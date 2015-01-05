@@ -1,0 +1,9 @@
+cl_dll/Debug
+cl_dll/Release
+dlls/debughl
+dlls/Debug
+dlls/Releasehl
+
+*.ncb
+*.suo
+*.vcproj.*
