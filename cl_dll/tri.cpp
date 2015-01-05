@@ -22,6 +22,22 @@
 #include "tri.h"
 extern IParticleMan *g_pParticleMan;
 
+extern float g_iFogColor[3];
+extern float g_iFogDensity;
+extern float g_iStartDist;
+extern float g_iEndDist;
+extern int g_iFogSkybox;
+
+extern int g_iWaterLevel;
+
+void RenderFog( void )
+{
+	//Not in water and we want fog.
+	bool bFog = g_iWaterLevel < 2 && g_iStartDist >= 0 && g_iEndDist >= 0;
+	gEngfuncs.pTriAPI->FogParams( g_iFogDensity, g_iFogSkybox );
+	gEngfuncs.pTriAPI->Fog( g_iFogColor, g_iStartDist, g_iEndDist, bFog );
+}
+
 /*
 =================
 HUD_DrawNormalTriangles
@@ -57,4 +73,6 @@ void CL_DLLEXPORT HUD_DrawTransparentTriangles( void )
 
 	if ( g_pParticleMan )
 		 g_pParticleMan->Update();
+
+	RenderFog();
 }

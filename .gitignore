@@ -3,6 +3,7 @@ cl_dll/Release
 dlls/debughl
 dlls/Debug
 dlls/Releasehl
+mapsrc/*.max
 
 *.ncb
 *.suo

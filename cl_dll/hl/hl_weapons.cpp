@@ -49,6 +49,8 @@ static CBasePlayerWeapon *g_pWpns[ 32 ];
 float g_flApplyVel = 0.0;
 int   g_irunninggausspred = 0;
 
+int g_iWaterLevel;
+
 vec3_t previousorigin;
 
 // HLDM Weapon placeholder entities.
@@ -819,7 +821,7 @@ void HUD_WeaponsPostThink( local_state_s *from, local_state_s *to, usercmd_t *cm
 	player.pev->flags = from->client.flags;
 
 	player.pev->deadflag = from->client.deadflag;
-	player.pev->waterlevel = from->client.waterlevel;
+	g_iWaterLevel = player.pev->waterlevel = from->client.waterlevel;
 	player.pev->maxspeed    = from->client.maxspeed;
 	player.pev->fov = from->client.fov;
 	player.pev->weaponanim = from->client.weaponanim;

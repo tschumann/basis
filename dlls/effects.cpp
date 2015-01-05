@@ -2266,3 +2266,41 @@ void CItemSoda::CanTouch ( CBaseEntity *pOther )
 	SetThink ( &CItemSoda::SUB_Remove );
 	pev->nextthink = gpGlobals->time;
 }
+
+//=========================================================
+// Fog
+//=========================================================
+#define SF_IN_SKYBOX	0x0001
+
+LINK_ENTITY_TO_CLASS( env_fog, CClientFog );
+
+void CClientFog::KeyValue( KeyValueData *pkvd )
+{
+	if( FStrEq( pkvd->szKeyName, "startdist" ) )
+	{
+		m_iStartDist = atoi( pkvd->szValue );
+		pkvd->fHandled = TRUE;
+	}
+	else if( FStrEq( pkvd->szKeyName, "enddist" ) )
+	{
+		m_iEndDist = atoi( pkvd->szValue );
+		pkvd->fHandled = TRUE;
+	}
+	else if( FStrEq( pkvd->szKeyName, "density" ) )
+	{
+		m_iDensity = atof( pkvd->szValue );
+		pkvd->fHandled = TRUE;
+	}
+	else
+	{
+		CBaseEntity::KeyValue( pkvd );
+	}
+}
+
+void CClientFog::Spawn( void )
+{
+	pev->movetype = MOVETYPE_NOCLIP;
+	pev->solid = SOLID_NOT;							// Remove model & collisions
+	pev->renderamt = 0;								// The engine won't draw this model if this is set to 0 and blending is on
+	pev->rendermode = kRenderTransTexture;
+}

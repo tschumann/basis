@@ -1,13 +1,15 @@
 //
 // Half-Life game definition file (.fgd) 
-// version 3.0.0.1
-// for Worldcraft 3.3 and above, and Half-Life 1.0.0.9 and above
+// for Worldcraft 3.5
 //
 // updated by Chris Bokitch
 // autolycus@valvesoftware.com
 // http://www.valve-erc.com/
 //
 
+//
+// jan 05 2014
+//  - added env_fog
 //
 // apr 15 2003 - 3.1.0.0
 //	- updated with studio() references to enable model display
@@ -887,6 +889,18 @@
 	holdtime(string) : "Hold Fade (seconds)" : "0"
 	renderamt(integer) : "Fade Alpha" : 255
 	rendercolor(color255) : "Fade Color (R G B)" : "0 0 0"
+]
+
+@PointClass base(Targetname) color(255 255 255) = env_fog : "Global Fog Properties" 
+[
+	rendercolor(color255) : "Fog Color (RGB)" : "0 0 0"
+	// startdist(string) : "Start Distance" : "0"
+	// enddist(string) : "End Distance" : "0"
+	density(string) : "Density (0 to 1)" : "0.001"
+	spawnflags(flags) =
+	[
+		1: "In skybox" : 0
+	]
 ]
 
 @PointClass base(Targetname) size(-16 -16 -16, 16 16 16) = env_funnel : "Large Portal Funnel" 

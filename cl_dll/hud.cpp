@@ -125,6 +125,12 @@ int __MsgFunc_GameMode(const char *pszName, int iSize, void *pbuf )
 	return gHUD.MsgFunc_GameMode( pszName, iSize, pbuf );
 }
 
+int __MsgFunc_Fog(const char *pszName, int iSize, void *pbuf )
+{
+	gHUD.MsgFunc_Fog( pszName, iSize, pbuf );
+	return 1;
+}
+
 // TFFree Command Menu
 void __CmdFunc_OpenCommandMenu(void)
 {
@@ -315,6 +321,8 @@ void CHud :: Init( void )
 	
 	HOOK_MESSAGE( SpecFade );
 	HOOK_MESSAGE( ResetFade );
+
+	HOOK_MESSAGE( Fog );
 
 	// VGUI Menus
 	HOOK_MESSAGE( VGUIMenu );

@@ -800,3 +800,17 @@ public:
 	void Precache( void );
 	void KeyValue( KeyValueData *pkvd );
 };
+
+//=========================================================
+// Fog
+//=========================================================
+class CClientFog : public CBaseEntity
+{
+public:
+	void Spawn( void );
+	void KeyValue( KeyValueData *pkvd );
+
+	float m_iStartDist;
+	float m_iEndDist;
+	float m_iDensity;
+};
