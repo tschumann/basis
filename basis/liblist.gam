@@ -1,0 +1,37 @@
+//
+// Basis resource listing
+//
+
+
+game "Basis"			// Mod's name
+gamedir "basis"			// Mod's root directory
+version "1.0"			// Mod's version
+						// Not used by Steam
+trainmap "t0a0"			// Mod's training map
+startmap "c0a0"			// Mod's start map
+developer "Team Sandpit"	// Developer's name
+developer_url "http://www.moddb.com/groups/team-sandpit"	// Developer's website
+url_info "http://www.moddb.com/groups/team-sandpit"			// Developer's Website
+															// Not used by Steam
+
+icon "basis"			// Steam icon; relative path to 16x16 uncompressed .tga
+
+// type "singleplayer_only"	// Don't show multiplayer options
+// type "mutiplayer_only"	// Don't do single player level transitions
+
+// These affect what shows up in Options
+nomodels "0"				// Don't show player model options
+nohimodel "0"				// Don't use high-def player models
+detailed_textures "1"		// Shows detail texture check box in options
+
+// These affect which maps are shown in the Create Server dialogue
+mpfilter ""			// Only show maps with names not containing this string
+mpentity "info_player_deathmatch"		// Only show maps containing this entity
+										// Not used by Steam
+
+cldll "1"			// Uses a modified client.dll
+gamedll "dlls\hl.dll" -num_edicts 4096	// Server .dll file
+svonly "0"			// Not a server only mod
+secure "1"			// Secure server
+fallback_dir "valve"		// Mount content from \half-life\valve\ & half-life.gcf
+							// This will only mount mods installed in \half-life\
