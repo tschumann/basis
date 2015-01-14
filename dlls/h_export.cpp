@@ -65,418 +65,418 @@ extern "C" void __declspec( dllexport ) SV_SaveGameComment( char *buffer, int ma
 {
 	if( !strcmp( STRING( gpGlobals->mapname ), "t0a0" ) )
 	{
-		strcpy( buffer, "HAZARD COURSE" );
+		strncpy( buffer, "HAZARD COURSE", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "t0a0a" ) )
 	{
-		strcpy( buffer, "HAZARD COURSE" );
+		strncpy( buffer, "HAZARD COURSE", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "t0a0b" ) )
 	{
-		strcpy( buffer, "HAZARD COURSE" );
+		strncpy( buffer, "HAZARD COURSE", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "t0a0b1" ) )
 	{
-		strcpy( buffer, "HAZARD COURSE" );
+		strncpy( buffer, "HAZARD COURSE", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "t0a0b2" ) )
 	{
-		strcpy( buffer, "HAZARD COURSE" );
+		strncpy( buffer, "HAZARD COURSE", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "t0a0c" ) )
 	{
-		strcpy( buffer, "HAZARD COURSE" );
+		strncpy( buffer, "HAZARD COURSE", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "t0a0d" ) )
 	{
-		strcpy( buffer, "HAZARD COURSE" );
+		strncpy( buffer, "HAZARD COURSE", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c0a0" ) )
 	{
-		strcpy( buffer, "BLACK MESA INBOUND" );
+		strncpy( buffer, "BLACK MESA INBOUND", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c0a0a" ) )
 	{
-		strcpy( buffer, "BLACK MESA INBOUND" );
+		strncpy( buffer, "BLACK MESA INBOUND", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c0a0b" ) )
 	{
-		strcpy( buffer, "BLACK MESA INBOUND" );
+		strncpy( buffer, "BLACK MESA INBOUND", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c0a0c" ) )
 	{
-		strcpy( buffer, "BLACK MESA INBOUND" );
+		strncpy( buffer, "BLACK MESA INBOUND", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c0a0d" ) )
 	{
-		strcpy( buffer, "BLACK MESA INBOUND" );
+		strncpy( buffer, "BLACK MESA INBOUND", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c0a0e" ) )
 	{
-		strcpy( buffer, "BLACK MESA INBOUND" );
+		strncpy( buffer, "BLACK MESA INBOUND", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a0" ) )
 	{
-		strcpy( buffer, "ANOMOLOUS MATERIALS" );
+		strncpy( buffer, "ANOMOLOUS MATERIALS", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a0a" ) )
 	{
-		strcpy( buffer, "ANOMOLOUS MATERIALS" );
+		strncpy( buffer, "ANOMOLOUS MATERIALS", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a0b" ) )
 	{
-		strcpy( buffer, "ANOMOLOUS MATERIALS" );
+		strncpy( buffer, "ANOMOLOUS MATERIALS", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a0c" ) )
 	{
-		strcpy( buffer, "UNFORSEEN CONSEQUENCES" );
+		strncpy( buffer, "UNFORSEEN CONSEQUENCES", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a0d" ) )
 	{
-		strcpy( buffer, "UNFORSEEN CONSEQUENCES" );
+		strncpy( buffer, "UNFORSEEN CONSEQUENCES", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a0e" ) )
 	{
-		strcpy( buffer, "UNFORSEEN CONSEQUENCES" );
+		strncpy( buffer, "UNFORSEEN CONSEQUENCES", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a1" ) )
 	{
-		strcpy( buffer, "UNFORSEEN CONSEQUENCES" );
+		strncpy( buffer, "UNFORSEEN CONSEQUENCES", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a1a" ) )
 	{
-		strcpy( buffer, "UNFORSEEN CONSEQUENCES" );
+		strncpy( buffer, "UNFORSEEN CONSEQUENCES", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a1b" ) )
 	{
-		strcpy( buffer, "UNFORSEEN CONSEQUENCES" );
+		strncpy( buffer, "UNFORSEEN CONSEQUENCES", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a1c" ) )
 	{
-		strcpy( buffer, "UNFORSEEN CONSEQUENCES" );
+		strncpy( buffer, "UNFORSEEN CONSEQUENCES", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a1d" ) )
 	{
-		strcpy( buffer, "UNFORSEEN CONSEQUENCES" );
+		strncpy( buffer, "UNFORSEEN CONSEQUENCES", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a1f" ) )
 	{
-		strcpy( buffer, "UNFORSEEN CONSEQUENCES" );
+		strncpy( buffer, "UNFORSEEN CONSEQUENCES", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a2" ) )
 	{
-		strcpy( buffer, "OFFICE COMPLEX" );
+		strncpy( buffer, "OFFICE COMPLEX", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a2a" ) )
 	{
-		strcpy( buffer, "OFFICE COMPLEX" );
+		strncpy( buffer, "OFFICE COMPLEX", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a2b" ) )
 	{
-		strcpy( buffer, "OFFICE COMPLEX" );
+		strncpy( buffer, "OFFICE COMPLEX", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a2c" ) )
 	{
-		strcpy( buffer, "OFFICE COMPLEX" );
+		strncpy( buffer, "OFFICE COMPLEX", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a2d" ) )
 	{
-		strcpy( buffer, "OFFICE COMPLEX" );
+		strncpy( buffer, "OFFICE COMPLEX", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a3" ) )
 	{
-		strcpy( buffer, "\"WE'VE GOT HOSTILES\"" );
+		strncpy( buffer, "\"WE'VE GOT HOSTILES\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a3a" ) )
 	{
-		strcpy( buffer, "\"WE'VE GOT HOSTILES\"" );
+		strncpy( buffer, "\"WE'VE GOT HOSTILES\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a3b" ) )
 	{
-		strcpy( buffer, "\"WE'VE GOT HOSTILES\"" );
+		strncpy( buffer, "\"WE'VE GOT HOSTILES\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a3c" ) )
 	{
-		strcpy( buffer, "\"WE'VE GOT HOSTILES\"" );
+		strncpy( buffer, "\"WE'VE GOT HOSTILES\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a3d" ) )
 	{
-		strcpy( buffer, "\"WE'VE GOT HOSTILES\"" );
+		strncpy( buffer, "\"WE'VE GOT HOSTILES\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a4" ) )
 	{
-		strcpy( buffer, "BLAST PIT" );
+		strncpy( buffer, "BLAST PIT", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a4b" ) )
 	{
-		strcpy( buffer, "BLAST PIT" );
+		strncpy( buffer, "BLAST PIT", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a4d" ) )
 	{
-		strcpy( buffer, "BLAST PIT" );
+		strncpy( buffer, "BLAST PIT", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a4e" ) )
 	{
-		strcpy( buffer, "BLAST PIT" );
+		strncpy( buffer, "BLAST PIT", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a4f" ) )
 	{
-		strcpy( buffer, "BLAST PIT" );
+		strncpy( buffer, "BLAST PIT", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a4g" ) )
 	{
-		strcpy( buffer, "BLAST PIT" );
+		strncpy( buffer, "BLAST PIT", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a4i" ) )
 	{
-		strcpy( buffer, "BLAST PIT" );
+		strncpy( buffer, "BLAST PIT", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a4j" ) )
 	{
-		strcpy( buffer, "BLAST PIT" );
+		strncpy( buffer, "BLAST PIT", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c1a4k" ) )
 	{
-		strcpy( buffer, "BLAST PIT" );
+		strncpy( buffer, "BLAST PIT", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a1" ) )
 	{
-		strcpy( buffer, "POWER UP" );
+		strncpy( buffer, "POWER UP", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a1a" ) )
 	{
-		strcpy( buffer, "POWER UP" );
+		strncpy( buffer, "POWER UP", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a1b" ) )
 	{
-		strcpy( buffer, "POWER UP" );
+		strncpy( buffer, "POWER UP", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2a" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2b1" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2b2" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2c" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2d" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2e" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2f" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2g" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a2h" ) )
 	{
-		strcpy( buffer, "ON A RAIL" );
+		strncpy( buffer, "ON A RAIL", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a3" ) )
 	{
-		strcpy( buffer, "APPREHENSION" );
+		strncpy( buffer, "APPREHENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a3a" ) )
 	{
-		strcpy( buffer, "APPREHENSION" );
+		strncpy( buffer, "APPREHENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a3b" ) )
 	{
-		strcpy( buffer, "APPREHENSION" );
+		strncpy( buffer, "APPREHENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a3c" ) )
 	{
-		strcpy( buffer, "APPREHENSION" );
+		strncpy( buffer, "APPREHENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a3d" ) )
 	{
-		strcpy( buffer, "APPREHENSION" );
+		strncpy( buffer, "APPREHENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a3e" ) )
 	{
-		strcpy( buffer, "APPREHENSION" );
+		strncpy( buffer, "APPREHENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a4" ) )
 	{
-		strcpy( buffer, "RESIDUE PROCESSING" );
+		strncpy( buffer, "RESIDUE PROCESSING", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a4a" ) )
 	{
-		strcpy( buffer, "RESIDUE PROCESSING" );
+		strncpy( buffer, "RESIDUE PROCESSING", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a4b" ) )
 	{
-		strcpy( buffer, "RESIDUE PROCESSING" );
+		strncpy( buffer, "RESIDUE PROCESSING", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a4c" ) )
 	{
-		strcpy( buffer, "RESIDUE PROCESSING" );
+		strncpy( buffer, "RESIDUE PROCESSING", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a4d" ) )
 	{
-		strcpy( buffer, "QUESTIONABLE ETHICS" );
+		strncpy( buffer, "QUESTIONABLE ETHICS", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a4e" ) )
 	{
-		strcpy( buffer, "QUESTIONABLE ETHICS" );
+		strncpy( buffer, "QUESTIONABLE ETHICS", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a4f" ) )
 	{
-		strcpy( buffer, "QUESTIONABLE ETHICS" );
+		strncpy( buffer, "QUESTIONABLE ETHICS", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a4g" ) )
 	{
-		strcpy( buffer, "QUESTIONABLE ETHICS" );
+		strncpy( buffer, "QUESTIONABLE ETHICS", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5a" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5b" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5c" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5d" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5e" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5f" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5g" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5w" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c2a5x" ) )
 	{
-		strcpy( buffer, "SURFACE TENSION" );
+		strncpy( buffer, "SURFACE TENSION", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a1" ) )
 	{
-		strcpy( buffer, "\"FORGET ABOUT FREEMAN\"" );
+		strncpy( buffer, "\"FORGET ABOUT FREEMAN\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a1a" ) )
 	{
-		strcpy( buffer, "\"FORGET ABOUT FREEMAN\"" );
+		strncpy( buffer, "\"FORGET ABOUT FREEMAN\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a1b" ) )
 	{
-		strcpy( buffer, "\"FORGET ABOUT FREEMAN\"" );
+		strncpy( buffer, "\"FORGET ABOUT FREEMAN\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a2" ) )
 	{
-		strcpy( buffer, "\"FORGET ABOUT FREEMAN\"" );
+		strncpy( buffer, "\"FORGET ABOUT FREEMAN\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a2a" ) )
 	{
-		strcpy( buffer, "\"FORGET ABOUT FREEMAN\"" );
+		strncpy( buffer, "\"FORGET ABOUT FREEMAN\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a2b" ) )
 	{
-		strcpy( buffer, "\"FORGET ABOUT FREEMAN\"" );
+		strncpy( buffer, "\"FORGET ABOUT FREEMAN\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a2c" ) )
 	{
-		strcpy( buffer, "\"FORGET ABOUT FREEMAN\"" );
+		strncpy( buffer, "\"FORGET ABOUT FREEMAN\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a2d" ) )
 	{
-		strcpy( buffer, "\"FORGET ABOUT FREEMAN\"" );
+		strncpy( buffer, "\"FORGET ABOUT FREEMAN\"", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a2e" ) )
 	{
-		strcpy( buffer, "LAMBDA CORE" );
+		strncpy( buffer, "LAMBDA CORE", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c3a2f" ) )
 	{
-		strcpy( buffer, "LAMBDA CORE" );
+		strncpy( buffer, "LAMBDA CORE", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a1" ) )
 	{
-		strcpy( buffer, "XEN" );
+		strncpy( buffer, "XEN", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a1a" ) )
 	{
-		strcpy( buffer, "INTERLOPER" );
+		strncpy( buffer, "INTERLOPER", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a1b" ) )
 	{
-		strcpy( buffer, "INTERLOPER" );
+		strncpy( buffer, "INTERLOPER", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a1c" ) )
 	{
-		strcpy( buffer, "INTERLOPER" );
+		strncpy( buffer, "INTERLOPER", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a1d" ) )
 	{
-		strcpy( buffer, "INTERLOPER" );
+		strncpy( buffer, "INTERLOPER", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a1e" ) )
 	{
-		strcpy( buffer, "INTERLOPER" );
+		strncpy( buffer, "INTERLOPER", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a1f" ) )
 	{
-		strcpy( buffer, "INTERLOPER" );
+		strncpy( buffer, "INTERLOPER", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a2" ) )
 	{
-		strcpy( buffer, "GONARCH'S LAIR" );
+		strncpy( buffer, "GONARCH'S LAIR", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a2a" ) )
 	{
-		strcpy( buffer, "GONARCH'S LAIR" );
+		strncpy( buffer, "GONARCH'S LAIR", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a2b" ) )
 	{
-		strcpy( buffer, "GONARCH'S LAIR" );
+		strncpy( buffer, "GONARCH'S LAIR", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c4a3" ) )
 	{
-		strcpy( buffer, "NIHILANTH" );
+		strncpy( buffer, "NIHILANTH", max_length );
 	}
 	else if( !strcmp( STRING( gpGlobals->mapname ), "c5a1" ) )
 	{
-		strcpy( buffer, "NIHILANTH" );
+		strncpy( buffer, "NIHILANTH", max_length );
 	}
 	else
 	{
-		strcpy( buffer, STRING( gpGlobals->mapname ) );
+		strncpy( buffer, STRING( gpGlobals->mapname ), max_length );
 	}
 }
