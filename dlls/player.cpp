@@ -4682,6 +4682,11 @@ BOOL CBasePlayer :: SwitchWeapon( CBasePlayerItem *pWeapon )
 	{
 		return FALSE;
 	}
+
+	if ( false /* cl_autowepswitch.value */ )
+	{
+		return FALSE;
+	}
 	
 	ResetAutoaim( );
 	
