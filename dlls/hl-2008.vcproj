@@ -615,6 +615,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\coop_gamerules.cpp"
+				>
+			</File>
+			<File
 				RelativePath="crossbow.cpp"
 				>
 				<FileConfiguration
@@ -2600,6 +2604,10 @@
 			</File>
 			<File
 				RelativePath="client.h"
+				>
+			</File>
+			<File
+				RelativePath=".\coop_gamerules.h"
 				>
 			</File>
 			<File

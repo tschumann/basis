@@ -56,6 +56,14 @@ enum
 	GR_NEUTRAL,
 };
 
+// Game modes
+enum
+{
+	GR_DEATHMATCH = 0,
+	GR_TEAMPLAY = 1,
+	GR_COOP = 2,
+};
+
 class CGameRules
 {
 public:

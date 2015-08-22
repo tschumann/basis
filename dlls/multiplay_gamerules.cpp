@@ -401,7 +401,7 @@ extern int gmsgGameMode;
 void CHalfLifeMultiplay :: UpdateGameMode( CBasePlayer *pPlayer )
 {
 	MESSAGE_BEGIN( MSG_ONE, gmsgGameMode, NULL, pPlayer->edict() );
-		WRITE_BYTE( 0 );  // game mode none
+		WRITE_BYTE( GR_DEATHMATCH );  // game mode none
 	MESSAGE_END();
 }
 
