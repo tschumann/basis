@@ -2232,22 +2232,6 @@
 		<File
 			RelativePath="..\lib\public\game_controls.lib"
 			>
-			<FileConfiguration
-				Name="Debug|Win32"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					CommandLine="call ..\filecopy.bat $(InputDir)$(InputName).dll $(ProjectDir)..\..\game\mod\cl_dlls\$(InputName).dll&#x0D;&#x0A;call ..\filecopy.bat $(InputDir)$(InputName).pdb $(ProjectDir)..\..\game\mod\cl_dlls\$(InputName).pdb&#x0D;&#x0A;"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="Release|Win32"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					CommandLine="call ..\filecopy.bat $(InputDir)$(InputName).dll $(ProjectDir)..\..\game\mod\cl_dlls\$(InputName).dll&#x0D;&#x0A;call ..\filecopy.bat $(InputDir)$(InputName).pdb $(ProjectDir)..\..\game\mod\cl_dlls\$(InputName).pdb&#x0D;&#x0A;"
-				/>
-			</FileConfiguration>
 		</File>
 	</Files>
 	<Globals>
