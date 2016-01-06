@@ -5,6 +5,17 @@ dlls/Debug
 dlls/Releasehl
 mapsrc/*.max
 mapsrc/*.rmx
+mapsrc/*.bsp
+mapsrc/*.lin
+mapsrc/*.p*
+utils/qcsg/Debug
+utils/qcsg/Release
+utils/qbsp2/Debug
+utils/qbsp2/Release
+utils/visx2/Debug
+utils/visx2/Release
+utils/qrad/Debug
+utils/qrad/Release
 
 *.ncb
 *.suo
