@@ -594,6 +594,17 @@ void ClientCommand( edict_t *pEntity )
 		if ( pPlayer->IsObserver() )
 			pPlayer->Observer_FindNextPlayer( atoi( CMD_ARGV(1) )?true:false );
 	}
+	else if ( FStrEq( pcmd, "bot_add" ) )
+	{
+		if ( gpGlobals->deathmatch )
+		{
+			// TODO: add the bot
+		}
+		else
+		{
+			ClientPrint( &pEntity->v, HUD_PRINTCONSOLE, UTIL_VarArgs( "Cannot add bots in singleplayer" ) );
+		}
+	}
 	else if ( g_pGameRules->ClientCommand( GetClassPtr((CBasePlayer *)pev), pcmd ) )
 	{
 		// MenuSelect returns true only if the command is properly handled,  so don't print a warning
