@@ -4,6 +4,7 @@ dlls/debughl
 dlls/Debug
 dlls/Releasehl
 mapsrc/*.max
+mapsrc/*.rmx
 
 *.ncb
 *.suo

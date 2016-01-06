@@ -1,5 +1,6 @@
 {
 "classname" "worldspawn"
+"classname" "worldspawn"
 "sounds" "1"
 "MaxRange" "4096"
 "mapversion" "220"
@@ -67,6 +68,6 @@
 {
 "classname" "env_fog"
 "rendercolor" "220 220 220"
-"density" "0.001"
+"density" "0.005"
 "origin" "0 0 320"
 }
