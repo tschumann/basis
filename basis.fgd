@@ -8,6 +8,9 @@
 //
 
 //
+// feb 04 2016
+//  - set env_fog density to more sensible value
+// 
 // jan 05 2014
 //  - added env_fog
 //
@@ -896,7 +899,7 @@
 	rendercolor(color255) : "Fog Color (RGB)" : "0 0 0"
 	// startdist(string) : "Start Distance" : "0"
 	// enddist(string) : "End Distance" : "0"
-	density(string) : "Density (0 to 1)" : "0.001"
+	density(string) : "Density (0 to 1)" : "0.005"
 	spawnflags(flags) =
 	[
 		1: "In skybox" : 0

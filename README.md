@@ -22,6 +22,8 @@ $ # clone your repo
 
 $ git clone https://github.com/you/repo
 
+$ # note that the steps below are in update.bat too
+
 $ # create a new remote that points to Basis
 
 $ git remote add basis https://github.com/tschumann/basis
