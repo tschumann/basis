@@ -30,6 +30,7 @@ mpentity "info_player_deathmatch"		// Only show maps containing this entity
 										// Not used by Steam
 
 cldll "1"			// Uses a modified client.dll
+crcclientdll "1"	// Enables CRC checking of client.dll
 gamedll "dlls\hl.dll" -num_edicts 4096	// Server .dll file
 gamedll_linux "dlls/hl.so"	// Linux server .dll
 gamedll_osx "dlls/hl.dylib"	// Mac server .dll
