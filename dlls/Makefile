@@ -82,6 +82,7 @@ OBJ = \
 	$(DLL_OBJDIR)/client.o \
 	$(DLL_OBJDIR)/combat.o \
 	$(DLL_OBJDIR)/controller.o \
+	$(DLL_OBJDIR)/coop_gamerules.o \
 	$(DLL_OBJDIR)/crossbow.o \
 	$(DLL_OBJDIR)/crowbar.o \
 	$(DLL_OBJDIR)/defaultai.o \
