@@ -61,7 +61,7 @@ extern "C" void DLLEXPORT GiveFnptrsToDll(	enginefuncs_t* pengfuncsFromEngine, g
 }
 
 
-extern "C" void __declspec( dllexport ) SV_SaveGameComment( char *buffer, int max_length )
+extern "C" void DLLEXPORT SV_SaveGameComment( char *buffer, int max_length )
 {
 	if( !strncmp( STRING( gpGlobals->mapname ), "t0a0", strlen( "t0a0" ) ) ) // a, b, b1, b2, c, d
 	{

@@ -17,6 +17,7 @@ COMMON_SRCDIR=../common
 WPN_SHARED_SRCDIR=./wpn_shared
 PM_SHARED_SRCDIR=../pm_shared
 GAME_SHARED_SRCDIR=../game_shared
+PUBLIC_SRCDIR=../public
 
 DLL_OBJDIR=$(DLL_SRCDIR)/obj
 WPN_SHARED_OBJDIR=$(WPN_SHARED_SRCDIR)/obj
@@ -27,7 +28,7 @@ BASE_CFLAGS=	-Dstricmp=strcasecmp -D_strnicmp=strncasecmp -Dstrnicmp=strncasecmp
 		-DCLIENT_WEAPONS
 
 #safe optimization
-CFLAGS=$(BASE_CFLAGS) -w -m486 -O1
+CFLAGS=$(BASE_CFLAGS) -w -m32 -O1
 
 #full optimization
 #CFLAGS=$(BASE_CFLAGS) -w -O1 -m486 -ffast-math -funroll-loops \
@@ -37,7 +38,7 @@ CFLAGS=$(BASE_CFLAGS) -w -m486 -O1
 #use these when debugging 
 #CFLAGS=$(BASE_CFLAGS) -g
 
-INCLUDEDIRS=-I. -I$(ENGINE_SRCDIR) -I$(COMMON_SRCDIR) -I$(PM_SHARED_SRCDIR) -I$(GAME_SHARED_SRCDIR)
+INCLUDEDIRS=-I. -I$(ENGINE_SRCDIR) -I$(COMMON_SRCDIR) -I$(PM_SHARED_SRCDIR) -I$(GAME_SHARED_SRCDIR) -I$(PUBLIC_SRCDIR)
 
 LDFLAGS=
 
