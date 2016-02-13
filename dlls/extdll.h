@@ -60,6 +60,7 @@ typedef int BOOL;
 #ifndef max
 #define max(a,b)  (((a) > (b)) ? (a) : (b))
 #define _vsnprintf(a,b,c,d) vsnprintf(a,b,c,d)
+#define _snprintf(a,b,c,...) snprintf(a,b,c,...)
 #endif
 #endif //_WIN32
 

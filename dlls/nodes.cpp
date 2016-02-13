@@ -3443,7 +3443,7 @@ void CGraph :: TestRoutingTables( void )
 								ALERT(at_aiconsole, "%d ", pMyPath[i]);
 							}
 							ALERT(at_aiconsole, "\n(%d to %d |%d/%d)2:", iFrom, iTo, iHull, iCap);
-							for (i = 0; i < cPathSize2; i++)
+							for (int i = 0; i < cPathSize2; i++)
 							{
 								ALERT(at_aiconsole, "%d ", pMyPath2[i]);
 							}
