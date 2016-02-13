@@ -30,3 +30,13 @@ utils/qrad/Release
 *.vcproj.*
 
 Thumbs.db
+
+# Linux-specific
+*~
+hl_cdll_map.txt
+hl_map.txt
+game_shared/obj
+dlls/obj
+dlls/wpn_shared/obj
+pm_shared/obj
+linux/release/obj/
