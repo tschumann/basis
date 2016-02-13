@@ -1,4 +1,9 @@
 
+call settings.bat
+
+:: tidy up the mod directory
+del %moddir%\voice_ban.dt
+
 :: code related stuff
 rmdir /s /q cl_dll\Debug
 rmdir /s /q cl_dll\Release
