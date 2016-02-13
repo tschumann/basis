@@ -8,10 +8,17 @@ mapsrc/*.rmx
 mapsrc/*.bsp
 mapsrc/*.lin
 mapsrc/*.p*
+# these .ls files are generated
+wadsrc/dev.ls
+wadsrc/tools.ls
+utils/makels/Debug
+utils/makels/Release
 utils/qcsg/Debug
 utils/qcsg/Release
 utils/qbsp2/Debug
 utils/qbsp2/Release
+utils/qlumpy/Debug
+utils/qlumpy/Release
 utils/visx2/Debug
 utils/visx2/Release
 utils/qrad/Debug
@@ -20,3 +27,5 @@ utils/qrad/Release
 *.ncb
 *.suo
 *.vcproj.*
+
+Thumbs.db
