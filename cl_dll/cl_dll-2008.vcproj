@@ -1372,6 +1372,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\vgui_ModViewport.cpp"
+				>
+			</File>
+			<File
 				RelativePath="vgui_MOTDWindow.cpp"
 				>
 				<FileConfiguration
@@ -2181,6 +2185,10 @@
 			</File>
 			<File
 				RelativePath="vgui_int.h"
+				>
+			</File>
+			<File
+				RelativePath=".\vgui_ModViewport.h"
 				>
 			</File>
 			<File
