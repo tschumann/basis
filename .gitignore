@@ -8,6 +8,7 @@ mapsrc/*.rmx
 mapsrc/*.bsp
 mapsrc/*.lin
 mapsrc/*.p*
+wadsrc/*.wad
 # these .ls files are generated
 wadsrc/dev.ls
 wadsrc/tools.ls
