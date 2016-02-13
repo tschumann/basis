@@ -605,6 +605,27 @@ void ClientCommand( edict_t *pEntity )
 			ClientPrint( &pEntity->v, HUD_PRINTCONSOLE, UTIL_VarArgs( "Cannot add bots in singleplayer" ) );
 		}
 	}
+	else if ( FStrEq( pcmd, "ent_fire" ) && g_flWeaponCheat )
+	{
+		if ( CMD_ARGC() < 2 )
+		{
+			ClientPrint( &pEntity->v, HUD_PRINTCONSOLE, UTIL_VarArgs( "ent_fire: expected entity and command\n" ) );
+		}
+		else
+		{
+			if ( FStrEq( CMD_ARGV(2), "Teleport" ) )
+			{
+				if ( CMD_ARGC() == 3 && FStrEq( CMD_ARGV(2), "here" ) )
+				{
+					// teleport in front of the player
+				}
+				else if ( CMD_ARGC() == 5 )
+				{
+					// teleport to CMD_ARGV(3), CMD_ARGV(4), CMD_ARGV(5)
+				}
+			}
+		}
+	}
 	else if ( g_pGameRules->ClientCommand( GetClassPtr((CBasePlayer *)pev), pcmd ) )
 	{
 		// MenuSelect returns true only if the command is properly handled,  so don't print a warning
