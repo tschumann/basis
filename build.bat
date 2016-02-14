@@ -17,6 +17,16 @@ cd mapsrc
 compile.bat %moddir%
 cd ..
 
+:: compile models
+cd modelsrc
+compile.bat %moddir%
+cd ..
+
+:: compile sprites
+cd spritesrc
+compile.bat %moddir%
+cd ..
+
 :: compile wads
 cd wadsrc
 compile.bat %moddir%
