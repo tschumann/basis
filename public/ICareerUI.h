@@ -11,7 +11,7 @@
 #endif
 
 #include "interface.h"
-#include <vgui\VGUI.h>
+#include <VGUI.h>
 
 using namespace vgui;
 

@@ -50,7 +50,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\dlls,.,..\tfc,..\public,..\common,..\pm_shared,..\engine,..\utils\vgui\include,..\game_shared,..\external"
+				AdditionalIncludeDirectories="..\dlls;.;..\tfc;..\public;..\common;..\pm_shared;..\engine;..\utils\vgui\include;..\utils\vgui2\include;..\game_shared;..\external"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;CLIENT_DLL;CLIENT_WEAPONS;HL_DLL"
 				MinimalRebuild="true"
 				RuntimeLibrary="1"
