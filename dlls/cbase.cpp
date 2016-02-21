@@ -95,11 +95,21 @@ static DLL_FUNCTIONS gFunctionTable =
 	AllowLagCompensation,		//pfnAllowLagCompensation
 };
 
+static NEW_DLL_FUNCTIONS gNewFunctionTable = 
+{
+	OnFreeEntPrivateData,		//pfnOnFreeEntPrivateData
+	GameShutdown,				//pfnGameShutdown
+	ShouldCollide,				//pfnShouldCollide
+
+	CvarValue,					//pfnCvarValue
+	CvarValue2,					//pfnCvarValue2
+};
+
 static void SetObjectCollisionBox( entvars_t *pev );
 
 extern "C" {
 
-	int GetEntityAPI( DLL_FUNCTIONS *pFunctionTable, int interfaceVersion )
+int GetEntityAPI( DLL_FUNCTIONS *pFunctionTable, int interfaceVersion )
 {
 	if ( !pFunctionTable || interfaceVersion != INTERFACE_VERSION )
 	{
@@ -120,6 +130,19 @@ int GetEntityAPI2( DLL_FUNCTIONS *pFunctionTable, int *interfaceVersion )
 	}
 	
 	memcpy( pFunctionTable, &gFunctionTable, sizeof( DLL_FUNCTIONS ) );
+	return TRUE;
+}
+
+int GetNewDLLFunctions( NEW_DLL_FUNCTIONS *pFunctionTable, int *interfaceVersion )
+{
+	if ( !pFunctionTable || *interfaceVersion != NEW_DLL_FUNCTIONS_VERSION )
+	{
+		// Tell engine what version we had, so it can figure out who is out of date.
+		*interfaceVersion = NEW_DLL_FUNCTIONS_VERSION;
+		return FALSE;
+	}
+	
+	memcpy( pFunctionTable, &gNewFunctionTable, sizeof( NEW_DLL_FUNCTIONS ) );
 	return TRUE;
 }
 
@@ -433,6 +456,17 @@ void SaveReadFields( SAVERESTOREDATA *pSaveData, const char *pname, void *pBaseD
 {
 	CRestore restoreHelper( pSaveData );
 	restoreHelper.ReadFields( pname, pBaseData, pFields, fieldCount );
+}
+
+
+void OnFreeEntPrivateData(edict_s *pEdict)
+{
+}
+
+
+int ShouldCollide(edict_t *pentTouched, edict_t *pentOther)
+{
+	return 1;
 }
 
 

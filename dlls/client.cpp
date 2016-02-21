@@ -1955,3 +1955,17 @@ int AllowLagCompensation( void )
 {
 	return 1;
 }
+
+void GameShutdown(void)
+{
+	Sys_FreeModule( hFileSystemModule );
+}
+
+void CvarValue( const edict_t *pEnt, const char *value )
+{
+	// deprecated; use pfnQueryClientCvarValue2
+}
+
+void CvarValue2( const edict_t *pEnt, int requestID, const char *cvarName, const char *value )
+{
+}

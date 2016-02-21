@@ -17,6 +17,30 @@
 #include "util.h"
 #include "game.h"
 
+#include "interface.h"
+
+HINTERFACEMODULE hFileSystemModule = NULL;
+#include "FileSystem.h"
+IFileSystem *g_pFileSystem = NULL;
+
+void LoadFileSystem( void )
+{
+	hFileSystemModule = Sys_LoadModule( FILESYSTEM_DLLNAME );
+	CreateInterfaceFn fileSystemFactory = Sys_GetFactory( hFileSystemModule );
+
+	if( fileSystemFactory == NULL )
+	{
+		g_pFileSystem = NULL;
+	}
+
+	g_pFileSystem = (IFileSystem *)fileSystemFactory( FILESYSTEM_INTERFACE_VERSION, NULL );
+
+	if( g_pFileSystem )
+	{
+		ALERT( at_console, "%s interface instantiated.\n", FILESYSTEM_INTERFACE_VERSION );
+	}
+}
+
 cvar_t	displaysoundlist = {"displaysoundlist","0"};
 
 // multiplayer server rules
@@ -885,6 +909,8 @@ void GameDLLInit( void )
 	CVAR_REGISTER ( &sk_player_leg2 );
 	CVAR_REGISTER ( &sk_player_leg3 );
 // END REGISTER CVARS FOR SKILL LEVEL STUFF
+
+	LoadFileSystem();
 
 	SERVER_COMMAND( "exec skill.cfg\n" );
 }

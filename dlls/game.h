@@ -16,6 +16,20 @@
 #ifndef GAME_H
 #define GAME_H
 
+#ifdef _WIN32
+#define FILESYSTEM_DLLNAME "FileSystem_Steam.dll"
+#elif defined(OSX)
+#define FILESYSTEM "FileSystem_Steam.dylib"
+#elif defined(LINUX)
+#define FILESYSTEM "FileSystem_Steam.so"
+#else
+#error
+#endif
+
+#include "interface.h"
+
+extern HINTERFACEMODULE hFileSystemModule;
+
 extern void GameDLLInit( void );
 
 

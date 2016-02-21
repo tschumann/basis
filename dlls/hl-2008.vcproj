@@ -1378,6 +1378,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath="..\common\interface.cpp"
+				>
+			</File>
+			<File
 				RelativePath="islave.cpp"
 				>
 				<FileConfiguration
