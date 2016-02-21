@@ -23,6 +23,7 @@ DLL_OBJDIR=$(DLL_SRCDIR)/obj
 WPN_SHARED_OBJDIR=$(WPN_SHARED_SRCDIR)/obj
 PM_SHARED_OBJDIR=$(PM_SHARED_SRCDIR)/obj
 GAME_SHARED_OBJDIR=$(GAME_SHARED_SRCDIR)/obj
+COMMON_OBJDIR=$(COMMON_SRCDIR)/obj
 
 BASE_CFLAGS=	-Dstricmp=strcasecmp -D_strnicmp=strncasecmp -Dstrnicmp=strncasecmp \
 		-DCLIENT_WEAPONS
@@ -57,6 +58,9 @@ $(DLL_OBJDIR)/%.o: $(DLL_SRCDIR)/%.cpp
 	$(DO_CC)
 
 $(WPN_SHARED_OBJDIR)/%.o: $(WPN_SHARED_SRCDIR)/%.cpp
+	$(DO_CC)
+
+$(COMMON_OBJDIR)/%.o: $(COMMON_SRCDIR)/%.cpp
 	$(DO_CC)
 
 $(GAME_SHARED_OBJDIR)/%.o: $(GAME_SHARED_SRCDIR)/%.cpp
@@ -164,6 +168,7 @@ OBJ = \
 	$(DLL_OBJDIR)/xen.o \
 	$(DLL_OBJDIR)/zombie.o \
 	$(WPN_SHARED_OBJDIR)/hl_wpn_glock.o \
+	$(COMMON_OBJDIR)/interface.o \
 	$(GAME_SHARED_OBJDIR)/voice_gamemgr.o \
 	$(PM_SHARED_OBJDIR)/pm_debug.o \
 	$(PM_SHARED_OBJDIR)/pm_math.o \
@@ -175,6 +180,7 @@ $(DLLNAME)_$(ARCH).$(SHLIBEXT) : neat $(OBJ)
 neat:
 	-mkdir $(DLL_OBJDIR)
 	-mkdir $(WPN_SHARED_OBJDIR)
+	-mkdir $(COMMON_OBJDIR)
 	-mkdir $(GAME_SHARED_OBJDIR)
 	-mkdir $(PM_SHARED_OBJDIR)
 clean:
@@ -183,6 +189,7 @@ clean:
 spotless: clean
 	-rm -r $(DLL_OBJDIR)
 	-rm -r $(WPN_SHARED_OBJDIR)
+	-rm -r $(COMMON_OBJDIR)
 	-rm -r $(GAME_SHARED_OBJDIR)
 	-rm -r $(PM_SHARED_OBJDIR)
 

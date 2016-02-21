@@ -19,9 +19,9 @@
 #ifdef _WIN32
 #define FILESYSTEM_DLLNAME "FileSystem_Steam.dll"
 #elif defined(OSX)
-#define FILESYSTEM "FileSystem_Steam.dylib"
-#elif defined(LINUX)
-#define FILESYSTEM "FileSystem_Steam.so"
+#define FILESYSTEM_DLLNAME "FileSystem_Steam.dylib"
+#elif defined(__linux__)
+#define FILESYSTEM_DLLNAME "FileSystem_Steam.so"
 #else
 #error
 #endif
