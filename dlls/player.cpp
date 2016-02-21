@@ -3964,36 +3964,6 @@ void CBasePlayer :: UpdateClientData( void )
 			MESSAGE_BEGIN( MSG_ONE, gmsgInitHUD, NULL, pev );
 			MESSAGE_END();
 
-			CBaseEntity *pEntity = NULL;
-
-			MESSAGE_BEGIN( MSG_ONE, gmsgFog, NULL, pev );
-				// send any info about client-side entities from here
-				pEntity = UTIL_FindEntityByClassname( NULL, "env_fog" );
-
-				if( pEntity )
-				{
-					CClientFog *pFog = (CClientFog *)pEntity;
-
-					WRITE_FLOAT( pFog->pev->rendercolor.x );
-					WRITE_FLOAT( pFog->pev->rendercolor.y );
-					WRITE_FLOAT( pFog->pev->rendercolor.z );
-					WRITE_FLOAT( pFog->m_iStartDist );
-					WRITE_FLOAT( pFog->m_iEndDist );
-					WRITE_FLOAT( pFog->m_iDensity );
-					WRITE_BYTE( pFog->pev->spawnflags );
-				}
-				else
-				{
-					WRITE_FLOAT( 0.0 );
-					WRITE_FLOAT( 0.0 );
-					WRITE_FLOAT( 0.0 );
-					WRITE_FLOAT( 0.0 );
-					WRITE_FLOAT( 0.0 );
-					WRITE_FLOAT( 0.0 );
-					WRITE_CHAR( 0 );
-				}
-			MESSAGE_END();
-
 			g_pGameRules->InitHUD( this );
 			m_fGameHUDInitialized = TRUE;
 			

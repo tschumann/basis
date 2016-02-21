@@ -125,6 +125,7 @@ OBJ = \
 	$(DLL_OBJDIR)/leech.o \
 	$(DLL_OBJDIR)/lights.o \
 	$(DLL_OBJDIR)/maprules.o \
+	$(DLL_OBJDIR)/modplayer.o \
 	$(DLL_OBJDIR)/monstermaker.o \
 	$(DLL_OBJDIR)/monsters.o \
 	$(DLL_OBJDIR)/monsterstate.o \

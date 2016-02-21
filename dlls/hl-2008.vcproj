@@ -1497,6 +1497,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\modplayer.cpp"
+				>
+			</File>
+			<File
 				RelativePath="monstermaker.cpp"
 				>
 				<FileConfiguration
@@ -2664,6 +2668,10 @@
 			</File>
 			<File
 				RelativePath="items.h"
+				>
+			</File>
+			<File
+				RelativePath=".\modplayer.h"
 				>
 			</File>
 			<File
