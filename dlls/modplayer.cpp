@@ -26,6 +26,21 @@
 #include "cbase.h"
 #include "modplayer.h"
 
+//=========================================================
+// 
+//=========================================================
+BOOL CModPlayer :: SwitchWeapon( CBasePlayerItem *pWeapon ) 
+{
+	if ( atof(g_engfuncs.pfnInfoKeyValue( g_engfuncs.pfnGetInfoKeyBuffer( this->edict() ), "cl_autowepswitch" )) )
+	{
+		return FALSE;
+	}
+	else
+	{
+		return CBasePlayer::SwitchWeapon( pWeapon );
+	}
+}
+
 /*
 =========================================================
 	UpdateClientData
@@ -77,3 +92,5 @@ void CModPlayer :: UpdateClientData( void )
 		}
 	}
 }
+
+LINK_ENTITY_TO_CLASS( player, CModPlayer );

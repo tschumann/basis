@@ -240,7 +240,7 @@ void LinkUserMessages( void )
 
 }
 
-LINK_ENTITY_TO_CLASS( player, CBasePlayer );
+// LINK_ENTITY_TO_CLASS( player, CBasePlayer );
 
 
 
@@ -4650,11 +4650,6 @@ BOOL CBasePlayer::HasNamedPlayerItem( const char *pszItemName )
 BOOL CBasePlayer :: SwitchWeapon( CBasePlayerItem *pWeapon ) 
 {
 	if ( !pWeapon->CanDeploy() )
-	{
-		return FALSE;
-	}
-
-	if ( false /* cl_autowepswitch.value */ )
 	{
 		return FALSE;
 	}
