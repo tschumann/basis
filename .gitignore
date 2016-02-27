@@ -25,6 +25,10 @@ utils/visx2/Release
 utils/qrad/Debug
 utils/qrad/Release
 
+# don't commit what can be compiled
+basis/cl_dlls/*.dll
+basis/dlls/*.dll
+
 *.ncb
 *.suo
 *.vcproj.*
