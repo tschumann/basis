@@ -82,7 +82,6 @@ HL1_OBJS = \
 	$(HL1_OBJ_DIR)/vgui_ConsolePanel.o \
 	$(HL1_OBJ_DIR)/vgui_ControlConfigPanel.o \
 	$(HL1_OBJ_DIR)/vgui_CustomObjects.o \
-	$(HL1_OBJ_DIR)/vgui_ModViewport.o \
 	$(HL1_OBJ_DIR)/vgui_MOTDWindow.o \
 	$(HL1_OBJ_DIR)/vgui_SchemeManager.o \
 	$(HL1_OBJ_DIR)/vgui_ScorePanel.o \
@@ -92,6 +91,7 @@ HL1_OBJS = \
 	$(HL1_OBJ_DIR)/vgui_teammenu.o \
 	$(HL1_OBJ_DIR)/voice_status.o \
 	$(HL1_OBJ_DIR)/hud_servers.o \
+	$(HL1_OBJ_DIR)/mod/vgui_ModViewport.o \
 	
 
 DLL_OBJS = \

@@ -1497,10 +1497,6 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\modplayer.cpp"
-				>
-			</File>
-			<File
 				RelativePath="monstermaker.cpp"
 				>
 				<FileConfiguration
@@ -2581,6 +2577,14 @@
 					/>
 				</FileConfiguration>
 			</File>
+			<Filter
+				Name="mod"
+				>
+				<File
+					RelativePath=".\modplayer.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -2668,10 +2672,6 @@
 			</File>
 			<File
 				RelativePath="items.h"
-				>
-			</File>
-			<File
-				RelativePath=".\modplayer.h"
 				>
 			</File>
 			<File
@@ -2774,6 +2774,14 @@
 				RelativePath="weapons.h"
 				>
 			</File>
+			<Filter
+				Name="mod"
+				>
+				<File
+					RelativePath=".\modplayer.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Resource Files"

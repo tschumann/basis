@@ -125,7 +125,6 @@ OBJ = \
 	$(DLL_OBJDIR)/leech.o \
 	$(DLL_OBJDIR)/lights.o \
 	$(DLL_OBJDIR)/maprules.o \
-	$(DLL_OBJDIR)/modplayer.o \
 	$(DLL_OBJDIR)/monstermaker.o \
 	$(DLL_OBJDIR)/monsters.o \
 	$(DLL_OBJDIR)/monsterstate.o \
@@ -168,6 +167,7 @@ OBJ = \
 	$(DLL_OBJDIR)/world.o \
 	$(DLL_OBJDIR)/xen.o \
 	$(DLL_OBJDIR)/zombie.o \
+	$(DLL_OBJDIR)/mod/modplayer.o \
 	$(WPN_SHARED_OBJDIR)/hl_wpn_glock.o \
 	$(COMMON_OBJDIR)/interface.o \
 	$(GAME_SHARED_OBJDIR)/voice_gamemgr.o \

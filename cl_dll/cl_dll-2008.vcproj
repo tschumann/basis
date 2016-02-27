@@ -1372,10 +1372,6 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\vgui_ModViewport.cpp"
-				>
-			</File>
-			<File
 				RelativePath="vgui_MOTDWindow.cpp"
 				>
 				<FileConfiguration
@@ -2062,6 +2058,14 @@
 					</FileConfiguration>
 				</File>
 			</Filter>
+			<Filter
+				Name="mod"
+				>
+				<File
+					RelativePath=".\vgui_ModViewport.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -2231,6 +2235,14 @@
 				RelativePath="wrect.h"
 				>
 			</File>
+			<Filter
+				Name="mod"
+				>
+				<File
+					RelativePath=".\mod\vgui_ModViewport.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Resource Files"

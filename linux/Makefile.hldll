@@ -89,7 +89,6 @@ HLDLL_OBJS = \
 	$(HLDLL_OBJ_DIR)/leech.o \
 	$(HLDLL_OBJ_DIR)/lights.o \
 	$(HLDLL_OBJ_DIR)/maprules.o \
-	$(HLDLL_OBJ_DIR)/modplayer.o \
 	$(HLDLL_OBJ_DIR)/monstermaker.o \
 	$(HLDLL_OBJ_DIR)/monsters.o \
 	$(HLDLL_OBJ_DIR)/monsterstate.o \
@@ -133,6 +132,7 @@ HLDLL_OBJS = \
 	$(HLDLL_OBJ_DIR)/world.o \
 	$(HLDLL_OBJ_DIR)/xen.o \
 	$(HLDLL_OBJ_DIR)/zombie.o
+	$(HLDLL_OBJ_DIR)/mod/modplayer.o \
 
 HLWPN_OBJS = \
 	$(HLWPN_OBJ_DIR)/hl_wpn_glock.o
