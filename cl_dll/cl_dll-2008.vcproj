@@ -2062,7 +2062,7 @@
 				Name="mod"
 				>
 				<File
-					RelativePath=".\vgui_ModViewport.cpp"
+					RelativePath=".\mod\vgui_ModViewport.cpp"
 					>
 				</File>
 			</Filter>

@@ -2581,7 +2581,7 @@
 				Name="mod"
 				>
 				<File
-					RelativePath=".\modplayer.cpp"
+					RelativePath=".\mod\modplayer.cpp"
 					>
 				</File>
 			</Filter>
@@ -2778,7 +2778,7 @@
 				Name="mod"
 				>
 				<File
-					RelativePath=".\modplayer.h"
+					RelativePath=".\mod\modplayer.h"
 					>
 				</File>
 			</Filter>
