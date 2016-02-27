@@ -189,6 +189,7 @@ int gmsgStatusText = 0;
 int gmsgStatusValue = 0; 
 
 int gmsgFog = 0;
+int gmsgVGUIMenu = 0;
 
 
 void LinkUserMessages( void )
@@ -234,6 +235,7 @@ void LinkUserMessages( void )
 	gmsgAmmoX = REG_USER_MSG("AmmoX", 2);
 	gmsgTeamNames = REG_USER_MSG( "TeamNames", -1 );
 	gmsgFog = REG_USER_MSG( "Fog", 25 );
+	gmsgVGUIMenu = REG_USER_MSG("VGUIMenu", 1 );
 
 	gmsgStatusText = REG_USER_MSG("StatusText", -1);
 	gmsgStatusValue = REG_USER_MSG("StatusValue", 3); 
