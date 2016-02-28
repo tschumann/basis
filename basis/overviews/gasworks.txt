@@ -1,0 +1,14 @@
+// overview description file for gasworks.bsp
+
+global 
+{
+	ZOOM	2.59
+	ORIGIN	-236 	348	-128
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/gasworks.bmp"
+	HEIGHT	-1569
+}
