@@ -2,19 +2,14 @@
 // Basis resource listing
 //
 
-
 game "Basis"			// Mod's name
 gamedir "basis"			// Mod's root directory
-version "1.0"			// Mod's version
-						// Not used by Steam
 trainmap "t0a0"			// Mod's training map
 startmap "c0a0"			// Mod's start map
-developer "Team Sandpit"	// Developer's name
+developer "Team Sandpit"									// Developer's name
 developer_url "http://www.moddb.com/groups/team-sandpit"	// Developer's website
-url_info "http://www.moddb.com/groups/team-sandpit"			// Developer's Website
-															// Not used by Steam
 
-icon "basis"			// Steam icon; relative path to 16x16 uncompressed .tga
+icon "basis"			// Steam icon; relative path to 32x32 uncompressed .tga
 
 // type "singleplayer_only"	// Don't show multiplayer options
 // type "mutiplayer_only"	// Don't do single player level transitions
