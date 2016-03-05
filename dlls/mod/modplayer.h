@@ -20,7 +20,7 @@
 class CModPlayer : public CBasePlayer
 {
 public:
-	BOOL SwitchWeapon( CBasePlayerItem *pWeapon );
+	virtual BOOL SwitchWeapon( CBasePlayerItem *pWeapon );
 	virtual void UpdateClientData( void );
 };
 
