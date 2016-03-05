@@ -27,8 +27,8 @@ mpentity "info_player_deathmatch"		// Only show maps containing this entity
 cldll "1"			// Uses a modified client.dll
 crcclientdll "1"	// Enables CRC checking of client.dll
 gamedll "dlls\hl.dll" -num_edicts 4096	// Server .dll file
-gamedll_linux "dlls/hl.so"	// Linux server .dll
-gamedll_osx "dlls/hl.dylib"	// Mac server .dll
+gamedll_linux "dlls/hl.so" -num_edicts 4096	// Linux server .dll
+gamedll_osx "dlls/hl.dylib" -num_edicts 4096	// Mac server .dll
 svonly "0"			// Not a server only mod
 secure "1"			// Secure server
 fallback_dir "valve"		// Mount content from steamapps\common\half-life\valve\
