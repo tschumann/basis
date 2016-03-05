@@ -373,6 +373,7 @@ void CL_LoadGameUI( void )
 
 	if ( gEngfuncs.COM_ExpandFilename( GAMEUI_DLLNAME, szPDir, sizeof( szPDir ) ) == FALSE )
 	{
+		gEngfuncs.Con_DPrintf("Unable to load %s", GAMEUI_DLLNAME);
 		g_pGameConsole = NULL;
 		g_hGameUIModule = NULL;
 		return;
@@ -383,6 +384,7 @@ void CL_LoadGameUI( void )
 
 	if ( gameUIFactory == NULL )
 	{
+		gEngfuncs.Con_DPrintf("Unable to get factory from %s", GAMEUI_DLLNAME);
 		g_pGameConsole = NULL;
 		g_hGameUIModule = NULL;
 		return;
@@ -393,6 +395,10 @@ void CL_LoadGameUI( void )
 	if ( g_pGameConsole )
 	{
 		g_pGameConsole->Printf( "%s interface instantiated\n", GAMECONSOLE_INTERFACE_VERSION );
+	}
+	else
+	{
+		gEngfuncs.Con_DPrintf("Unable to instantiate %s", GAMECONSOLE_INTERFACE_VERSION);
 	}
 }
 
