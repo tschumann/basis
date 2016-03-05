@@ -45,7 +45,7 @@ DESCRIPTION SERVER_OPTIONS
 	{
 		"#Valve_Hostname"
 		{ STRING }
-		{ "Half-Life" }
+		{ "Basis Server" }
 	}
 
 	"maxplayers"

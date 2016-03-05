@@ -48,4 +48,11 @@ DESCRIPTION INFO_OPTIONS
 		{ "300" }
 	}
 
+	"cl_autowepswitch"
+	{
+		"#Basis_Automatic_Weapon_Switch"
+		{ BOOL }
+		{ "1" }
+		SetInfo
+	}
 }
