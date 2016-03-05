@@ -33,7 +33,7 @@ BOOL CModPlayer :: SwitchWeapon( CBasePlayerItem *pWeapon )
 {
 	if ( atof(g_engfuncs.pfnInfoKeyValue( g_engfuncs.pfnGetInfoKeyBuffer( this->edict() ), "cl_autowepswitch" )) )
 	{
-		return FALSE;
+		return TRUE;
 	}
 	else
 	{
