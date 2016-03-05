@@ -16,6 +16,7 @@
 #include "eiface.h"
 #include "util.h"
 #include "game.h"
+#include "mod/modgame.h"
 
 #include "interface.h"
 
@@ -908,6 +909,8 @@ void GameDLLInit( void )
 	CVAR_REGISTER ( &sk_player_leg1 );
 	CVAR_REGISTER ( &sk_player_leg2 );
 	CVAR_REGISTER ( &sk_player_leg3 );
+
+	ModDLLInit();
 // END REGISTER CVARS FOR SKILL LEVEL STUFF
 
 	LoadFileSystem();
