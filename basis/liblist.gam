@@ -9,7 +9,7 @@ startmap "c0a0"			// Mod's start map
 developer "Team Sandpit"									// Developer's name
 developer_url "http://www.moddb.com/groups/team-sandpit"	// Developer's website
 
-icon "basis"			// Steam icon; relative path to 32x32 uncompressed .tga
+icon "game"			// Steam icon; relative path to 32x32 uncompressed .tga
 
 // type "singleplayer_only"	// Don't show multiplayer options
 // type "mutiplayer_only"	// Don't do single player level transitions
