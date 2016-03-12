@@ -169,6 +169,8 @@ int CL_DLLEXPORT Initialize( cl_enginefunc_t *pEnginefuncs, int iVersion )
 
 	EV_HookEvents();
 	CL_LoadParticleMan();
+	CL_LoadGameUI();
+	CL_LoadVGUI2();
 
 	// get tracker interface, if any
 	return 1;
@@ -202,7 +204,6 @@ int CL_DLLEXPORT HUD_VidInit( void )
 Called whenever the client connects
 to a server.  Reinitializes all 
 the hud variables.
-Called when the game loads.
 ==========================
 */
 
@@ -213,7 +214,6 @@ void CL_DLLEXPORT HUD_Init( void )
 	gHUD.Init();
 	Scheme_Init();
 	CL_LoadGameUI();
-	CL_LoadVGUI2();
 }
 
 
@@ -374,7 +374,7 @@ void CL_LoadGameUI( void )
 
 	if ( gEngfuncs.COM_ExpandFilename( GAMEUI_DLLNAME, szPDir, sizeof( szPDir ) ) == FALSE )
 	{
-		gEngfuncs.Con_DPrintf("Unable to load %s", GAMEUI_DLLNAME);
+		gEngfuncs.Con_DPrintf( "Unable to load %s\n", GAMEUI_DLLNAME );
 		g_pGameConsole = NULL;
 		g_hGameUIModule = NULL;
 		return;
@@ -385,7 +385,7 @@ void CL_LoadGameUI( void )
 
 	if ( gameUIFactory == NULL )
 	{
-		gEngfuncs.Con_DPrintf("Unable to get factory from %s", GAMEUI_DLLNAME);
+		gEngfuncs.Con_DPrintf( "Unable to get factory from %s\n", GAMEUI_DLLNAME );
 		g_pGameConsole = NULL;
 		g_hGameUIModule = NULL;
 		return;
@@ -396,10 +396,6 @@ void CL_LoadGameUI( void )
 	if ( g_pGameConsole )
 	{
 		g_pGameConsole->Printf( "%s interface instantiated\n", GAMECONSOLE_INTERFACE_VERSION );
-	}
-	else
-	{
-		gEngfuncs.Con_DPrintf("Unable to instantiate %s", GAMECONSOLE_INTERFACE_VERSION);
 	}
 }
 
@@ -416,7 +412,7 @@ void CL_LoadVGUI2( void )
 
 	if ( gEngfuncs.COM_ExpandFilename( VGUI2_DLLNAME, szPDir, sizeof( szPDir ) ) == FALSE )
 	{
-		gEngfuncs.Con_DPrintf("Unable to load %s", VGUI2_DLLNAME);
+		gEngfuncs.Con_DPrintf( "Unable to load %s\n", VGUI2_DLLNAME );
 		g_hVGUI2Module = NULL;
 		return;
 	}
@@ -426,7 +422,7 @@ void CL_LoadVGUI2( void )
 
 	if ( vgui2Factory == NULL )
 	{
-		gEngfuncs.Con_DPrintf("Unable to get factory from %s", VGUI2_DLLNAME);
+		gEngfuncs.Con_DPrintf( "Unable to get factory from %s\n", VGUI2_DLLNAME );
 		g_hVGUI2Module = NULL;
 		return;
 	}

@@ -24,6 +24,9 @@
 #include "particleman.h"
 extern IParticleMan *g_pParticleMan;
 
+#include "IGameConsole.h"
+extern IGameConsole *g_pGameConsole;
+
 #define MAX_CLIENTS 32
 
 #if !defined( _TFC )
@@ -94,6 +97,12 @@ void CHud::MsgFunc_InitHUD( const char *pszName, int iSize, void *pbuf )
 
 	if ( g_pParticleMan )
 		 g_pParticleMan->ResetParticles();
+	else
+		gEngfuncs.Con_DPrintf( "Unable to instantiate %s\n", PARTICLEMAN_INTERFACE );
+	if ( g_pGameConsole )
+		gEngfuncs.Con_DPrintf( "%s interface was instantiated\n", GAMECONSOLE_INTERFACE_VERSION );
+	else
+		gEngfuncs.Con_DPrintf( "Unable to instantiate %s\n", GAMECONSOLE_INTERFACE_VERSION );
 
 #if !defined( _TFC )
 	//Probably not a good place to put this.
