@@ -26,7 +26,6 @@ cvar_t	timeleft	= {"mp_timeleft","0" , FCVAR_SERVER | FCVAR_UNLOGGED };	  // "  
 
 // multiplayer server rules
 cvar_t	teamplay	= {"mp_teamplay","0", FCVAR_SERVER };
-cvar_t	coop		= {"mp_coop","0", FCVAR_SERVER };
 cvar_t	fraglimit	= {"mp_fraglimit","0", FCVAR_SERVER };
 cvar_t	timelimit	= {"mp_timelimit","0", FCVAR_SERVER };
 cvar_t	friendlyfire= {"mp_friendlyfire","0", FCVAR_SERVER };
@@ -885,9 +884,9 @@ void GameDLLInit( void )
 	CVAR_REGISTER ( &sk_player_leg1 );
 	CVAR_REGISTER ( &sk_player_leg2 );
 	CVAR_REGISTER ( &sk_player_leg3 );
+// END REGISTER CVARS FOR SKILL LEVEL STUFF
 
 	ModDLLInit();
-// END REGISTER CVARS FOR SKILL LEVEL STUFF
 
 	SERVER_COMMAND( "exec skill.cfg\n" );
 }

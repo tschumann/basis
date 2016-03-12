@@ -40,7 +40,8 @@ void LoadFileSystem( void )
 	}
 }
 
-cvar_t	ragdolls = {"sv_ragdolls", 0};
+cvar_t	coop		= {"mp_coop","0", FCVAR_SERVER };
+cvar_t	ragdolls	= {"sv_ragdolls", 0};
 
 // Construction Worker
 cvar_t	sk_construction_health1 = {"sk_construction_health1","0"};
