@@ -169,8 +169,6 @@ int CL_DLLEXPORT Initialize( cl_enginefunc_t *pEnginefuncs, int iVersion )
 
 	EV_HookEvents();
 	CL_LoadParticleMan();
-	CL_LoadGameUI();
-	CL_LoadVGUI2();
 
 	// get tracker interface, if any
 	return 1;
@@ -204,6 +202,7 @@ int CL_DLLEXPORT HUD_VidInit( void )
 Called whenever the client connects
 to a server.  Reinitializes all 
 the hud variables.
+Called when the game loads.
 ==========================
 */
 
@@ -213,6 +212,8 @@ void CL_DLLEXPORT HUD_Init( void )
 	InitInput();
 	gHUD.Init();
 	Scheme_Init();
+	CL_LoadGameUI();
+	CL_LoadVGUI2();
 }
 
 
@@ -415,6 +416,7 @@ void CL_LoadVGUI2( void )
 
 	if ( gEngfuncs.COM_ExpandFilename( VGUI2_DLLNAME, szPDir, sizeof( szPDir ) ) == FALSE )
 	{
+		gEngfuncs.Con_DPrintf("Unable to load %s", VGUI2_DLLNAME);
 		g_hVGUI2Module = NULL;
 		return;
 	}
@@ -424,6 +426,7 @@ void CL_LoadVGUI2( void )
 
 	if ( vgui2Factory == NULL )
 	{
+		gEngfuncs.Con_DPrintf("Unable to get factory from %s", VGUI2_DLLNAME);
 		g_hVGUI2Module = NULL;
 		return;
 	}
