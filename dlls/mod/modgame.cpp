@@ -17,6 +17,8 @@
 #include "util.h"
 #include "game.h"
 
+cvar_t	ragdolls = {"sv_ragdolls", 0};
+
 // Construction Worker
 cvar_t	sk_construction_health1 = {"sk_construction_health1","0"};
 cvar_t	sk_construction_health2 = {"sk_construction_health2","0"};
@@ -24,6 +26,8 @@ cvar_t	sk_construction_health3 = {"sk_construction_health3","0"};
 
 void ModDLLInit( void )
 {
+	CVAR_REGISTER (&ragdolls);
+
 	CVAR_REGISTER (&sk_construction_health1);
 	CVAR_REGISTER (&sk_construction_health2);
 	CVAR_REGISTER (&sk_construction_health3);

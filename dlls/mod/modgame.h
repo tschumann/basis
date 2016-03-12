@@ -18,4 +18,6 @@
 
 extern void ModDLLInit( void );
 
+extern cvar_t ragdolls;
+
 #endif		// MODGAME_H

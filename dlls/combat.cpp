@@ -29,6 +29,7 @@
 #include "animation.h"
 #include "weapons.h"
 #include "func_break.h"
+#include "mod/modgame.h"
 
 extern DLL_GLOBAL Vector		g_vecAttackDir;
 extern DLL_GLOBAL int			g_iSkillLevel;
@@ -525,10 +526,13 @@ void CBaseMonster::BecomeDead( void )
 
 	// make the corpse fly away from the attack vector
 	pev->movetype = MOVETYPE_TOSS;
-	//pev->flags &= ~FL_ONGROUND;
-	//pev->origin.z += 2;
-	//pev->velocity = g_vecAttackDir * -1;
-	//pev->velocity = pev->velocity * RANDOM_FLOAT( 300, 400 );
+	if ( ragdolls.value )
+	{
+		pev->flags &= ~FL_ONGROUND;
+		pev->origin.z += 2;
+		pev->velocity = g_vecAttackDir * -1;
+		pev->velocity = pev->velocity * RANDOM_FLOAT( 300, 400 );
+	}
 }
 
 
@@ -987,18 +991,18 @@ int CBaseMonster :: DeadTakeDamage( entvars_t *pevInflictor, entvars_t *pevAttac
 		}
 	}
 
-#if 0// turn this back on when the bounding box issues are resolved.
-
-	pev->flags &= ~FL_ONGROUND;
-	pev->origin.z += 1;
-	
-	// let the damage scoot the corpse around a bit.
-	if ( !FNullEnt(pevInflictor) && (pevAttacker->solid != SOLID_TRIGGER) )
+	// turn this back on when the bounding box issues are resolved.
+	if ( ragdolls.value )
 	{
-		pev->velocity = pev->velocity + vecDir * -DamageForce( flDamage );
+		pev->flags &= ~FL_ONGROUND;
+		pev->origin.z += 1;
+		
+		// let the damage scoot the corpse around a bit.
+		if ( !FNullEnt(pevInflictor) && (pevAttacker->solid != SOLID_TRIGGER) )
+		{
+			pev->velocity = pev->velocity + vecDir * -DamageForce( flDamage );
+		}
 	}
-
-#endif
 
 	// kill the corpse if enough damage was done to destroy the corpse and the damage is of a type that is allowed to destroy the corpse.
 	if ( bitsDamageType & DMG_GIB_CORPSE )
