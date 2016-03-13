@@ -26,6 +26,11 @@
 #include "cbase.h"
 #include "modplayer.h"
 
+void CModPlayer::Spawn( void )
+{
+	CBasePlayer::Spawn();
+}
+
 //=========================================================
 // 
 //=========================================================
