@@ -36,7 +36,7 @@ void LoadFileSystem( void )
 
 	if( g_pFileSystem )
 	{
-		ALERT( at_console, "%s interface instantiated.\n", FILESYSTEM_INTERFACE_VERSION );
+		ALERT( at_aiconsole, "%s interface instantiated.\n", FILESYSTEM_INTERFACE_VERSION );
 	}
 }
 
@@ -50,11 +50,11 @@ cvar_t	sk_construction_health3 = {"sk_construction_health3","0"};
 
 void ModDLLInit( void )
 {
-	CVAR_REGISTER (&ragdolls);
+	CVAR_REGISTER ( &ragdolls );
 
-	CVAR_REGISTER (&sk_construction_health1);
-	CVAR_REGISTER (&sk_construction_health2);
-	CVAR_REGISTER (&sk_construction_health3);
+	CVAR_REGISTER ( &sk_construction_health1 );
+	CVAR_REGISTER ( &sk_construction_health2 );
+	CVAR_REGISTER ( &sk_construction_health3 );
 
 	LoadFileSystem();
 }
