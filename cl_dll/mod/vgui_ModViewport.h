@@ -21,6 +21,7 @@
 #include<VGUI_ScrollBar.h>
 #include<VGUI_Slider.h>
 
+#include "cl_util.h"
 #include "vgui_TeamFortressViewport.h"
 
 //==============================================================================

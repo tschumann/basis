@@ -20,6 +20,7 @@
 
 #include "hud.h"
 #include "cl_util.h"
+#include "mod/cl_util.h"
 #include "netadr.h"
 #undef INTERFACE_H
 #include "../public/interface.h"
@@ -374,7 +375,7 @@ void CL_LoadGameUI( void )
 
 	if ( gEngfuncs.COM_ExpandFilename( GAMEUI_DLLNAME, szPDir, sizeof( szPDir ) ) == FALSE )
 	{
-		gEngfuncs.Con_DPrintf( "Unable to load %s\n", GAMEUI_DLLNAME );
+		ConsoleDPrintf( "Unable to load %s\n", GAMEUI_DLLNAME );
 		g_pGameConsole = NULL;
 		g_hGameUIModule = NULL;
 		return;
@@ -385,7 +386,7 @@ void CL_LoadGameUI( void )
 
 	if ( gameUIFactory == NULL )
 	{
-		gEngfuncs.Con_DPrintf( "Unable to get factory from %s\n", GAMEUI_DLLNAME );
+		ConsoleDPrintf( "Unable to get factory from %s\n", GAMEUI_DLLNAME );
 		g_pGameConsole = NULL;
 		g_hGameUIModule = NULL;
 		return;
@@ -395,7 +396,7 @@ void CL_LoadGameUI( void )
 
 	if ( g_pGameConsole )
 	{
-		g_pGameConsole->Printf( "%s interface instantiated\n", GAMECONSOLE_INTERFACE_VERSION );
+		ConsoleDPrintf( "%s interface instantiated\n", GAMECONSOLE_INTERFACE_VERSION );
 	}
 }
 
@@ -412,7 +413,7 @@ void CL_LoadVGUI2( void )
 
 	if ( gEngfuncs.COM_ExpandFilename( VGUI2_DLLNAME, szPDir, sizeof( szPDir ) ) == FALSE )
 	{
-		gEngfuncs.Con_DPrintf( "Unable to load %s\n", VGUI2_DLLNAME );
+		ConsoleDPrintf( "Unable to load %s\n", VGUI2_DLLNAME );
 		g_hVGUI2Module = NULL;
 		return;
 	}
@@ -422,7 +423,7 @@ void CL_LoadVGUI2( void )
 
 	if ( vgui2Factory == NULL )
 	{
-		gEngfuncs.Con_DPrintf( "Unable to get factory from %s\n", VGUI2_DLLNAME );
+		ConsoleDPrintf( "Unable to get factory from %s\n", VGUI2_DLLNAME );
 		g_hVGUI2Module = NULL;
 		return;
 	}

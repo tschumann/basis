@@ -46,7 +46,7 @@ int g_iFogSkybox;
 
 /// USER-DEFINED SERVER MESSAGE HANDLERS
 
-int CHud::MsgFunc_ResetHUD(const char *pszName, int iSize, void *pbuf )
+int CHud :: MsgFunc_ResetHUD(const char *pszName, int iSize, void *pbuf )
 {
 	ASSERT( iSize == 0 );
 
@@ -71,12 +71,12 @@ int CHud::MsgFunc_ResetHUD(const char *pszName, int iSize, void *pbuf )
 
 void CAM_ToFirstPerson(void);
 
-void CHud::MsgFunc_ViewMode( const char *pszName, int iSize, void *pbuf )
+void CHud :: MsgFunc_ViewMode( const char *pszName, int iSize, void *pbuf )
 {
 	CAM_ToFirstPerson();
 }
 
-void CHud::MsgFunc_InitHUD( const char *pszName, int iSize, void *pbuf )
+void CHud :: MsgFunc_InitHUD( const char *pszName, int iSize, void *pbuf )
 {
 	// prepare all hud data
 	HUDLIST *pList = m_pHudList;
@@ -97,12 +97,6 @@ void CHud::MsgFunc_InitHUD( const char *pszName, int iSize, void *pbuf )
 
 	if ( g_pParticleMan )
 		 g_pParticleMan->ResetParticles();
-	else
-		gEngfuncs.Con_DPrintf( "Unable to instantiate %s\n", PARTICLEMAN_INTERFACE );
-	if ( g_pGameConsole )
-		gEngfuncs.Con_DPrintf( "%s interface was instantiated\n", GAMECONSOLE_INTERFACE_VERSION );
-	else
-		gEngfuncs.Con_DPrintf( "Unable to instantiate %s\n", GAMECONSOLE_INTERFACE_VERSION );
 
 #if !defined( _TFC )
 	//Probably not a good place to put this.
@@ -111,7 +105,7 @@ void CHud::MsgFunc_InitHUD( const char *pszName, int iSize, void *pbuf )
 }
 
 
-int CHud::MsgFunc_GameMode(const char *pszName, int iSize, void *pbuf )
+int CHud :: MsgFunc_GameMode(const char *pszName, int iSize, void *pbuf )
 {
 	BEGIN_READ( pbuf, iSize );
 	m_Teamplay = READ_BYTE();
@@ -120,7 +114,7 @@ int CHud::MsgFunc_GameMode(const char *pszName, int iSize, void *pbuf )
 }
 
 
-int CHud::MsgFunc_Damage(const char *pszName, int iSize, void *pbuf )
+int CHud :: MsgFunc_Damage(const char *pszName, int iSize, void *pbuf )
 {
 	int		armor, blood;
 	Vector	from;
@@ -144,7 +138,7 @@ int CHud::MsgFunc_Damage(const char *pszName, int iSize, void *pbuf )
 	return 1;
 }
 
-int CHud::MsgFunc_Concuss( const char *pszName, int iSize, void *pbuf )
+int CHud :: MsgFunc_Concuss( const char *pszName, int iSize, void *pbuf )
 {
 	BEGIN_READ( pbuf, iSize );
 	m_iConcussionEffect = READ_BYTE();
@@ -155,7 +149,7 @@ int CHud::MsgFunc_Concuss( const char *pszName, int iSize, void *pbuf )
 	return 1;
 }
 
-void CHud::MsgFunc_Fog( const char *pszName, int iSize, void *pbuf )
+void CHud :: MsgFunc_Fog( const char *pszName, int iSize, void *pbuf )
 {
 	// Clear the fog
 	g_iFogColor[0] = 0.0;
