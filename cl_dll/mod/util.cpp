@@ -25,24 +25,34 @@ extern IGameConsole *g_pGameConsole;
 
 void ConsolePrintf( const char *format, ... )
 {
+	va_list args;
+	va_start(args, format);
+
 	if( g_pGameConsole )
 	{
-		g_pGameConsole->Printf( format, ... );
+		g_pGameConsole->Printf( format, args );
 	}
 	else
 	{
-		gEngfuncs.Con_Printf( format, ... );
+		gEngfuncs.Con_Printf( (char *)format, args );
 	}
+
+	va_end(args);
 }
 
 void ConsoleDPrintf( const char *format, ... )
 {
+	va_list args;
+	va_start(args, format);
+
 	if( g_pGameConsole )
 	{
-		g_pGameConsole->DPrintf( format, .. );
+		g_pGameConsole->DPrintf( format, args );
 	}
 	else
 	{
-		gEngfuncs.Con_DPrintf( format, ... );
+		gEngfuncs.Con_DPrintf( (char *)format, args );
 	}
+
+	va_end(args);
 }

@@ -16,10 +16,5 @@
 // cl_util.h
 //
 
-#ifndef CL_UTIL
-#define CL_UTIL
-
 extern void ConsolePrintf( const char *format, ... );
 extern void ConsoleDPrintf( const char *format, ... );
-
-#endif // CL_UTIL
