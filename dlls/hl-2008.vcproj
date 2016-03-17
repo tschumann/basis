@@ -2581,7 +2581,15 @@
 				Name="mod"
 				>
 				<File
+					RelativePath=".\mod\modentity.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\mod\modgame.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\mod\modmonster.cpp"
 					>
 				</File>
 				<File
@@ -2782,7 +2790,15 @@
 				Name="mod"
 				>
 				<File
+					RelativePath=".\mod\modentity.h"
+					>
+				</File>
+				<File
 					RelativePath=".\mod\modgame.h"
+					>
+				</File>
+				<File
+					RelativePath=".\mod\modmonster.h"
 					>
 				</File>
 				<File

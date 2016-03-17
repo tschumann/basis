@@ -167,7 +167,9 @@ OBJ = \
 	$(DLL_OBJDIR)/world.o \
 	$(DLL_OBJDIR)/xen.o \
 	$(DLL_OBJDIR)/zombie.o \
+	$(DLL_OBJDIR)/mod/modentity.o \
 	$(DLL_OBJDIR)/mod/modgame.o \
+	$(DLL_OBJDIR)/mod/modmonster.o \
 	$(DLL_OBJDIR)/mod/modplayer.o \
 	$(WPN_SHARED_OBJDIR)/hl_wpn_glock.o \
 	$(COMMON_OBJDIR)/interface.o \

@@ -132,7 +132,9 @@ HLDLL_OBJS = \
 	$(HLDLL_OBJ_DIR)/world.o \
 	$(HLDLL_OBJ_DIR)/xen.o \
 	$(HLDLL_OBJ_DIR)/zombie.o
+	$(HLDLL_OBJ_DIR)/mod/modentity.o \
 	$(HLDLL_OBJ_DIR)/mod/modgame.o \
+	$(HLDLL_OBJ_DIR)/mod/modmonster.o \
 	$(HLDLL_OBJ_DIR)/mod/modplayer.o \
 
 HLWPN_OBJS = \
