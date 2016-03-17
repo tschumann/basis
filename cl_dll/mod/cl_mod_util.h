@@ -13,8 +13,14 @@
 *
 ****/
 //
-// cl_util.h
+// cl_mod_util.h
 //
 
 extern void ConsolePrintf( const char *format, ... );
 extern void ConsoleDPrintf( const char *format, ... );
+
+extern void CL_LoadGameUI( void );
+extern void CL_UnloadGameUI( void );
+
+extern void CL_LoadVGUI2( void );
+extern void CL_UnloadVGUI2( void );
