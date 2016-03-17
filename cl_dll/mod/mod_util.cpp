@@ -13,13 +13,19 @@
 *
 ****/
 //
-// util.cpp
+// mod_util.cpp
 //
 // implementation of class-less helper functions
 //
 
-#include "mod/cl_util.h"
+#include "hud.h"
+#include "cl_util.h"
+#include "cl_mod_util.h"
 #include "IGameConsole.h"
+
+#include <stdarg.h>
+
+extern cl_enginefunc_t gEngfuncs;
 
 extern IGameConsole *g_pGameConsole;
 
