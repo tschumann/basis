@@ -39,7 +39,6 @@ public:
 	virtual void PlayerKilled( CBasePlayer *pVictim, entvars_t *pKiller, entvars_t *pInflictor );
 	virtual void Think ( void );
 	const char *SetDefaultPlayerTeam( CBasePlayer *pPlayer );
-	virtual void ChangePlayerTeam( CBasePlayer *pPlayer, const char *pTeamName, BOOL bKill, BOOL bGib );
 	virtual int WeaponShouldRespawn( CBasePlayerItem *pWeapon );
 	virtual float FlWeaponRespawnTime( CBasePlayerItem *pWeapon );
 	virtual int ItemShouldRespawn( CItem *pItem );

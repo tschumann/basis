@@ -168,57 +168,6 @@ void CHalfLifeCoop::InitHUD( CBasePlayer *pPlayer )
 	}
 }
 
-
-void CHalfLifeCoop::ChangePlayerTeam( CBasePlayer *pPlayer, const char *pTeamName, BOOL bKill, BOOL bGib )
-{
-	int damageFlags = DMG_GENERIC;
-	int clientIndex = pPlayer->entindex();
-
-	if ( !bGib )
-	{
-		damageFlags |= DMG_NEVERGIB;
-	}
-	else
-	{
-		damageFlags |= DMG_ALWAYSGIB;
-	}
-
-	if ( bKill )
-	{
-		// kill the player,  remove a death,  and let them start on the new team
-		m_DisableDeathMessages = TRUE;
-		m_DisableDeathPenalty = TRUE;
-
-		entvars_t *pevWorld = VARS( INDEXENT(0) );
-		pPlayer->TakeDamage( pevWorld, pevWorld, 900, damageFlags );
-
-		m_DisableDeathMessages = FALSE;
-		m_DisableDeathPenalty = FALSE;
-	}
-
-	// copy out the team name from the model
-	strncpy( pPlayer->m_szTeamName, pTeamName, TEAM_NAME_LENGTH );
-
-	// TODO: model is variable
-	g_engfuncs.pfnSetClientKeyValue( clientIndex, g_engfuncs.pfnGetInfoKeyBuffer( pPlayer->edict() ), "model", pPlayer->m_szTeamName );
-	g_engfuncs.pfnSetClientKeyValue( clientIndex, g_engfuncs.pfnGetInfoKeyBuffer( pPlayer->edict() ), "team", pPlayer->m_szTeamName );
-
-	// notify everyone's HUD of the team change
-	MESSAGE_BEGIN( MSG_ALL, gmsgTeamInfo );
-		WRITE_BYTE( clientIndex );
-		WRITE_STRING( pPlayer->m_szTeamName );
-	MESSAGE_END();
-
-	MESSAGE_BEGIN( MSG_ALL, gmsgScoreInfo );
-		WRITE_BYTE( clientIndex );
-		WRITE_SHORT( pPlayer->pev->frags );
-		WRITE_SHORT( pPlayer->m_iDeaths );
-		WRITE_SHORT( 0 );
-		WRITE_SHORT( g_pGameRules->GetTeamIndex( pPlayer->m_szTeamName ) + 1 );
-	MESSAGE_END();
-}
-
-
 //=========================================================
 // ClientUserInfoChanged
 //=========================================================
