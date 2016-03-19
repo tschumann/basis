@@ -23,13 +23,55 @@
 #include "extdll.h"
 #include "util.h"
 #include "cbase.h"
-#include "nodes.h"
+#include "monsters.h"
+#include "mod/modgame.h"
 #include "mod/modmonster.h"
-#include "animation.h"
-#include "saverestore.h"
-#include "weapons.h"
-#include "scripted.h"
-#include "squadmonster.h"
-#include "decals.h"
-#include "soundent.h"
-#include "gamerules.h"
+
+void CModMonster::BecomeDead( void )
+{
+	CBaseMonster::BecomeDead();
+
+	if ( ragdolls.value )
+	{
+		pev->flags &= ~FL_ONGROUND;
+		pev->origin.z += 2;
+		pev->velocity = g_vecAttackDir * -1;
+		pev->velocity = pev->velocity * RANDOM_FLOAT( 300, 400 );
+	}
+}
+
+//=========================================================
+// DeadTakeDamage - takedamage function called when a monster's
+// corpse is damaged.
+//=========================================================
+int CModMonster :: DeadTakeDamage( entvars_t *pevInflictor, entvars_t *pevAttacker, float flDamage, int bitsDamageType )
+{
+	Vector			vecDir;
+
+	// grab the vector of the incoming attack. ( pretend that the inflictor is a little lower than it really is, so the body will tend to fly upward a bit).
+	vecDir = Vector( 0, 0, 0 );
+	if (!FNullEnt( pevInflictor ))
+	{
+		CBaseEntity *pInflictor = CBaseEntity :: Instance( pevInflictor );
+		if (pInflictor)
+		{
+			vecDir = ( pInflictor->Center() - Vector ( 0, 0, 10 ) - Center() ).Normalize();
+			vecDir = g_vecAttackDir = vecDir.Normalize();
+		}
+	}
+
+	// turn this back on when the bounding box issues are resolved.
+	if ( ragdolls.value )
+	{
+		pev->flags &= ~FL_ONGROUND;
+		pev->origin.z += 1;
+		
+		// let the damage scoot the corpse around a bit.
+		if ( !FNullEnt(pevInflictor) && (pevAttacker->solid != SOLID_TRIGGER) )
+		{
+			pev->velocity = pev->velocity + vecDir * -DamageForce( flDamage );
+		}
+	}
+
+	return CBaseMonster::DeadTakeDamage(pevInflictor, pevAttacker, flDamage, bitsDamageType);
+}

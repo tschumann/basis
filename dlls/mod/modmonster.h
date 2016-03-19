@@ -23,6 +23,7 @@ class CModMonster : public CBaseMonster
 {
 public:
 	virtual void BecomeDead( void );
+	virtual int DeadTakeDamage( entvars_t *pevInflictor, entvars_t *pevAttacker, float flDamage, int bitsDamageType );
 };
 
 #endif // MODMONSTER_H
