@@ -28,6 +28,7 @@
 #include "cbase.h"
 #include "saverestore.h"
 #include "player.h"
+#include "mod/modplayer.h"
 #include "spectator.h"
 #include "client.h"
 #include "soundent.h"
@@ -198,7 +199,7 @@ void ClientPutInServer( edict_t *pEntity )
 
 	entvars_t *pev = &pEntity->v;
 
-	pPlayer = GetClassPtr((CBasePlayer *)pev);
+	pPlayer = GetClassPtr((CModPlayer *)pev);
 	pPlayer->SetCustomDecalFrames(-1); // Assume none;
 
 	// Allocate a CBasePlayer for pev, and call spawn
