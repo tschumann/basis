@@ -149,7 +149,7 @@ void respawn(entvars_t* pev, BOOL fCopyCorpse)
 		}
 
 		// respawn player
-		GetClassPtr( (CBasePlayer *)pev)->Spawn( );
+		GetClassPtr( (CModPlayer *)pev)->Spawn( );
 	}
 	else
 	{       // restart the entire server
