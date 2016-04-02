@@ -167,6 +167,7 @@ OBJ = \
 	$(DLL_OBJDIR)/world.o \
 	$(DLL_OBJDIR)/xen.o \
 	$(DLL_OBJDIR)/zombie.o \
+	$(DLL_OBJDIR)/mod/construction.o \
 	$(DLL_OBJDIR)/mod/modentity.o \
 	$(DLL_OBJDIR)/mod/modgame.o \
 	$(DLL_OBJDIR)/mod/modmonster.o \

@@ -2581,6 +2581,10 @@
 				Name="mod"
 				>
 				<File
+					RelativePath=".\mod\construction.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\mod\modentity.cpp"
 					>
 				</File>
