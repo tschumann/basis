@@ -147,6 +147,7 @@ $(HL1_OBJ_DIR):
 	mkdir -p $(HL1_OBJ_DIR)
 	mkdir -p $(HL1_OBJ_DIR)/hl
 	mkdir -p $(HL1_OBJ_DIR)/dlls/wpn_shared
+	mkdir -p $(HL1_OBJ_DIR)/mod
 	mkdir -p $(HL1_OBJ_DIR)/VGUI
 
 $(HL1_SERVER_OBJ_DIR):

@@ -15,7 +15,7 @@
 #ifndef MODPLAYER_H
 #define MODPLAYER_H
 
-#include "player.h"
+#include "../player.h"
 
 class CModPlayer : public CBasePlayer
 {

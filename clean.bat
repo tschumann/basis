@@ -4,14 +4,14 @@ call settings.bat
 :: tidy up the mod directory
 del %moddir%\voice_ban.dt
 
-:: code related stuff
+:: code-related stuff
 rmdir /s /q cl_dll\Debug
 rmdir /s /q cl_dll\Release
 rmdir /s /q dlls\Debug
 rmdir /s /q dlls\debughl
 rmdir /s /q dlls\Releasehl
 
-:: map related stuff
+:: map-related stuff
 del mapsrc\*.bsp
 del mapsrc\*.rmx
 del mapsrc\*.max

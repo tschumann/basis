@@ -14,12 +14,14 @@ CC=gcc
 DLL_SRCDIR=.
 ENGINE_SRCDIR=../engine
 COMMON_SRCDIR=../common
+MOD_SRCDIR=./mod
 WPN_SHARED_SRCDIR=./wpn_shared
 PM_SHARED_SRCDIR=../pm_shared
 GAME_SHARED_SRCDIR=../game_shared
 PUBLIC_SRCDIR=../public
 
 DLL_OBJDIR=$(DLL_SRCDIR)/obj
+MOD_OBJDIR=$(MOD_SRCDIR)/obj
 WPN_SHARED_OBJDIR=$(WPN_SHARED_SRCDIR)/obj
 PM_SHARED_OBJDIR=$(PM_SHARED_SRCDIR)/obj
 GAME_SHARED_OBJDIR=$(GAME_SHARED_SRCDIR)/obj
@@ -55,6 +57,9 @@ DO_CC=$(CC) $(CFLAGS) $(SHLIBCFLAGS) $(INCLUDEDIRS) -o $@ -c $<
 #############################################################################
 
 $(DLL_OBJDIR)/%.o: $(DLL_SRCDIR)/%.cpp
+	$(DO_CC)
+
+$(MOD_OBJDIR)/%.o: $(MOD_SRCDIR)/%.cpp
 	$(DO_CC)
 
 $(WPN_SHARED_OBJDIR)/%.o: $(WPN_SHARED_SRCDIR)/%.cpp
@@ -167,11 +172,11 @@ OBJ = \
 	$(DLL_OBJDIR)/world.o \
 	$(DLL_OBJDIR)/xen.o \
 	$(DLL_OBJDIR)/zombie.o \
-	$(DLL_OBJDIR)/mod/construction.o \
-	$(DLL_OBJDIR)/mod/modentity.o \
-	$(DLL_OBJDIR)/mod/modgame.o \
-	$(DLL_OBJDIR)/mod/modmonster.o \
-	$(DLL_OBJDIR)/mod/modplayer.o \
+	$(MOD_OBJDIR)/construction.o \
+	$(MOD_OBJDIR)/modentity.o \
+	$(MOD_OBJDIR)/modgame.o \
+	$(MOD_OBJDIR)/modmonster.o \
+	$(MOD_OBJDIR)/modplayer.o \
 	$(WPN_SHARED_OBJDIR)/hl_wpn_glock.o \
 	$(COMMON_OBJDIR)/interface.o \
 	$(GAME_SHARED_OBJDIR)/voice_gamemgr.o \
@@ -184,6 +189,7 @@ $(DLLNAME)_$(ARCH).$(SHLIBEXT) : neat $(OBJ)
 
 neat:
 	-mkdir $(DLL_OBJDIR)
+	-mkdir $(MOD_OBJDIR)
 	-mkdir $(WPN_SHARED_OBJDIR)
 	-mkdir $(COMMON_OBJDIR)
 	-mkdir $(GAME_SHARED_OBJDIR)
@@ -193,6 +199,7 @@ clean:
 	-rm -f $(DLLNAME)_$(ARCH).$(SHLIBEXT)
 spotless: clean
 	-rm -r $(DLL_OBJDIR)
+	-rm -r $(MOD_OBJDIR)
 	-rm -r $(WPN_SHARED_OBJDIR)
 	-rm -r $(COMMON_OBJDIR)
 	-rm -r $(GAME_SHARED_OBJDIR)

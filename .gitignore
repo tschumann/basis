@@ -39,8 +39,10 @@ Thumbs.db
 *~
 hl_cdll_map.txt
 hl_map.txt
+common/obj
 game_shared/obj
 dlls/obj
+dlls/mod/obj
 dlls/wpn_shared/obj
 pm_shared/obj
 linux/release/obj/
