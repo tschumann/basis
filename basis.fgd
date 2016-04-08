@@ -8,6 +8,9 @@
 //
 
 //
+// apr 09 2016
+//  - added monster_construction_dead
+//
 // feb 04 2016
 //  - set env_fog density to more sensible value
 // 
@@ -1839,7 +1842,7 @@
 @PointClass base(Monster,TalkMonster, Sequence) size(-16 -16 0, 16 16 72) studio("models/barney.mdl") = monster_barney : "Barney" []
 @PointClass base(RenderFields,Appearflags, Angles, Sequence) size(-16 -16 0, 16 16 72) = monster_barney_dead : "Dead Barney" 
 [
-      pose(Choices) : "Pose" : 0 =
+    pose(Choices) : "Pose" : 0 =
 	[
 		0 : "On back"
 		1 : "On side"
@@ -1853,6 +1856,15 @@
 @PointClass base(Monster, Sequence) size(-16 -16 0, 16 16 72) studio("models/floater.mdl") = monster_bloater : "Bloater" []
 @PointClass base(Monster, Sequence) size(-32 -32 0, 32 32 64) studio("models/bullsquid.mdl") = monster_bullchicken : "BullChicken" []
 @PointClass base(Monster, Sequence) size(-3 -3 0, 3 3 3) studio("models/roach.mdl") = monster_cockroach : "Cockroach" []
+@PointClass base(RenderFields,Appearflags, Angles, Sequence) size(-16 -16 0, 16 16 72) = monster_construction_dead : "Dead Construction Worker" 
+[
+    pose(Choices) : "Pose" : 0 =
+	[
+		0 : "On back"
+		1 : "On side"
+		2 : "On stomach"
+	]
+]
 @PointClass base(Monster, Sequence) size(-16 -16 0, 16 16 16) studio("models/aflock.mdl") = monster_flyer_flock : "Flock of Flyers" 
 [
 	iFlockSize(Integer) : "Flock Size" : 8
