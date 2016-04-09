@@ -42,7 +42,7 @@ public:
 	// printes a debug message to the console
 	virtual void	DPrintf(const char *format, ...) = 0;
 
-	virtual void	SetParent( VPANEL parent ) = 0;
+	virtual void	SetParent(VPANEL parent) = 0;
 };
 
 #define GAMECONSOLE_INTERFACE_VERSION "GameConsole003"

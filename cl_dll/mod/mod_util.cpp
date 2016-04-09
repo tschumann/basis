@@ -29,6 +29,8 @@
 CSysModule *g_hGameUIModule = NULL;
 #include "IGameConsole.h"
 IGameConsole *g_pGameConsole = NULL;
+#include "IMusicManager.h"
+IMusicManager *g_pMusicManager = NULL;
 
 #include "VGUI2.h"
 CSysModule *g_hVGUI2Module = NULL;
@@ -102,6 +104,13 @@ void CL_LoadGameUI( void )
 	if ( g_pGameConsole )
 	{
 		ConsoleDPrintf( "%s interface instantiated\n", GAMECONSOLE_INTERFACE_VERSION );
+	}
+
+	g_pMusicManager = (IMusicManager *)gameUIFactory( MUSICMANAGER_INTERFACE_VERSION, NULL);
+
+	if ( g_pMusicManager )
+	{
+		ConsoleDPrintf( "%s interface instantiated\n", MUSICMANAGER_INTERFACE_VERSION );
 	}
 }
 
