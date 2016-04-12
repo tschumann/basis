@@ -5,11 +5,11 @@ call settings.bat
 del %moddir%\voice_ban.dt
 
 :: code-related stuff
-rmdir /s /q cl_dll\Debug
-rmdir /s /q cl_dll\Release
-rmdir /s /q dlls\Debug
-rmdir /s /q dlls\debughl
-rmdir /s /q dlls\Releasehl
+rmdir /s /q cl_dll\Debug\
+rmdir /s /q cl_dll\Release\
+rmdir /s /q dlls\Debug\
+rmdir /s /q dlls\debughl\
+rmdir /s /q dlls\Releasehl\
 
 :: map-related stuff
 del mapsrc\*.bsp
@@ -20,3 +20,6 @@ del mapsrc\*.max
 del wadsrc\*.wad
 del wadsrc\dev.ls
 del wadsrc\tools.ls
+
+:: filesystem testing stuff
+rmdir /s /q mod\

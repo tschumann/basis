@@ -8,4 +8,6 @@ mkdir %moddir%\dlls\
 mkdir utils\qrad\Release
 copy mapsrc\lights.rad utils\qrad\Release
 
+mkdir mod\
+
 pause
