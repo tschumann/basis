@@ -19,6 +19,8 @@
 #include "monsters.h"
 #endif
 
+#include "mod/modmonster.h"
+
 //=========================================================
 // Talking monster base class
 // Used for scientists and barneys
@@ -95,7 +97,7 @@ enum
 	LAST_TALKMONSTER_TASK,			// MUST be last
 };
 
-class CTalkMonster : public CBaseMonster
+class CTalkMonster : public CModMonster
 {
 public:
 	void			TalkInit( void );				
