@@ -14,3 +14,6 @@ for /D %%d in (*) do (
 
 	copy %%~nd.wad ..\%1
 )
+
+:: clean up the generated files
+del *.wad

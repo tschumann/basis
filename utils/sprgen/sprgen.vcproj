@@ -2,8 +2,8 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="qlumpy"
-	ProjectGUID="{C454C4B3-CC8D-47F7-9F88-E6CC0B2490EF}"
+	Name="sprgen"
+	ProjectGUID="{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>
@@ -37,24 +37,25 @@
 			/>
 			<Tool
 				Name="VCMIDLTool"
-				TypeLibraryName=".\Release/qlumpy.tlb"
+				TypeLibraryName=".\Release/sprgen.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="2"
+				Optimization="1"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\common"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				StringPooling="true"
 				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
-				PrecompiledHeaderFile=".\Release/qlumpy.pch"
+				PrecompiledHeaderFile=".\Release/sprgen.pch"
 				AssemblerListingLocation=".\Release/"
 				ObjectFile=".\Release/"
 				ProgramDataBaseFileName=".\Release/"
-				WarningLevel="2"
+				WarningLevel="3"
 				SuppressStartupBanner="true"
+				DebugInformationFormat="3"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -69,10 +70,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\Release/qlumpy.exe"
+				OutputFile=".\Release/sprgen.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
-				ProgramDatabaseFile=".\Release/qlumpy.pdb"
+				GenerateDebugInformation="true"
+				ProgramDatabaseFile=".\Release/sprgen.pdb"
 				SubSystem="1"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
@@ -90,7 +92,7 @@
 			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
-				OutputFile=".\Release/qlumpy.bsc"
+				OutputFile=".\Release/sprgen.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -125,7 +127,7 @@
 			/>
 			<Tool
 				Name="VCMIDLTool"
-				TypeLibraryName=".\Debug/qlumpy.tlb"
+				TypeLibraryName=".\Debug/sprgen.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -135,12 +137,11 @@
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				RuntimeLibrary="1"
-				PrecompiledHeaderFile=".\Debug/qlumpy.pch"
+				PrecompiledHeaderFile=".\Debug/sprgen.pch"
 				AssemblerListingLocation=".\Debug/"
 				ObjectFile=".\Debug/"
 				ProgramDataBaseFileName=".\Debug/"
 				BrowseInformation="1"
-				WarningLevel="2"
 				SuppressStartupBanner="true"
 				DebugInformationFormat="4"
 			/>
@@ -157,11 +158,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\Debug/qlumpy.exe"
+				OutputFile=".\Debug/sprgen.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
 				GenerateDebugInformation="true"
-				ProgramDatabaseFile=".\Debug/qlumpy.pdb"
+				ProgramDatabaseFile=".\Debug/sprgen.pdb"
 				SubSystem="1"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
@@ -179,7 +180,7 @@
 			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
-				OutputFile=".\Debug/qlumpy.bsc"
+				OutputFile=".\Debug/sprgen.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -244,50 +245,6 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="qlumpy.c"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="quakegrb.c"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-			</File>
-			<File
 				RelativePath="..\common\scriplib.c"
 				>
 				<FileConfiguration
@@ -310,7 +267,7 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\common\wadlib.c"
+				RelativePath="sprgen.c"
 				>
 				<FileConfiguration
 					Name="Release|Win32"
@@ -345,15 +302,11 @@
 				>
 			</File>
 			<File
-				RelativePath="qlumpy.h"
-				>
-			</File>
-			<File
 				RelativePath="..\common\scriplib.h"
 				>
 			</File>
 			<File
-				RelativePath="..\common\wadlib.h"
+				RelativePath="spritegn.h"
 				>
 			</File>
 		</Filter>

@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9.00"
 	Name="makels"
-	ProjectGUID="{FF6349B6-9D49-4540-97FC-19766E24C013}"
+	ProjectGUID="{6EAB95F8-EBEF-4784-8D79-1E6EA2E42435}"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>

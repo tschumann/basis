@@ -8,22 +8,26 @@ mapsrc/*.rmx
 mapsrc/*.bsp
 mapsrc/*.lin
 mapsrc/*.p*
+spritesrc/*.spr
 wadsrc/*.wad
 # these .ls files are generated
 wadsrc/dev.ls
 wadsrc/tools.ls
+
 utils/makels/Debug
 utils/makels/Release
-utils/qcsg/Debug
-utils/qcsg/Release
 utils/qbsp2/Debug
 utils/qbsp2/Release
+utils/qcsg/Debug
+utils/qcsg/Release
 utils/qlumpy/Debug
 utils/qlumpy/Release
-utils/visx2/Debug
-utils/visx2/Release
 utils/qrad/Debug
 utils/qrad/Release
+utils/sprgen/Debug
+utils/sprgen/Release
+utils/visx2/Debug
+utils/visx2/Release
 
 mod/
 

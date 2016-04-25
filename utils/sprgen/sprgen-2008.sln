@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sprgen", "sprgen.vcproj", "{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Debug|Win32.Build.0 = Debug|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Release|Win32.ActiveCfg = Release|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
