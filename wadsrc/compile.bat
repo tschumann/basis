@@ -1,9 +1,5 @@
 
-:: check that a mod directory has been passed in
-if "%~1"=="" (
-	echo No mod directory specified!
-	exit /B
-)
+call ..\settings.bat
 
 :: %%d is a variable - why isn't %%dir valid?
 for /D %%d in (*) do (

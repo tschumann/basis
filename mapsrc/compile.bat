@@ -1,9 +1,5 @@
 
-:: check that a mod directory has been passed in
-if "%~1"=="" (
-	echo No mod directory specified!
-	exit /B
-)
+call ..\settings.bat
 
 :: %%f is a variable - why isn't %%map valid?
 for %%f in (*.map) do (

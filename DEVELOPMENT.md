@@ -13,4 +13,4 @@ Take a screenshot.
 liblist.gam
 ===========
 
-Updated mod and developer details here.
+Update mod and developer details here.

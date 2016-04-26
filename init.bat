@@ -5,6 +5,11 @@ call settings.bat
 mkdir %moddir%\cl_dlls\
 mkdir %moddir%\dlls\
 
+:: compile the utilities - build as release as they shouldn't need to be debugged
+%visualstudio%\Common7\IDE\devenv.exe  utils\makels\makels-2008.sln /Build Release
+%visualstudio%\Common7\IDE\devenv.exe  utils\qlumpy\qlumpy-2008.sln /Build Release
+%visualstudio%\Common7\IDE\devenv.exe  utils\sprgren\sprgen-2008.sln /Build Release
+
 :: make sure qrad has a lights file
 mkdir utils\qrad\Release
 copy mapsrc\lights.rad utils\qrad\Release
