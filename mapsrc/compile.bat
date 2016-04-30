@@ -13,5 +13,6 @@ for %%f in (*.map) do (
 )
 
 :: clean up the generated files
+del *.bsp
 del *.lin
 del *.p*

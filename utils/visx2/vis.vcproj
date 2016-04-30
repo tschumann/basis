@@ -49,7 +49,7 @@
 				AssemblerListingLocation=".\Release/"
 				ObjectFile=".\Release/"
 				ProgramDataBaseFileName=".\Release/"
-				BrowseInformation="2"
+				BrowseInformation="0"
 				BrowseInformationFile=".\Release/"
 				SuppressStartupBanner="true"
 			/>
@@ -136,7 +136,7 @@
 				AssemblerListingLocation=".\Debug/"
 				ObjectFile=".\Debug/"
 				ProgramDataBaseFileName=".\Debug/"
-				BrowseInformation="2"
+				BrowseInformation="0"
 				BrowseInformationFile=".\Debug/"
 				SuppressStartupBanner="true"
 				DebugInformationFormat="4"
