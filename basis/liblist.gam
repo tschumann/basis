@@ -7,7 +7,7 @@ gamedir "basis"			// Mod's root directory
 trainmap "t0a0"			// Mod's training map
 startmap "c0a0"			// Mod's start map
 developer "Team Sandpit"									// Developer's name
-developer_url "http://www.moddb.com/groups/team-sandpit"	// Developer's website
+developer_url "http://www.teamsandpit.com"	// Developer's website
 
 icon "game"			// Steam icon; relative path to 32x32 uncompressed .tga
 
