@@ -37,36 +37,40 @@ CSysModule *g_hVGUI2Module = NULL;
 
 void ConsolePrintf( const char *format, ... )
 {
+	char string[1024];
+
 	va_list args;
 	va_start(args, format);
+	vsprintf(string, format, args);
+	va_end(args);
 
 	if( g_pGameConsole )
 	{
-		g_pGameConsole->Printf( format, args );
+		g_pGameConsole->Printf( string );
 	}
 	else
 	{
-		gEngfuncs.Con_Printf( (char *)format, args );
+		gEngfuncs.Con_Printf( string );
 	}
-
-	va_end(args);
 }
 
 void ConsoleDPrintf( const char *format, ... )
 {
+	char string[1024];
+
 	va_list args;
 	va_start(args, format);
+	vsprintf(string, format, args);
+	va_end(args);
 
 	if( g_pGameConsole )
 	{
-		g_pGameConsole->DPrintf( format, args );
+		g_pGameConsole->DPrintf( string );
 	}
 	else
 	{
-		gEngfuncs.Con_DPrintf( (char *)format, args );
+		gEngfuncs.Con_DPrintf( string );
 	}
-
-	va_end(args);
 }
 
 void CL_UnloadGameUI( void )
