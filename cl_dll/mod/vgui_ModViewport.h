@@ -23,11 +23,31 @@
 
 #include "vgui_TeamFortressViewport.h"
 
+class CModPanel;
+
 //==============================================================================
 class ModViewport : public TeamFortressViewport
 {
 public:
 	ModViewport(int x,int y,int wide,int tall);
+
+	virtual void SetCurrentMenu( CMenuPanel *pMenu );
+
+	CModPanel	*m_pModPanel;
+};
+
+//================================================================
+// Mod Panel
+//============================================================
+class CModPanel : public CMenuPanel
+{
+private:
+	CTransparentPanel   *m_pPanel;
+	Label               *m_pTitle;
+	CommandButton       *m_pCancelButton;
+
+public:
+	CModPanel( int iTrans, int iRemoveMe, int x, int y, int wide, int tall );
 };
 
 #endif

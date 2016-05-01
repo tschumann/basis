@@ -2066,15 +2066,12 @@
 					>
 				</File>
 				<File
+					RelativePath=".\mod\vgui_modpanel.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\mod\vgui_ModViewport.cpp"
 					>
-					<FileConfiguration
-						Name="Debug|Win32"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-						/>
-					</FileConfiguration>
 				</File>
 			</Filter>
 		</Filter>

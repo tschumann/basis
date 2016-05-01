@@ -63,3 +63,16 @@
 ModViewport::ModViewport(int x, int y, int wide, int tall) : TeamFortressViewport(x, y, wide, tall)
 {
 }
+
+void ModViewport::SetCurrentMenu( CMenuPanel *pMenu )
+{
+	m_pCurrentMenu = pMenu;
+	if ( m_pCurrentMenu )
+	{
+		m_pCurrentMenu->Open();
+	}
+	else
+	{
+		gEngfuncs.pfnClientCmd( "closemenus;" );
+	}
+}

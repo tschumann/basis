@@ -574,7 +574,7 @@ public:
 	void InputSignalHideCommandMenu( void );
 	void HideCommandMenu( void );
 	void SetCurrentCommandMenu( CCommandMenu *pNewMenu );
-	void SetCurrentMenu( CMenuPanel *pMenu );
+	virtual void SetCurrentMenu( CMenuPanel *pMenu );
 
 	void ShowScoreBoard( void );
 	void HideScoreBoard( void );
