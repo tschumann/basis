@@ -5,9 +5,13 @@ call ..\settings.bat
 for %%f in (*.map) do (
 	echo Compiling %%~nf
 	..\utils\qcsg\Release\qcsg.exe %%~nf.map
+	sleep 1
 	..\utils\qbsp2\Release\qbsp2.exe %%~nf.bsp
+	sleep 1
 	..\utils\visx2\Release\vis.exe %%~nf.bsp
+	sleep 1
 	..\utils\qrad\Release\qrad.exe %%~nf.bsp
+	sleep 1
 
 	copy %%~nf.bsp ..\%moddir%\maps
 )

@@ -5,6 +5,7 @@ call ..\settings.bat
 for %%f in (*.qc) do (
 	echo Compiling %%~nf
 	..\utils\sprgen\Release\sprgen.exe %%~nf.qc
+	sleep 1
 
 	copy %%~nf.spr ..\%moddir%\sprites
 )
