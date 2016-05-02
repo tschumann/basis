@@ -4,7 +4,7 @@
 "sounds" "1"
 "MaxRange" "4096"
 "mapversion" "220"
-"wad" "\users\tom\desktop\hammer editor\halflife.wad"
+"wad" "\program files (x86)\steam\steamapps\common\half-life\valve\halflife.wad;\users\tom\documents\github\basis\basis\dev.wad;\users\tom\documents\github\basis\basis\tools.wad;\users\tom\documents\github\basis\basis\zhlt.wad"
 {
 ( 0 512 0 ) ( 1024 512 0 ) ( 1024 -512 0 ) -0BABFL [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1 
 ( 0 -512 -64 ) ( 1024 -512 -64 ) ( 1024 512 -64 ) -0BABFL [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1 
@@ -92,4 +92,24 @@
 "body" "-1"
 "sequence" "13"
 "origin" "512 384 0"
+}
+{
+"classname" "weapon_shotgun"
+"angles" "0 0 0"
+"origin" "576 0 0"
+}
+{
+"classname" "weapon_shotgun"
+"angles" "0 0 0"
+"origin" "448 0 0"
+}
+{
+"classname" "weapon_handgrenade"
+"angles" "0 0 0"
+"origin" "512 64 0"
+}
+{
+"classname" "weapon_handgrenade"
+"angles" "0 0 0"
+"origin" "512 -64 0"
 }

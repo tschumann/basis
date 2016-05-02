@@ -4,7 +4,7 @@
 "sounds" "1"
 "MaxRange" "4096"
 "mapversion" "220"
-"wad" "\users\tom\documents\projects\basis\dev\basis\tools.wad;\users\tom\desktop\hammer editor\halflife.wad"
+"wad" "\program files (x86)\steam\steamapps\common\half-life\valve\halflife.wad;\users\tom\documents\github\basis\basis\dev.wad;\users\tom\documents\github\basis\basis\tools.wad;\users\tom\documents\github\basis\basis\zhlt.wad"
 {
 ( -512 512 64 ) ( 512 512 64 ) ( 512 -512 64 ) -0BABFL [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1 
 ( -512 -512 0 ) ( 512 -512 0 ) ( 512 512 0 ) -0BABFL [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1 
