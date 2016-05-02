@@ -27,6 +27,15 @@
 #include "modplayer.h"
 
 
+int gmsgFog = 0;
+int gmsgVGUIMenu = 0;
+
+void LinkModUserMessages( void )
+{
+	gmsgFog = REG_USER_MSG("Fog", 25 );
+	gmsgVGUIMenu = REG_USER_MSG("VGUIMenu", 1 );
+}
+
 //=========================================================
 // 
 //=========================================================
