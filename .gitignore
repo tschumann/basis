@@ -29,8 +29,6 @@ utils/sprgen/Release
 utils/visx2/Debug
 utils/visx2/Release
 
-mod/
-
 # don't commit what can be compiled
 basis/cl_dlls/*.dll
 basis/dlls/*.dll

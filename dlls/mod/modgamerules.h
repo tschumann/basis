@@ -12,15 +12,8 @@
 *   without written permission from Valve LLC.
 *
 ****/
-#ifndef MODPLAYER_H
-#define MODPLAYER_H
+//=========================================================
+// ModGameRules
+//=========================================================
 
-#include "../player.h"
-
-class CModPlayer : public CBasePlayer
-{
-public:
-	virtual void UpdateClientData( void );
-};
-
-#endif // MODPLAYER_H
+extern CGameRules *InstallModGameRules( void );

@@ -36,21 +36,6 @@ void LinkModUserMessages( void )
 	gmsgVGUIMenu = REG_USER_MSG("VGUIMenu", 1 );
 }
 
-//=========================================================
-// 
-//=========================================================
-BOOL CModPlayer :: SwitchWeapon( CBasePlayerItem *pWeapon ) 
-{
-	if ( atof(g_engfuncs.pfnInfoKeyValue( g_engfuncs.pfnGetInfoKeyBuffer( this->edict() ), "cl_autowepswitch" )) )
-	{
-		return TRUE;
-	}
-	else
-	{
-		return CBasePlayer::SwitchWeapon( pWeapon );
-	}
-}
-
 /*
 =========================================================
 	UpdateClientData
@@ -64,8 +49,6 @@ reflecting all of the HUD state info.
 */
 void CModPlayer :: UpdateClientData( void )
 {
-	CBasePlayer::UpdateClientData();
-
 	if (m_fInitHUD)
 	{
 		if ( !m_fGameHUDInitialized )
@@ -101,6 +84,8 @@ void CModPlayer :: UpdateClientData( void )
 			MESSAGE_END();
 		}
 	}
+
+	CBasePlayer::UpdateClientData();
 }
 
 LINK_ENTITY_TO_CLASS( player, CModPlayer );

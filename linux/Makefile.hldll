@@ -142,6 +142,8 @@ HLMOD_OBJS = \
 	$(HLMOD_OBJ_DIR)/modentity.o \
 	$(HLMOD_OBJ_DIR)/modgame.o \
 	$(HLMOD_OBJ_DIR)/modmonster.o \
+	$(HLMOD_OBJ_DIR)/modgamerules.o \
+	$(HLMOD_OBJ_DIR)/modmultiplay_gamerules.o \
 	$(HLMOD_OBJ_DIR)/modplayer.o
 
 HLWPN_OBJS = \

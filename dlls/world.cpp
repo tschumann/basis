@@ -32,6 +32,7 @@
 #include "player.h"
 #include "weapons.h"
 #include "gamerules.h"
+#include "mod/modgamerules.h"
 #include "teamplay_gamerules.h"
 
 extern CGraph WorldGraph;
@@ -496,7 +497,7 @@ void CWorld :: Precache( void )
 		delete g_pGameRules;
 	}
 
-	g_pGameRules = InstallGameRules( );
+	g_pGameRules = InstallModGameRules( );
 
 	//!!!UNDONE why is there so much Spawn code in the Precache function? I'll just keep it here 
 

@@ -12,15 +12,13 @@
 *   without written permission from Valve LLC.
 *
 ****/
-#ifndef MODPLAYER_H
-#define MODPLAYER_H
+//
+// modmultiplay_gamerules.h
+//
 
-#include "../player.h"
-
-class CModPlayer : public CBasePlayer
+class CModMultiplay : public CHalfLifeMultiplay
 {
 public:
-	virtual void UpdateClientData( void );
+	virtual BOOL IsCoOp( void );
+	virtual BOOL FShouldSwitchWeapon( CBasePlayer *pPlayer, CBasePlayerItem *pWeapon );
 };
-
-#endif // MODPLAYER_H

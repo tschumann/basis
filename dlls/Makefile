@@ -176,6 +176,8 @@ OBJ = \
 	$(MOD_OBJDIR)/modentity.o \
 	$(MOD_OBJDIR)/modgame.o \
 	$(MOD_OBJDIR)/modmonster.o \
+	$(MOD_OBJDIR)/modgamerules.o \
+	$(MOD_OBJDIR)/modmultiplay_gamerules.o \
 	$(MOD_OBJDIR)/modplayer.o \
 	$(WPN_SHARED_OBJDIR)/hl_wpn_glock.o \
 	$(COMMON_OBJDIR)/interface.o \
