@@ -308,6 +308,26 @@ void CL_DLLEXPORT HUD_DirectorMessage( int iSize, void *pbuf )
 	gHUD.m_Spectator.DirectorMessage( iSize, pbuf );
 }
 
+/*
+==========================
+HUD_GetPlayerTeam
+==========================
+*/
+int CL_DLLEXPORT HUD_GetPlayerTeam( int iplayer )
+{
+	return gEngfuncs.GetEntityByIndex( iplayer )->curstate.team;
+}
+
+/*
+==========================
+ClientFactory
+==========================
+*/
+void CL_DLLEXPORT *ClientFactory()
+{
+	return NULL;
+}
+
 void CL_UnloadParticleMan( void )
 {
 	Sys_UnloadModule( g_hParticleManModule );
@@ -400,6 +420,8 @@ extern "C" void CL_DLLEXPORT F(void *pv)
 	HUD_DirectorMessage,
 	HUD_GetStudioModelInterface,
 	HUD_ChatInputPosition,
+	HUD_GetPlayerTeam,
+	ClientFactory
 	};
 
 	*pcldll_func = cldll_func;
