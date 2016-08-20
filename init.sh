@@ -3,6 +3,10 @@ sh ./settings.sh
 
 mkdir $MODDIR/cl_dlls/
 mkdir $MODDIR/dlls/
+# need to create these, otherwise the compile scripts don't copy correctly
+mkdir $MODDIR/maps/
+mkdir $MODDIR/models/
+mkdir $MODDIR/sprites/
 
 # create directories for filsystem testing assets
 mkdir mod/
