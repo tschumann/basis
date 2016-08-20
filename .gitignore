@@ -26,6 +26,8 @@ utils/qrad/Debug
 utils/qrad/Release
 utils/sprgen/Debug
 utils/sprgen/Release
+utils/studiomdl/Debug
+utils/studiomdl/Release
 utils/visx2/Debug
 utils/visx2/Release
 
