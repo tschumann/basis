@@ -2585,6 +2585,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\mod\modeffects.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\mod\modentity.cpp"
 					>
 				</File>

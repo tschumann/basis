@@ -139,6 +139,7 @@ HLDLL_OBJS = \
 
 HLMOD_OBJS = \
 	$(HLMOD_OBJ_DIR)/construction.o \
+	$(HLMOD_OBJ_DIR)/modeffects.o \
 	$(HLMOD_OBJ_DIR)/modentity.o \
 	$(HLMOD_OBJ_DIR)/modgame.o \
 	$(HLMOD_OBJ_DIR)/modmonster.o \

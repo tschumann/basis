@@ -173,6 +173,7 @@ OBJ = \
 	$(DLL_OBJDIR)/xen.o \
 	$(DLL_OBJDIR)/zombie.o \
 	$(MOD_OBJDIR)/construction.o \
+	$(MOD_OBJDIR)/modeffects.o \
 	$(MOD_OBJDIR)/modentity.o \
 	$(MOD_OBJDIR)/modgame.o \
 	$(MOD_OBJDIR)/modmonster.o \
