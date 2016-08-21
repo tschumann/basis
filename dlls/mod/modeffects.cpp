@@ -15,13 +15,8 @@
 #include "extdll.h"
 #include "util.h"
 #include "cbase.h"
-#include "monsters.h"
 #include "customentity.h"
 #include "effects.h"
-#include "weapons.h"
-#include "decals.h"
-#include "func_break.h"
-#include "shake.h"
 
 //=========================================================
 // Fog

@@ -57,4 +57,13 @@ void ModDLLInit( void )
 	CVAR_REGISTER ( &sk_construction_health3 );
 
 	LoadFileSystem();
+
+	if( g_pFileSystem )
+	{
+		g_pFileSystem->AddSearchPath("mod", "mod");
+
+		PRECACHE_MODEL("models/test.mdl");
+		PRECACHE_MODEL("sprites/test.spr");
+		PRECACHE_SOUND("sounds/test.wav");
+	}
 }
