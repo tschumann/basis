@@ -56,6 +56,8 @@ void ModDLLInit( void )
 	CVAR_REGISTER ( &sk_construction_health2 );
 	CVAR_REGISTER ( &sk_construction_health3 );
 
+	PRECACHE_MODEL("models/null.mdl");
+
 	LoadFileSystem();
 
 	if( g_pFileSystem )
