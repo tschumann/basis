@@ -127,7 +127,11 @@
 [ 
 	target(target_destination) : "Target" 
 ]
-@BaseClass size(-16 -16 0, 16 16 32) color(0 0 200) base(Targetname, Appearflags, Angles) = Weapon []
+@BaseClass size(-16 -16 0, 16 16 32) color(0 0 200) base(Targetname, Appearflags, Angles) = Weapon
+[
+	// which player can pick this up in coop
+	player_index(string) : "Coop owner" : "0"
+]
 @BaseClass = Global 
 [ 
 	globalname(string) : "Global Entity Name" 

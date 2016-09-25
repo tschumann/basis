@@ -251,6 +251,17 @@ int CHalfLifeCoop :: WeaponShouldRespawn( CBasePlayerItem *pWeapon )
 }
 
 //=========================================================
+// CanHaveWeapon - returns FALSE if the weapon is for
+// another player
+//=========================================================
+BOOL CHalfLifeCoop::CanHavePlayerItem( CBasePlayer *pPlayer, CBasePlayerItem *pItem )
+{
+	// TODO: ENTINDEX(pPlayer->edict) equals the player_index property of the weapon
+
+	return CHalfLifeMultiplay::CanHavePlayerItem( pPlayer, pItem );
+}
+
+//=========================================================
 // FlWeaponRespawnTime - what is the time in the future
 // at which this weapon may spawn?
 //=========================================================

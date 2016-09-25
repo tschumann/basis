@@ -32,6 +32,7 @@ public:
 	virtual BOOL IsTeamplay( void ) { return false; }
 	virtual BOOL IsCoOp( void ) { return true; }
 	virtual int IPointsForKill( CBasePlayer *pAttacker, CBasePlayer *pKilled );
+	virtual BOOL CanHavePlayerItem( CBasePlayer *pPlayer, CBasePlayerItem *pWeapon );// The player is touching an CBasePlayerItem, do I give it to him?
 	virtual void InitHUD( CBasePlayer *pl );
 	virtual void DeathNotice( CBasePlayer *pVictim, entvars_t *pKiller, entvars_t *pevInflictor );
 	virtual const char *GetGameDescription( void ) { return "HL Coop"; }  // this is the game name that gets seen in the server browser
