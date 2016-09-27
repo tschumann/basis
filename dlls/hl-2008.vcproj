@@ -2829,6 +2829,10 @@
 					RelativePath=".\mod\modplayer.h"
 					>
 				</File>
+				<File
+					RelativePath=".\modweapons.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
