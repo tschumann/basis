@@ -12,16 +12,22 @@
 *   without written permission from Valve LLC.
 *
 ****/
+/*
 
-#ifndef MODWEAPONS_H
-#define MODWEAPONS_H
+===== modweapons.cpp =====================================================
 
+  functions governing the selection/use of weapons for players
+
+*/
+
+#include "extdll.h"
+#include "util.h"
+#include "cbase.h"
+#include "player.h"
+#include "monsters.h"
 #include "weapons.h"
-
-class CModPlayerItem : public CBasePlayerItem
-{
-public:
-	virtual int PlayerIndex();
-};
-
-#endif // MODWEAPONS_H
+#include "modweapons.h"
+#include "nodes.h"
+#include "soundent.h"
+#include "decals.h"
+#include "gamerules.h"

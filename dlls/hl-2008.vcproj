@@ -2612,6 +2612,10 @@
 					RelativePath=".\mod\modplayer.cpp"
 					>
 				</File>
+				<File
+					RelativePath=".\modweapons.cpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter

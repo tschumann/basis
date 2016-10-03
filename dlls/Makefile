@@ -180,6 +180,7 @@ OBJ = \
 	$(MOD_OBJDIR)/modgamerules.o \
 	$(MOD_OBJDIR)/modmultiplay_gamerules.o \
 	$(MOD_OBJDIR)/modplayer.o \
+	$(MOD_OBJDIR)/modweapons.o \
 	$(WPN_SHARED_OBJDIR)/hl_wpn_glock.o \
 	$(COMMON_OBJDIR)/interface.o \
 	$(GAME_SHARED_OBJDIR)/voice_gamemgr.o \
