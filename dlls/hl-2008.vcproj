@@ -2613,7 +2613,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\modweapons.cpp"
+					RelativePath=".\mod\modweapons.cpp"
 					>
 				</File>
 			</Filter>
@@ -2834,7 +2834,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\modweapons.h"
+					RelativePath=".\mod\modweapons.h"
 					>
 				</File>
 			</Filter>

@@ -22,6 +22,9 @@ class CModPlayerItem : public CBasePlayerItem
 {
 public:
 	virtual int PlayerIndex();
+	void KeyValue( KeyValueData *pkvd );
+private:
+	int m_iPlayerIndex;
 };
 
 #endif // MODWEAPONS_H

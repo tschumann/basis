@@ -31,3 +31,15 @@
 #include "soundent.h"
 #include "decals.h"
 #include "gamerules.h"
+
+
+void CModPlayerItem::KeyValue( KeyValueData *pkvd )
+{
+	if (FStrEq(pkvd->szKeyName, "player_index"))
+	{
+		m_iPlayerIndex = atoi(pkvd->szValue);
+		pkvd->fHandled = TRUE;
+	}
+	else 
+		CBasePlayerItem::KeyValue( pkvd );
+}
