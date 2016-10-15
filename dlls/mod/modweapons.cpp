@@ -33,6 +33,11 @@
 #include "gamerules.h"
 
 
+int CModPlayerItem::PlayerIndex()
+{
+	return m_iPlayerIndex;
+}
+
 void CModPlayerItem::KeyValue( KeyValueData *pkvd )
 {
 	if (FStrEq(pkvd->szKeyName, "player_index"))

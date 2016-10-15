@@ -20,6 +20,7 @@
 #include	"cbase.h"
 #include	"player.h"
 #include	"weapons.h"
+#include	"mod/modweapons.h"
 #include	"gamerules.h"
 #include	"coop_gamerules.h"
 #include	"game.h"
@@ -256,7 +257,11 @@ int CHalfLifeCoop :: WeaponShouldRespawn( CBasePlayerItem *pWeapon )
 //=========================================================
 BOOL CHalfLifeCoop::CanHavePlayerItem( CBasePlayer *pPlayer, CBasePlayerItem *pItem )
 {
-	// TODO: ENTINDEX(pPlayer->edict) equals the player_index property of the weapon
+	// TODO: this cast doesn't work and the second parameter's type should be updated
+	if( ENTINDEX(pPlayer->edict()) != ((CModPlayerItem *)pItem)->PlayerIndex() )
+	{
+		return false;
+	}
 
 	return CHalfLifeMultiplay::CanHavePlayerItem( pPlayer, pItem );
 }
