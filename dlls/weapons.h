@@ -282,9 +282,10 @@ public:
 	// int		m_iIdSecondary;										// Unique Id for secondary ammo
 };
 
+#include "mod/modweapons.h"
 
 // inventory items that 
-class CBasePlayerWeapon : public CBasePlayerItem
+class CBasePlayerWeapon : public CModPlayerItem
 {
 public:
 	virtual int		Save( CSave &save );
