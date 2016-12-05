@@ -60,6 +60,11 @@ void ModDLLInit( void )
 
 	LoadFileSystem();
 
+	// make sure the mod_addons directory is loaded, but do it before doing
+	// any other filesystem operations because it reinitialises the
+	// filesystem - see https://github.com/ValveSoftware/halflife/issues/951
+	SERVER_COMMAND("_setaddons_folder 1");
+
 	if( g_pFileSystem )
 	{
 		g_pFileSystem->AddSearchPath("mod", "mod");
