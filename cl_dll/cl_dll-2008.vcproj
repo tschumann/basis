@@ -2066,6 +2066,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\modhud.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\mod\vgui_modpanel.cpp"
 					>
 				</File>
@@ -2248,6 +2252,10 @@
 				>
 				<File
 					RelativePath=".\mod\cl_mod_util.h"
+					>
+				</File>
+				<File
+					RelativePath=".\modhud.h"
 					>
 				</File>
 				<File

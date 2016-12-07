@@ -540,7 +540,7 @@ private:
 
 class CHud
 {
-private:
+protected:
 	HUDLIST						*m_pHudList;
 	HSPRITE						m_hsprLogo;
 	int							m_iLogo;
