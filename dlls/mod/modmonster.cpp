@@ -31,7 +31,7 @@ void CModMonster::BecomeDead( void )
 {
 	CBaseMonster::BecomeDead();
 
-	if ( ragdolls.value )
+	if ( physics.value )
 	{
 		pev->flags &= ~FL_ONGROUND;
 		pev->origin.z += 2;
@@ -61,7 +61,7 @@ int CModMonster :: DeadTakeDamage( entvars_t *pevInflictor, entvars_t *pevAttack
 	}
 
 	// turn this back on when the bounding box issues are resolved.
-	if ( ragdolls.value )
+	if ( physics.value )
 	{
 		pev->flags &= ~FL_ONGROUND;
 		pev->origin.z += 1;
