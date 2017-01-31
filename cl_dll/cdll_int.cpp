@@ -20,7 +20,7 @@
 
 #include "hud.h"
 #include "cl_util.h"
-#include "mod/cl_mod_util.h"
+#include "mod/mod_cl_util.h"
 #include "netadr.h"
 #undef INTERFACE_H
 #include "../public/interface.h"

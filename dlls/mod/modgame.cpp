@@ -16,7 +16,30 @@
 #include "eiface.h"
 #include "util.h"
 #include "game.h"
-#include "mod/modfilesystem.h"
+#include "mod/modgame.h"
+#include "interface.h"
+
+HINTERFACEMODULE hFileSystemModule = NULL;
+#include "FileSystem.h"
+IFileSystem *g_pFileSystem = NULL;
+
+void LoadFileSystem( void )
+{
+	hFileSystemModule = Sys_LoadModule( FILESYSTEM_DLLNAME );
+	CreateInterfaceFn fileSystemFactory = Sys_GetFactory( hFileSystemModule );
+
+	if( fileSystemFactory == NULL )
+	{
+		g_pFileSystem = NULL;
+	}
+
+	g_pFileSystem = (IFileSystem *)fileSystemFactory( FILESYSTEM_INTERFACE_VERSION, NULL );
+
+	if( g_pFileSystem )
+	{
+		ALERT( at_aiconsole, "%s interface instantiated.\n", FILESYSTEM_INTERFACE_VERSION );
+	}
+}
 
 cvar_t	coop		= {"mp_coop","0", FCVAR_SERVER };
 cvar_t	physics		= {"sv_physics", "0"};

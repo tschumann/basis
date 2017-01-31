@@ -2593,10 +2593,6 @@
 					>
 				</File>
 				<File
-					RelativePath="..\common\mod\modfilesystem.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\mod\modgame.cpp"
 					>
 				</File>
@@ -2815,10 +2811,6 @@
 				>
 				<File
 					RelativePath=".\mod\modentity.h"
-					>
-				</File>
-				<File
-					RelativePath="..\common\mod\modfilesystem.h"
 					>
 				</File>
 				<File

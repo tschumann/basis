@@ -2251,7 +2251,7 @@
 				Name="mod"
 				>
 				<File
-					RelativePath=".\mod\cl_mod_util.h"
+					RelativePath=".\mod\mod_cl_util.h"
 					>
 				</File>
 				<File
