@@ -26,7 +26,10 @@
 #include <stdarg.h>
 
 #include "GameUI.h"
+CSysModule *g_hFilesystemModule = NULL;
 CSysModule *g_hGameUIModule = NULL;
+#include "Filesystem.h"
+IFileSystem *g_pFilesystem = NULL;
 #include "IGameConsole.h"
 IGameConsole *g_pGameConsole = NULL;
 #include "IMusicManager.h"
@@ -71,6 +74,17 @@ void ConsoleDPrintf( const char *format, ... )
 	{
 		gEngfuncs.Con_DPrintf( string );
 	}
+}
+
+void CL_UnloadFileSystem( void )
+{
+	Sys_UnloadModule( g_hFilesystemModule );
+
+	g_hFilesystemModule = NULL;
+}
+
+void CL_LoadFileSystem( void )
+{
 }
 
 void CL_UnloadGameUI( void )
