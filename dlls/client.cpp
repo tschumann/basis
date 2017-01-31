@@ -40,6 +40,7 @@
 #include "usercmd.h"
 #include "netadr.h"
 #include "pm_shared.h"
+#include "mod/modgame.h"
 
 #if !defined ( _WIN32 )
 #include <ctype.h>

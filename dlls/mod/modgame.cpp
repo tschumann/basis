@@ -16,32 +16,10 @@
 #include "eiface.h"
 #include "util.h"
 #include "game.h"
-#include "interface.h"
-
-HINTERFACEMODULE hFileSystemModule = NULL;
-#include "FileSystem.h"
-IFileSystem *g_pFileSystem = NULL;
-
-void LoadFileSystem( void )
-{
-	hFileSystemModule = Sys_LoadModule( FILESYSTEM_DLLNAME );
-	CreateInterfaceFn fileSystemFactory = Sys_GetFactory( hFileSystemModule );
-
-	if( fileSystemFactory == NULL )
-	{
-		g_pFileSystem = NULL;
-	}
-
-	g_pFileSystem = (IFileSystem *)fileSystemFactory( FILESYSTEM_INTERFACE_VERSION, NULL );
-
-	if( g_pFileSystem )
-	{
-		ALERT( at_aiconsole, "%s interface instantiated.\n", FILESYSTEM_INTERFACE_VERSION );
-	}
-}
+#include "mod/modfilesystem.h"
 
 cvar_t	coop		= {"mp_coop","0", FCVAR_SERVER };
-cvar_t	physics	= {"sv_physics", "0"};
+cvar_t	physics		= {"sv_physics", "0"};
 
 // Construction Worker
 cvar_t	sk_construction_health1 = {"sk_construction_health1","0"};
@@ -50,6 +28,7 @@ cvar_t	sk_construction_health3 = {"sk_construction_health3","0"};
 
 void ModDLLInit( void )
 {
+	CVAR_REGISTER ( &coop );
 	CVAR_REGISTER ( &physics );
 
 	CVAR_REGISTER ( &sk_construction_health1 );
@@ -65,7 +44,7 @@ void ModDLLInit( void )
 	// filesystem - see https://github.com/ValveSoftware/halflife/issues/951
 	SERVER_COMMAND("_setaddons_folder 1");
 
-	if( g_pFileSystem )
+	if( g_pFileSystem && IS_DEDICATED_SERVER() )
 	{
 		g_pFileSystem->AddSearchPath("mod", "mod");
 

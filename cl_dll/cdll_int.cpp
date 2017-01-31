@@ -159,6 +159,8 @@ int CL_DLLEXPORT Initialize( cl_enginefunc_t *pEnginefuncs, int iVersion )
 	CL_LoadGameUI();
 	CL_LoadVGUI2();
 
+	gEngfuncs.pfnClientCmd("_setaddons_folder 1");
+
 	// get tracker interface, if any
 	return 1;
 }

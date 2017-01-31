@@ -16,8 +16,13 @@
 #ifndef MODGAME_H
 #define MODGAME_H
 
+#include "interface.h"
+
+extern HINTERFACEMODULE hFileSystemModule;
+
 extern void ModDLLInit( void );
 
-extern cvar_t physics;
+extern cvar_t	physics;
+extern cvar_t	coop;
 
 #endif		// MODGAME_H

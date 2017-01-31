@@ -36,6 +36,4 @@
 void CModHud :: Init( void )
 {
 	CHud::Init();
-
-	gEngfuncs.pfnClientCmd("_setaddons_folder 1");
 }
