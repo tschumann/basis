@@ -25,6 +25,16 @@
 
 #include <stdarg.h>
 
+#ifdef _WIN32
+#define FILESYSTEM_DLLNAME "../FileSystem_Steam.dll"
+#elif defined(OSX)
+#define FILESYSTEM_DLLNAME "../FileSystem_Steam.dylib"
+#elif defined(__linux__)
+#define FILESYSTEM_DLLNAME "../FileSystem_Steam.so"
+#else
+#error
+#endif
+
 #include "GameUI.h"
 CSysModule *g_hFilesystemModule = NULL;
 CSysModule *g_hGameUIModule = NULL;
@@ -85,6 +95,31 @@ void CL_UnloadFileSystem( void )
 
 void CL_LoadFileSystem( void )
 {
+	char szPDir[512];
+
+	if ( gEngfuncs.COM_ExpandFilename( FILESYSTEM_DLLNAME, szPDir, sizeof( szPDir ) ) == FALSE )
+	{
+		ConsoleDPrintf( "Unable to load %s\n", FILESYSTEM_DLLNAME );
+		g_hFilesystemModule = NULL;
+		return;
+	}
+
+	g_hFilesystemModule = Sys_LoadModule( szPDir );
+	CreateInterfaceFn filesystemFactory = Sys_GetFactory( g_hFilesystemModule );
+
+	if ( g_hFilesystemModule == NULL )
+	{
+		ConsoleDPrintf( "Unable to get factory from %s\n", g_hFilesystemModule );
+		g_hFilesystemModule = NULL;
+		return;
+	}
+
+	g_pFilesystem = (IFileSystem *)filesystemFactory( FILESYSTEM_INTERFACE_VERSION, NULL);
+
+	if ( g_pFilesystem )
+	{
+		ConsoleDPrintf( "%s interface instantiated\n", FILESYSTEM_INTERFACE_VERSION );
+	}
 }
 
 void CL_UnloadGameUI( void )

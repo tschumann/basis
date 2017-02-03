@@ -156,6 +156,7 @@ int CL_DLLEXPORT Initialize( cl_enginefunc_t *pEnginefuncs, int iVersion )
 
 	EV_HookEvents();
 	CL_LoadParticleMan();
+	CL_LoadFileSystem();
 	CL_LoadGameUI();
 	CL_LoadVGUI2();
 
@@ -202,7 +203,6 @@ void CL_DLLEXPORT HUD_Init( void )
 	InitInput();
 	gHUD.Init();
 	Scheme_Init();
-	CL_LoadGameUI();
 }
 
 

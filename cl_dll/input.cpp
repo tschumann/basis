@@ -1022,6 +1022,7 @@ void ShutdownInput (void)
 
 #include "interface.h"
 void CL_UnloadParticleMan( void );
+void CL_UnloadFileSystem( void );
 void CL_UnloadGameUI( void );
 void CL_UnloadVGUI2( void );
 
@@ -1040,6 +1041,7 @@ void CL_DLLEXPORT HUD_Shutdown( void )
 #endif
 	
 	CL_UnloadParticleMan();
+	CL_UnloadFileSystem();
 	CL_UnloadGameUI();
 	CL_UnloadVGUI2();
 }
