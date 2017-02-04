@@ -119,6 +119,7 @@ void CL_LoadFileSystem( void )
 	if ( g_pFilesystem )
 	{
 		ConsoleDPrintf( "%s interface instantiated\n", FILESYSTEM_INTERFACE_VERSION );
+		g_pFilesystem->AddSearchPath("gearbox", "GAME");
 	}
 }
 

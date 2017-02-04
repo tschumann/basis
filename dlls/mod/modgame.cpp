@@ -58,21 +58,25 @@ void ModDLLInit( void )
 	CVAR_REGISTER ( &sk_construction_health2 );
 	CVAR_REGISTER ( &sk_construction_health3 );
 
-	PRECACHE_MODEL("models/null.mdl");
-
 	LoadFileSystem();
 
 	// make sure the mod_addons directory is loaded, but do it before doing
 	// any other filesystem operations because it reinitialises the
 	// filesystem - see https://github.com/ValveSoftware/halflife/issues/951
-	SERVER_COMMAND("_setaddons_folder 1");
+	// SERVER_COMMAND("_setaddons_folder 1");
 
-	if( g_pFileSystem && IS_DEDICATED_SERVER() )
+	if( g_pFileSystem )
 	{
-		g_pFileSystem->AddSearchPath("mod", "mod");
-
-		PRECACHE_MODEL("models/test.mdl");
-		PRECACHE_MODEL("sprites/test.spr");
-		PRECACHE_SOUND("sounds/test.wav");
+		ALERT( at_console, "Adding search path\n" );
+		g_pFileSystem->AddSearchPath("gearbox", "GAME");
 	}
+}
+
+void Mod_Precache( void )
+{
+	PRECACHE_MODEL("models/null.mdl");
+
+	PRECACHE_MODEL("models/test.mdl");
+	PRECACHE_MODEL("sprites/test.spr");
+	PRECACHE_SOUND("test.wav");
 }

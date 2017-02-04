@@ -157,10 +157,8 @@ int CL_DLLEXPORT Initialize( cl_enginefunc_t *pEnginefuncs, int iVersion )
 	EV_HookEvents();
 	CL_LoadParticleMan();
 	CL_LoadFileSystem();
-	CL_LoadGameUI();
-	CL_LoadVGUI2();
 
-	gEngfuncs.pfnClientCmd("_setaddons_folder 1");
+	// gEngfuncs.pfnClientCmd("_setaddons_folder 1");
 
 	// get tracker interface, if any
 	return 1;
@@ -203,6 +201,9 @@ void CL_DLLEXPORT HUD_Init( void )
 	InitInput();
 	gHUD.Init();
 	Scheme_Init();
+	// if these are called from Initialize nothing is printed to the console
+	CL_LoadGameUI();
+	CL_LoadVGUI2();
 }
 
 

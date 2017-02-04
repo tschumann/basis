@@ -30,6 +30,7 @@
 #include "soundent.h"
 #include "decals.h"
 #include "gamerules.h"
+#include "mod/modgame.h"
 
 extern CGraph	WorldGraph;
 extern int gEvilImpulse101;
@@ -420,6 +421,7 @@ void W_Precache(void)
 	
 	PRECACHE_SOUND ("items/weapondrop1.wav");// weapon falls to the ground
 
+	Mod_Precache();
 }
 
 

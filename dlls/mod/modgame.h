@@ -32,6 +32,8 @@ extern HINTERFACEMODULE hFileSystemModule;
 
 extern void ModDLLInit( void );
 
+extern void Mod_Precache( void );
+
 extern cvar_t	physics;
 extern cvar_t	coop;
 
