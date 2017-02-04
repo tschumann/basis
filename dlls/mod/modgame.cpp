@@ -75,8 +75,4 @@ void ModDLLInit( void )
 void Mod_Precache( void )
 {
 	PRECACHE_MODEL("models/null.mdl");
-
-	PRECACHE_MODEL("models/test.mdl");
-	PRECACHE_MODEL("sprites/test.spr");
-	PRECACHE_SOUND("test.wav");
 }
