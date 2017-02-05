@@ -28,16 +28,14 @@ void LoadFileSystem( void )
 	hFileSystemModule = Sys_LoadModule( FILESYSTEM_DLLNAME );
 	CreateInterfaceFn fileSystemFactory = Sys_GetFactory( hFileSystemModule );
 
-	if( fileSystemFactory == NULL )
+	if( fileSystemFactory )
 	{
-		g_pFileSystem = NULL;
-	}
+		g_pFileSystem = (IFileSystem *)fileSystemFactory( FILESYSTEM_INTERFACE_VERSION, NULL );
 
-	g_pFileSystem = (IFileSystem *)fileSystemFactory( FILESYSTEM_INTERFACE_VERSION, NULL );
-
-	if( g_pFileSystem )
-	{
-		ALERT( at_aiconsole, "%s interface instantiated.\n", FILESYSTEM_INTERFACE_VERSION );
+		if( g_pFileSystem )
+		{
+			ALERT( at_aiconsole, "%s interface instantiated.\n", FILESYSTEM_INTERFACE_VERSION );
+		}
 	}
 }
 

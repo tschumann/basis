@@ -26,11 +26,11 @@
 #include <stdarg.h>
 
 #ifdef _WIN32
-#define FILESYSTEM_DLLNAME "../FileSystem_Steam.dll"
+#define FILESYSTEM_DLLNAME "../FileSystem_Stdio.dll"
 #elif defined(OSX)
-#define FILESYSTEM_DLLNAME "../FileSystem_Steam.dylib"
+#define FILESYSTEM_DLLNAME "../FileSystem_Stdio.dylib"
 #elif defined(__linux__)
-#define FILESYSTEM_DLLNAME "../FileSystem_Steam.so"
+#define FILESYSTEM_DLLNAME "../FileSystem_Stdio.so"
 #else
 #error
 #endif
