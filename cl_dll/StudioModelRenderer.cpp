@@ -22,6 +22,8 @@
 #include "StudioModelRenderer.h"
 #include "GameStudioModelRenderer.h"
 
+#include "mod/gl.h"
+
 extern cvar_t *tfc_newmodels;
 
 extern extra_player_info_t  g_PlayerExtraInfo[MAX_PLAYERS+1];
@@ -2078,6 +2080,7 @@ void CStudioModelRenderer::StudioRenderFinal_Hardware( void )
 			}
 
 			IEngineStudio.GL_SetRenderMode( rendermode );
+			glDisableCulling();
 			IEngineStudio.StudioDrawPoints();
 			IEngineStudio.GL_StudioDrawShadow();
 		}

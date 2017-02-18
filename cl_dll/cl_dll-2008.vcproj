@@ -77,7 +77,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="odbc32.lib odbccp32.lib winmm.lib ..\utils\vgui\lib\win32_vc6\vgui.lib wsock32.lib ..\lib\public\sdl2.lib"
+				AdditionalDependencies="odbc32.lib odbccp32.lib winmm.lib ..\utils\vgui\lib\win32_vc6\vgui.lib wsock32.lib ..\lib\public\sdl2.lib opengl32.lib"
 				OutputFile=".\Debug\client.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -150,7 +150,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="..\dlls,.,..\tfc,..\public,..\common,..\pm_shared,..\engine,..\utils\vgui\include,..\game_shared,..\external"
+				AdditionalIncludeDirectories="..\dlls;.;..\tfc;..\public;..\common;..\pm_shared;..\engine;..\utils\vgui\include;..\utils\vgui2\include;..\game_shared;..\external"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;CLIENT_DLL;CLIENT_WEAPONS;HL_DLL"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -178,7 +178,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="winmm.lib ..\utils\vgui\lib\win32_vc6\vgui.lib wsock32.lib ..\lib\public\sdl2.lib"
+				AdditionalDependencies="winmm.lib ..\utils\vgui\lib\win32_vc6\vgui.lib wsock32.lib ..\lib\public\sdl2.lib opengl32.lib"
 				OutputFile=".\Release\client.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -2062,6 +2062,10 @@
 				Name="mod"
 				>
 				<File
+					RelativePath=".\mod\gl.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\mod\mod_util.cpp"
 					>
 				</File>
@@ -2250,6 +2254,10 @@
 			<Filter
 				Name="mod"
 				>
+				<File
+					RelativePath=".\mod\gl.h"
+					>
+				</File>
 				<File
 					RelativePath=".\mod\mod_cl_util.h"
 					>
