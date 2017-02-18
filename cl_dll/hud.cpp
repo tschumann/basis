@@ -83,6 +83,7 @@ extern client_sprite_t *GetSpriteList(client_sprite_t *pList, const char *psz, i
 
 extern cvar_t *sensitivity;
 cvar_t *cl_lw = NULL;
+cvar_t *r_cull = NULL;
 
 void ShutdownInput (void);
 
@@ -331,6 +332,7 @@ void CHud :: Init( void )
 	CVAR_CREATE( "hud_takesshots", "0", FCVAR_ARCHIVE );		// controls whether or not to automatically take screenshots at the end of a round
 
 	CVAR_CREATE( "cl_autowepswitch", "1", FCVAR_ARCHIVE | FCVAR_USERINFO );		// controls where the user automatically switches to the weapon they've just picked up
+	r_cull = CVAR_CREATE( "r_cull", "0", FCVAR_ARCHIVE );
 
 
 	m_iLogo = 0;

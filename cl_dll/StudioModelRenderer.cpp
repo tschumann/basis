@@ -22,9 +22,8 @@
 #include "StudioModelRenderer.h"
 #include "GameStudioModelRenderer.h"
 
-#include "mod/gl.h"
-
 extern cvar_t *tfc_newmodels;
+extern cvar_t *r_cull;
 
 extern extra_player_info_t  g_PlayerExtraInfo[MAX_PLAYERS+1];
 
@@ -2080,7 +2079,14 @@ void CStudioModelRenderer::StudioRenderFinal_Hardware( void )
 			}
 
 			IEngineStudio.GL_SetRenderMode( rendermode );
-			glDisableCulling();
+			if (r_cull->value)
+			{
+				gEngfuncs.pTriAPI->CullFace( TRI_FRONT );
+			}
+			else
+			{
+				gEngfuncs.pTriAPI->CullFace( TRI_NONE );
+			}
 			IEngineStudio.StudioDrawPoints();
 			IEngineStudio.GL_StudioDrawShadow();
 		}
