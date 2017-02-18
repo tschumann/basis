@@ -71,3 +71,9 @@
 "density" "0.005"
 "origin" "0 0 320"
 }
+{
+"classname" "item_suit"
+"spawnflags" "2048"
+"angles" "0 0 0"
+"origin" "0 0 64"
+}

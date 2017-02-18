@@ -113,3 +113,9 @@
 "angles" "0 0 0"
 "origin" "512 -64 0"
 }
+{
+"classname" "item_suit"
+"spawnflags" "2048"
+"angles" "0 0 0"
+"origin" "512 0 0"
+}
