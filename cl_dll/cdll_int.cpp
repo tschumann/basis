@@ -46,6 +46,12 @@ extern "C"
 #include "tri.h"
 #include "vgui_TeamFortressViewport.h"
 #include "../public/interface.h"
+// stub for function that the Steam API tries to use
+int Q_snprintf( char *buffer, size_t buffersize, const char *format, ... ) { return 0; }
+// NETADR_H is defined in common/netadr.h but the Steam API expects it to be defined in tier1 code
+#undef NETADR_H
+#include "steamapi.h"
+#define NETARD_H
 
 cl_enginefunc_t gEngfuncs;
 CHud gHUD;
@@ -204,6 +210,39 @@ void CL_DLLEXPORT HUD_Init( void )
 	// if these are called from Initialize nothing is printed to the console
 	CL_LoadGameUI();
 	CL_LoadVGUI2();
+	bool bSuccess = SteamAPI_Init();
+	ConsoleDPrintf( "SteamAPI_Init result %d\n", bSuccess );
+	if( bSuccess )
+	{
+		ISteamUser* pUser = SteamUser();
+
+		if( pUser )
+		{
+			char cTicketData[2048];
+			uint32 iTicketLength;
+
+			HAuthTicket ticket = pUser->GetAuthSessionTicket( cTicketData, sizeof(cTicketData), &iTicketLength );
+			ConsoleDPrintf( "GetAuthSessionTicket returned %d byte ticket\n", iTicketLength );
+			EBeginAuthSessionResult authSessionResult = pUser->BeginAuthSession( cTicketData, iTicketLength, pUser->GetSteamID() );
+
+			if( authSessionResult == k_EBeginAuthSessionResultOK )
+			{
+				AppId_t appId = 70;
+				EUserHasLicenseForAppResult licenseForAppResult = pUser->UserHasLicenseForApp( pUser->GetSteamID(), appId );
+				ConsoleDPrintf( "EUserHasLicenseForAppResult for appId %d: %d\n", appId, licenseForAppResult );
+			}
+			else
+			{
+				ConsoleDPrintf( "BeginAuthSession returned %d\n", authSessionResult );
+			}
+
+			pUser->EndAuthSession( pUser->GetSteamID() );
+		}
+		else
+		{
+			ConsoleDPrintf( "Unable to get ISteamUser\n" );
+		}
+	}
 }
 
 

@@ -50,7 +50,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\dlls;.;..\tfc;..\public;..\common;..\pm_shared;..\engine;..\utils\vgui\include;..\utils\vgui2\include;..\game_shared;..\external"
+				AdditionalIncludeDirectories="..\dlls;.;..\tfc;..\public;..\common;..\pm_shared;..\engine;..\utils\vgui\include;..\utils\vgui2\include;..\game_shared;..\external;..\public\steam"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;CLIENT_DLL;CLIENT_WEAPONS;HL_DLL"
 				MinimalRebuild="true"
 				RuntimeLibrary="1"
@@ -150,7 +150,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="..\dlls;.;..\tfc;..\public;..\common;..\pm_shared;..\engine;..\utils\vgui\include;..\utils\vgui2\include;..\game_shared;..\external"
+				AdditionalIncludeDirectories="..\dlls;.;..\tfc;..\public;..\common;..\pm_shared;..\engine;..\utils\vgui\include;..\utils\vgui2\include;..\game_shared;..\external;..\public\steam"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS;CLIENT_DLL;CLIENT_WEAPONS;HL_DLL"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -2271,6 +2271,82 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="steam"
+				>
+				<File
+					RelativePath="..\public\steam\isteamapps.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamclient.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamcontroller.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamfriends.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamhttp.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteammatchmaking.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamnetworking.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamremotestorage.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamscreenshots.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamunifiedmessages.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamuser.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamuserstats.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\isteamutils.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\matchmakingtypes.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\steamapi.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\steamclientpublic.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\steamhttpenums.h"
+					>
+				</File>
+				<File
+					RelativePath="..\public\steam\steamtypes.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Resource Files"
@@ -2279,6 +2355,10 @@
 		</Filter>
 		<File
 			RelativePath="..\lib\public\game_controls.lib"
+			>
+		</File>
+		<File
+			RelativePath="..\lib\public\steam_api.lib"
 			>
 		</File>
 	</Files>
