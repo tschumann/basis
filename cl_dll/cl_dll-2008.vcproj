@@ -2074,6 +2074,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\mod\steam_integration.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\mod\vgui_modpanel.cpp"
 					>
 				</File>
@@ -2264,6 +2268,10 @@
 				</File>
 				<File
 					RelativePath=".\modhud.h"
+					>
+				</File>
+				<File
+					RelativePath=".\mod\steam_integration.h"
 					>
 				</File>
 				<File
