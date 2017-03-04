@@ -16,7 +16,7 @@
 #ifndef MODWEAPONS_H
 #define MODWEAPONS_H
 
-#include "weapons.h"
+#include "../weapons.h"
 
 class CModPlayerItem : public CBasePlayerItem
 {

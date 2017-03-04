@@ -1,4 +1,6 @@
 
+- Added Steam API integration
+- Added r_cull
 - Added cl_autowepswitch
 - Added sv_physics
 - Added env_fog

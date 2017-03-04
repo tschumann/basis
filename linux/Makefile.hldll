@@ -145,7 +145,7 @@ HLMOD_OBJS = \
 	$(HLMOD_OBJ_DIR)/modmonster.o \
 	$(HLMOD_OBJ_DIR)/modgamerules.o \
 	$(HLMOD_OBJ_DIR)/modmultiplay_gamerules.o \
-	$(HLMOD_OBJ_DIR)/modplayer.o
+	$(HLMOD_OBJ_DIR)/modplayer.o \
 	$(HLMOD_OBJ_DIR)/modweapons.o
 
 HLWPN_OBJS = \

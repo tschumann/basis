@@ -1,4 +1,6 @@
 
+sudo apt-get install libgl-dev
+
 sh ./settings.sh
 
 mkdir $MODDIR/cl_dlls/

@@ -38,7 +38,7 @@
 #include "GameUI.h"
 CSysModule *g_hFilesystemModule = NULL;
 CSysModule *g_hGameUIModule = NULL;
-#include "Filesystem.h"
+#include "FileSystem.h"
 IFileSystem *g_pFilesystem = NULL;
 #include "IGameConsole.h"
 IGameConsole *g_pGameConsole = NULL;
