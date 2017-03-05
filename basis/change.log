@@ -1,6 +1,6 @@
 
 - Added Steam API integration
-- Added r_cull
-- Added cl_autowepswitch
-- Added sv_physics
-- Added env_fog
+- Added r_cull cvar
+- Added cl_autowepswitch cvar
+- Added sv_physics cvar
+- Added env_fog entity
