@@ -21,7 +21,7 @@ if "%1" == "release" (
 
 :: compile maps
 cd mapsrc
-compile.bat
+compile.bat %codeconfiguration%
 cd ..
 
 :: compile models

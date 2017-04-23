@@ -12,7 +12,9 @@
 #include <windows.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
+#if defined(_MSC_VER) && _MSC_VER <= 1500
 #include <GL/glaux.h>
+#endif // _MSC_VER
 
 #include "csg.h"
 
@@ -25,6 +27,7 @@ vec3_t	draw_mins, draw_maxs;
 
 #define	WIN_SIZE	512
 
+#if defined(_MSC_VER) && _MSC_VER <= 1500
 void InitWindow (void)
 {
     auxInitDisplayMode (AUX_SINGLE | AUX_RGB);
@@ -152,3 +155,32 @@ void DrawAuxWinding (winding_t *w)
 
 	glFlush ();
 }
+#else
+void InitWindow(void)
+{
+}
+
+void Draw_ClearWindow(void)
+{
+}
+
+void Draw_SetRed(void)
+{
+}
+
+void Draw_SetGrey(void)
+{
+}
+
+void Draw_SetBlack(void)
+{
+}
+
+void DrawWinding(winding_t *w)
+{
+}
+
+void DrawAuxWinding(winding_t *w)
+{
+}
+#endif // _MSC_VER

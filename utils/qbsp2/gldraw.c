@@ -11,12 +11,15 @@
 #include <windows.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
+#if defined(_MSC_VER) && _MSC_VER <= 1500
 #include <GL/glaux.h>
+#endif // _MSC_VER
 
 #include "bsp5.h"
 
 vec3_t	draw_mins, draw_maxs;
 
+#if defined(_MSC_VER) && _MSC_VER <= 1500
 void Draw_ClearBounds (void)
 {
 }
@@ -46,9 +49,23 @@ void Draw_DrawFace (face_t *f)
 
 	glFlush ();
 }
+#else
+void Draw_ClearBounds(void)
+{
+}
+
+void Draw_AddToBounds(vec3_t v)
+{
+}
+
+void Draw_DrawFace(face_t *f)
+{
+}
+#endif // _MSC_VER
 
 #define	WIN_SIZE	512
 
+#if defined(_MSC_VER) && _MSC_VER <= 1500
 void InitWindow (void)
 {
     auxInitDisplayMode (AUX_SINGLE | AUX_RGB);
@@ -162,3 +179,44 @@ void DrawPortal (portal_t *portal)
 {
 	DrawWinding (portal->winding);
 }
+#else
+void InitWindow(void)
+{
+}
+
+void Draw_ClearWindow(void)
+{
+}
+
+void Draw_SetRed(void)
+{
+}
+
+void Draw_SetGrey(void)
+{
+}
+
+void Draw_SetBlack(void)
+{
+}
+
+void DrawPoint(vec3_t v)
+{
+}
+
+void DrawLeaf(node_t *l, int color)
+{
+}
+
+void DrawWinding(winding_t *w)
+{
+}
+
+void DrawTri(vec3_t p1, vec3_t p2, vec3_t p3)
+{
+}
+
+void DrawPortal(portal_t *portal)
+{
+}
+#endif // _MSC_VER
