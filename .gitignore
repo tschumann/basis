@@ -1,8 +1,10 @@
 cl_dll/Debug
 cl_dll/Release
+cl_dll/.vs
 dlls/debughl
 dlls/Debug
 dlls/Releasehl
+dlls/.vs
 mapsrc/*.max
 mapsrc/*.rmx
 mapsrc/*.bsp
@@ -16,20 +18,28 @@ wadsrc/tools.ls
 
 utils/makels/Debug
 utils/makels/Release
+utils/makels/.vs
 utils/qbsp2/Debug
 utils/qbsp2/Release
+utils/qbsp2/.vs
 utils/qcsg/Debug
 utils/qcsg/Release
+utils/qcsg/.vs
 utils/qlumpy/Debug
 utils/qlumpy/Release
+utils/qlumpy/.vs
 utils/qrad/Debug
 utils/qrad/Release
+utils/qrad/.vs
 utils/sprgen/Debug
 utils/sprgen/Release
+utils/sprgen/.vs
 utils/studiomdl/Debug
 utils/studiomdl/Release
+utils/studiomdl/.vs
 utils/visx2/Debug
 utils/visx2/Release
+utils/visx2/.vs
 
 # don't commit what can be compiled
 basis/cl_dlls/*.dll
@@ -40,6 +50,9 @@ basis/dlls/*.dll
 *.vcproj.*
 
 Thumbs.db
+
+# Visual Studio upgrade-specific
+UpgradeLog.htm
 
 # Linux-specific
 *~
