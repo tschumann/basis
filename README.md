@@ -31,3 +31,7 @@ $ git remote add basis https://github.com/tschumann/basis
 $ # pull the latest changes from Basis
 
 $ git pull basis master
+
+Compiling on Linux
+------------------
+Required libraries: mesa-common-dev
