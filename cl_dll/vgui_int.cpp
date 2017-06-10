@@ -24,6 +24,7 @@
 #include "in_defs.h"
 #include "vgui_TeamFortressViewport.h"
 #include "vgui_ControlConfigPanel.h"
+#include "mod/vgui_ModViewport.h"
 
 namespace
 {
@@ -105,7 +106,7 @@ void VGui_Startup()
 	}
 	else
 	{
-		gViewPort = new TeamFortressViewport(0,0,root->getWide(),root->getTall());
+		gViewPort = new ModViewport(0,0,root->getWide(),root->getTall());
 		gViewPort->setParent(root);
 	}
 

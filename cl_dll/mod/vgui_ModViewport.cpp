@@ -62,6 +62,23 @@
 //================================================================
 ModViewport::ModViewport(int x, int y, int wide, int tall) : TeamFortressViewport(x, y, wide, tall)
 {
+	m_pModPanel = NULL;
+
+	CreateModMenu();
+}
+
+//-----------------------------------------------------------------------------
+// Purpose: Called everytime a new level is started. Viewport clears out it's data.
+//-----------------------------------------------------------------------------
+void ModViewport::Initialize(void)
+{
+	TeamFortressViewport::Initialize();
+
+	// Force each menu to Initialize
+	if (m_pModPanel)
+	{
+		m_pModPanel->setVisible( false );
+	}
 }
 
 void ModViewport::SetCurrentMenu( CMenuPanel *pMenu )
@@ -69,10 +86,29 @@ void ModViewport::SetCurrentMenu( CMenuPanel *pMenu )
 	m_pCurrentMenu = pMenu;
 	if ( m_pCurrentMenu )
 	{
+		// in the parent this doesn't get called if it happens during demo playback
 		m_pCurrentMenu->Open();
 	}
 	else
 	{
 		gEngfuncs.pfnClientCmd( "closemenus;" );
 	}
+}
+
+//======================================================================================
+// MOD MENU
+//======================================================================================
+// Show the mod Menu
+CMenuPanel* ModViewport::ShowModMenu()
+{
+	m_pModPanel->Reset();
+	return m_pModPanel;
+}
+
+void ModViewport::CreateModMenu()
+{
+	// Create the panel
+	m_pModPanel = new CModPanel(100, false, 0, 0, ScreenWidth, ScreenHeight);
+	m_pModPanel->setParent( this );
+	m_pModPanel->setVisible( false );
 }

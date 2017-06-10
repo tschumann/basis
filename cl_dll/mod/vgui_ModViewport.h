@@ -28,8 +28,13 @@ class CModPanel;
 //==============================================================================
 class ModViewport : public TeamFortressViewport
 {
+private:
+	CMenuPanel*  ShowModMenu(void);
+	void         CreateModMenu(void);
+
 public:
 	ModViewport(int x,int y,int wide,int tall);
+	void Initialize(void);
 
 	virtual void SetCurrentMenu( CMenuPanel *pMenu );
 
