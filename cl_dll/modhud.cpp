@@ -32,8 +32,14 @@
 #include "demo_api.h"
 #include "vgui_ScorePanel.h"
 
+cvar_t *r_cull = NULL;
+
 // This is called every time the DLL is loaded
 void CModHud :: Init( void )
 {
 	CHud::Init();
+
+	CVAR_CREATE("cl_autowepswitch", "1", FCVAR_ARCHIVE | FCVAR_USERINFO);		// controls where the user automatically switches to the weapon they've just picked up
+
+	r_cull = CVAR_CREATE("r_cull", "0", FCVAR_ARCHIVE);
 }
