@@ -16,7 +16,7 @@ for %%f in (*.qc) do (
 	..\utils\studiomdl\%codeconfiguration%\studiomdl.exe %%~nf.qc
 	sleep 1
 
-	xcopy %%~nf.mdl ..\%moddir%\models\
+	xcopy /y %%~nf.mdl ..\%moddir%\models\
 )
 
 :: clean up the generated files

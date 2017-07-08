@@ -16,7 +16,7 @@ for %%f in (*.qc) do (
 	..\utils\sprgen\%codeconfiguration%\sprgen.exe %%~nf.qc
 	sleep 1
 
-	xcopy %%~nf.spr ..\%moddir%\sprites\
+	xcopy /y %%~nf.spr ..\%moddir%\sprites\
 )
 
 :: clean up the generated files

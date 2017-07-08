@@ -31,7 +31,7 @@ for %%f in (*.map) do (
 	..\utils\qrad\%codeconfiguration%\qrad.exe %%~nf.bsp
 	sleep 1
 
-	xcopy %%~nf.bsp ..\%moddir%\maps
+	xcopy /y %%~nf.bsp ..\%moddir%\maps
 )
 
 :: clean up the generated files

@@ -20,7 +20,7 @@ for /D %%d in (*) do (
 	..\utils\qlumpy\%codeconfiguration%\qlumpy %%~nd.ls
 	sleep 1
 
-	xcopy %%~nd.wad ..\%moddir%\
+	xcopy /y %%~nd.wad ..\%moddir%\
 )
 
 :: clean up the generated files
