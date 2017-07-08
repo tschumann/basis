@@ -227,8 +227,8 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     <ClCompile Include="in_camera.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="message.cpp" />
-    <ClCompile Include="modhud.cpp" />
     <ClCompile Include="mod\gl.cpp" />
+    <ClCompile Include="mod\modhud.cpp" />
     <ClCompile Include="mod\mod_util.cpp" />
     <ClCompile Include="mod\steam_integration.cpp" />
     <ClCompile Include="mod\vgui_modpanel.cpp" />
@@ -304,8 +304,8 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     <ClInclude Include="interpolation.h" />
     <ClInclude Include="in_defs.h" />
     <ClInclude Include="kbutton.h" />
-    <ClInclude Include="modhud.h" />
     <ClInclude Include="mod\gl.h" />
+    <ClInclude Include="mod\modhud.h" />
     <ClInclude Include="mod\mod_cl_util.h" />
     <ClInclude Include="mod\steam_integration.h" />
     <ClInclude Include="mod\vgui_ModViewport.h" />

@@ -283,9 +283,6 @@
     <ClCompile Include="mod\mod_util.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
-    <ClCompile Include="modhud.cpp">
-      <Filter>Source Files\mod</Filter>
-    </ClCompile>
     <ClCompile Include="mod\steam_integration.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
@@ -293,6 +290,9 @@
       <Filter>Source Files\mod</Filter>
     </ClCompile>
     <ClCompile Include="mod\vgui_ModViewport.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\modhud.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
   </ItemGroup>
@@ -426,9 +426,6 @@
     <ClInclude Include="mod\mod_cl_util.h">
       <Filter>Header Files\mod</Filter>
     </ClInclude>
-    <ClInclude Include="modhud.h">
-      <Filter>Header Files\mod</Filter>
-    </ClInclude>
     <ClInclude Include="mod\steam_integration.h">
       <Filter>Header Files\mod</Filter>
     </ClInclude>
@@ -488,6 +485,9 @@
     </ClInclude>
     <ClInclude Include="..\public\steam\steamtypes.h">
       <Filter>Header Files\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="mod\modhud.h">
+      <Filter>Header Files\mod</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

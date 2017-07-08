@@ -18,8 +18,6 @@
 // implementation of class-less helper functions
 //
 
-// #include "wrect.h"
-// #include "cl_dll.h"
 #include "hud.h"
 #include "cl_util.h"
 

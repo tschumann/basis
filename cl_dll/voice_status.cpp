@@ -14,6 +14,7 @@
 	#include "../dod/cl_dll/hud.h"
 #else
 	#include "hud.h"
+	#include "mod/modhud.h"
 #endif
 
 #include "cl_util.h"

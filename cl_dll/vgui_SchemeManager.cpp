@@ -17,6 +17,7 @@
 //=============================================================================
 
 #include "hud.h"
+#include "mod/modhud.h"
 #include "vgui_SchemeManager.h"
 #include "cvardef.h"
 

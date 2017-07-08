@@ -19,10 +19,13 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"player.h"
+#include	"mod/modplayer.h"
 #include	"weapons.h"
 #include	"gamerules.h"
 #include	"modmultiplay_gamerules.h"
 #include	"game.h"
+
+extern int gmsgVGUIMenu;
 
 //=========================================================
 //=========================================================
@@ -43,4 +46,18 @@ BOOL CModMultiplay::FShouldSwitchWeapon( CBasePlayer *pPlayer, CBasePlayerItem *
 	{
 		return CHalfLifeMultiplay::FShouldSwitchWeapon( pPlayer, pWeapon );
 	}
+}
+
+BOOL CModMultiplay::ClientCommand( CBasePlayer *pPlayer, const char *pcmd )
+{
+	if ( FStrEq(pcmd, "menu" ) )
+	{
+		MESSAGE_BEGIN( MSG_ONE, gmsgVGUIMenu, NULL, pPlayer->pev );
+			WRITE_BYTE( atoi( CMD_ARGV(1) ) );
+		MESSAGE_END();
+
+		return true;
+	}
+
+	return CHalfLifeMultiplay::ClientCommand(pPlayer, pcmd);
 }

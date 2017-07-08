@@ -582,7 +582,7 @@ public:
 
 	bool AllowedToPrintText( void );
 
-	void ShowVGUIMenu( int iMenu );
+	virtual void ShowVGUIMenu( int iMenu );
 	void HideVGUIMenu( void );
 	void HideTopMenu( void );
 

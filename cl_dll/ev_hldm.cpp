@@ -13,6 +13,7 @@
 *
 ****/
 #include "hud.h"
+#include "mod/modhud.h"
 #include "cl_util.h"
 #include "const.h"
 #include "entity_state.h"

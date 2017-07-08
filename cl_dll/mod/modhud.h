@@ -25,9 +25,6 @@ class CModHud : public CHud
 public:
 
 	void Init( void );
-
-	CModHud();  
-	~CModHud();			// destructor, frees allocated memor
 };
 
-// extern CModHud gHUD;
+extern CModHud gHUD;

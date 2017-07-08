@@ -19,6 +19,7 @@
 //
 
 #include "hud.h"
+#include "mod/modhud.h"
 #include "cl_util.h"
 #include "mod/mod_cl_util.h"
 #include "netadr.h"
@@ -49,7 +50,7 @@ extern "C"
 #include "mod/steam_integration.h"
 
 cl_enginefunc_t gEngfuncs;
-CHud gHUD;
+CModHud gHUD;
 TeamFortressViewport *gViewPort = NULL;
 
 

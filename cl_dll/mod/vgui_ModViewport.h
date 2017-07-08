@@ -23,6 +23,8 @@
 
 #include "vgui_TeamFortressViewport.h"
 
+#define MENU_MENU				20
+
 class CModPanel;
 
 //==============================================================================
@@ -37,6 +39,8 @@ public:
 	void Initialize(void);
 
 	virtual void SetCurrentMenu( CMenuPanel *pMenu );
+
+	virtual void ShowVGUIMenu( int iMenu );
 
 	CModPanel	*m_pModPanel;
 };

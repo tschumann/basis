@@ -649,8 +649,6 @@ public:
 
 };
 
-extern CHud gHUD;
-
 extern int g_iPlayerClass;
 extern int g_iTeamNumber;
 extern int g_iUser1;

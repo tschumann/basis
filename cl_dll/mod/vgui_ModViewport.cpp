@@ -35,6 +35,7 @@
 #include<VGUI_BuildGroup.h>
 
 #include "hud.h"
+#include "mod/modhud.h"
 #include "cl_util.h"
 #include "camera.h"
 #include "kbutton.h"
@@ -92,6 +93,75 @@ void ModViewport::SetCurrentMenu( CMenuPanel *pMenu )
 	else
 	{
 		gEngfuncs.pfnClientCmd( "closemenus;" );
+	}
+}
+
+//================================================================
+// VGUI Menus
+void ModViewport::ShowVGUIMenu( int iMenu )
+{
+	CMenuPanel *pNewMenu = NULL;
+
+	// Don't open any menus except the MOTD during intermission
+	// MOTD needs to be accepted because it's sent down to the client 
+	// after map change, before intermission's turned off
+	if ( gHUD.m_iIntermission && iMenu != MENU_INTRO )
+		return;
+
+	// Don't create one if it's already in the list
+	if (m_pCurrentMenu)
+	{
+		CMenuPanel *pMenu = m_pCurrentMenu;
+		while (pMenu != NULL)
+		{
+			if (pMenu->GetMenuID() == iMenu)
+				return;
+			pMenu = pMenu->GetNextMenu();
+		}
+	}
+
+	switch ( iMenu )
+	{
+	case MENU_MENU:
+		pNewMenu = ShowModMenu();
+		break;
+	default:
+		TeamFortressViewport::ShowVGUIMenu( iMenu );
+		return;
+	}
+
+	if (!pNewMenu)
+		return;
+
+	// Close the Command Menu if it's open
+	HideCommandMenu();
+
+	pNewMenu->SetMenuID( iMenu );
+	pNewMenu->SetActive( true );
+	pNewMenu->setParent(this);
+
+	// See if another menu is visible, and if so, cache this one for display once the other one's finished
+	if (m_pCurrentMenu)
+	{
+		if (m_pCurrentMenu->GetMenuID() == MENU_CLASS && iMenu == MENU_TEAM)
+		{
+			CMenuPanel *temp = m_pCurrentMenu;
+			m_pCurrentMenu->Close();
+			m_pCurrentMenu = pNewMenu;
+			m_pCurrentMenu->SetNextMenu(temp);
+			m_pCurrentMenu->Open();
+			UpdateCursorState();
+		}
+		else
+		{
+			m_pCurrentMenu->SetNextMenu(pNewMenu);
+		}
+	}
+	else
+	{
+		m_pCurrentMenu = pNewMenu;
+		m_pCurrentMenu->Open();
+		UpdateCursorState();
 	}
 }
 

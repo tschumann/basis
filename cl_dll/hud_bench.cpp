@@ -4,6 +4,7 @@
 #define BENCH_TIME 10.0
 
 #include "hud.h"
+#include "mod/modhud.h"
 #include "cl_util.h"
 
 #include "const.h"
