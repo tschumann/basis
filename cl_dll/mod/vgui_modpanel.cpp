@@ -21,6 +21,12 @@
 #include "cl_util.h"
 #include "vgui_ModViewport.h"
 
+#define MOD_PANEL_PADDING 20
+#define MOD_PANEL_X XRES(MOD_PANEL_PADDING)
+#define MOD_PANEL_Y YRES(MOD_PANEL_PADDING)
+#define MOD_PANEL_WIDTH XRES(640 - (MOD_PANEL_PADDING * 2))
+#define MOD_PANEL_HEIGHT YRES(480 - (MOD_PANEL_PADDING * 2))
+
 CModPanel::CModPanel(int iTrans, int iRemoveMe, int x, int y, int wide, int tall) : CMenuPanel(iTrans, iRemoveMe, x, y, wide, tall)
 {
 	CSchemeManager *pSchemes = gViewPort->GetSchemeManager();
@@ -28,7 +34,7 @@ CModPanel::CModPanel(int iTrans, int iRemoveMe, int x, int y, int wide, int tall
 
 	int r, g, b, a;
 
-	m_pPanel = new CTransparentPanel( 200, XRES(20), YRES(20), XRES(600), YRES(440) );
+	m_pPanel = new CTransparentPanel( 200, MOD_PANEL_X, MOD_PANEL_Y, MOD_PANEL_WIDTH, MOD_PANEL_HEIGHT );
 	m_pPanel->setParent( this );
 	m_pPanel->setBorder( new LineBorder( Color(255 * 0.7, 170 * 0.7, 0, 0) ) );
 
@@ -43,7 +49,7 @@ CModPanel::CModPanel(int iTrans, int iRemoveMe, int x, int y, int wide, int tall
 	m_pTitle->setText( "Menu" );
 
 	m_pCancelButton = new CommandButton( gHUD.m_TextMessage.BufferedLocaliseTextString( "#CANCEL" ), XRES(510), YRES(400), XRES(70), YRES(30) );
-	m_pCancelButton->setContentAlignment( vgui::Label::a_west );
+	m_pCancelButton->setContentAlignment( vgui::Label::a_center);
 	m_pCancelButton->setParent( m_pPanel );
 	m_pCancelButton->addActionSignal( new CMenuHandler_TextWindow(HIDE_TEXTWINDOW) );
 }
