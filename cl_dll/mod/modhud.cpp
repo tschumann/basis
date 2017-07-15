@@ -27,6 +27,7 @@
 #include "hud_servers.h"
 #include "vgui_int.h"
 #include "vgui_TeamFortressViewport.h"
+#include "mod/vgui_ModViewport.h"
 
 #include "demo.h"
 #include "demo_api.h"
@@ -34,10 +35,24 @@
 
 cvar_t *r_cull = NULL;
 
+void __CmdFunc_OpenModMenu(void)
+{
+	// do nothing - this is handled server-side and this is here so that there are no errors about unknown commands
+}
+
+void __CmdFunc_CloseModMenu(void)
+{
+	// do nothing - this is handled server-side and this is here so that there are no errors about unknown commands
+}
+
 // This is called every time the DLL is loaded
 void CModHud :: Init( void )
 {
 	CHud::Init();
+
+	// TODO: hooking this client-side prevents it from getting to the server
+	// HOOK_COMMAND( "+modmenu", OpenModMenu );
+	// HOOK_COMMAND( "-modmenu", CloseModMenu );
 
 	CVAR_CREATE("cl_autowepswitch", "1", FCVAR_ARCHIVE | FCVAR_USERINFO);		// controls where the user automatically switches to the weapon they've just picked up
 

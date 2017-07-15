@@ -23,6 +23,7 @@
 
 #include "vgui_TeamFortressViewport.h"
 
+#define MENU_NONE				0
 #define MENU_MENU				20
 
 class CModPanel;

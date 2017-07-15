@@ -14,3 +14,8 @@ liblist.gam
 ===========
 
 Update mod and developer details here.
+
+
+Adding a new key bind
+---------------------
+default.cfg and gfx/shell/kb_def.lst both look like they should store default bindings to be populated if nothing is present in config.cfg but neither actually seems to do that.

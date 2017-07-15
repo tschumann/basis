@@ -50,13 +50,35 @@ BOOL CModMultiplay::FShouldSwitchWeapon( CBasePlayer *pPlayer, CBasePlayerItem *
 
 BOOL CModMultiplay::ClientCommand( CBasePlayer *pPlayer, const char *pcmd )
 {
-	if ( FStrEq(pcmd, "modmenu" ) )
+	entvars_t *pev = &pPlayer->edict()->v;
+
+	if ( FStrEq(pcmd, "menu" ) )
 	{
 		MESSAGE_BEGIN( MSG_ONE, gmsgVGUIMenu, NULL, pPlayer->pev );
 			WRITE_BYTE( 20 );
 		MESSAGE_END();
 
 		return true;
+	}
+	else if ( FStrEq(pcmd, "+modmenu" ))
+	{
+		CBasePlayer *pPlayer = GetClassPtr((CBasePlayer *)pev);
+
+		MESSAGE_BEGIN( MSG_ONE, gmsgVGUIMenu, NULL, pPlayer->pev );
+			WRITE_BYTE( 20 );
+		MESSAGE_END();
+
+		pPlayer->EnableControl( false );
+	}
+	else if ( FStrEq(pcmd, "-modmenu") )
+	{
+		CBasePlayer *pPlayer = GetClassPtr((CBasePlayer *)pev);
+
+		MESSAGE_BEGIN( MSG_ONE, gmsgVGUIMenu, NULL, pPlayer->pev );
+			WRITE_BYTE( 0 );
+		MESSAGE_END();
+
+		pPlayer->EnableControl( true );
 	}
 
 	return CHalfLifeMultiplay::ClientCommand(pPlayer, pcmd);
