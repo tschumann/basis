@@ -74,6 +74,7 @@ BOOL CModMultiplay::ClientCommand( CBasePlayer *pPlayer, const char *pcmd )
 
 		return true;
 	}
+	// TODO: this is getting called somewhere and causing the MOTD to never show
 	else if ( FStrEq(pcmd, "-modmenu") && pPlayer->IsAlive() )
 	{
 		CBasePlayer *pPlayer = GetClassPtr((CBasePlayer *)pev);
