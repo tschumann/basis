@@ -127,6 +127,7 @@ void ModViewport::ShowVGUIMenu( int iMenu )
 		break;
 	case MENU_NONE:
 		this->HideVGUIMenu();
+		break;
 	default:
 		TeamFortressViewport::ShowVGUIMenu( iMenu );
 		return;
