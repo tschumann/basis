@@ -8,6 +8,9 @@
 //
 
 //
+// jul 15 2017
+//  - added env_projectile
+//
 // apr 09 2016
 //  - added monster_construction_dead
 //
@@ -959,6 +962,11 @@
 		2 : "Large  Radius"
 		3 : "Play Everywhere"
 	]
+]
+
+@PointClass base(Targetname) color(255 255 255) = env_projectile : "Projectile" 
+[
+	model(studio) : "model"
 ]
 
 @PointClass base(Targetname, Target, RenderFields) size(-16 -16 -16, 16 16 16) color(100 100 0) = env_render : "Render Controls"

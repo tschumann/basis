@@ -55,3 +55,27 @@ void CClientFog::Spawn( void )
 	pev->renderamt = 0;								// The engine won't draw this model if this is set to 0 and blending is on
 	pev->rendermode = kRenderTransTexture;
 }
+
+//=========================================================
+// Projectile
+//=========================================================
+class CEnvProjectile : public CBaseEntity
+{
+public:
+	void Spawn(void);
+	void Precache(void);
+};
+
+LINK_ENTITY_TO_CLASS( env_projectile, CEnvProjectile );
+
+void CEnvProjectile::Spawn(void)
+{
+	pev->movetype = MOVETYPE_NOCLIP;
+	pev->solid = SOLID_NOT;							// Remove model & collisions
+	pev->velocity.z += 1;
+}
+
+void CEnvProjectile::Precache(void)
+{
+	PRECACHE_MODEL( (char *)STRING(pev->model) );
+}
