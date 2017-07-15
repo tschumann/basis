@@ -50,10 +50,10 @@ BOOL CModMultiplay::FShouldSwitchWeapon( CBasePlayer *pPlayer, CBasePlayerItem *
 
 BOOL CModMultiplay::ClientCommand( CBasePlayer *pPlayer, const char *pcmd )
 {
-	if ( FStrEq(pcmd, "menu" ) )
+	if ( FStrEq(pcmd, "modmenu" ) )
 	{
 		MESSAGE_BEGIN( MSG_ONE, gmsgVGUIMenu, NULL, pPlayer->pev );
-			WRITE_BYTE( atoi( CMD_ARGV(1) ) );
+			WRITE_BYTE( 20 );
 		MESSAGE_END();
 
 		return true;

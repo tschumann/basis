@@ -148,13 +148,13 @@ void ModViewport::ShowVGUIMenu( int iMenu )
 			CMenuPanel *temp = m_pCurrentMenu;
 			m_pCurrentMenu->Close();
 			m_pCurrentMenu = pNewMenu;
-			m_pCurrentMenu->SetNextMenu(temp);
+			m_pCurrentMenu->SetNextMenu( temp );
 			m_pCurrentMenu->Open();
 			UpdateCursorState();
 		}
 		else
 		{
-			m_pCurrentMenu->SetNextMenu(pNewMenu);
+			m_pCurrentMenu->SetNextMenu( pNewMenu );
 		}
 	}
 	else

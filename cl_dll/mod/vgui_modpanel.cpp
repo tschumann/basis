@@ -24,8 +24,8 @@
 #define MOD_PANEL_PADDING 20
 #define MOD_PANEL_X XRES(MOD_PANEL_PADDING)
 #define MOD_PANEL_Y YRES(MOD_PANEL_PADDING)
-#define MOD_PANEL_WIDTH XRES(640 - (MOD_PANEL_PADDING * 2))
-#define MOD_PANEL_HEIGHT YRES(480 - (MOD_PANEL_PADDING * 2))
+#define MOD_PANEL_WIDTH XRES((ModViewport::VIEWPORT_WIDTH - (MOD_PANEL_PADDING * 2)))
+#define MOD_PANEL_HEIGHT YRES((ModViewport::VIEWPORT_HEIGHT - (MOD_PANEL_PADDING * 2)))
 
 CModPanel::CModPanel(int iTrans, int iRemoveMe, int x, int y, int wide, int tall) : CMenuPanel(iTrans, iRemoveMe, x, y, wide, tall)
 {
@@ -49,7 +49,7 @@ CModPanel::CModPanel(int iTrans, int iRemoveMe, int x, int y, int wide, int tall
 	m_pTitle->setText( "Menu" );
 
 	m_pCancelButton = new CommandButton( gHUD.m_TextMessage.BufferedLocaliseTextString( "#CANCEL" ), XRES(510), YRES(400), XRES(70), YRES(30) );
-	m_pCancelButton->setContentAlignment( vgui::Label::a_center);
+	m_pCancelButton->setContentAlignment( vgui::Label::a_center );
 	m_pCancelButton->setParent( m_pPanel );
 	m_pCancelButton->addActionSignal( new CMenuHandler_TextWindow(HIDE_TEXTWINDOW) );
 }

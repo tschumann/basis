@@ -43,6 +43,9 @@ public:
 	virtual void ShowVGUIMenu( int iMenu );
 
 	CModPanel	*m_pModPanel;
+
+	const static int VIEWPORT_WIDTH = 640;
+	const static int VIEWPORT_HEIGHT = 480;
 };
 
 //================================================================
