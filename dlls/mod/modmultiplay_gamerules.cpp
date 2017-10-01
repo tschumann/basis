@@ -60,35 +60,24 @@ BOOL CModMultiplay::ClientCommand( CBasePlayer *pPlayer, const char *pcmd )
 
 		return true;
 	}
-	else if ( FStrEq(pcmd, "+modmenu" ) && pPlayer->IsAlive() )
-	{
-		CBasePlayer *pPlayer = GetClassPtr((CBasePlayer *)pev);
-
-		// open the menu on the client
-		MESSAGE_BEGIN( MSG_ONE, gmsgVGUIMenu, NULL, pPlayer->pev );
-			WRITE_BYTE( 20 );
-		MESSAGE_END();
-
-		// freeze the player while it is open
-		pPlayer->EnableControl( false );
-
-		return true;
-	}
-	// TODO: this is getting called somewhere and causing the MOTD to never show
-	else if ( FStrEq(pcmd, "-modmenu") && pPlayer->IsAlive() )
-	{
-		CBasePlayer *pPlayer = GetClassPtr((CBasePlayer *)pev);
-
-		// close the menu on the client
-		MESSAGE_BEGIN( MSG_ONE, gmsgVGUIMenu, NULL, pPlayer->pev );
-			WRITE_BYTE( 0 );
-		MESSAGE_END();
-
-		// re-enable player control
-		pPlayer->EnableControl( true );
-
-		return true;
-	}
 
 	return CHalfLifeMultiplay::ClientCommand(pPlayer, pcmd);
+}
+
+//=========================================================
+//=========================================================
+void CModMultiplay :: PlayerThink( CBasePlayer *pPlayer )
+{
+	CHalfLifeMultiplay::PlayerThink( pPlayer );
+	
+	int iInMenu = atoi(g_engfuncs.pfnInfoKeyValue( g_engfuncs.pfnGetInfoKeyBuffer( pPlayer->edict()), "menu" ) );
+
+	if( iInMenu )
+	{
+		pPlayer->EnableControl( false );
+	}
+	else
+	{
+		pPlayer->EnableControl( true );
+	}
 }

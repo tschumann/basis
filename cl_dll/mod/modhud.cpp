@@ -35,10 +35,32 @@
 
 cvar_t *r_cull = NULL;
 
+// TFFree Command Menu
+void __CmdFunc_OpenModMenu(void)
+{
+	if( gViewPort )
+	{
+		gViewPort->ShowVGUIMenu( MENU_MENU );
+		gEngfuncs.PlayerInfo_SetValueForKey( "menu", "1" );
+	}
+}
+
+void __CmdFunc_CloseModMenu(void)
+{
+	if( gViewPort )
+	{
+		gViewPort->ShowVGUIMenu( MENU_NONE );
+		gEngfuncs.PlayerInfo_SetValueForKey( "menu", "0" );
+	}
+}
+
 // This is called every time the DLL is loaded
 void CModHud :: Init( void )
 {
 	CHud::Init();
+
+	HOOK_COMMAND( "+modmenu", OpenModMenu );
+	HOOK_COMMAND( "-modmenu", CloseModMenu );
 
 	CVAR_CREATE("cl_autowepswitch", "1", FCVAR_ARCHIVE | FCVAR_USERINFO);		// controls where the user automatically switches to the weapon they've just picked up
 

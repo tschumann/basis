@@ -19,9 +19,11 @@
 class CModMultiplay : public CHalfLifeMultiplay
 {
 public:
-	virtual BOOL FShouldSwitchWeapon(CBasePlayer *pPlayer, CBasePlayerItem *pWeapon);
+	virtual BOOL FShouldSwitchWeapon( CBasePlayer *pPlayer, CBasePlayerItem *pWeapon );
 
 	virtual BOOL IsCoOp( void );
 
-	virtual BOOL ClientCommand(CBasePlayer *pPlayer, const char *pcmd);
+	virtual void PlayerThink( CBasePlayer *pPlayer );
+
+	virtual BOOL ClientCommand( CBasePlayer *pPlayer, const char *pcmd );
 };
