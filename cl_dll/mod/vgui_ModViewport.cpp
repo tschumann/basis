@@ -120,13 +120,19 @@ void ModViewport::ShowVGUIMenu( int iMenu )
 		}
 	}
 
+#include "mod/mod_cl_util.h";
+	ConsolePrintf("%d\n", iMenu);
+
 	switch ( iMenu )
 	{
 	case MENU_MENU:
 		pNewMenu = ShowModMenu();
 		break;
-	case MENU_NONE:
-		this->HideVGUIMenu();
+	case -MENU_MENU:
+		if( m_pCurrentMenu && m_pCurrentMenu->GetMenuID() == MENU_MENU )
+		{
+			this->HideTopMenu();
+		}
 		break;
 	default:
 		TeamFortressViewport::ShowVGUIMenu( iMenu );

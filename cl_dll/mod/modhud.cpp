@@ -49,7 +49,7 @@ void __CmdFunc_CloseModMenu(void)
 {
 	if( gViewPort )
 	{
-		gViewPort->ShowVGUIMenu( MENU_NONE );
+		gViewPort->ShowVGUIMenu( -MENU_MENU );
 		gEngfuncs.PlayerInfo_SetValueForKey( "menu", "0" );
 	}
 }
