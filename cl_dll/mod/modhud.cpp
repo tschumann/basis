@@ -35,7 +35,6 @@
 
 cvar_t *r_cull = NULL;
 
-// TFFree Command Menu
 void __CmdFunc_OpenModMenu(void)
 {
 	if( gViewPort )

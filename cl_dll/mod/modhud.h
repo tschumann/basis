@@ -17,7 +17,7 @@
 //
 // class CModHud declaration
 //
-// CHud handles the message, calculation, and drawing the HUD
+// CModHud handles the message, calculation, and drawing the HUD
 //
 
 class CModHud : public CHud

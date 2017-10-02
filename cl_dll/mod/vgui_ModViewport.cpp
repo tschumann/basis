@@ -120,9 +120,6 @@ void ModViewport::ShowVGUIMenu( int iMenu )
 		}
 	}
 
-#include "mod/mod_cl_util.h";
-	ConsolePrintf("%d\n", iMenu);
-
 	switch ( iMenu )
 	{
 	case MENU_MENU:
