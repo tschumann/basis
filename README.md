@@ -28,7 +28,7 @@ $ # create a new remote that points to Basis
 
 $ git remote add basis https://github.com/you/basis-mirror
 
-$ # pull the latest changes from Basis
+$ # pull and merge the latest changes from Basis
 
 $ git pull basis master
 
