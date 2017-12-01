@@ -15,7 +15,7 @@ $ cd basis
 
 $ # push the checkout of Basis into a repo that you have created
 
-$ git push --mirror https://github.com/you/repo
+$ git push --mirror https://github.com/you/basis-mirror
 
 
 $ # clone your repo
@@ -26,12 +26,19 @@ $ # note that the steps below are in update.bat too
 
 $ # create a new remote that points to Basis
 
-$ git remote add basis https://github.com/tschumann/basis
+$ git remote add basis https://github.com/you/basis-mirror
 
-$ # pull the latest changes from Basis
+$ # pull and merge the latest changes from Basis
 
 $ git pull basis master
 
+
 Compiling on Linux
 ------------------
-Required libraries: mesa-common-dev
+
+$ sudo apt-get install gcc-multilib g++-multilib mesa-common-dev
+
+$ cd linux
+
+$ make
+

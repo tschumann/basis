@@ -5,11 +5,11 @@
 #
 
 HLDLL_SRC_DIR=$(SOURCE_DIR)/dlls
-HLMOD_SRC_DIR=$(HLDLL_SRC_DIR)/mod
+MODDLL_SRC_DIR=$(HLDLL_SRC_DIR)/mod
 HLWPN_SRC_DIR=$(HLDLL_SRC_DIR)/wpn_shared
 
 HLDLL_OBJ_DIR=$(BUILD_OBJ_DIR)/hldll
-HLMOD_OBJ_DIR=$(HLDLL_OBJ_DIR)/mod
+MODDLL_OBJ_DIR=$(HLDLL_OBJ_DIR)/mod
 HLWPN_OBJ_DIR=$(HLDLL_OBJ_DIR)/wpn_shared
 PM_OBJ_DIR=$(HLDLL_OBJ_DIR)/pm_shared
 GAME_SHARED_OBJ_DIR=$(HLDLL_OBJ_DIR)/game_shared
@@ -20,7 +20,7 @@ CFLAGS=$(BASE_CFLAGS)  $(ARCH_CFLAGS)  -DCLIENT_WEAPONS
 #-O3 -ffast-math -fno-strength-reduce
 
 HLDLL_INCLUDEDIRS=-I$(ENGINE_SRC_DIR) -I$(COMMON_SRC_DIR) -I$(PM_SRC_DIR) -I$(GAME_SHARED_SRC_DIR) -I$(PUBLIC_SRC_DIR)
-HLMOD_INCLUDEDIRS=-I$(HLDLL_SRC_DIR) -I$(ENGINE_SRC_DIR) -I$(COMMON_SRC_DIR) -I$(PM_SRC_DIR) -I$(PUBLIC_SRC_DIR) -I$(GAME_SHARED_SRC_DIR)
+MODDLL_INCLUDEDIRS=-I$(HLDLL_SRC_DIR) -I$(ENGINE_SRC_DIR) -I$(COMMON_SRC_DIR) -I$(PM_SRC_DIR) -I$(PUBLIC_SRC_DIR) -I$(GAME_SHARED_SRC_DIR)
 HLWPN_INCLUDEDIRS=-I$(HLDLL_SRC_DIR) -I$(ENGINE_SRC_DIR) -I$(COMMON_SRC_DIR) -I$(PM_SRC_DIR) -I$(PUBLIC_SRC_DIR)
 PM_INCLUDEDIRS=-I$(COMMON_SRC_DIR)  -I$(PUBLIC_SRC_DIR)
 GAME_SHARED_INCLUDEDIRS=-I$(HLDLL_SRC_DIR) -I$(ENGINE_SRC_DIR) -I$(COMMON_SRC_DIR) -I$(PM_SRC_DIR) -I$(PUBLIC_SRC_DIR)
@@ -29,7 +29,7 @@ COMMON_INCLUDEDIRS=
 LDFLAGS= -lm -lstdc++
 
 DO_HLDLL_CC=$(CC) $(HLDLL_INCLUDEDIRS) $(CFLAGS) -o $@ -c $<
-DO_HLMOD_CC=$(CC) $(HLMOD_INCLUDEDIRS) $(CFLAGS) -o $@ -c $<
+DO_MODDLL_CC=$(CC) $(MODDLL_INCLUDEDIRS) $(CFLAGS) -o $@ -c $<
 DO_HLWPN_CC=$(CC) $(HLWPN_INCLUDEDIRS) $(CFLAGS) -o $@ -c $<
 DO_PM_CC=$(CC) $(PM_INCLUDEDIRS) $(CFLAGS) -o $@ -c $<
 DO_GAME_SHARED_CC=$(CC) $(GAME_SHARED_INCLUDEDIRS) $(CFLAGS) -o $@ -c $<
@@ -137,16 +137,16 @@ HLDLL_OBJS = \
 	$(HLDLL_OBJ_DIR)/xen.o \
 	$(HLDLL_OBJ_DIR)/zombie.o
 
-HLMOD_OBJS = \
-	$(HLMOD_OBJ_DIR)/construction.o \
-	$(HLMOD_OBJ_DIR)/modeffects.o \
-	$(HLMOD_OBJ_DIR)/modentity.o \
-	$(HLMOD_OBJ_DIR)/modgame.o \
-	$(HLMOD_OBJ_DIR)/modmonster.o \
-	$(HLMOD_OBJ_DIR)/modgamerules.o \
-	$(HLMOD_OBJ_DIR)/modmultiplay_gamerules.o \
-	$(HLMOD_OBJ_DIR)/modplayer.o \
-	$(HLMOD_OBJ_DIR)/modweapons.o
+MODDLL_OBJS = \
+	$(MODDLL_OBJ_DIR)/construction.o \
+	$(MODDLL_OBJ_DIR)/modeffects.o \
+	$(MODDLL_OBJ_DIR)/modentity.o \
+	$(MODDLL_OBJ_DIR)/modgame.o \
+	$(MODDLL_OBJ_DIR)/modmonster.o \
+	$(MODDLL_OBJ_DIR)/modgamerules.o \
+	$(MODDLL_OBJ_DIR)/modmultiplay_gamerules.o \
+	$(MODDLL_OBJ_DIR)/modplayer.o \
+	$(MODDLL_OBJ_DIR)/modweapons.o
 
 HLWPN_OBJS = \
 	$(HLWPN_OBJ_DIR)/hl_wpn_glock.o
@@ -167,23 +167,23 @@ all: dirs hl.$(SHLIBEXT)
 dirs:
 	-mkdir $(BUILD_OBJ_DIR)
 	-mkdir $(HLDLL_OBJ_DIR)
-	-mkdir $(HLMOD_OBJ_DIR)
+	-mkdir $(MODDLL_OBJ_DIR)
 	-mkdir $(HLWPN_OBJ_DIR)
 	-mkdir $(PM_OBJ_DIR)
 	-mkdir $(GAME_SHARED_OBJ_DIR)
 	-mkdir $(COMMON_OBJ_DIR)
 
-hl.$(SHLIBEXT): $(HLDLL_OBJS) $(HLMOD_OBJS) $(HLWPN_OBJS) $(PM_OBJS) $(GAME_SHARED_OBJS) $(COMMON_OBJS)
-	$(CC) $(LDFLAGS) $(SHLIBLDFLAGS) -o $(BUILD_DIR)/$@ $(HLDLL_OBJS) $(HLMOD_OBJS) $(HLWPN_OBJS) $(PM_OBJS) $(GAME_SHARED_OBJS) $(COMMON_OBJS)
-	# p4 edit ../../game/mod/dlls/hl.$(SHLIBEXT)
-	# cp $(BUILD_DIR)/$@  ../../game/mod/dlls/hl.$(SHLIBEXT)
-	# ./gendbg.sh ../../game/mod/dlls/hl.$(SHLIBEXT)
+hl.$(SHLIBEXT): $(HLDLL_OBJS) $(MODDLL_OBJS) $(HLWPN_OBJS) $(PM_OBJS) $(GAME_SHARED_OBJS) $(COMMON_OBJS)
+	$(CC) $(LDFLAGS) $(SHLIBLDFLAGS) -o $(BUILD_DIR)/$@ $(HLDLL_OBJS) $(MODDLL_OBJS) $(HLWPN_OBJS) $(PM_OBJS) $(GAME_SHARED_OBJS) $(COMMON_OBJS)
+	# p4 edit ../basis/dlls/hl.$(SHLIBEXT)
+	cp $(BUILD_DIR)/$@  ../basis/dlls/hl.$(SHLIBEXT)
+	./gendbg.sh ../basis/dlls/hl.$(SHLIBEXT)
 	
 $(HLWPN_OBJ_DIR)/%.o : $(HLWPN_SRC_DIR)/%.cpp
 	$(DO_HLWPN_CC)
 
-$(HLMOD_OBJ_DIR)/%.o : $(HLMOD_SRC_DIR)/%.cpp
-	$(DO_HLMOD_CC)
+$(MODDLL_OBJ_DIR)/%.o : $(MODDLL_SRC_DIR)/%.cpp
+	$(DO_MODDLL_CC)
 
 $(HLDLL_OBJ_DIR)/%.o : $(HLDLL_SRC_DIR)/%.cpp
 	$(DO_HLDLL_CC)
@@ -202,6 +202,6 @@ clean:
 	-rm -rf $(GAME_SHARED_OBJ_DIR)
 	-rm -rf $(PM_OBJ_DIR)
 	-rm -rf $(HLWPN_OBJ_DIR)
-	-rm -rf $(HLMOD_OBJ_DIR)
+	-rm -rf $(MODDLL_OBJ_DIR)
 	-rm -rf $(HLDLL_OBJ_DIR)
 	-rm -f hl_$(ARCH).$(SHLIBEXT)
