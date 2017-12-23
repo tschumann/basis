@@ -20,7 +20,6 @@
 #include "interface.h"
 
 HINTERFACEMODULE hFileSystemModule = NULL;
-#include "FileSystem.h"
 IFileSystem *g_pFileSystem = NULL;
 
 void LoadFileSystem( void )

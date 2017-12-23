@@ -27,8 +27,10 @@
 #endif
 
 #include "interface.h"
+#include "FileSystem.h"
 
 extern HINTERFACEMODULE hFileSystemModule;
+extern IFileSystem *g_pFileSystem;
 
 extern void ModDLLInit( void );
 
