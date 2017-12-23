@@ -360,6 +360,9 @@
     <ClCompile Include="mod\modweapons.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="mod\modutil.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h">
@@ -519,6 +522,9 @@
       <Filter>Header Files\mod</Filter>
     </ClInclude>
     <ClInclude Include="mod\modweapons.h">
+      <Filter>Header Files\mod</Filter>
+    </ClInclude>
+    <ClInclude Include="mod\modutil.h">
       <Filter>Header Files\mod</Filter>
     </ClInclude>
   </ItemGroup>

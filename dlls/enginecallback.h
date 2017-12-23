@@ -17,7 +17,6 @@
 #pragma once
 
 #include "event_flags.h"
-#include "mod/modgame.h"
 
 // Must be provided by user of this code
 extern enginefuncs_t g_engfuncs;
@@ -25,16 +24,16 @@ extern enginefuncs_t g_engfuncs;
 // The actual engine callbacks
 #define GETPLAYERUSERID (*g_engfuncs.pfnGetPlayerUserId)
 
+// this isn't great but this file ends up getting included by both the client and server code
+#ifndef CLIENT_DLL
+#include "mod/modutil.h"
 inline int PRECACHE_MODEL(char *s)
 {
-	if( !g_pFileSystem->FileExists(s) )
-	{
-		// ALERT isn't defined until later on in the file...
-		(*g_engfuncs.pfnAlertMessage)( at_warning, "%s doesn't exist - precaching models/null.mdl instead\n", s );
-		return (*g_engfuncs.pfnPrecacheModel)("models/null.mdl");
-	}
-	return (*g_engfuncs.pfnPrecacheModel)(s);
+	return UTIL_PrecacheSafe(s);
 }
+#else
+#define PRECACHE_MODEL	(*g_engfuncs.pfnPrecacheModel)
+#endif
 
 #define PRECACHE_SOUND	(*g_engfuncs.pfnPrecacheSound)
 #define PRECACHE_GENERIC	(*g_engfuncs.pfnPrecacheGeneric)
