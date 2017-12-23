@@ -35,6 +35,14 @@ void LoadFileSystem( void )
 		{
 			ALERT( at_aiconsole, "%s interface instantiated.\n", FILESYSTEM_INTERFACE_VERSION );
 		}
+		else
+		{
+			ALERT( at_warning, "Factory couldn't find %s\n", FILESYSTEM_INTERFACE_VERSION );
+		}
+	}
+	else
+	{
+		ALERT( at_warning, "Unable to get factory from %s\n", FILESYSTEM_DLLNAME );
 	}
 }
 

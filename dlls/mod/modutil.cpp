@@ -27,7 +27,7 @@ Utility code.
 
 int UTIL_PrecacheSafe( char *szModel )
 {
-	if( !g_pFileSystem->FileExists( szModel ) )
+	if( g_pFileSystem && !g_pFileSystem->FileExists( szModel ) )
 	{
 		ALERT( at_warning, "%s doesn't exist - precaching models/null.mdl instead\n", szModel );
 		return (*g_engfuncs.pfnPrecacheModel)("models/null.mdl");

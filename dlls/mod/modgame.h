@@ -21,7 +21,7 @@
 #elif defined(OSX)
 #define FILESYSTEM_DLLNAME "FileSystem_Stdio.dylib"
 #elif defined(__linux__)
-#define FILESYSTEM_DLLNAME "FileSystem_Stdio.so"
+#define FILESYSTEM_DLLNAME "filesystem_stdio.so"
 #else
 #error
 #endif
