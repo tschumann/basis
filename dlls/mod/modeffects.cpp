@@ -64,6 +64,7 @@ class CEnvProjectile : public CBaseEntity
 public:
 	void Spawn(void);
 	void Precache(void);
+	void EXPORT ProjectileThink( void );
 };
 
 LINK_ENTITY_TO_CLASS( env_projectile, CEnvProjectile );
@@ -72,10 +73,21 @@ void CEnvProjectile::Spawn(void)
 {
 	pev->movetype = MOVETYPE_NOCLIP;
 	pev->solid = SOLID_NOT;							// Remove model & collisions
-	pev->velocity.z += 1;
+	pev->speed = 5.0;
+	SetThink( &CEnvProjectile::ProjectileThink );
 }
 
 void CEnvProjectile::Precache(void)
 {
 	PRECACHE_MODEL( (char *)STRING(pev->model) );
+}
+
+void CEnvProjectile::ProjectileThink( void )
+{
+	// set a random velocity
+	pev->velocity.x = RANDOM_LONG(-1, 1) * 5;
+	pev->velocity.y = RANDOM_LONG(-1, 1) * 5;
+	pev->velocity.z = RANDOM_LONG(-1, 1) * 5;
+	// think again in one second
+	pev->nextthink = gpGlobals->time + 1.0;
 }
