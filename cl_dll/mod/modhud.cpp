@@ -35,6 +35,12 @@
 
 cvar_t *r_cull = NULL;
 
+int __MsgFunc_Fog(const char *pszName, int iSize, void *pbuf)
+{
+	gHUD.MsgFunc_Fog( pszName, iSize, pbuf );
+	return 1;
+}
+
 void __CmdFunc_OpenModMenu(void)
 {
 	if( gViewPort )
@@ -57,6 +63,8 @@ void __CmdFunc_CloseModMenu(void)
 void CModHud :: Init( void )
 {
 	CHud::Init();
+
+	HOOK_MESSAGE( Fog );
 
 	HOOK_COMMAND( "+modmenu", OpenModMenu );
 	HOOK_COMMAND( "-modmenu", CloseModMenu );
