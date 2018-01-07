@@ -16,8 +16,8 @@ if "%1" == "release" (
 :: compile qrad
 %visualstudio%\Common7\IDE\devenv.exe ..\utils\qrad\qrad-2017.sln /Build %codeconfiguration%
 
-xcopy lights.rad ..\utils\qrad\%codeconfiguration%
-xcopy valve.rad ..\utils\qrad\%codeconfiguration%
+xcopy /y lights.rad ..\utils\qrad\%codeconfiguration%
+xcopy /y valve.rad ..\utils\qrad\%codeconfiguration%
 
 :: %%f is a variable - why isn't %%map valid?
 for %%f in (*.map) do (

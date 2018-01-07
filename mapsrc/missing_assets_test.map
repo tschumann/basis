@@ -55,9 +55,9 @@
 }
 }
 {
-"classname" "info_player_coop"
+"classname" "info_player_start"
 "angles" "0 0 0"
-"origin" "-64 0 64"
+"origin" "0 0 64"
 }
 {
 "classname" "light"
@@ -66,91 +66,24 @@
 "origin" "0 0 384"
 }
 {
-"classname" "weapon_crowbar"
+"classname" "item_suit"
+"spawnflags" "2048"
 "angles" "0 0 0"
-"player_index" "1"
-"origin" "-448 -448 0"
+"origin" "0 0 0"
 }
 {
-"classname" "weapon_9mmhandgun"
+"classname" "env_sprite"
 "angles" "0 0 0"
-"player_index" "2"
-"origin" "-384 -448 0"
+"rendercolor" "0 0 0"
+"framerate" "10.0"
+"model" "sprites/no_such_sprite.spr"
+"origin" "0 -448 64"
 }
 {
-"classname" "weapon_357"
+"classname" "env_sprite"
 "angles" "0 0 0"
-"player_index" "1"
-"origin" "-320 -448 0"
-}
-{
-"classname" "weapon_9mmAR"
-"angles" "0 0 0"
-"player_index" "2"
-"origin" "-256 -448 0"
-}
-{
-"classname" "weapon_shotgun"
-"angles" "0 0 0"
-"player_index" "1"
-"origin" "-192 -448 0"
-}
-{
-"classname" "weapon_rpg"
-"angles" "0 0 0"
-"player_index" "2"
-"origin" "-128 -448 0"
-}
-{
-"classname" "weapon_gauss"
-"angles" "0 0 0"
-"player_index" "1"
-"origin" "-64 -448 0"
-}
-{
-"classname" "weapon_crossbow"
-"angles" "0 0 0"
-"player_index" "2"
-"origin" "0 -448 0"
-}
-{
-"classname" "weapon_egon"
-"angles" "0 0 0"
-"player_index" "1"
-"origin" "64 -448 0"
-}
-{
-"classname" "weapon_tripmine"
-"angles" "0 0 0"
-"player_index" "2"
-"origin" "128 -448 0"
-}
-{
-"classname" "weapon_satchel"
-"angles" "0 0 0"
-"player_index" "1"
-"origin" "192 -448 0"
-}
-{
-"classname" "weapon_handgrenade"
-"angles" "0 0 0"
-"player_index" "2"
-"origin" "256 -448 0"
-}
-{
-"classname" "weapon_snark"
-"angles" "0 0 0"
-"player_index" "1"
-"origin" "320 -448 0"
-}
-{
-"classname" "weapon_hornetgun"
-"angles" "0 0 0"
-"player_index" "2"
-"origin" "384 -448 0"
-}
-{
-"classname" "info_player_coop"
-"angles" "0 0 0"
-"origin" "64 0 64"
+"rendercolor" "0 0 0"
+"framerate" "10.0"
+"model" "models/no_such_model.mdl"
+"origin" "0 448 64"
 }
