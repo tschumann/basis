@@ -25,6 +25,9 @@ class CModHud : public CHud
 public:
 
 	void Init( void );
+
+	// user messages
+	void _cdecl MsgFunc_Fog( const char *pszName, int iSize, void *pbuf );
 };
 
 extern CModHud gHUD;

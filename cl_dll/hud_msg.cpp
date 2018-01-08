@@ -24,9 +24,6 @@
 #include "particleman.h"
 extern IParticleMan *g_pParticleMan;
 
-#include "IGameConsole.h"
-extern IGameConsole *g_pGameConsole;
-
 #define MAX_CLIENTS 32
 
 #if !defined( _TFC )
@@ -37,12 +34,6 @@ extern BEAM *pBeam2;
 #if defined( _TFC )
 void ClearEventList( void );
 #endif
-
-float g_iFogColor[3];
-float g_iFogDensity;
-float g_iStartDist;
-float g_iEndDist;
-int g_iFogSkybox;
 
 /// USER-DEFINED SERVER MESSAGE HANDLERS
 
@@ -147,26 +138,4 @@ int CHud :: MsgFunc_Concuss( const char *pszName, int iSize, void *pbuf )
 	else
 		this->m_StatusIcons.DisableIcon("dmg_concuss");
 	return 1;
-}
-
-void CHud :: MsgFunc_Fog( const char *pszName, int iSize, void *pbuf )
-{
-	// Clear the fog
-	g_iFogColor[0] = 0.0;
-	g_iFogColor[1] = 0.0;
-	g_iFogColor[2] = 0.0;
-	g_iStartDist = 0.0;
-	g_iEndDist = 0.0;
-	g_iFogDensity = 0.0;
-	g_iFogSkybox = 0.0;
-
-	BEGIN_READ( pbuf, iSize );
-
-	g_iFogColor[0] = READ_FLOAT();
-	g_iFogColor[1] = READ_FLOAT();
-	g_iFogColor[2] = READ_FLOAT();
-	g_iStartDist = READ_FLOAT();
-	g_iEndDist = READ_FLOAT();
-	g_iFogDensity = READ_FLOAT();
-	g_iFogSkybox = READ_BYTE();
 }

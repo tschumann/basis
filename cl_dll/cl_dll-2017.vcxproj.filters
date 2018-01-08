@@ -295,6 +295,9 @@
     <ClCompile Include="mod\modhud.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="mod\modhud_msg.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ammo.h">

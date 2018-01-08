@@ -229,6 +229,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     <ClCompile Include="message.cpp" />
     <ClCompile Include="mod\gl.cpp" />
     <ClCompile Include="mod\modhud.cpp" />
+    <ClCompile Include="mod\modhud_msg.cpp" />
     <ClCompile Include="mod\mod_util.cpp" />
     <ClCompile Include="mod\steam_integration.cpp" />
     <ClCompile Include="mod\vgui_modpanel.cpp" />
