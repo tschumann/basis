@@ -1,6 +1,9 @@
 
+- Added VGUI menu that can be opened or held open (i or F1)
 - Added Steam API integration
-- Added r_cull cvar
-- Added cl_autowepswitch cvar
-- Added sv_physics cvar
+- Added r_cull cvar (controls whether OpenGL rendering does backface culling or not)
+- Added game/mod mounting
+- Added cl_autowepswitch cvar (multiplayer only; always switches weapons on pick-up when true, otherwise uses default weapon switching rules)
+- Added monster_construction_dead
+- Added sv_physics cvar (controls movement of bodies on death)
 - Added env_fog entity

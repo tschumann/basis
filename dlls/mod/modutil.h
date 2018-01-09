@@ -13,4 +13,5 @@
 *
 ****/
 
-extern int			UTIL_PrecacheSafe( char *szModel );
+extern int			UTIL_PrecacheModelSafe( char *szModel );
+extern void			UTIL_SetModelSafe( edict_t *pEdict, const char *szModel );

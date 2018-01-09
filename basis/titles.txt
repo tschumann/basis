@@ -970,3 +970,8 @@ Spec_Duck
 {
 Press DUCK for Spectator Menu
 }
+
+CANCEL
+{
+Cancel
+}
