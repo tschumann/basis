@@ -22,7 +22,7 @@ $ # clone your repo
 
 $ git clone https://github.com/you/repo
 
-$ # note that the steps below are in update.bat too
+$ # note that similar steps are in update.bat too
 
 $ # create a new remote that points to Basis
 
@@ -42,3 +42,17 @@ $ cd linux
 
 $ make
 
+Setting up local development
+----------------------------
+
+$ # clone the repo
+
+$ git clone https://github.com/tschumann/basis
+
+$ # create a new remote to link back to Valve's halflife repo
+
+$ git remote add valve https://github.com/ValveSoftware/halflife
+
+$ # pull the latest changes from halflife
+
+$ git pull valve master
