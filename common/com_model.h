@@ -94,6 +94,8 @@ typedef struct texture_s
 {
 	char		name[16];
 	unsigned	width, height;
+	int			gl_texturenum;
+	struct msurface_s *texturechain;	// for gl_texsort drawing
 	int			anim_total;				// total tenths in sequence ( 0 = no)
 	int			anim_min, anim_max;		// time for this frame min <=time< max
 	struct texture_s *anim_next;		// in the animation sequence
@@ -112,13 +114,26 @@ typedef struct
 	int			flags;			// sky or slime, no lightmap or 256 subdivision
 } mtexinfo_t;
 
+#define VERTEXSIZE  7
+
+typedef struct glpoly_s
+{
+	struct glpoly_s	*next;
+	struct glpoly_s	*chain;
+	int	numverts;
+	int	flags;		// for SURF_UNDERWATER
+
+	// NOTE: not actually 4
+	float verts[4][VERTEXSIZE];	// variable sized (xyz s1t1 s2t2)
+} glpoly_t;
+
 typedef struct mnode_s
 {
 // common with leaf
 	int			contents;		// 0, to differentiate from leafs
 	int			visframe;		// node needs to be traversed if current
 	
-	short		minmaxs[6];		// for bounding box culling
+	float		minmaxs[6];		// for bounding box culling
 
 	struct mnode_s	*parent;
 
@@ -153,7 +168,7 @@ typedef struct mleaf_s
 	int			contents;		// wil be a negative contents number
 	int			visframe;		// node needs to be traversed if current
 
-	short		minmaxs[6];		// for bounding box culling
+	float		minmaxs[6];		// for bounding box culling
 
 	struct mnode_s	*parent;
 
@@ -171,28 +186,32 @@ struct msurface_s
 {
 	int			visframe;		// should be drawn when node is crossed
 
-	int			dlightframe;	// last frame the surface was checked by an animated light
-	int			dlightbits;		// dynamically generated. Indicates if the surface illumination 
-								// is modified by an animated light.
-
 	mplane_t	*plane;			// pointer to shared plane			
 	int			flags;			// see SURF_ #defines
 
 	int			firstedge;	// look up in model->surfedges[], negative numbers
 	int			numedges;	// are backwards edges
-	
-// surface generation data
-	struct surfcache_s	*cachespots[MIPLEVELS];
 
 	short		texturemins[2]; // smallest s/t position on the surface.
 	short		extents[2];		// ?? s/t texture size, 1..256 for all non-sky surfaces
 
+	int			light_s, light_t;			// gl lightmap coordinates
+
+	glpoly_t	*polys;						// multiple if warped
+	struct msurface_s	*texturechain;
+
 	mtexinfo_t	*texinfo;		
-	
+
 // lighting info
-	byte		styles[MAXLIGHTMAPS]; // index into d_lightstylevalue[] for animated lights 
-									  // no one surface can be effected by more than 4 
-									  // animated lights.
+	int			dlightframe;	// last frame the surface was checked by an animated light
+	int			dlightbits;		// dynamically generated. Indicates if the surface illumination 
+								// is modified by an animated light.
+
+	int			lightmaptexturenum;
+	byte		styles[MAXLIGHTMAPS];
+	int			cached_light[MAXLIGHTMAPS];	// values currently used in lightmap
+	qboolean	cached_dlight;				// true if dynamic light in cache
+
 	color24		*samples;
 	
 	decal_t		*pdecals;
