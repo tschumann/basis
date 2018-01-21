@@ -28,6 +28,7 @@
 #include "vgui_int.h"
 #include "vgui_TeamFortressViewport.h"
 #include "mod/vgui_ModViewport.h"
+#include "com_model.h"
 
 #include "demo.h"
 #include "demo_api.h"
@@ -59,6 +60,43 @@ void __CmdFunc_CloseModMenu(void)
 	}
 }
 
+void __CmdFunc_ShowModels( void )
+{
+	int idx = 1;
+
+	while( true )
+	{
+		model_t *pModel = gEngfuncs.hudGetModelByIndex(idx);
+
+		if( pModel )
+		{
+			gEngfuncs.Con_DPrintf( "%d %s\n", idx, pModel->name );
+
+			switch( pModel->type )
+			{
+			case mod_brush:
+				gEngfuncs.Con_DPrintf("\tmod_brush\n");
+				break;
+			case mod_sprite:
+				gEngfuncs.Con_DPrintf("\tmod_sprite\n");
+				break;
+			case mod_alias:
+				gEngfuncs.Con_DPrintf("\tmod_alias\n");
+				break;
+			case mod_studio:
+				gEngfuncs.Con_DPrintf("\tmod_studio\n");
+				break;
+			}
+
+			idx++;
+		}
+		else
+		{
+			break;
+		}
+	}
+}
+
 // This is called every time the DLL is loaded
 void CModHud :: Init( void )
 {
@@ -68,6 +106,7 @@ void CModHud :: Init( void )
 
 	HOOK_COMMAND( "+modmenu", OpenModMenu );
 	HOOK_COMMAND( "-modmenu", CloseModMenu );
+	HOOK_COMMAND( "cl_showmodels", ShowModels );
 
 	CVAR_CREATE("cl_autowepswitch", "1", FCVAR_ARCHIVE | FCVAR_USERINFO);		// controls where the user automatically switches to the weapon they've just picked up
 
