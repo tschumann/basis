@@ -21,6 +21,7 @@
 #include "hud.h"
 #include "modhud.h"
 #include "cl_util.h"
+#include "mod_cl_util.h"
 #include <string.h>
 #include <stdio.h>
 #include "parsemsg.h"
@@ -66,28 +67,11 @@ void __CmdFunc_ShowModels( void )
 
 	while( true )
 	{
-		model_t *pModel = gEngfuncs.hudGetModelByIndex(idx);
+		model_t *pModel = gEngfuncs.hudGetModelByIndex( idx );
 
 		if( pModel )
 		{
-			gEngfuncs.Con_DPrintf( "%d %s\n", idx, pModel->name );
-
-			switch( pModel->type )
-			{
-			case mod_brush:
-				gEngfuncs.Con_DPrintf("\tmod_brush\n");
-				break;
-			case mod_sprite:
-				gEngfuncs.Con_DPrintf("\tmod_sprite\n");
-				break;
-			case mod_alias:
-				gEngfuncs.Con_DPrintf("\tmod_alias\n");
-				break;
-			case mod_studio:
-				gEngfuncs.Con_DPrintf("\tmod_studio\n");
-				break;
-			}
-
+			gEngfuncs.Con_DPrintf( "%d %s (%s)\n", idx, pModel->name, GetModelType( pModel ) );
 			idx++;
 		}
 		else

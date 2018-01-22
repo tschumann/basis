@@ -13,8 +13,10 @@
 *
 ****/
 //
-// cl_mod_util.h
+// mod_cl_util.h
 //
+
+#include "com_model.h"
 
 #ifdef _WIN32
 #define FILESYSTEM_DLLNAME "FileSystem_Steam.dll"
@@ -37,3 +39,5 @@ extern void CL_UnloadGameUI( void );
 
 extern void CL_LoadVGUI2( void );
 extern void CL_UnloadVGUI2( void );
+
+extern const char *GetModelType( model_t *pModel );

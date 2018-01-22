@@ -20,6 +20,7 @@
 
 #include "hud.h"
 #include "cl_util.h"
+#include "com_model.h"
 
 #include <stdarg.h>
 
@@ -192,5 +193,22 @@ void CL_LoadVGUI2( void )
 		ConsoleDPrintf( "Unable to get factory from %s\n", VGUI2_DLLNAME );
 		g_hVGUI2Module = NULL;
 		return;
+	}
+}
+
+const char *GetModelType( model_t *pModel )
+{
+	switch( pModel->type )
+	{
+	case mod_brush:
+		return "mod_brush";
+	case mod_sprite:
+		return "mod_sprite";
+	case mod_alias:
+		return "mod_alias";
+	case mod_studio:
+		return "mod_studio";
+	default:
+		return "unknown";
 	}
 }
