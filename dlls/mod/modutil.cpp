@@ -45,3 +45,31 @@ void UTIL_SetModelSafe( edict_t *pEdict, const char *szModel )
 	}
 	(*g_engfuncs.pfnSetModel)( pEdict, szModel );
 }
+
+void UTIL_ClampAngles( vec3_t &angles )
+{
+	if( angles.x >= 180.0f )
+	{
+		angles.x -= 360 * ((int)(angles.x / 360.0f) + 1);
+	}
+	if( angles.x < -180.0f )
+	{
+		angles.x += 360 * ((int)(angles.x / 360.0f) + 1);
+	}
+	if( angles.y >= 180.0f )
+	{
+		angles.y -= 360 * ((int)(angles.y / 360.0f) + 1);
+	}
+	if( angles.y < -180.0f )
+	{
+		angles.y += 360 * ((int)(angles.y / 360.0f) + 1);
+	}
+	if( angles.z >= 180.0f )
+	{
+		angles.z -= 360 * ((int)(angles.z / 360.0f) + 1);
+	}
+	if( angles.z < -180.0f )
+	{
+		angles.z += 360 * ((int)(angles.z / 360.0f) + 1);
+	}
+}
