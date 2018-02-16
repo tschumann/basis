@@ -25,6 +25,12 @@
 
 #define MENU_MENU				20
 
+#define MOD_PANEL_PADDING 20
+#define MOD_PANEL_X XRES(MOD_PANEL_PADDING)
+#define MOD_PANEL_Y YRES(MOD_PANEL_PADDING)
+#define MOD_PANEL_WIDTH XRES((ModViewport::VIEWPORT_WIDTH - (MOD_PANEL_PADDING * 2)))
+#define MOD_PANEL_HEIGHT YRES((ModViewport::VIEWPORT_HEIGHT - (MOD_PANEL_PADDING * 2)))
+
 class CModPanel;
 
 //==============================================================================

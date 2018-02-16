@@ -21,12 +21,6 @@
 #include "cl_util.h"
 #include "vgui_ModViewport.h"
 
-#define MOD_PANEL_PADDING 20
-#define MOD_PANEL_X XRES(MOD_PANEL_PADDING)
-#define MOD_PANEL_Y YRES(MOD_PANEL_PADDING)
-#define MOD_PANEL_WIDTH XRES((ModViewport::VIEWPORT_WIDTH - (MOD_PANEL_PADDING * 2)))
-#define MOD_PANEL_HEIGHT YRES((ModViewport::VIEWPORT_HEIGHT - (MOD_PANEL_PADDING * 2)))
-
 CModPanel::CModPanel(int iTrans, int iRemoveMe, int x, int y, int wide, int tall) : CMenuPanel(iTrans, iRemoveMe, x, y, wide, tall)
 {
 	CSchemeManager *pSchemes = gViewPort->GetSchemeManager();
