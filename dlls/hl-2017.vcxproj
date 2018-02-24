@@ -337,6 +337,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
     <ClCompile Include="mod\construction.cpp" />
+    <ClCompile Include="mod\modanimation.cpp" />
     <ClCompile Include="mod\modeffects.cpp" />
     <ClCompile Include="mod\modentity.cpp" />
     <ClCompile Include="mod\modgame.cpp" />
@@ -507,6 +508,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     <ClInclude Include="gamerules.h" />
     <ClInclude Include="hornet.h" />
     <ClInclude Include="items.h" />
+    <ClInclude Include="mod\modanimation.h" />
     <ClInclude Include="mod\modentity.h" />
     <ClInclude Include="mod\modgame.h" />
     <ClInclude Include="mod\modgamerules.h" />

@@ -139,6 +139,7 @@ HLDLL_OBJS = \
 
 MODDLL_OBJS = \
 	$(MODDLL_OBJ_DIR)/construction.o \
+	$(MODDLL_OBJ_DIR)/modanimation.o \
 	$(MODDLL_OBJ_DIR)/modeffects.o \
 	$(MODDLL_OBJ_DIR)/modentity.o \
 	$(MODDLL_OBJ_DIR)/modgame.o \
