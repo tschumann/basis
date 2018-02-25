@@ -115,6 +115,9 @@ extern "C" int Server_GetBlendingInterface( int version, struct sv_blending_inte
 
 #endif
 {
+	// quit out because it's not clear what SV_StudioSetupBones is meant to do
+	return 0;
+
 	if ( version != SV_BLENDING_INTERFACE_VERSION )
 		return 0;
 
