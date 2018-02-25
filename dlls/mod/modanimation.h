@@ -15,6 +15,8 @@
 #ifndef MODANIMATION_H
 #define MODANIMATION_H
 
+extern cvar_t drawhitboxes;
+
 void SV_StudioSetupBones( struct model_s *pModel, float frame, int sequence, const vec3_t angles, const vec3_t origin, const byte *pcontroller, const byte *pblending, int iBone, const edict_t *pEdict );
 
 #endif	//MODANIMATION_H

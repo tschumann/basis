@@ -139,11 +139,9 @@ void SV_StudioSetupBones( struct model_s *pModel, float frame, int sequence, con
 	// your blending code here...
 
 
-	cvar_t *developer = CVAR_GET_POINTER("developer");
-
 	g_pstudiohdr = (studiohdr_t *)IEngineStudio.Mod_Extradata (pModel);
 
-	if( developer && developer->value >= 2 )
+	if( drawhitboxes.value )
 	{
 		mstudiobbox_t	*pbbox;
 		vec3_t	tmp;
@@ -164,9 +162,7 @@ void SV_StudioSetupBones( struct model_s *pModel, float frame, int sequence, con
 				VectorTransform( tmp, (*g_pBoneTransform)[pbbox[i].bone], p[j] );
 			}
 
-			//Only draw every other hitbox
-			if( i % 2 == 0 )
-				DrawBox( p, 255, 0, 0 );
+			DrawBox( p, 255, 0, 0 );
 		}
 	}
 }

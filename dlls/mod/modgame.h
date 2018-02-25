@@ -38,5 +38,6 @@ extern void Mod_Precache( void );
 
 extern cvar_t	physics;
 extern cvar_t	coop;
+extern cvar_t	drawhitboxes;
 
 #endif		// MODGAME_H
