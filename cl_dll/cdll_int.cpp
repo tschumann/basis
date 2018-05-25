@@ -46,6 +46,7 @@ extern "C"
 #
 #include "tri.h"
 #include "vgui_TeamFortressViewport.h"
+#include "mod/vgui_ModViewport.h"
 #include "../public/interface.h"
 #include "mod/steam_integration.h"
 
@@ -283,6 +284,12 @@ void CL_DLLEXPORT HUD_Frame( double time )
 	ServersThink( time );
 
 	GetClientVoiceMgr()->Frame(time);
+
+	if( gViewPort )
+	{
+		// need to cast to subclass because there's no way of doing this without changing the base class
+		((ModViewport *)gViewPort)->Update();
+	}
 }
 
 

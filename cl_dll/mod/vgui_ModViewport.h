@@ -48,6 +48,8 @@ public:
 
 	virtual void ShowVGUIMenu( int iMenu );
 
+	virtual void Update( void );
+
 	CModPanel	*m_pModPanel;
 
 	const static int VIEWPORT_WIDTH = 640;

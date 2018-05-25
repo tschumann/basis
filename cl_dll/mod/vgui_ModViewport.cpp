@@ -188,3 +188,7 @@ void ModViewport::CreateModMenu()
 	m_pModPanel->setParent( this );
 	m_pModPanel->setVisible( false );
 }
+
+void ModViewport::Update()
+{
+}

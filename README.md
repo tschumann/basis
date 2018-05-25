@@ -1,7 +1,7 @@
 Basis
 =====
 
-Something like Spirit of Half-Life.
+Something like Spirit of Half-Life. The intent is to add more features to the Half-Life SDK while better documenting the engine's features and maintaining the same style.
 
 
 How to fork this without using GitHub's forking
