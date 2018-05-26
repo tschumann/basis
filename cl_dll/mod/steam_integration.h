@@ -16,6 +16,9 @@
 #ifndef STEAM_INTEGRATION_H
 #define STEAM_INTEGRATION_H
 
+// stub for function that the Steam API tries to use
+extern int Q_snprintf( char *buffer, size_t buffersize, const char *format, ... );
+
 void Steam_Init();
 
 bool Steam_UserHasLicenseForApp();

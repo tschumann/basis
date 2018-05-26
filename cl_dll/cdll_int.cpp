@@ -204,7 +204,7 @@ void CL_DLLEXPORT HUD_Init( void )
 	InitInput();
 	gHUD.Init();
 	Scheme_Init();
-	// if these are called from Initialize nothing is printed to the console
+	// if these are called from Initialize nothing is printed to the console, so call them here instead
 	CL_LoadGameUI();
 	CL_LoadVGUI2();
 
