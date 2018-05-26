@@ -41,3 +41,5 @@ extern void CL_LoadVGUI2( void );
 extern void CL_UnloadVGUI2( void );
 
 extern const char *GetModelType( model_t *pModel );
+
+extern void COM_FileBase ( const char *in, char *out);

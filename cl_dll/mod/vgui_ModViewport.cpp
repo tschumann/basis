@@ -171,6 +171,10 @@ void ModViewport::ShowVGUIMenu( int iMenu )
 	}
 }
 
+void ModViewport::Update()
+{
+}
+
 //======================================================================================
 // MOD MENU
 //======================================================================================
@@ -187,8 +191,4 @@ void ModViewport::CreateModMenu()
 	m_pModPanel = new CModPanel(100, false, 0, 0, ScreenWidth, ScreenHeight);
 	m_pModPanel->setParent( this );
 	m_pModPanel->setVisible( false );
-}
-
-void ModViewport::Update()
-{
 }
