@@ -230,6 +230,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     <ClCompile Include="mod\gl.cpp" />
     <ClCompile Include="mod\modhud.cpp" />
     <ClCompile Include="mod\modhud_msg.cpp" />
+    <ClCompile Include="mod\ModStudioModelRenderer.cpp" />
     <ClCompile Include="mod\mod_util.cpp" />
     <ClCompile Include="mod\steam_integration.cpp" />
     <ClCompile Include="mod\vgui_modpanel.cpp" />
@@ -307,6 +308,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     <ClInclude Include="kbutton.h" />
     <ClInclude Include="mod\gl.h" />
     <ClInclude Include="mod\modhud.h" />
+    <ClInclude Include="mod\ModStudioModelRenderer.h" />
     <ClInclude Include="mod\mod_cl_util.h" />
     <ClInclude Include="mod\steam_integration.h" />
     <ClInclude Include="mod\vgui_ModViewport.h" />

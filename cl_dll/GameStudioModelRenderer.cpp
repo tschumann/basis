@@ -25,6 +25,7 @@
 #include "r_studioint.h"
 
 #include "StudioModelRenderer.h"
+#include "mod/ModStudioModelRenderer.h"
 #include "GameStudioModelRenderer.h"
 #include "Exports.h"
 
@@ -37,7 +38,8 @@
 extern engine_studio_api_t IEngineStudio;
 
 // The renderer object, created on the stack.
-CGameStudioModelRenderer g_StudioRenderer;
+// CGameStudioModelRenderer g_StudioRenderer;
+CModStudioModelRenderer g_StudioRenderer;
 /*
 ====================
 CGameStudioModelRenderer
