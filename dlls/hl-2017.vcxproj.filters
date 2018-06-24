@@ -366,6 +366,9 @@
     <ClCompile Include="mod\modanimation.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="mod\modchargers.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h">

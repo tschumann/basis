@@ -338,6 +338,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     </ClCompile>
     <ClCompile Include="mod\construction.cpp" />
     <ClCompile Include="mod\modanimation.cpp" />
+    <ClCompile Include="mod\modchargers.cpp" />
     <ClCompile Include="mod\modeffects.cpp" />
     <ClCompile Include="mod\modentity.cpp" />
     <ClCompile Include="mod\modgame.cpp" />
