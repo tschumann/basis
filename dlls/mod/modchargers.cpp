@@ -28,14 +28,10 @@ class CBaseCharger : public CBaseToggle
 public:
 	virtual void Spawn( );
 	void EXPORT Off(void);
-	virtual void EXPORT Recharge(void);
-	void KeyValue( KeyValueData *pkvd );
-	void Use( CBaseEntity *pActivator, CBaseEntity *pCaller, USE_TYPE useType, float value );
+	virtual void EXPORT Recharge(void) {}
+	void KeyValue( KeyValueData *pkvd ) {}
+	void Use( CBaseEntity *pActivator, CBaseEntity *pCaller, USE_TYPE useType, float value ) {}
 	virtual int	ObjectCaps( void ) { return (CBaseToggle :: ObjectCaps() | FCAP_CONTINUOUS_USE) & ~FCAP_ACROSS_TRANSITION; }
-	virtual int		Save( CSave &save );
-	virtual int		Restore( CRestore &restore );
-
-	static	TYPEDESCRIPTION m_SaveData[];
 
 	float m_flNextCharge; 
 	int		m_iReactivate ; // DeathMatch Delay until reactvated
@@ -76,13 +72,33 @@ void CBaseCharger::Off(void)
 		SetThink( &CBaseCharger::SUB_DoNothing );
 }
 
+
 class CHealthCharger : public CBaseCharger
 {
 public:
 	void Spawn( );
 	void Precache( void );
 	void EXPORT Recharge(void);
+
+	virtual int		Save( CSave &save );
+	virtual int		Restore( CRestore &restore );
+
+	static	TYPEDESCRIPTION m_SaveData[];
 };
+
+TYPEDESCRIPTION CHealthCharger::m_SaveData[] =
+{
+	DEFINE_FIELD( CHealthCharger, m_flNextCharge, FIELD_TIME ),
+	DEFINE_FIELD( CHealthCharger, m_iReactivate, FIELD_INTEGER),
+	DEFINE_FIELD( CHealthCharger, m_iJuice, FIELD_INTEGER),
+	DEFINE_FIELD( CHealthCharger, m_iOn, FIELD_INTEGER),
+	DEFINE_FIELD( CHealthCharger, m_flSoundTime, FIELD_TIME ),
+};
+
+IMPLEMENT_SAVERESTORE( CHealthCharger, CBaseEntity );
+
+LINK_ENTITY_TO_CLASS(item_healthcharger, CHealthCharger);
+
 
 void CHealthCharger::Spawn()
 {
@@ -113,7 +129,26 @@ public:
 	void Spawn( );
 	void Precache( void );
 	void EXPORT Recharge(void);
+
+	virtual int		Save( CSave &save );
+	virtual int		Restore( CRestore &restore );
+
+	static	TYPEDESCRIPTION m_SaveData[];
 };
+
+TYPEDESCRIPTION CArmorCharger::m_SaveData[] =
+{
+	DEFINE_FIELD( CArmorCharger, m_flNextCharge, FIELD_TIME ),
+	DEFINE_FIELD( CArmorCharger, m_iReactivate, FIELD_INTEGER),
+	DEFINE_FIELD( CArmorCharger, m_iJuice, FIELD_INTEGER),
+	DEFINE_FIELD( CArmorCharger, m_iOn, FIELD_INTEGER),
+	DEFINE_FIELD( CArmorCharger, m_flSoundTime, FIELD_TIME ),
+};
+
+IMPLEMENT_SAVERESTORE( CArmorCharger, CBaseEntity );
+
+LINK_ENTITY_TO_CLASS(item_recharge, CArmorCharger);
+
 
 void CArmorCharger::Spawn()
 {
