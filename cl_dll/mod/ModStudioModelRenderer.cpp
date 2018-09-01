@@ -55,6 +55,8 @@ void CModStudioModelRenderer::StudioRenderModel( void )
 	{
 		return;
 	}
+
+	CStudioModelRenderer::StudioRenderModel( );
 }
 
 /*
