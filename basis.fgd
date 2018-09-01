@@ -8,6 +8,9 @@
 //
 
 //
+// sep 01 2018
+//  - added scale attribute to Monster class
+//
 // jul 15 2017
 //  - added env_projectile
 //
@@ -190,7 +193,7 @@
 @BaseClass base(Target, Targetname, RenderFields, Angles) color(0 200 200) = Monster 
 [
 	TriggerTarget(String) : "TriggerTarget"
-      TriggerCondition(Choices) : "Trigger Condition" : 0 =
+	TriggerCondition(Choices) : "Trigger Condition" : 0 =
 	[
 		0 : "No Trigger"
 		1 : "See Player, Mad at Player"
@@ -213,6 +216,7 @@
 		256: "Pre-Disaster" 	: 0
 		512: "Fade Corpse"	: 0
 	]
+	scale(string) : "Scale" : "1.0"
 ]
 
 @BaseClass = TalkMonster
