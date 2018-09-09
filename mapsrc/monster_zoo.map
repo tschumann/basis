@@ -69,6 +69,7 @@
 "classname" "monster_barney"
 "rendercolor" "0 0 0"
 "angles" "0 0 0"
+"scale" "2.0"
 "origin" "128 384 0"
 }
 {
@@ -77,12 +78,14 @@
 "angles" "0 0 0"
 "body" "-1"
 "sequence" "13"
+"scale" "2.0"
 "origin" "384 384 0"
 }
 {
 "classname" "monster_barney"
 "rendercolor" "0 0 0"
 "angles" "0 0 0"
+"scale" "1.0"
 "origin" "256 384 0"
 }
 {
@@ -91,6 +94,7 @@
 "angles" "0 0 0"
 "body" "-1"
 "sequence" "13"
+"scale" "1.0"
 "origin" "512 384 0"
 }
 {

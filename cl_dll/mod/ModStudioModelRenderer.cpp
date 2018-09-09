@@ -232,12 +232,15 @@ void CModStudioModelRenderer::StudioSetupBones ( void )
 		}
 	}
 
-	// scale the bones by the entity's scale
-	for (int i = 0; i < 3; i++)
+	if (m_pCurrentEntity->curstate.scale > 0.0)
 	{
-		for (int j = 0; j < 3; j++)
+		// scale the bones by the entity's scale
+		for (int i = 0; i < 3; i++)
 		{
-			(*m_protationmatrix)[i][j] *= m_pCurrentEntity->curstate.scale;
+			for (int j = 0; j < 3; j++)
+			{
+				(*m_protationmatrix)[i][j] *= m_pCurrentEntity->curstate.scale;
+			}
 		}
 	}
 
