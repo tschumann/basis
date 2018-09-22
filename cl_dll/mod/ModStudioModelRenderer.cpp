@@ -38,7 +38,7 @@ extern engine_studio_api_t IEngineStudio;
 
 /*
 ====================
-CGameStudioModelRenderer
+CModStudioModelRenderer
 
 ====================
 */
