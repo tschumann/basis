@@ -79,7 +79,9 @@ void ModDLLInit( void )
 	}
 }
 
+DLL_GLOBAL	short	g_sModelIndexNull;// holds the index for the null model
+
 void Mod_Precache( void )
 {
-	PRECACHE_MODEL("models/null.mdl");
+	g_sModelIndexNull = PRECACHE_MODEL("models/null.mdl");
 }

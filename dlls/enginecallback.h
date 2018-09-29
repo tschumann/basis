@@ -49,7 +49,17 @@ inline void SET_MODEL(edict_t *e, const char *m)
 #define SET_MODEL		(*g_engfuncs.pfnSetModel)
 #endif
 
+// this isn't great but this file ends up getting included by both the client and server code
+#ifndef CLIENT_DLL
+#include "mod/modutil.h"
+inline int MODEL_INDEX(const char *m)
+{
+	return UTIL_ModelIndexSafe(m);
+}
+#else
 #define MODEL_INDEX		(*g_engfuncs.pfnModelIndex)
+#endif
+
 #define MODEL_FRAMES	(*g_engfuncs.pfnModelFrames)
 #define SET_SIZE		(*g_engfuncs.pfnSetSize)
 #define CHANGE_LEVEL	(*g_engfuncs.pfnChangeLevel)
