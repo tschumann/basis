@@ -21,6 +21,7 @@
 
 #include "particleman.h"
 #include "tri.h"
+#include "mod/modtri.h"
 extern IParticleMan *g_pParticleMan;
 
 extern float g_iFogColor[3];
@@ -76,4 +77,5 @@ void CL_DLLEXPORT HUD_DrawTransparentTriangles( void )
 		 g_pParticleMan->Update();
 
 	RenderFog();
+	RenderBoundingBoxes();
 }

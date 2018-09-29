@@ -94,6 +94,7 @@ HL1_OBJS = \
 	$(HL1_OBJ_DIR)/mod/gl.o \
 	$(HL1_OBJ_DIR)/mod/modhud.o \
 	$(HL1_OBJ_DIR)/mod/modhud_msg.o \
+	$(HL1_OBJ_DIR)/mod/modtri.o \
 	$(HL1_OBJ_DIR)/mod/mod_util.o \
 	$(HL1_OBJ_DIR)/mod/ModStudioModelRenderer.o \
 	$(HL1_OBJ_DIR)/mod/steam_integration.o \

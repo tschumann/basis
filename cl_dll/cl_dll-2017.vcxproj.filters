@@ -301,6 +301,9 @@
     <ClCompile Include="mod\ModStudioModelRenderer.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="mod\modtri.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ammo.h">
@@ -496,6 +499,9 @@
       <Filter>Header Files\mod</Filter>
     </ClInclude>
     <ClInclude Include="mod\ModStudioModelRenderer.h">
+      <Filter>Header Files\mod</Filter>
+    </ClInclude>
+    <ClInclude Include="mod\modtri.h">
       <Filter>Header Files\mod</Filter>
     </ClInclude>
   </ItemGroup>

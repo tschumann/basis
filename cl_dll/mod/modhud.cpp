@@ -36,6 +36,7 @@
 #include "vgui_ScorePanel.h"
 
 cvar_t *r_cull = NULL;
+cvar_t *r_boundingboxes = NULL;
 
 int __MsgFunc_Fog(const char *pszName, int iSize, void *pbuf)
 {
@@ -95,4 +96,5 @@ void CModHud :: Init( void )
 	CVAR_CREATE("cl_autowepswitch", "1", FCVAR_ARCHIVE | FCVAR_USERINFO);		// controls where the user automatically switches to the weapon they've just picked up
 
 	r_cull = CVAR_CREATE("r_cull", "0", FCVAR_ARCHIVE);
+	r_boundingboxes = CVAR_CREATE("r_boundingboxes", "0", 0);
 }
