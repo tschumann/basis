@@ -52,6 +52,23 @@ void RenderBoundingBoxes( void )
 				gEngfuncs.pTriAPI->Color4f( 0.0, 1.0, 0.0, 1.0 );
 				gEngfuncs.pTriAPI->Brightness( 1.0 );
 
+				// straight lines
+				gEngfuncs.pTriAPI->Vertex3f( mins.x, mins.y, mins.z );
+				gEngfuncs.pTriAPI->Vertex3f( maxs.x, mins.y, mins.z );
+
+				gEngfuncs.pTriAPI->Vertex3f( mins.x, mins.y, mins.z );
+				gEngfuncs.pTriAPI->Vertex3f( mins.x, maxs.y, mins.z );
+
+				gEngfuncs.pTriAPI->Vertex3f( mins.x, mins.y, mins.z );
+				gEngfuncs.pTriAPI->Vertex3f( mins.x, mins.y, maxs.z );
+
+				// angled lines
+				gEngfuncs.pTriAPI->Vertex3f( mins.x, mins.y, mins.z );
+				gEngfuncs.pTriAPI->Vertex3f( maxs.x, mins.y, maxs.z );
+
+				gEngfuncs.pTriAPI->Vertex3f( mins.x, mins.y, mins.z );
+				gEngfuncs.pTriAPI->Vertex3f( mins.x, maxs.y, maxs.z );
+
 				gEngfuncs.pTriAPI->Vertex3f( mins.x, mins.y, mins.z );
 				gEngfuncs.pTriAPI->Vertex3f( maxs.x, maxs.y, maxs.z );
 
