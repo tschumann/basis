@@ -338,6 +338,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     </ClCompile>
     <ClCompile Include="mod\construction.cpp" />
     <ClCompile Include="mod\modanimation.cpp" />
+    <ClCompile Include="mod\modcbase.cpp" />
     <ClCompile Include="mod\modchargers.cpp" />
     <ClCompile Include="mod\modeffects.cpp" />
     <ClCompile Include="mod\modentity.cpp" />
@@ -510,6 +511,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     <ClInclude Include="hornet.h" />
     <ClInclude Include="items.h" />
     <ClInclude Include="mod\modanimation.h" />
+    <ClInclude Include="mod\modcbase.h" />
     <ClInclude Include="mod\modentity.h" />
     <ClInclude Include="mod\modgame.h" />
     <ClInclude Include="mod\modgamerules.h" />

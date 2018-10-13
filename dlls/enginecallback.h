@@ -23,43 +23,11 @@ extern enginefuncs_t g_engfuncs;
 
 // The actual engine callbacks
 #define GETPLAYERUSERID (*g_engfuncs.pfnGetPlayerUserId)
-
-// this isn't great but this file ends up getting included by both the client and server code
-#ifndef CLIENT_DLL
-#include "mod/modutil.h"
-inline int PRECACHE_MODEL(char *s)
-{
-	return UTIL_PrecacheModelSafe(s);
-}
-#else
 #define PRECACHE_MODEL	(*g_engfuncs.pfnPrecacheModel)
-#endif
-
 #define PRECACHE_SOUND	(*g_engfuncs.pfnPrecacheSound)
 #define PRECACHE_GENERIC	(*g_engfuncs.pfnPrecacheGeneric)
-
-// this isn't great but this file ends up getting included by both the client and server code
-#ifndef CLIENT_DLL
-#include "mod/modutil.h"
-inline void SET_MODEL(edict_t *e, const char *m)
-{
-	UTIL_SetModelSafe(e, m);
-}
-#else
 #define SET_MODEL		(*g_engfuncs.pfnSetModel)
-#endif
-
-// this isn't great but this file ends up getting included by both the client and server code
-#ifndef CLIENT_DLL
-#include "mod/modutil.h"
-inline int MODEL_INDEX(const char *m)
-{
-	return UTIL_ModelIndexSafe(m);
-}
-#else
 #define MODEL_INDEX		(*g_engfuncs.pfnModelIndex)
-#endif
-
 #define MODEL_FRAMES	(*g_engfuncs.pfnModelFrames)
 #define SET_SIZE		(*g_engfuncs.pfnSetSize)
 #define CHANGE_LEVEL	(*g_engfuncs.pfnChangeLevel)

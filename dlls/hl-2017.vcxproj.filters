@@ -369,6 +369,9 @@
     <ClCompile Include="mod\modchargers.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="mod\modcbase.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h">
@@ -534,6 +537,9 @@
       <Filter>Header Files\mod</Filter>
     </ClInclude>
     <ClInclude Include="mod\modanimation.h">
+      <Filter>Header Files\mod</Filter>
+    </ClInclude>
+    <ClInclude Include="mod\modcbase.h">
       <Filter>Header Files\mod</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,4 +1,5 @@
 
+- Missing sprites and models now get replaced with a placeholder
 - Added support for models using pev->scale
 - Added cl_showmodels command to print models and their types used in a map
 - Added VGUI menu that can be opened or held open (i or F1)

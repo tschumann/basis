@@ -15,6 +15,7 @@
 #include	"extdll.h"
 #include	"util.h"
 #include	"cbase.h"
+#include	"mod/modcbase.h"
 #include	"saverestore.h"
 #include	"client.h"
 #include	"decals.h"
@@ -34,7 +35,7 @@ extern DLL_GLOBAL int			g_iSkillLevel;
 static DLL_FUNCTIONS gFunctionTable = 
 {
 	GameDLLInit,				//pfnGameInit
-	DispatchSpawn,				//pfnSpawn
+	ModDispatchSpawn,				//pfnSpawn
 	DispatchThink,				//pfnThink
 	DispatchUse,				//pfnUse
 	DispatchTouch,				//pfnTouch
