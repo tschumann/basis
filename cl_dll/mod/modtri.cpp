@@ -41,7 +41,6 @@ void RenderBoundingBoxes( void )
 			{
 				i++;
 
-				vec3_t origin = pEntity->origin;
 				vec3_t mins = pEntity->curstate.mins;
 				vec3_t maxs = pEntity->curstate.maxs;
 
