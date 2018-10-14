@@ -8,6 +8,9 @@
 //
 
 //
+// oct 14 2018
+//  - added monster_human_assault
+//
 // sep 01 2018
 //  - added scale attribute to Monster class
 //
@@ -1946,6 +1949,7 @@
 	]
 ]
 @PointClass base(Monster, Sequence) size(-16 -16 0, 16 16 72) studio("models/hassassin.mdl") = monster_human_assassin : "Human Assassin" []
+@PointClass base(Monster, Sequence) size(-16 -16 0, 16 16 72) studio("models/hassault.mdl") = monster_human_assault : "Human Assault" []
 @PointClass base(Monster) size(-16 -16 0, 16 16 72) studio("models/hgrunt.mdl") = monster_human_grunt : "Human Grunt (camo)" 
 [
 	spawnflags(Flags) =

@@ -143,3 +143,10 @@
 "pose" "2"
 "origin" "320 -448 0"
 }
+{
+"classname" "monster_human_assault"
+"rendercolor" "0 0 0"
+"angles" "0 0 0"
+"scale" "1.0"
+"origin" "960 -448 0"
+}

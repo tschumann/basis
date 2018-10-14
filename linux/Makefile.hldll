@@ -139,6 +139,7 @@ HLDLL_OBJS = \
 
 MODDLL_OBJS = \
 	$(MODDLL_OBJ_DIR)/construction.o \
+	$(MODDLL_OBJ_DIR)/hassault.o \
 	$(MODDLL_OBJ_DIR)/modanimation.o \
 	$(MODDLL_OBJ_DIR)/modcbase.o \
 	$(MODDLL_OBJ_DIR)/modchargers.o \
@@ -150,7 +151,8 @@ MODDLL_OBJS = \
 	$(MODDLL_OBJ_DIR)/modmultiplay_gamerules.o \
 	$(MODDLL_OBJ_DIR)/modplayer.o \
 	$(MODDLL_OBJ_DIR)/modutil.o \
-	$(MODDLL_OBJ_DIR)/modweapons.o
+	$(MODDLL_OBJ_DIR)/modweapons.o \
+	$(MODDLL_OBJ_DIR)/panthereye.o
 
 HLWPN_OBJS = \
 	$(HLWPN_OBJ_DIR)/hl_wpn_glock.o

@@ -337,6 +337,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
     <ClCompile Include="mod\construction.cpp" />
+    <ClCompile Include="mod\hassult.cpp" />
     <ClCompile Include="mod\modanimation.cpp" />
     <ClCompile Include="mod\modcbase.cpp" />
     <ClCompile Include="mod\modchargers.cpp" />
@@ -349,6 +350,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     <ClCompile Include="mod\modplayer.cpp" />
     <ClCompile Include="mod\modutil.cpp" />
     <ClCompile Include="mod\modweapons.cpp" />
+    <ClCompile Include="mod\panthereye.cpp" />
     <ClCompile Include="monstermaker.cpp">
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>

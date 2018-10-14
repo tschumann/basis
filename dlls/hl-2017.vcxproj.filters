@@ -372,6 +372,12 @@
     <ClCompile Include="mod\modcbase.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="mod\hassult.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\panthereye.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h">
