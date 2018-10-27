@@ -29,6 +29,7 @@ This file contains "stubs" of class member implementations so that we can predic
 #include	"nodes.h"
 #include	"soundent.h"
 #include	"skill.h"
+#include	"mod/modskill.h"
 
 // Globals used by game logic
 const Vector g_vecZero = Vector( 0, 0, 0 );
@@ -98,7 +99,8 @@ CGrenade *CGrenade::ShootContact( entvars_t *pevOwner, Vector vecStart, Vector v
 void CGrenade::DetonateUse( CBaseEntity *pActivator, CBaseEntity *pCaller, USE_TYPE useType, float value ){ }
 
 void UTIL_Remove( CBaseEntity *pEntity ){ }
-struct skilldata_t  gSkillData;
+// struct skilldata_t  gSkillData;
+struct modskilldata_t  gSkillData;
 void UTIL_SetSize( entvars_t *pev, const Vector &vecMin, const Vector &vecMax ){ }
 CBaseEntity *UTIL_FindEntityInSphere( CBaseEntity *pStartEntity, const Vector &vecCenter, float flRadius ){ return 0;}
 
