@@ -548,8 +548,5 @@
     <ClInclude Include="mod\modcbase.h">
       <Filter>Header Files\mod</Filter>
     </ClInclude>
-    <ClInclude Include="mod\modskill.h">
-      <Filter>Source Files\mod</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
