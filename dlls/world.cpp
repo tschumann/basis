@@ -28,6 +28,7 @@
 #include "client.h"
 #include "decals.h"
 #include "skill.h"
+#include "mod/modskill.h"
 #include "effects.h"
 #include "player.h"
 #include "weapons.h"

@@ -55,6 +55,11 @@ cvar_t	sk_construction_health1 = {"sk_construction_health1","0"};
 cvar_t	sk_construction_health2 = {"sk_construction_health2","0"};
 cvar_t	sk_construction_health3 = {"sk_construction_health3","0"};
 
+// Panthereye
+cvar_t	sk_panthereye_health1 = {"sk_panthereye_health1","0"};
+cvar_t	sk_panthereye_health2 = {"sk_panthereye_health2","0"};
+cvar_t	sk_panthereye_health3 = {"sk_panthereye_health3","0"};
+
 void ModDLLInit( void )
 {
 	CVAR_REGISTER ( &coop );
@@ -64,6 +69,10 @@ void ModDLLInit( void )
 	CVAR_REGISTER ( &sk_construction_health1 );
 	CVAR_REGISTER ( &sk_construction_health2 );
 	CVAR_REGISTER ( &sk_construction_health3 );
+
+	CVAR_REGISTER ( &sk_panthereye_health1 );
+	CVAR_REGISTER ( &sk_panthereye_health2 );
+	CVAR_REGISTER ( &sk_panthereye_health3 );
 
 	LoadFileSystem();
 

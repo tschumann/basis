@@ -26,6 +26,7 @@
 #include "weapons.h"
 #include "player.h"
 #include "skill.h"
+#include "mod/modskill.h"
 #include "items.h"
 #include "gamerules.h"
 

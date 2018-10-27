@@ -171,10 +171,20 @@ extern CGameRules *InstallGameRules( void );
 
 
 //=========================================================
+// CModGameRules - should be mod/modgamerules.h but the
+// entire default game rules inheritance chain is in this file
+//=========================================================
+class CModGameRules : public CGameRules
+{
+public:
+	virtual void RefreshSkillData( void );// fill skill data struct with proper values
+};
+
+//=========================================================
 // CHalfLifeRules - rules for the single player Half-Life 
 // game.
 //=========================================================
-class CHalfLifeRules : public CGameRules
+class CHalfLifeRules : public CModGameRules
 {
 public:
 	CHalfLifeRules ( void );
@@ -260,7 +270,7 @@ public:
 // CHalfLifeMultiplay - rules for the basic half life multiplayer
 // competition
 //=========================================================
-class CHalfLifeMultiplay : public CGameRules
+class CHalfLifeMultiplay : public CModGameRules
 {
 public:
 	CHalfLifeMultiplay();

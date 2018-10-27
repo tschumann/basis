@@ -18,6 +18,7 @@
 #include "cbase.h"
 #include "saverestore.h"
 #include "skill.h"
+#include "mod/modskill.h"
 #include "gamerules.h"
 
 //-------------------------------------------------------------

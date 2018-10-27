@@ -14,6 +14,7 @@
 ****/
 #ifndef MONSTERS_H
 #include "skill.h"
+#include "mod/modskill.h"
 #define MONSTERS_H
 
 /*

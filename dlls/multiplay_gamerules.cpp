@@ -23,6 +23,7 @@
 #include	"gamerules.h"
  
 #include	"skill.h"
+#include	"mod/modskill.h"
 #include	"game.h"
 #include	"items.h"
 #include	"voice_gamemgr.h"

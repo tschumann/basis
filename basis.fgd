@@ -8,6 +8,9 @@
 //
 
 //
+// oct 27 2018
+//  - added monster_panther
+//
 // oct 14 2018
 //  - added monster_human_assault
 //
@@ -2074,6 +2077,7 @@
 		64 : "Start Inactive" : 0
 	]
 ]
+@PointClass base(Monster, Sequence) size(-32 -32 0, 32 32 64) studio("models/panther.mdl") = monster_panther : "Panthereye" []
 @PointClass base(Monster, Sequence) size(-6 -6 0, 6 6 6) studio("models/bigrat.mdl") = monster_rat : "Rat (no ai)" []
 @PointClass base(Weapon,Targetx,RenderFields, Sequence) studio("models/w_satchel.mdl") = monster_satchelcharge : "Live Satchel Charge" []
 @PointClass base(Monster, TalkMonster) size(-16 -16 0, 16 16 72) studio("models/scientist.mdl") = monster_scientist : "Scared Scientist" 

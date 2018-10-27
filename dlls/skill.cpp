@@ -18,9 +18,10 @@
 #include	"extdll.h"
 #include	"util.h"
 #include	"skill.h"
+#include	"mod/modskill.h"
 
 
-skilldata_t	gSkillData;
+modskilldata_t	gSkillData;
 
 
 //=========================================================

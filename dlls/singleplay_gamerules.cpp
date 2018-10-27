@@ -22,6 +22,7 @@
 #include	"weapons.h"
 #include	"gamerules.h"
 #include	"skill.h"
+#include	"mod/modskill.h"
 #include	"items.h"
 
 extern DLL_GLOBAL CGameRules	*g_pGameRules;

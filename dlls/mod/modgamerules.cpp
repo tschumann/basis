@@ -23,9 +23,40 @@
 #include	"modgamerules.h"
 #include	"modmultiplay_gamerules.h"
 #include	"teamplay_gamerules.h"
+#include	"skill.h"
+#include	"mod/modskill.h"
 #include	"game.h"
 
 extern int g_teamplay;
+
+//=========================================================
+// load the SkillData struct with the proper values based on the skill level.
+//=========================================================
+void CModGameRules::RefreshSkillData ( void )
+{
+	CGameRules::RefreshSkillData();
+
+	int	iSkill;
+
+	iSkill = (int)CVAR_GET_FLOAT("skill");
+	g_iSkillLevel = iSkill;
+
+	if ( iSkill < 1 )
+	{
+		iSkill = 1;
+	}
+	else if ( iSkill > 3 )
+	{
+		iSkill = 3; 
+	}
+
+	gSkillData.iSkillLevel = iSkill;
+
+	ALERT ( at_console, "\nGAME SKILL LEVEL:%d\n",iSkill );
+
+	// Panthereye
+	gSkillData.panthereyeHealth = GetSkillCvar( "sk_panthereye_health");
+}
 
 //=========================================================
 // instantiate the proper game rules object

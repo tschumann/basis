@@ -520,6 +520,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
     <ClInclude Include="mod\modmonster.h" />
     <ClInclude Include="mod\modmultiplay_gamerules.h" />
     <ClInclude Include="mod\modplayer.h" />
+    <ClInclude Include="mod\modskill.h" />
     <ClInclude Include="mod\modutil.h" />
     <ClInclude Include="mod\modweapons.h" />
     <ClInclude Include="monsterevent.h" />
