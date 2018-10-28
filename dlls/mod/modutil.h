@@ -15,5 +15,4 @@
 
 extern int			UTIL_PrecacheModelSafe( char *szModel );
 extern void			UTIL_SetModelSafe( edict_t *pEdict, const char *szModel );
-extern int			UTIL_ModelIndexSafe( const char *szModel );
 extern void			UTIL_ClampAngles( vec3_t &angles );

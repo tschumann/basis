@@ -23,7 +23,16 @@ extern enginefuncs_t g_engfuncs;
 
 // The actual engine callbacks
 #define GETPLAYERUSERID (*g_engfuncs.pfnGetPlayerUserId)
+// this isn't great but this file ends up getting included by both the client and server code
+#ifndef CLIENT_DLL
+#include "mod/modutil.h"
+inline int PRECACHE_MODEL(char *s)
+{
+	return UTIL_PrecacheModelSafe(s);
+}
+#else
 #define PRECACHE_MODEL	(*g_engfuncs.pfnPrecacheModel)
+#endif
 #define PRECACHE_SOUND	(*g_engfuncs.pfnPrecacheSound)
 #define PRECACHE_GENERIC	(*g_engfuncs.pfnPrecacheGeneric)
 #define SET_MODEL		(*g_engfuncs.pfnSetModel)

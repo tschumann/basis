@@ -46,16 +46,6 @@ void UTIL_SetModelSafe( edict_t *pEdict, const char *szModel )
 	(*g_engfuncs.pfnSetModel)( pEdict, szModel );
 }
 
-int UTIL_ModelIndexSafe( const char *szModel )
-{
-	if( g_pFileSystem && !g_pFileSystem->FileExists( szModel ) )
-	{
-		ALERT( at_warning, "%s doesn't exist - getting index of models/null.mdl instead\n", szModel );
-		return (*g_engfuncs.pfnModelIndex)("models/null.mdl");
-	}
-	return (*g_engfuncs.pfnModelIndex)( szModel );
-}
-
 void UTIL_ClampAngles( vec3_t &angles )
 {
 	if( angles.x >= 180.0f )
