@@ -372,10 +372,10 @@
     <ClCompile Include="mod\modcbase.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
-    <ClCompile Include="mod\hassult.cpp">
+    <ClCompile Include="mod\panthereye.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
-    <ClCompile Include="mod\panthereye.cpp">
+    <ClCompile Include="mod\hassault.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
   </ItemGroup>

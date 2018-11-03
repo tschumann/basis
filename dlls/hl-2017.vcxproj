@@ -337,7 +337,7 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
     <ClCompile Include="mod\construction.cpp" />
-    <ClCompile Include="mod\hassult.cpp" />
+    <ClCompile Include="mod\hassault.cpp" />
     <ClCompile Include="mod\modanimation.cpp" />
     <ClCompile Include="mod\modcbase.cpp" />
     <ClCompile Include="mod\modchargers.cpp" />
