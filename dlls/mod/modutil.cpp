@@ -42,6 +42,8 @@ void UTIL_SetModelSafe( edict_t *pEdict, const char *szModel )
 	{
 		ALERT( at_warning, "%s doesn't exist - setting models/null.mdl instead\n", szModel );
 		(*g_engfuncs.pfnSetModel)(pEdict, "models/null.mdl");
+
+		return;
 	}
 	(*g_engfuncs.pfnSetModel)( pEdict, szModel );
 }

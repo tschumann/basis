@@ -35,7 +35,16 @@ inline int PRECACHE_MODEL(char *s)
 #endif
 #define PRECACHE_SOUND	(*g_engfuncs.pfnPrecacheSound)
 #define PRECACHE_GENERIC	(*g_engfuncs.pfnPrecacheGeneric)
+// this isn't great but this file ends up getting included by both the client and server code
+#ifndef CLIENT_DLL
+#include "mod/modutil.h"
+inline void SET_MODEL(edict_t *e, const char *m)
+{
+	UTIL_SetModelSafe(e, m);
+}
+#else
 #define SET_MODEL		(*g_engfuncs.pfnSetModel)
+#endif
 #define MODEL_INDEX		(*g_engfuncs.pfnModelIndex)
 #define MODEL_FRAMES	(*g_engfuncs.pfnModelFrames)
 #define SET_SIZE		(*g_engfuncs.pfnSetSize)
