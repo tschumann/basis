@@ -51,5 +51,6 @@
 "t"				"impulse 201"
 "y"				"messagemode"
 "u"				"messagemode2"
+"g"				"+commandmenu"
 "i"				"modmenu"
 "F1"			"+modmenu"
