@@ -53,7 +53,7 @@
 //=========================================================
 // CSquadMonster - for any monster that forms squads.
 //=========================================================
-class CSquadMonster : public CBaseMonster 
+class CSquadMonster : public CModMonster
 {
 public:
 	// squad leader info

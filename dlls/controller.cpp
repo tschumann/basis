@@ -22,6 +22,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"effects.h"
 #include	"schedule.h"
 #include	"weapons.h"

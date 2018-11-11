@@ -20,6 +20,7 @@
 #include "cbase.h"
 #include "nodes.h"
 #include "monsters.h"
+#include "mod/modmonster.h"
 #include "animation.h"
 #include "saverestore.h"
 #include "squadmonster.h"

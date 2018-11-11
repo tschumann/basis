@@ -39,6 +39,7 @@ extern void Mod_Precache( void );
 extern cvar_t	physics;
 extern cvar_t	coop;
 extern cvar_t	drawhitboxes;
+extern cvar_t	ai;
 
 extern DLL_GLOBAL	short	g_sModelIndexNull;// holds the index for the null model
 

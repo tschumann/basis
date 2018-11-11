@@ -49,6 +49,7 @@ void LoadFileSystem( void )
 cvar_t	coop		= {"mp_coop", "0", FCVAR_SERVER };
 cvar_t	physics		= {"sv_physics", "0"};
 cvar_t	drawhitboxes	= {"sv_drawhitboxes", "0"};
+cvar_t	ai			= {"sv_ai", "1"};
 
 // Construction Worker
 cvar_t	sk_construction_health1 = {"sk_construction_health1","0"};

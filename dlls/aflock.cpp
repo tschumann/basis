@@ -20,6 +20,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"squadmonster.h"
 
 #define		AFLOCK_MAX_RECRUIT_RADIUS	1024
