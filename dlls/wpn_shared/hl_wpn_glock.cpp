@@ -16,6 +16,7 @@
 #include "extdll.h"
 #include "util.h"
 #include "cbase.h"
+#include "mod/modmonster.h"
 #include "monsters.h"
 #include "weapons.h"
 #include "nodes.h"

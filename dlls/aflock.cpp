@@ -33,7 +33,7 @@
 
 //=========================================================
 //=========================================================
-class CFlockingFlyerFlock : public CBaseMonster
+class CFlockingFlyerFlock : public CModMonster
 {
 public:
 	void Spawn( void );
@@ -62,7 +62,7 @@ IMPLEMENT_SAVERESTORE( CFlockingFlyerFlock, CBaseMonster );
 
 //=========================================================
 //=========================================================
-class CFlockingFlyer : public CBaseMonster
+class CFlockingFlyer : public CModMonster
 {
 public:
 	void Spawn( void );

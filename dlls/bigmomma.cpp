@@ -21,6 +21,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 #include	"decals.h"
 #include	"weapons.h"
@@ -172,7 +173,7 @@ void MortarSpray( const Vector &position, const Vector &direction, int spriteMod
 //
 #define BIG_CHILDCLASS		"monster_babycrab"
 
-class CBigMomma : public CBaseMonster
+class CBigMomma : public CModMonster
 {
 public:
 	void Spawn( void );

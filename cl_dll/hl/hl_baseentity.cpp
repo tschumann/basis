@@ -24,6 +24,7 @@ This file contains "stubs" of class member implementations so that we can predic
 #include	"extdll.h"
 #include	"util.h"
 #include	"cbase.h"
+#include	"mod/modmonster.h"
 #include	"player.h"
 #include	"weapons.h"
 #include	"nodes.h"
@@ -239,6 +240,9 @@ int CBaseMonster :: TakeDamage( entvars_t *pevInflictor, entvars_t *pevAttacker,
 int CBaseMonster :: DeadTakeDamage( entvars_t *pevInflictor, entvars_t *pevAttacker, float flDamage, int bitsDamageType ) { return 0; }
 int CBaseMonster::Restore( class CRestore & ) { return 1; }
 int CBaseMonster::Save( class CSave & ) { return 1; }
+
+void CModMonster::BecomeDead( void ) {}
+int CModMonster :: DeadTakeDamage( entvars_t *pevInflictor, entvars_t *pevAttacker, float flDamage, int bitsDamageType ) { return 0; }
 
 int TrainSpeed(int iSpeed, int iMax) { 	return 0; }
 void CBasePlayer :: DeathSound( void ) { }

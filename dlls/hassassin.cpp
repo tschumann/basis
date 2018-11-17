@@ -62,7 +62,7 @@ enum
 
 #define bits_MEMORY_BADJUMP		(bits_MEMORY_CUSTOM1)
 
-class CHAssassin : public CBaseMonster
+class CHAssassin : public CModMonster
 {
 public:
 	void Spawn( void );

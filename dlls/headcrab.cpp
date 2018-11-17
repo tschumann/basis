@@ -20,6 +20,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 #include	"game.h"
 
@@ -70,7 +71,7 @@ Schedule_t	slHCRangeAttack1Fast[] =
 	},
 };
 
-class CHeadCrab : public CBaseMonster
+class CHeadCrab : public CModMonster
 {
 public:
 	void Spawn( void );

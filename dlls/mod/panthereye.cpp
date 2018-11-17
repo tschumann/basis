@@ -20,6 +20,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 #include	"nodes.h"
 #include	"effects.h"
@@ -27,7 +28,7 @@
 #include	"soundent.h"
 #include	"game.h"
 
-class CPanthereye : public CBaseMonster
+class CPanthereye : public CModMonster
 {
 public:
 	void Spawn( void );

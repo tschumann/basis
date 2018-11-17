@@ -22,6 +22,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 
 
@@ -34,7 +35,7 @@
 
 #define ZOMBIE_FLINCH_DELAY			2		// at most one flinch every n secs
 
-class CZombie : public CBaseMonster
+class CZombie : public CModMonster
 {
 public:
 	void Spawn( void );

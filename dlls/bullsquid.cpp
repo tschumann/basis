@@ -20,6 +20,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 #include	"nodes.h"
 #include	"effects.h"
@@ -186,7 +187,7 @@ void CSquidSpit :: Touch ( CBaseEntity *pOther )
 #define		BSQUID_AE_HOP		( 5 )
 #define		BSQUID_AE_THROW		( 6 )
 
-class CBullsquid : public CBaseMonster
+class CBullsquid : public CModMonster
 {
 public:
 	void Spawn( void );

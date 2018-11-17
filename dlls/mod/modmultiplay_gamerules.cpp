@@ -18,6 +18,7 @@
 #include	"extdll.h"
 #include	"util.h"
 #include	"cbase.h"
+#include	"mod/modmonster.h"
 #include	"player.h"
 #include	"mod/modplayer.h"
 #include	"weapons.h"

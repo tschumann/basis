@@ -24,6 +24,7 @@
 #include "util.h"
 
 #include "cbase.h"
+#include "mod/modmonster.h"
 #include "player.h"
 #include "trains.h"
 #include "nodes.h"
@@ -4670,7 +4671,7 @@ BOOL CBasePlayer :: SwitchWeapon( CBasePlayerItem *pWeapon )
 //=========================================================
 // Dead HEV suit prop
 //=========================================================
-class CDeadHEV : public CBaseMonster
+class CDeadHEV : public CModMonster
 {
 public:
 	void Spawn( void );

@@ -28,6 +28,7 @@
 #include "util.h"
 #include "cbase.h"
 #include "monsters.h"
+#include "mod/modmonster.h"
 #include "weapons.h"
 #include "effects.h"
 
@@ -51,7 +52,7 @@ typedef enum
 	TURRET_ANIM_DIE,
 } TURRET_ANIM;
 
-class CBaseTurret : public CBaseMonster
+class CBaseTurret : public CModMonster
 {
 public:
 	void Spawn(void);

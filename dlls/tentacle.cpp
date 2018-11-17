@@ -24,6 +24,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"weapons.h"
 #include	"soundent.h"
 
@@ -33,7 +34,7 @@
 #define ACT_T_STRIKE		1030
 #define ACT_T_REARIDLE	1040
 
-class CTentacle : public CBaseMonster
+class CTentacle : public CModMonster
 {
 public:
 	CTentacle( void );
@@ -1007,7 +1008,7 @@ void CTentacle :: Killed( entvars_t *pevAttacker, int iGib )
 
 
 
-class CTentacleMaw : public CBaseMonster
+class CTentacleMaw : public CModMonster
 {
 public:
 	void Spawn( );

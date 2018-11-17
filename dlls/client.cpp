@@ -26,6 +26,7 @@
 #include "extdll.h"
 #include "util.h"
 #include "cbase.h"
+#include "mod/modmonster.h"
 #include "saverestore.h"
 #include "player.h"
 #include "mod/modplayer.h"

@@ -2378,7 +2378,7 @@ Schedule_t* CHGrunt :: GetScheduleOfType ( int Type )
 // repelling down a line.
 //=========================================================
 
-class CHGruntRepel : public CBaseMonster
+class CHGruntRepel : public CModMonster
 {
 public:
 	void Spawn( void );
@@ -2435,7 +2435,7 @@ void CHGruntRepel::RepelUse ( CBaseEntity *pActivator, CBaseEntity *pCaller, USE
 //=========================================================
 // DEAD HGRUNT PROP
 //=========================================================
-class CDeadHGrunt : public CBaseMonster
+class CDeadHGrunt : public CModMonster
 {
 public:
 	void Spawn( void );

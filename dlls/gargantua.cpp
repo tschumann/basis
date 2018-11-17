@@ -22,6 +22,7 @@
 #include	"cbase.h"
 #include	"nodes.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 #include	"customentity.h"
 #include	"weapons.h"
@@ -197,7 +198,7 @@ void StreakSplash( const Vector &origin, const Vector &direction, int color, int
 }
 
 
-class CGargantua : public CBaseMonster
+class CGargantua : public CModMonster
 {
 public:
 	void Spawn( void );

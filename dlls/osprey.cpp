@@ -16,6 +16,7 @@
 #include "util.h"
 #include "cbase.h"
 #include "monsters.h"
+#include "mod/modmonster.h"
 #include "weapons.h"
 #include "nodes.h"
 #include "soundent.h"
@@ -37,7 +38,7 @@ typedef struct
 
 #define MAX_CARRY	24
 
-class COsprey : public CBaseMonster
+class COsprey : public CModMonster
 {
 public:
 	int		Save( CSave &save );

@@ -1098,7 +1098,7 @@ int CScientist::FriendNumber( int arrayNumber )
 //=========================================================
 // Dead Scientist PROP
 //=========================================================
-class CDeadScientist : public CBaseMonster
+class CDeadScientist : public CModMonster
 {
 public:
 	void Spawn( void );

@@ -28,6 +28,7 @@
 #include "gamerules.h"
 #include "maprules.h"
 #include "cbase.h"
+#include "mod/modmonster.h"
 #include "player.h"
 
 class CRuleEntity : public CBaseEntity

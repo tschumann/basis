@@ -787,7 +787,7 @@ void CBarney::DeclineFollowing( void )
 // the m_iFirstPose properly!
 //
 //=========================================================
-class CDeadBarney : public CBaseMonster
+class CDeadBarney : public CModMonster
 {
 public:
 	void Spawn( void );

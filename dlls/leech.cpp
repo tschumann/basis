@@ -40,6 +40,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 
 
 
@@ -69,7 +70,7 @@
 #endif
 
 
-class CLeech : public CBaseMonster
+class CLeech : public CModMonster
 {
 public:
 	void Spawn( void );

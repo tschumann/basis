@@ -20,6 +20,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 
 #define	BARNACLE_BODY_HEIGHT	44 // how 'tall' the barnacle's model is.
@@ -31,7 +32,7 @@
 //=========================================================
 #define	BARNACLE_AE_PUKEGIB	2
 
-class CBarnacle : public CBaseMonster
+class CBarnacle : public CModMonster
 {
 public:
 	void Spawn( void );

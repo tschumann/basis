@@ -85,7 +85,7 @@ enum sbar_data
 
 #define CHAT_INTERVAL 1.0f
 
-class CBasePlayer : public CBaseMonster
+class CBasePlayer : public CModMonster
 {
 public:
 	

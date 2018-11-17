@@ -18,6 +18,7 @@
 #include "util.h"
 #include "cbase.h"
 #include "monsters.h"
+#include "mod/modmonster.h"
 #include "weapons.h"
 #include "nodes.h"
 #include "effects.h"
@@ -25,7 +26,7 @@
 #define N_SCALE		15
 #define N_SPHERES	20
 
-class CNihilanth : public CBaseMonster
+class CNihilanth : public CModMonster
 {
 public:
 	int		Save( CSave &save );

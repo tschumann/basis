@@ -24,6 +24,7 @@
 #include "util.h"
 
 #include "cbase.h"
+#include "mod/modmonster.h"
 #include "modplayer.h"
 
 

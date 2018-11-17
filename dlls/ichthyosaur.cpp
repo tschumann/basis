@@ -22,6 +22,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 #include    "flyingmonster.h"
 #include	"nodes.h"

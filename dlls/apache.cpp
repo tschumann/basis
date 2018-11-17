@@ -18,6 +18,7 @@
 #include "util.h"
 #include "cbase.h"
 #include "monsters.h"
+#include "mod/modmonster.h"
 #include "weapons.h"
 #include "nodes.h"
 #include "effects.h"
@@ -27,7 +28,7 @@ extern DLL_GLOBAL int		g_iSkillLevel;
 #define SF_WAITFORTRIGGER	(0x04 | 0x40) // UNDONE: Fix!
 #define SF_NOWRECKAGE		0x08
 
-class CApache : public CBaseMonster
+class CApache : public CModMonster
 {
 	int		Save( CSave &save );
 	int		Restore( CRestore &restore );

@@ -20,12 +20,13 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 
 //=========================================================
 // DEAD CONSTRUCTION WORKER PROP
 //=========================================================
-class CDeadConstruction : public CBaseMonster
+class CDeadConstruction : public CModMonster
 {
 public:
 	void Spawn( void );

@@ -20,6 +20,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 
 
@@ -29,7 +30,7 @@
 #define	BLOATER_AE_ATTACK_MELEE1		0x01
 
 
-class CBloater : public CBaseMonster
+class CBloater : public CModMonster
 {
 public:
 	void Spawn( void );

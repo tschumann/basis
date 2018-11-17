@@ -20,6 +20,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 #include	"soundent.h"
 #include	"decals.h"
@@ -34,7 +35,7 @@
 //=========================================================
 // Monster's Anim Events Go Here
 //=========================================================
-class CRoach : public CBaseMonster
+class CRoach : public CModMonster
 {
 public:
 	void Spawn( void );

@@ -19,6 +19,7 @@
 #include	"util.h"
 #include	"cbase.h"
 #include	"monsters.h"
+#include	"mod/modmonster.h"
 #include	"schedule.h"
 #include	"weapons.h"
 
@@ -26,7 +27,7 @@
 // Monster's Anim Events Go Here
 //=========================================================
 
-class CGMan : public CBaseMonster
+class CGMan : public CModMonster
 {
 public:
 	void Spawn( void );
