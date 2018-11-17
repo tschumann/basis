@@ -27,6 +27,14 @@
 #include "mod/modgame.h"
 #include "mod/modmonster.h"
 
+void CModMonster :: Look ( int iDistance )
+{
+	if ( ai.value )
+	{
+		CBaseMonster ::Look( iDistance );
+	}
+}
+
 void CModMonster::BecomeDead( void )
 {
 	CBaseMonster::BecomeDead();
@@ -37,6 +45,18 @@ void CModMonster::BecomeDead( void )
 		pev->origin.z += 2;
 		pev->velocity = g_vecAttackDir * -1;
 		pev->velocity = pev->velocity * RANDOM_FLOAT( 300, 400 );
+	}
+}
+
+CBaseEntity *CModMonster :: BestVisibleEnemy ( void )
+{
+	if ( ai.value )
+	{
+		return CBaseMonster :: BestVisibleEnemy();
+	}
+	else
+	{
+		return NULL;
 	}
 }
 

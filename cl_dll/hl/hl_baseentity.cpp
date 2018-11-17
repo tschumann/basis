@@ -241,7 +241,9 @@ int CBaseMonster :: DeadTakeDamage( entvars_t *pevInflictor, entvars_t *pevAttac
 int CBaseMonster::Restore( class CRestore & ) { return 1; }
 int CBaseMonster::Save( class CSave & ) { return 1; }
 
+void CModMonster :: Look ( int iDistance ) {}
 void CModMonster::BecomeDead( void ) {}
+CBaseEntity *CModMonster :: BestVisibleEnemy ( void ) { return NULL; }
 int CModMonster :: DeadTakeDamage( entvars_t *pevInflictor, entvars_t *pevAttacker, float flDamage, int bitsDamageType ) { return 0; }
 
 int TrainSpeed(int iSpeed, int iMax) { 	return 0; }

@@ -22,7 +22,12 @@
 class CModMonster : public CBaseMonster
 {
 public:
+	virtual void Look ( int iDistance );// basic sight function for monsters
+
 	virtual void BecomeDead( void );
+
+	virtual CBaseEntity* BestVisibleEnemy ( void );// finds best visible enemy for attack
+
 	virtual int DeadTakeDamage( entvars_t *pevInflictor, entvars_t *pevAttacker, float flDamage, int bitsDamageType );
 };
 
