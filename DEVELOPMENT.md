@@ -1,4 +1,15 @@
 
+gfx/colormap.lmp
+================
+64 light-adjusted RGB colour values for the 256 colours in palette.lmp
+Light-adjusted RGB colours 0 to 31 are brightly lit (with 0 being the brightest), 32 is the original colour and 33 to 63 are darkly lit (with 63 being black).
+
+
+gfx/palette.lmp
+===============
+256 RGB colour values.
+
+
 overviews/
 ==========
 
@@ -16,6 +27,14 @@ liblist.gam
 Update mod and developer details here.
 
 
+*.wad
+=====
+
+Luma textures/fullbrights
+-------------------------
+The last 32 colours in a texture's palette will be displayed as fullbright for certain textures.
+
+
 Adding a new key bind
----------------------
+=====================
 default.cfg and gfx/shell/kb_def.lst both look like they should store default bindings to be populated if nothing is present in config.cfg but neither actually seems to do that.
