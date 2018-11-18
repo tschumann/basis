@@ -31,7 +31,7 @@ void CModMonster :: Look ( int iDistance )
 {
 	if ( ai.value )
 	{
-		CBaseMonster ::Look( iDistance );
+		CBaseMonster :: Look ( iDistance );
 	}
 }
 

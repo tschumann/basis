@@ -66,6 +66,7 @@ void ModDLLInit( void )
 	CVAR_REGISTER ( &coop );
 	CVAR_REGISTER ( &physics );
 	CVAR_REGISTER ( &drawhitboxes );
+	CVAR_REGISTER ( &ai );
 
 	CVAR_REGISTER ( &sk_construction_health1 );
 	CVAR_REGISTER ( &sk_construction_health2 );

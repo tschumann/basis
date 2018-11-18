@@ -1,4 +1,7 @@
 
+- Added sv_ai cvar (controls whether enemies attack each other)
+- Added monster_panther
+- Added monster_human_assault
 - Missing sprites and models now get replaced with a placeholder
 - Added support for models using pev->scale
 - Added cl_showmodels command to print models and their types used in a map
