@@ -48,6 +48,7 @@ basis/dlls/*.dll
 *.ncb
 *.suo
 *.vcproj.*
+*.vcxproj.*
 
 Thumbs.db
 
