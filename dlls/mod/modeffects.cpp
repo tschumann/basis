@@ -74,7 +74,12 @@ void CEnvProjectile::Spawn(void)
 	pev->movetype = MOVETYPE_NOCLIP;
 	pev->solid = SOLID_NOT;							// Remove model & collisions
 	pev->speed = 5.0;
+
+	Precache();
+	SET_MODEL( ENT(pev), STRING(pev->model) );
+
 	SetThink( &CEnvProjectile::ProjectileThink );
+	pev->nextthink = gpGlobals->time;
 }
 
 void CEnvProjectile::Precache(void)

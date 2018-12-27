@@ -74,35 +74,35 @@
 {
 "classname" "env_projectile"
 "model" "models/ef_gib.mdl"
-"origin" "-448 448 -576"
+"origin" "-192 192 -448"
 }
 {
 "classname" "env_projectile"
 "model" "models/ef_grenade.mdl"
-"origin" "0 448 -576"
+"origin" "0 192 -448"
 }
 {
 "classname" "env_projectile"
 "model" "models/ef_rocket.mdl"
-"origin" "448 448 -576"
+"origin" "192 192 -448"
 }
 {
 "classname" "env_projectile"
 "model" "models/ef_tracer.mdl"
-"origin" "448 0 -576"
+"origin" "192 0 -448"
 }
 {
 "classname" "env_projectile"
 "model" "models/ef_tracer2.mdl"
-"origin" "448 -448 -576"
+"origin" "192 -193 -448"
 }
 {
 "classname" "env_projectile"
 "model" "models/ef_tracer3.mdl"
-"origin" "0 -448 -576"
+"origin" "0 -192 -448"
 }
 {
 "classname" "env_projectile"
 "model" "models/ef_zomgib.mdl"
-"origin" "-448 -448 -576"
+"origin" "-192 -192 -448"
 }
