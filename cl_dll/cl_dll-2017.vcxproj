@@ -54,10 +54,10 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <CustomBuildStep>
-      <Command>call ..\filecopy.bat $(ProjectDir)$(ProjectName).dll $(ProjectDir)..\..\game\mod\cl_dlls\$(ProjectName).dll
-call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod\cl_dlls\$(ProjectName).pdb
+      <Command>call ..\filecopy.bat $(ProjectDir)$(OutDir)client.dll $(ProjectDir)..\basis\cl_dlls\client.dll
+call ..\filecopy.bat $(ProjectDir)$(OutDir)client.pdb $(ProjectDir)..\basis\cl_dlls\client.pdb
 </Command>
-      <Outputs>$(ProjectDir)..\..\game\mod\cl_dlls\$(ProjectName).dll;$(ProjectDir)..\..\game\mod\cl_dlls\$(ProjectName).pdb;%(Outputs)</Outputs>
+      <Outputs>$(ProjectDir)..\basis\cl_dlls\$(ProjectName).dll;$(ProjectDir)..\basis\cl_dlls\$(ProjectName).pdb;%(Outputs)</Outputs>
     </CustomBuildStep>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -107,10 +107,10 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <CustomBuildStep>
-      <Command>call ..\filecopy.bat $(ProjectDir)$(ProjectName).dll $(ProjectDir)..\..\game\mod\cl_dlls\$(ProjectName).dll
-call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod\cl_dlls\$(ProjectName).pdb
+      <Command>call ..\filecopy.bat $(ProjectDir)$(OutDir)client.dll $(ProjectDir)..\basis\cl_dlls\client.dll
+call ..\filecopy.bat $(ProjectDir)$(OutDir)client.pdb $(ProjectDir)..\basis\cl_dlls\client.pdb
 </Command>
-      <Outputs>$(ProjectDir)..\..\game\mod\cl_dlls\$(ProjectName).dll;$(ProjectDir)..\..\game\mod\cl_dlls\$(ProjectName).pdb;%(Outputs)</Outputs>
+      <Outputs>$(ProjectDir)..\basis\cl_dlls\$(ProjectName).dll;$(ProjectDir)..\basis\cl_dlls\$(ProjectName).pdb;%(Outputs)</Outputs>
     </CustomBuildStep>
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

@@ -53,10 +53,10 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <CustomBuildStep>
-      <Command>call ..\filecopy.bat $(ProjectPath) $(ProjectDir)..\..\game\mod\dlls\$(ProjectName).dll
-call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod\dlls\$(ProjectName).pdb
+      <Command>call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).dll $(ProjectDir)..\basis\dlls\$(ProjectName).dll
+call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\basis\dlls\$(ProjectName).pdb
 </Command>
-      <Outputs>$(ProjectDir)..\..\game\mod\dlls\$(ProjectName).dll;$(ProjectDir)..\..\game\mod\dlls\$(ProjectName).pdb;%(Outputs)</Outputs>
+      <Outputs>$(ProjectDir)..\basis\dlls\$(ProjectName).dll;$(ProjectDir)..\basis\dlls\$(ProjectName).pdb;%(Outputs)</Outputs>
     </CustomBuildStep>
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -110,9 +110,9 @@ call ..\filecopy.bat $(ProjectDir)$(ProjectName).pdb $(ProjectDir)..\..\game\mod
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <CustomBuildStep>
-      <Command>call ..\filecopy.bat $(ProjectPath) $(ProjectDir)..\..\game\mod\dlls\$(ProjectName).dll
+      <Command>call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).dll $(ProjectDir)..\basis\dlls\$(ProjectName).dll
 </Command>
-      <Outputs>$(ProjectDir)..\..\game\mod\dlls\$(ProjectName).dll;%(Outputs)</Outputs>
+      <Outputs>$(ProjectDir)..\basis\dlls\$(ProjectName).dll;%(Outputs)</Outputs>
     </CustomBuildStep>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
