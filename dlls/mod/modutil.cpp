@@ -75,3 +75,17 @@ void UTIL_ClampAngles( vec3_t &angles )
 		angles.z += 360 * ((int)(angles.z / 360.0f) + 1);
 	}
 }
+
+BOOL UTIL_IsModel( edict_t *pent )
+{
+	const char *szExtension = strrchr( STRING(pent->v.model), '.' );
+
+	return szExtension && strcmp(szExtension, ".mdl") == 0;
+}
+
+BOOL UTIL_IsSprite( edict_t *pent )
+{
+	const char *szExtension = strrchr( STRING(pent->v.model), '.' );
+
+	return szExtension && strcmp(szExtension, ".spr") == 0;
+}

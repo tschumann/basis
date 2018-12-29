@@ -16,3 +16,6 @@
 extern int			UTIL_PrecacheModelSafe( char *szModel );
 extern void			UTIL_SetModelSafe( edict_t *pEdict, const char *szModel );
 extern void			UTIL_ClampAngles( vec3_t &angles );
+
+extern BOOL			UTIL_IsModel( edict_t *pent );
+extern BOOL			UTIL_IsSprite( edict_t *pent );
