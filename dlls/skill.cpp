@@ -21,6 +21,7 @@
 #include	"mod/modskill.h"
 
 
+// skilldata_t	gSkillData;
 modskilldata_t	gSkillData;
 
 

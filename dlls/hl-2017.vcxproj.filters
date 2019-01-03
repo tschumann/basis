@@ -72,9 +72,6 @@
     <ClCompile Include="controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="coop_gamerules.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="crossbow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -378,6 +375,9 @@
     <ClCompile Include="mod\hassault.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="mod\coop_gamerules.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h">
@@ -399,9 +399,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="client.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="coop_gamerules.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="decals.h">
@@ -546,6 +543,12 @@
       <Filter>Header Files\mod</Filter>
     </ClInclude>
     <ClInclude Include="mod\modcbase.h">
+      <Filter>Header Files\mod</Filter>
+    </ClInclude>
+    <ClInclude Include="mod\modskill.h">
+      <Filter>Header Files\mod</Filter>
+    </ClInclude>
+    <ClInclude Include="mod\coop_gamerules.h">
       <Filter>Header Files\mod</Filter>
     </ClInclude>
   </ItemGroup>

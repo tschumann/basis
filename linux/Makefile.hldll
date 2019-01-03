@@ -55,7 +55,6 @@ HLDLL_OBJS = \
 	$(HLDLL_OBJ_DIR)/client.o \
 	$(HLDLL_OBJ_DIR)/combat.o \
 	$(HLDLL_OBJ_DIR)/controller.o \
-	$(HLDLL_OBJ_DIR)/coop_gamerules.o \
 	$(HLDLL_OBJ_DIR)/crossbow.o \
 	$(HLDLL_OBJ_DIR)/crowbar.o \
 	$(HLDLL_OBJ_DIR)/defaultai.o \
@@ -139,6 +138,7 @@ HLDLL_OBJS = \
 
 MODDLL_OBJS = \
 	$(MODDLL_OBJ_DIR)/construction.o \
+	$(MODDLL_OBJ_DIR)/coop_gamerules.o \
 	$(MODDLL_OBJ_DIR)/hassault.o \
 	$(MODDLL_OBJ_DIR)/modanimation.o \
 	$(MODDLL_OBJ_DIR)/modcbase.o \

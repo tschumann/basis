@@ -224,7 +224,6 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
     <ClCompile Include="controller.cpp">
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
-    <ClCompile Include="coop_gamerules.cpp" />
     <ClCompile Include="crossbow.cpp">
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
@@ -337,6 +336,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
     <ClCompile Include="mod\construction.cpp" />
+    <ClCompile Include="mod\coop_gamerules.cpp" />
     <ClCompile Include="mod\hassault.cpp" />
     <ClCompile Include="mod\modanimation.cpp" />
     <ClCompile Include="mod\modcbase.cpp" />
@@ -499,7 +499,6 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
     <ClInclude Include="cbase.h" />
     <ClInclude Include="cdll_dll.h" />
     <ClInclude Include="client.h" />
-    <ClInclude Include="coop_gamerules.h" />
     <ClInclude Include="decals.h" />
     <ClInclude Include="defaultai.h" />
     <ClInclude Include="doors.h" />
@@ -512,6 +511,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
     <ClInclude Include="gamerules.h" />
     <ClInclude Include="hornet.h" />
     <ClInclude Include="items.h" />
+    <ClInclude Include="mod\coop_gamerules.h" />
     <ClInclude Include="mod\modanimation.h" />
     <ClInclude Include="mod\modcbase.h" />
     <ClInclude Include="mod\modentity.h" />
@@ -520,6 +520,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
     <ClInclude Include="mod\modmonster.h" />
     <ClInclude Include="mod\modmultiplay_gamerules.h" />
     <ClInclude Include="mod\modplayer.h" />
+    <ClInclude Include="mod\modskill.h" />
     <ClInclude Include="mod\modutil.h" />
     <ClInclude Include="mod\modweapons.h" />
     <ClInclude Include="monsterevent.h" />
