@@ -35,6 +35,18 @@ liblist.gam
 Update mod and developer details here.
 
 
+game.tga
+========
+
+16x16 32-bit RLE .tga (used in Steam's Small Mode and as the game icon when running).
+
+
+game_big.tga
+============
+
+32x32 32-bit RLE .tga (used in Steam's Large Mode)
+
+
 *.wad
 =====
 
