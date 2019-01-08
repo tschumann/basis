@@ -11,6 +11,16 @@
 
 #define	MAX_ALIAS_NAME	32
 
+typedef void (*xcommand_t) (void);
+
+typedef struct cmd_function_s
+{
+	cmd_function_s *next;
+	char *name;
+	xcommand_t function;
+	int flags;
+} cmd_function_t;
+
 typedef struct cmdalias_s
 {
 	struct cmdalias_s	*next;
@@ -323,9 +333,9 @@ typedef void						(*pfnEngSrc_GetMousePos_t )(struct tagPOINT *ppt);
 typedef void						(*pfnEngSrc_SetMousePos_t )(int x, int y);
 typedef void						(*pfnEngSrc_SetMouseEnable_t)(qboolean fEnable);
 typedef struct cvar_s *				(*pfnEngSrc_GetFirstCVarPtr_t)();
-typedef unsigned int				(*pfnEngSrc_GetFirstCmdFunctionHandle_t)();
-typedef unsigned int				(*pfnEngSrc_GetNextCmdFunctionHandle_t)(unsigned int cmdhandle);
-typedef const char *				(*pfnEngSrc_GetCmdFunctionName_t)(unsigned int cmdhandle);
+typedef cmd_function_t *			(*pfnEngSrc_GetFirstCmdFunctionHandle_t)();
+typedef cmd_function_t *			(*pfnEngSrc_GetNextCmdFunctionHandle_t)(cmd_function_t *cmdhandle);
+typedef const char *				(*pfnEngSrc_GetCmdFunctionName_t)(cmd_function_t *cmdhandle);
 typedef float						(*pfnEngSrc_GetClientOldTime_t)();
 typedef float						(*pfnEngSrc_GetServerGravityValue_t)();
 typedef struct model_s	*			(*pfnEngSrc_GetModelByIndex_t)( int index );
