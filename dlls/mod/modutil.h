@@ -19,3 +19,5 @@ extern void			UTIL_ClampAngles( vec3_t &angles );
 
 extern BOOL			UTIL_IsModel( edict_t *pent );
 extern BOOL			UTIL_IsSprite( edict_t *pent );
+
+extern void			UTIL_ClientPrintf( edict_t* pEdict, PRINT_TYPE ptype, const char *szFormat, ... );

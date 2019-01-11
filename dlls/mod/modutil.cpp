@@ -89,3 +89,20 @@ BOOL UTIL_IsSprite( edict_t *pent )
 
 	return szExtension && strcmp(szExtension, ".spr") == 0;
 }
+
+void UTIL_ClientPrintf( edict_t* pEdict, PRINT_TYPE ptype, const char *szFormat, ... )
+{
+	char string[1024];
+
+	va_list args;
+	va_start(args, szFormat);
+	vsprintf(string, szFormat, args);
+	va_end(args);
+
+	if( strlen( string ) > 40 && ptype == print_center )
+	{
+		ALERT( at_error, "The engine will truncate your message \"%s\" as it is more than 40 characters long\n", string );
+	}
+
+	CLIENT_PRINTF( pEdict, ptype, string );
+}
