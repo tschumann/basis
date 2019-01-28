@@ -3,6 +3,7 @@
 
 #include "particleman.h"
 
+void RenderFog( void );
 void RenderBoundingBoxes( void );
 
 #endif //MODRENDER_H
