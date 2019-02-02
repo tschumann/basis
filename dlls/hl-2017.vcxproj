@@ -348,6 +348,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
     <ClCompile Include="mod\modmonster.cpp" />
     <ClCompile Include="mod\modmultiplay_gamerules.cpp" />
     <ClCompile Include="mod\modplayer.cpp" />
+    <ClCompile Include="mod\modtriggers.cpp" />
     <ClCompile Include="mod\modutil.cpp" />
     <ClCompile Include="mod\modweapons.cpp" />
     <ClCompile Include="mod\panthereye.cpp" />
@@ -523,6 +524,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
     <ClInclude Include="mod\modskill.h" />
     <ClInclude Include="mod\modutil.h" />
     <ClInclude Include="mod\modweapons.h" />
+    <ClInclude Include="mod\triggers.h" />
     <ClInclude Include="monsterevent.h" />
     <ClInclude Include="monsters.h" />
     <ClInclude Include="nodes.h" />

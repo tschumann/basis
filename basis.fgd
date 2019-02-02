@@ -8,6 +8,10 @@
 //
 
 //
+// feb 02 2019
+//	- added trigger_bit
+//	- added trigger_bit_counter
+//
 // oct 27 2018
 //  - added monster_panther
 //
@@ -2535,6 +2539,17 @@
 @SolidClass base(Targetname) = trigger_autosave : "AutoSave Trigger"
 [
 	master(string) : "Master" 
+]
+
+@PointClass base(Target, Targetname) color(0 128 255) = trigger_bit : "Trigger that sets a bit in a trigger_bit_counter"
+[
+	skin(integer) : "Trigger value" : 0
+]
+
+@PointClass base(Target, Targetname) color(0 128 255) = trigger_bit_counter : "Trigger that fires when its bit combination is set"
+[
+	skin(integer) : "Start value" : 0
+	triggermask(integer) : "Trigger value" : 0
 ]
 
 @PointClass base(Targetx, Targetname) = trigger_camera : "Trigger Camera" 

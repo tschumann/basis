@@ -150,6 +150,7 @@ MODDLL_OBJS = \
 	$(MODDLL_OBJ_DIR)/modgamerules.o \
 	$(MODDLL_OBJ_DIR)/modmultiplay_gamerules.o \
 	$(MODDLL_OBJ_DIR)/modplayer.o \
+	$(MODDLL_OBJ_DIR)/modtriggers.o
 	$(MODDLL_OBJ_DIR)/modutil.o \
 	$(MODDLL_OBJ_DIR)/modweapons.o \
 	$(MODDLL_OBJ_DIR)/panthereye.o

@@ -378,6 +378,9 @@
     <ClCompile Include="mod\coop_gamerules.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="mod\modtriggers.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h">
@@ -549,6 +552,9 @@
       <Filter>Header Files\mod</Filter>
     </ClInclude>
     <ClInclude Include="mod\coop_gamerules.h">
+      <Filter>Header Files\mod</Filter>
+    </ClInclude>
+    <ClInclude Include="mod\triggers.h">
       <Filter>Header Files\mod</Filter>
     </ClInclude>
   </ItemGroup>
