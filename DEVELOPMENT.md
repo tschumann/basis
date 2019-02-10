@@ -38,13 +38,19 @@ Update mod and developer details here.
 game.tga
 ========
 
-16x16 32-bit RLE .tga (used in Steam's Small Mode and as the game icon when running).
+16x16 32-bit .tga (used in Steam's Small Mode and as the game icon when running).
 
 
 game_big.tga
 ============
 
-32x32 32-bit RLE .tga (used in Steam's Large Mode)
+32x32 32-bit .tga (used in Steam's Large Mode)
+
+
+*.tga
+=====
+
+RLE or uncompressed .tga with y-origin set to image height, image description bit 5 set and pixel rows in reversed order. The engine expects these three things and if even one is not done the game icon will be vertically inverted when the mode runs.
 
 
 *.wad
