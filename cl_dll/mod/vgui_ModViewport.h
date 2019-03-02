@@ -33,6 +33,62 @@
 
 class CModPanel;
 
+class ColorHoverButton : public ColorButton
+{
+private:
+
+	Color *ArmedBgColor;
+	Color *UnArmedBgColor;
+
+public:
+	ColorHoverButton( const char* text,int x,int y,int wide,int tall, bool bNoHighlight, bool bFlat ) : 
+	  ColorButton( text, x, y, wide, tall, bNoHighlight, bFlat  ) 
+	  {
+		  ArmedBgColor = NULL;
+		  UnArmedBgColor = NULL;
+	  }
+	
+
+	virtual void paintBackground()
+	{
+		int r, g, b, a;
+		Color bgcolor;
+
+		if ( isArmed() )
+		{
+			if ( ArmedBgColor )
+			{
+				// Highlight background
+				ArmedBgColor->getColor(r, g, b, a);
+				drawSetColor( r,g,b,a );
+				drawFilledRect(0,0,_size[0],_size[1]);
+			}
+		}
+		else
+		{
+			if ( UnArmedBgColor )
+			{
+				// Highlight background
+				UnArmedBgColor->getColor(r, g, b, a);
+				drawSetColor( r,g,b,a );
+				drawFilledRect(0,0,_size[0],_size[1]);
+			}
+		}
+
+		ColorButton::paintBackground();
+	}
+
+	void setArmedBgColor ( int r, int g, int b, int a )
+	{
+		ArmedBgColor = new Color( r, g, b, a );
+	}
+
+	void setUnArmedBgColor ( int r, int g, int b, int a )
+	{
+		UnArmedBgColor = new Color( r, g, b, a );
+	}
+};
+
 //==============================================================================
 class ModViewport : public TeamFortressViewport
 {
