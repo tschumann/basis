@@ -106,7 +106,7 @@ void CTriggerBitCounter::Think( void )
 	if( m_iValue == m_iMask )
 	{
 		FireTargets( STRING(pev->target), this, this, USE_TOGGLE, 0.0 );
-		// stop thinking (and firing) for now
+		// stop thinking (and firing) for now - next use will start thinking again
 		pev->nextthink = 0;
 	}
 	else
