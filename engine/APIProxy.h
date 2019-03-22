@@ -363,6 +363,7 @@ typedef void						(*pfnEngSrc_pfnFillRGBABlend_t )			( int x, int y, int width, 
 typedef int						(*pfnEngSrc_pfnGetAppID_t)			( void );
 typedef cmdalias_t*				(*pfnEngSrc_pfnGetAliases_t)		( void );
 typedef void					(*pfnEngSrc_pfnVguiWrap2_GetMouseDelta_t) ( int *x, int *y );
+typedef int						(*pfnEngSrc_pfnFilteredClientCmd_t)(char *);
 
 // Pointers to the exported engine functions themselves
 typedef struct cl_enginefuncs_s
@@ -501,6 +502,7 @@ typedef struct cl_enginefuncs_s
 	pfnEngSrc_pfnGetAppID_t					pfnGetAppID;
 	pfnEngSrc_pfnGetAliases_t				pfnGetAliasList;
 	pfnEngSrc_pfnVguiWrap2_GetMouseDelta_t pfnVguiWrap2_GetMouseDelta;
+	pfnEngSrc_pfnFilteredClientCmd_t		pfnFilteredClientCmd;
 } cl_enginefunc_t;
 
 // Function type declarations for engine destination functions
