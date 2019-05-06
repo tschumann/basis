@@ -134,6 +134,10 @@ inline void *GET_PRIVATE( edict_t *pent )
 
 #define FREE_PRIVATE	(*g_engfuncs.pfnFreeEntPrivateData)
 //#define STRING			(*g_engfuncs.pfnSzFromIndex)
+// ALLOC_STRING will process any sequence of two character that
+// starts will a \ and collapse it to a single character but
+// will leave the second character in the string
+// see https://github.com/ValveSoftware/halflife/issues/2388
 #define ALLOC_STRING	(*g_engfuncs.pfnAllocString)
 #define FIND_ENTITY_BY_STRING	(*g_engfuncs.pfnFindEntityByString)
 #define GETENTITYILLUM	(*g_engfuncs.pfnGetEntityIllum)
