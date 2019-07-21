@@ -4,11 +4,15 @@ dlls/hl.dll
 
 Any method of a class that inherits from CBaseEntity and that is passed to SetThink, SetTouch, SetUse or SetBlocked should have the EXPORT macro as part of its definition in order for save-restore to work correctly.
 
-g_engfuncs
-----------
+enginefuncs_t
+-------------
 pfnAllocString - can modify the passed in string if there are characters preceeded by a \ (see https://github.com/ValveSoftware/halflife/issues/2388)
 
+pfnPEntityOfEntIndex - will return NULL for the last player
+
 pfnGetModelPtr - studiohdr_t.textureindex will be 0 if textures are stored in an external *T.mdl
+
+pfnPEntityOfEntIndexAllEntities - will not return NULL for the last player
 
 
 gfx/colormap.lmp
