@@ -48,6 +48,9 @@ public:
 	}
 
 	vec_t	x, y;
+
+	inline bool IsLengthGreaterThan(float val) const				{ return this->Length() > val; }
+	inline bool IsLengthLessThan(float val) const					{ return this->Length() < val; }
 };
 
 inline float DotProduct(const Vector2D& a, const Vector2D& b) { return( a.x*b.x + a.y*b.y ); }
@@ -102,6 +105,21 @@ public:
 
 	// Members
 	vec_t x, y, z;
+
+	inline float NormalizeInPlace(void)
+	{
+		float flLen = Length();
+		if (flLen == 0) return 0; // ????
+		flLen = 1 / flLen;
+		x *= flLen;
+		y *= flLen;
+		z *= flLen;
+		return flLen;
+	}
+
+	inline float LengthSquared(void) const					{ return x*x + y*y + z*z; }
+	inline bool IsLengthGreaterThan(float val) const				{ return this->Length() > val; }
+	inline bool IsLengthLessThan(float val) const					{ return this->Length() < val; }
 };
 inline Vector operator*(float fl, const Vector& v)	{ return v * fl; }
 inline float DotProduct(const Vector& a, const Vector& b) { return(a.x*b.x+a.y*b.y+a.z*b.z); }
