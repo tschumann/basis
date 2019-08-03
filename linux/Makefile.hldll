@@ -164,7 +164,16 @@ PM_OBJS = \
 	$(PM_OBJ_DIR)/pm_debug.o
 
 GAME_SHARED_OBJS = \
-	$(GAME_SHARED_OBJ_DIR)/voice_gamemgr.o
+	$(GAME_SHARED_OBJ_DIR)/shared_util.o \
+	$(GAME_SHARED_OBJ_DIR)/voice_gamemgr.o \
+	$(GAME_SHARED_OBJ_DIR)/modbot/bot.o \
+	$(GAME_SHARED_OBJ_DIR)/modbot/bot_manager.o \
+	$(GAME_SHARED_OBJ_DIR)/modbot/bot_profile.o \
+	$(GAME_SHARED_OBJ_DIR)/modbot/bot_util.o \
+	$(GAME_SHARED_OBJ_DIR)/modbot/nav_area.o \
+	$(GAME_SHARED_OBJ_DIR)/modbot/nav_file.o \
+	$(GAME_SHARED_OBJ_DIR)/modbot/nav_node.o \
+	$(GAME_SHARED_OBJ_DIR)/modbot/nav_path.o \
 
 COMMON_OBJS = \
 	$(COMMON_OBJ_DIR)/interface.o

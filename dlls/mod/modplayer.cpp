@@ -89,4 +89,9 @@ void CModPlayer :: UpdateClientData( void )
 	CBasePlayer::UpdateClientData();
 }
 
+BOOL CModPlayer :: IsBot()
+{
+	return pev->flags & FL_FAKECLIENT;
+}
+
 LINK_ENTITY_TO_CLASS( player, CModPlayer );

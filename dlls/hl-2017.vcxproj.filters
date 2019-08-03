@@ -19,6 +19,12 @@
       <UniqueIdentifier>{617d9778-3bc7-4bbc-b606-a71be3e5f107}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
+    <Filter Include="Source Files\mod\bot">
+      <UniqueIdentifier>{58a76151-3f90-4d91-9246-70e08da6aff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mod\bot">
+      <UniqueIdentifier>{92113dae-d10f-4fd3-9d5a-9cc2ff0cca89}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aflock.cpp">
@@ -381,6 +387,33 @@
     <ClCompile Include="mod\modtriggers.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="..\game_shared\modbot\bot.cpp">
+      <Filter>Source Files\mod\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\modbot\bot_manager.cpp">
+      <Filter>Source Files\mod\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\modbot\bot_profile.cpp">
+      <Filter>Source Files\mod\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\modbot\bot_util.cpp">
+      <Filter>Source Files\mod\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\modbot\nav_area.cpp">
+      <Filter>Source Files\mod\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\modbot\nav_file.cpp">
+      <Filter>Source Files\mod\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\modbot\nav_node.cpp">
+      <Filter>Source Files\mod\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\modbot\nav_path.cpp">
+      <Filter>Source Files\mod\bot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_shared\shared_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h">
@@ -556,6 +589,39 @@
     </ClInclude>
     <ClInclude Include="mod\triggers.h">
       <Filter>Header Files\mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\bot.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\bot_constants.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\bot_manager.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\bot_profile.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\bot_util.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\improv.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\nav.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\nav_area.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\nav_node.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\nav_path.h">
+      <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_shared\modbot\simple_state_machine.h">
+      <Filter>Header Files\mod\bot</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

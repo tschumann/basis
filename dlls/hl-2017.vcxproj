@@ -161,6 +161,15 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\common\interface.cpp" />
+    <ClCompile Include="..\game_shared\modbot\bot.cpp" />
+    <ClCompile Include="..\game_shared\modbot\bot_manager.cpp" />
+    <ClCompile Include="..\game_shared\modbot\bot_profile.cpp" />
+    <ClCompile Include="..\game_shared\modbot\bot_util.cpp" />
+    <ClCompile Include="..\game_shared\modbot\nav_area.cpp" />
+    <ClCompile Include="..\game_shared\modbot\nav_file.cpp" />
+    <ClCompile Include="..\game_shared\modbot\nav_node.cpp" />
+    <ClCompile Include="..\game_shared\modbot\nav_path.cpp" />
+    <ClCompile Include="..\game_shared\shared_util.cpp" />
     <ClCompile Include="..\game_shared\voice_gamemgr.cpp">
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
@@ -487,6 +496,17 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\engine\eiface.h" />
+    <ClInclude Include="..\game_shared\modbot\bot.h" />
+    <ClInclude Include="..\game_shared\modbot\bot_constants.h" />
+    <ClInclude Include="..\game_shared\modbot\bot_manager.h" />
+    <ClInclude Include="..\game_shared\modbot\bot_profile.h" />
+    <ClInclude Include="..\game_shared\modbot\bot_util.h" />
+    <ClInclude Include="..\game_shared\modbot\improv.h" />
+    <ClInclude Include="..\game_shared\modbot\nav.h" />
+    <ClInclude Include="..\game_shared\modbot\nav_area.h" />
+    <ClInclude Include="..\game_shared\modbot\nav_node.h" />
+    <ClInclude Include="..\game_shared\modbot\nav_path.h" />
+    <ClInclude Include="..\game_shared\modbot\simple_state_machine.h" />
     <ClInclude Include="..\pm_shared\pm_debug.h" />
     <ClInclude Include="..\pm_shared\pm_defs.h" />
     <ClInclude Include="..\pm_shared\pm_info.h" />

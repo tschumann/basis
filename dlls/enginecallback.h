@@ -190,4 +190,6 @@ inline void *GET_PRIVATE( edict_t *pent )
 
 #define PLAYER_CNX_STATS		( *g_engfuncs.pfnGetPlayerStats )
 
+#define GET_FILE_SIZE			( *g_engfuncs.pfnGetFileSize )
+
 #endif		//ENGINECALLBACK_H

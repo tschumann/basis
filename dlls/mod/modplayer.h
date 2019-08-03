@@ -21,6 +21,8 @@ class CModPlayer : public CBasePlayer
 {
 public:
 	virtual void UpdateClientData( void );
+
+	virtual BOOL IsBot();
 };
 
 #endif // MODPLAYER_H
