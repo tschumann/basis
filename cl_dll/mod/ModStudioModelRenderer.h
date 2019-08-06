@@ -25,6 +25,7 @@ public:
 	// Send bones and verts to renderer
 	virtual void StudioRenderModel ( void );
 protected:
+	virtual void StudioCulling( void );
 	virtual void StudioScaleBones( void );
 
 	virtual bool StudioShouldRenderModel( model_t *pRenderModel );

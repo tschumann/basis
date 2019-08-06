@@ -28,6 +28,8 @@
 #include "ModStudioModelRenderer.h"
 #include "GameStudioModelRenderer.h"
 
+extern cvar_t *r_cull;
+
 //
 // Override the StudioModelRender virtual member functions here to implement custom bone
 // setup, blending, etc.
@@ -60,6 +62,24 @@ void CModStudioModelRenderer::StudioRenderModel( void )
 	}
 
 	CStudioModelRenderer::StudioRenderModel( );
+}
+
+/*
+====================
+StudioCulling
+
+====================
+*/
+void CModStudioModelRenderer::StudioCulling( void )
+{
+	if (r_cull->value)
+	{
+		gEngfuncs.pTriAPI->CullFace( TRI_FRONT );
+	}
+	else
+	{
+		gEngfuncs.pTriAPI->CullFace( TRI_NONE );
+	}
 }
 
 /*

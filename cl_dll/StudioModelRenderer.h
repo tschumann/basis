@@ -186,6 +186,7 @@ public:
 	float			(*m_plighttransform)[ MAXSTUDIOBONES ][ 3 ][ 4 ];
 
 protected:
+	virtual void StudioCulling( void ) {}
 	virtual void StudioScaleBones( void ) {}
 };
 

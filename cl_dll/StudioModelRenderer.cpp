@@ -23,7 +23,6 @@
 #include "GameStudioModelRenderer.h"
 
 extern cvar_t *tfc_newmodels;
-extern cvar_t *r_cull;
 
 extern extra_player_info_t  g_PlayerExtraInfo[MAX_PLAYERS+1];
 
@@ -2026,6 +2025,7 @@ void CStudioModelRenderer::StudioRenderFinal_Software( void )
 		for (i=0 ; i < m_pStudioHeader->numbodyparts ; i++)
 		{
 			IEngineStudio.StudioSetupModel( i, (void **)&m_pBodyPart, (void **)&m_pSubModel );
+			StudioCulling();
 			IEngineStudio.StudioDrawPoints( );
 		}
 	}
@@ -2080,14 +2080,7 @@ void CStudioModelRenderer::StudioRenderFinal_Hardware( void )
 			}
 
 			IEngineStudio.GL_SetRenderMode( rendermode );
-			if (r_cull->value)
-			{
-				gEngfuncs.pTriAPI->CullFace( TRI_FRONT );
-			}
-			else
-			{
-				gEngfuncs.pTriAPI->CullFace( TRI_NONE );
-			}
+			StudioCulling();
 			IEngineStudio.StudioDrawPoints();
 			IEngineStudio.GL_StudioDrawShadow();
 		}
