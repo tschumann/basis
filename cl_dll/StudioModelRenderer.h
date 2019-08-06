@@ -184,6 +184,9 @@ public:
 	// Concatenated bone and light transforms
 	float			(*m_pbonetransform) [ MAXSTUDIOBONES ][ 3 ][ 4 ];
 	float			(*m_plighttransform)[ MAXSTUDIOBONES ][ 3 ][ 4 ];
+
+protected:
+	virtual void StudioScaleBones( void ) {}
 };
 
 #endif // STUDIOMODELRENDERER_H

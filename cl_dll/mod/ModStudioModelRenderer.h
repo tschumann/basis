@@ -22,13 +22,12 @@ class CModStudioModelRenderer : public CStudioModelRenderer
 public:
 	CModStudioModelRenderer( void );
 
-	// Set up model bone positions
-	virtual void StudioSetupBones ( void );	
-
 	// Send bones and verts to renderer
 	virtual void StudioRenderModel ( void );
 protected:
-	bool StudioShouldRenderModel( model_t *pRenderModel );
+	virtual void StudioScaleBones( void );
+
+	virtual bool StudioShouldRenderModel( model_t *pRenderModel );
 };
 
 #endif // MODSTUDIOMODELRENDERER_H

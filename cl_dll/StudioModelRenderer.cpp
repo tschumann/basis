@@ -1051,6 +1051,7 @@ void CStudioModelRenderer::StudioMergeBones ( model_t *m_pSubModel )
 
 	pbones = (mstudiobone_t *)((byte *)m_pStudioHeader + m_pStudioHeader->boneindex);
 
+	StudioScaleBones();
 
 	for (i = 0; i < m_pStudioHeader->numbones; i++) 
 	{
