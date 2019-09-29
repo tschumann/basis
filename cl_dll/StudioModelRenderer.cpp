@@ -951,7 +951,7 @@ void CStudioModelRenderer::StudioSetupBones ( void )
 		}
 	}
 
-	StudioSetupBones();
+	StudioScaleBones();
 
 	for (i = 0; i < m_pStudioHeader->numbones; i++) 
 	{
