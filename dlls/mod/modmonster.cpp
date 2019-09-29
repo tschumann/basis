@@ -27,6 +27,16 @@
 #include "mod/modgame.h"
 #include "mod/modmonster.h"
 
+//=========================================================
+// Spawn
+//=========================================================
+void CModMonster::Spawn()
+{
+	CBaseMonster::Spawn();
+
+	pev->scale = 1.0f;
+}
+
 void CModMonster :: Look ( int iDistance )
 {
 	if ( ai.value )

@@ -22,6 +22,8 @@
 class CModMonster : public CBaseMonster
 {
 public:
+	virtual void	Spawn(void);
+
 	virtual void Look ( int iDistance );// basic sight function for monsters
 
 	virtual void BecomeDead( void );

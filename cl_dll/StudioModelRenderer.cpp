@@ -951,6 +951,8 @@ void CStudioModelRenderer::StudioSetupBones ( void )
 		}
 	}
 
+	StudioSetupBones();
+
 	for (i = 0; i < m_pStudioHeader->numbones; i++) 
 	{
 		QuaternionMatrix( q[i], bonematrix );
