@@ -33,6 +33,9 @@ int ModDispatchSpawn( edict_t *pent )
 			ALERT( at_warning, "%s doesn't exist - changing %s to use models/null.mdl instead\n", szModelName, STRING(pEntity->pev->classname) );
 			pEntity->pev->model = MAKE_STRING( "models/null.mdl" );
 		}
+
+		// this should be done in CModMonster::Spawn (and is) but no Spawn methods call the parent, so do it here rather than changing all the Spawn methods
+		pEntity->pev->scale = 1.0f;
 	}
 
 	return DispatchSpawn( pent );
