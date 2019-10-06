@@ -20,6 +20,7 @@
 #include "extdll.h"
 #include "util.h"
 #include "cbase.h"
+#include "mod/modcbase.h"
 #include "monsters.h"
 #include "saverestore.h"
 
@@ -214,7 +215,7 @@ void CMonsterMaker::MakeMonster( void )
 	if ( pev->spawnflags & SF_MONSTERMAKER_MONSTERCLIP )
 		SetBits( pevCreate->spawnflags, SF_MONSTER_HITMONSTERCLIP );
 
-	DispatchSpawn( ENT( pevCreate ) );
+	ModDispatchSpawn( ENT( pevCreate ) );
 	pevCreate->owner = edict();
 
 	if ( !FStringNull( pev->netname ) )

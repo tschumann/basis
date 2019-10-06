@@ -799,7 +799,7 @@ CBaseEntity * CBaseEntity::Create( char *szName, const Vector &vecOrigin, const 
 	pEntity->pev->owner = pentOwner;
 	pEntity->pev->origin = vecOrigin;
 	pEntity->pev->angles = vecAngles;
-	DispatchSpawn( pEntity->edict() );
+	ModDispatchSpawn( pEntity->edict() );
 	return pEntity;
 }
 

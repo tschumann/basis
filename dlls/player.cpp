@@ -24,6 +24,7 @@
 #include "util.h"
 
 #include "cbase.h"
+#include "mod/modcbase.h"
 #include "mod/modmonster.h"
 #include "player.h"
 #include "trains.h"
@@ -3337,7 +3338,7 @@ void CBasePlayer::GiveNamedItem( const char *pszName )
 	VARS( pent )->origin = pev->origin;
 	pent->v.spawnflags |= SF_NORESPAWN;
 
-	DispatchSpawn( pent );
+	ModDispatchSpawn( pent );
 	DispatchTouch( pent, ENT( pev ) );
 }
 

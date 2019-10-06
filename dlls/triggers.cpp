@@ -23,6 +23,7 @@
 #include "extdll.h"
 #include "util.h"
 #include "cbase.h"
+#include "mod/modcbase.h"
 #include "mod/modmonster.h"
 #include "player.h"
 #include "saverestore.h"
@@ -1486,7 +1487,7 @@ void CChangeLevel :: ChangeLevelNow( CBaseEntity *pActivator )
 			pFireAndDie->m_flDelay = m_changeTargetDelay;
 			pFireAndDie->pev->origin = pPlayer->pev->origin;
 			// Call spawn
-			DispatchSpawn( pFireAndDie->edict() );
+			ModDispatchSpawn( pFireAndDie->edict() );
 		}
 	}
 	// This object will get removed in the call to CHANGE_LEVEL, copy the params into "safe" memory
