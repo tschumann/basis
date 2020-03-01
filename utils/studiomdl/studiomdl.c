@@ -3159,7 +3159,12 @@ void Cmd_SetTextureRendermode( void )
 
 	GetToken(false);
 
-	if(!strcmp(token, "additive"))
+	if (!strcmp(token, "fullbright"))
+	{
+		texture[iTextureIndex].flags |= STUDIO_NF_FULLBRIGHT;
+		return;
+	}
+	else if (!strcmp(token, "additive"))
 	{
 		texture[iTextureIndex].flags |= STUDIO_NF_ADDITIVE;
 		return;
