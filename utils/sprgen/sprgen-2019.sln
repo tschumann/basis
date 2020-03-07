@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlumpy", "qlumpy-2017.vcxproj", "{C454C4B3-CC8D-47F7-9F88-E6CC0B2490EF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sprgen", "sprgen-2019.vcxproj", "{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C454C4B3-CC8D-47F7-9F88-E6CC0B2490EF}.Debug|Win32.ActiveCfg = Debug|Win32
-		{C454C4B3-CC8D-47F7-9F88-E6CC0B2490EF}.Debug|Win32.Build.0 = Debug|Win32
-		{C454C4B3-CC8D-47F7-9F88-E6CC0B2490EF}.Release|Win32.ActiveCfg = Release|Win32
-		{C454C4B3-CC8D-47F7-9F88-E6CC0B2490EF}.Release|Win32.Build.0 = Release|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Debug|Win32.Build.0 = Debug|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Release|Win32.ActiveCfg = Release|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
