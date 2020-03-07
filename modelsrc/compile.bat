@@ -8,7 +8,7 @@ if "%1" == "release" (
 )
 
 :: compile studiomdl
-%visualstudio%\Common7\IDE\devenv.exe ..\utils\studiomdl\studiomdl-2017.sln /Build %codeconfiguration%
+%visualstudio%\Common7\IDE\devenv.exe ..\utils\studiomdl\studiomdl-2019.sln /Build %codeconfiguration%
 
 :: %%f is a variable - why isn't %%qc valid?
 for %%f in (*.qc) do (

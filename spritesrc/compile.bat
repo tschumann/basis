@@ -8,7 +8,7 @@ if "%1" == "release" (
 )
 
 :: compile sprgen
-%visualstudio%\Common7\IDE\devenv.exe ..\utils\sprgen\sprgen-2017.sln /Build %codeconfiguration%
+%visualstudio%\Common7\IDE\devenv.exe ..\utils\sprgen\sprgen-2019.sln /Build %codeconfiguration%
 
 :: %%f is a variable - why isn't %%qc valid?
 for %%f in (*.qc) do (

@@ -8,13 +8,13 @@ if "%1" == "release" (
 )
 
 :: compile qcsg
-%visualstudio%\Common7\IDE\devenv.exe ..\utils\qcsg\qcsg-2017.sln /Build %codeconfiguration%
+%visualstudio%\Common7\IDE\devenv.exe ..\utils\qcsg\qcsg-2019.sln /Build %codeconfiguration%
 :: compile qbsp2
-%visualstudio%\Common7\IDE\devenv.exe ..\utils\qbsp2\qbsp2-2017.sln /Build %codeconfiguration%
+%visualstudio%\Common7\IDE\devenv.exe ..\utils\qbsp2\qbsp2-2019.sln /Build %codeconfiguration%
 :: compile vis
-%visualstudio%\Common7\IDE\devenv.exe ..\utils\visx2\vis-2017.sln /Build %codeconfiguration%
+%visualstudio%\Common7\IDE\devenv.exe ..\utils\visx2\vis-2019.sln /Build %codeconfiguration%
 :: compile qrad
-%visualstudio%\Common7\IDE\devenv.exe ..\utils\qrad\qrad-2017.sln /Build %codeconfiguration%
+%visualstudio%\Common7\IDE\devenv.exe ..\utils\qrad\qrad-2019.sln /Build %codeconfiguration%
 
 xcopy /y lights.rad ..\utils\qrad\%codeconfiguration%
 xcopy /y valve.rad ..\utils\qrad\%codeconfiguration%

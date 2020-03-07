@@ -8,9 +8,9 @@ if "%1" == "release" (
 )
 
 :: compile makels
-%visualstudio%\Common7\IDE\devenv.exe ..\utils\makels\makels-2017.sln /Build %codeconfiguration%
+%visualstudio%\Common7\IDE\devenv.exe ..\utils\makels\makels-2019.sln /Build %codeconfiguration%
 :: compile qlumpy
-%visualstudio%\Common7\IDE\devenv.exe ..\utils\qlumpy\qlumpy-2017.sln /Build %codeconfiguration%
+%visualstudio%\Common7\IDE\devenv.exe ..\utils\qlumpy\qlumpy-2019.sln /Build %codeconfiguration%
 
 :: %%d is a variable - why isn't %%dir valid?
 for /D %%d in (*) do (
