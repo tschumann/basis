@@ -82,6 +82,24 @@ void __CmdFunc_ShowModels( void )
 	}
 }
 
+void __CmdFunc_ShowModelData( void )
+{
+	model_t *pModel = gEngfuncs.hudGetModelByIndex( 0 );
+
+	if( pModel )
+	{
+		ConsoleDPrintf( "Textures:\n" );
+		for( unsigned int i = 0; i < pModel->numtextures; i++ )
+		{
+			ConsoleDPrintf( "%s\n", pModel->textures[0]->name );
+		}
+	}
+	else
+	{
+		ConsoleDPrintf( "Unable to get model 0\n" );
+	}
+}
+
 // This is called every time the DLL is loaded
 void CModHud :: Init( void )
 {
@@ -92,6 +110,10 @@ void CModHud :: Init( void )
 	HOOK_COMMAND( "+modmenu", OpenModMenu );
 	HOOK_COMMAND( "-modmenu", CloseModMenu );
 	HOOK_COMMAND( "cl_showmodels", ShowModels );
+
+#if _DEBUG
+	HOOK_COMMAND( "cl_showmodeldata", ShowModelData );
+#endif
 
 	CVAR_CREATE("cl_autowepswitch", "1", FCVAR_ARCHIVE | FCVAR_USERINFO);		// controls where the user automatically switches to the weapon they've just picked up
 
