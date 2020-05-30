@@ -30,6 +30,7 @@
 #include "vgui_TeamFortressViewport.h"
 #include "mod/vgui_ModViewport.h"
 #include "com_model.h"
+#include "r_studioint.h"
 
 #include "demo.h"
 #include "demo_api.h"
@@ -37,6 +38,8 @@
 
 cvar_t *r_cull = NULL;
 cvar_t *r_boundingboxes = NULL;
+
+extern engine_studio_api_t IEngineStudio;
 
 int __MsgFunc_Fog(const char *pszName, int iSize, void *pbuf)
 {
@@ -88,10 +91,19 @@ void __CmdFunc_ShowModelData( void )
 
 	if( pModel )
 	{
-		ConsoleDPrintf( "Textures:\n" );
-		for( unsigned int i = 0; i < pModel->numtextures; i++ )
+		if( IEngineStudio.IsHardware() )
 		{
-			ConsoleDPrintf( "%s\n", pModel->textures[0]->name );
+			ConsoleDPrintf( "Textures:\n" );
+			for( unsigned int i = 0; i < pModel->numtextures; i++ )
+			{
+				// TODO: deal with textures being a pointer to a pointer
+				texture_t* pTexture = pModel->textures[0];
+				ConsoleDPrintf( "%s (%d x %d) (gl_texturenum %d, offsets %d paloffset %d)\n", pTexture->name, pTexture->width, pTexture->height, pTexture->gl_texturenum, pTexture->offsets, pTexture->paloffset );
+			}
+		}
+		else
+		{
+			ConsoleDPrintf( "Not implemented in software mode" );
 		}
 	}
 	else
