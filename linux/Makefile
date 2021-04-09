@@ -96,7 +96,7 @@ endif
 ARCH_CFLAGS="$(ARCH_CFLAGS_I486)"
 
 BASE_CFLAGS=-fpermissive -fno-strict-aliasing -DNDEBUG -DPOSIX -D_POSIX -DLINUX -D_LINUX -DGNUC -DHL1 -Dstricmp=strcasecmp -D_strnicmp=strncasecmp -Dstrnicmp=strncasecmp -D_snprintf=snprintf -DQUIVER -DQUAKE2 -DVALVE_DLL -D_alloca=alloca -fno-exceptions -fexpensive-optimizations -D_vsnprintf=vsnprintf -DNO_MALLOC_OVERRIDE -Werror=return-type
-# don't ignore errors
+# don't ignore warnings
 # BASE_CFLAGS+=-w
 
 ifeq ($(OS),Darwin)

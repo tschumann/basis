@@ -432,7 +432,7 @@ void UTIL_ConstructBotNetName(char *name, int nameLength, const BotProfile *prof
 		return;
 	}
 
-	_snprintf(name, nameLength, "%s %s", UTIL_GetBotPrefix(), profile->GetName());
+	snprintf(name, nameLength, "%s %s", UTIL_GetBotPrefix(), profile->GetName());
 }
 
 //--------------------------------------------------------------------------------------------------------------
