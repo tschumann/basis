@@ -1,3 +1,8 @@
+#!/bin/bash
+
+set -e
+
+cd $(dirname "${BASH_SOURCE[0]}")
 
 sudo apt-get install libgl-dev
 
