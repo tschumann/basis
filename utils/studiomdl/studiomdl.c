@@ -3177,7 +3177,7 @@ void Cmd_SetTextureRendermode( void )
 	else
 	{
   		printf("\n*********ERROR!!!*************\n");
-  		printf("\ninvalid rendermode at $texrendermode, choices are :\nadditive\nmasked\n");
+  		printf("\ninvalid rendermode at $texrendermode, choices are :\nfullbright\nadditive\nmasked\n");
   		exit(1);
 	}
 }
