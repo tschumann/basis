@@ -29,6 +29,7 @@
 #include "GameStudioModelRenderer.h"
 
 extern cvar_t *r_cull;
+extern cvar_t *r_fullbrightstudio;
 
 //
 // Override the StudioModelRender virtual member functions here to implement custom bone
@@ -100,6 +101,22 @@ void CModStudioModelRenderer::StudioScaleBones( void )
 				(*m_protationmatrix)[i][j] *= m_pCurrentEntity->curstate.scale;
 			}
 		}
+	}
+}
+
+/*
+====================
+StudioEntityLighting
+
+====================
+*/
+void CModStudioModelRenderer::StudioEntityLighting( alight_t* lighting )
+{
+	if (r_fullbrightstudio->value)
+	{
+		lighting->color = Vector(1.0f, 1.0f, 1.0f);
+		lighting->ambientlight = 255;
+		lighting->shadelight = 0;
 	}
 }
 

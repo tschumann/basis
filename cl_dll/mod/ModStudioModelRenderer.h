@@ -27,6 +27,7 @@ public:
 protected:
 	virtual void StudioCulling( void );
 	virtual void StudioScaleBones( void );
+	virtual void StudioEntityLighting( alight_t *lighting );
 
 	virtual bool StudioShouldRenderModel( model_t *pRenderModel );
 };

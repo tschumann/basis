@@ -38,6 +38,7 @@
 
 cvar_t *r_cull = NULL;
 cvar_t *r_boundingboxes = NULL;
+cvar_t* r_fullbrightstudio = NULL;
 
 extern engine_studio_api_t IEngineStudio;
 
@@ -131,4 +132,5 @@ void CModHud :: Init( void )
 
 	r_cull = CVAR_CREATE("r_cull", "0", FCVAR_ARCHIVE);
 	r_boundingboxes = CVAR_CREATE("r_boundingboxes", "0", 0);
+	r_fullbrightstudio = CVAR_CREATE("r_fullbrightstudio", "0", 0);
 }

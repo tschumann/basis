@@ -1,4 +1,4 @@
-
+- Added r_fullbrightstudio cvar (controls whether models are lit fullbright)
 - Added env_projectile to test studiomdl_t flags (EF_ROCKET, EF_GRENADE, EF_GIB, EF_TRACER, EF_ZOMGIB, EF_TRACER2, EF_TRACER3)
 - Added sv_ai cvar (controls whether enemies attack each other)
 - Added monster_panther

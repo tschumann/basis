@@ -1243,6 +1243,7 @@ int CStudioModelRenderer::StudioDrawModel( int flags )
 		lighting.plightvec = dir;
 		IEngineStudio.StudioDynamicLight(m_pCurrentEntity, &lighting );
 
+		StudioEntityLighting( &lighting );
 		IEngineStudio.StudioEntityLight( &lighting );
 
 		// model and frame independant
@@ -1784,6 +1785,7 @@ int CStudioModelRenderer::StudioDrawPlayer( int flags, entity_state_t *pplayer )
 		lighting.plightvec = dir;
 		IEngineStudio.StudioDynamicLight(m_pCurrentEntity, &lighting );
 
+		StudioEntityLighting( &lighting );
 		IEngineStudio.StudioEntityLight( &lighting );
 
 		// model and frame independant
