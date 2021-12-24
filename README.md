@@ -1,7 +1,7 @@
 Basis
 =====
 
-Something like Spirit of Half-Life. The intent is to add more features to the Half-Life SDK while better documenting the engine's features and maintaining the same style.
+Something like Spirit of Half-Life. The intent is to add more features to the Half-Life SDK and better documenting the engine's features while maintaining the same style.
 
 
 How to fork this without using GitHub's forking
@@ -33,14 +33,28 @@ $ # pull and merge the latest changes from Basis
 $ git pull basis master
 
 
+Compiling on Windows
+--------------------
+
+If you're using Command Prompt:
+```
+build.bat
+```
+
+If you're using Git Bash
+```
+MSYS_NO_PATHCONV=1 cmd /c build.bat
+```
+
+
 Compiling on Linux
 ------------------
 
-$ sudo apt-get install gcc-multilib g++-multilib mesa-common-dev
-
-$ cd linux
-
-$ make
+```
+sudo apt-get install gcc-multilib g++-multilib mesa-common-dev
+cd linux
+make
+```
 
 Setting up local development
 ----------------------------
@@ -53,6 +67,6 @@ $ # create a new remote to link back to Valve's halflife repo
 
 $ git remote add valve https://github.com/ValveSoftware/halflife
 
-$ # pull the latest changes from halflife
+$ # pull the latest changes from Valve's halflife repo
 
 $ git pull valve master
