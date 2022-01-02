@@ -1,4 +1,3 @@
-:: TODO: build everything
 
 call settings.bat
 
@@ -9,8 +8,8 @@ if "%1" == "release" (
 )
 
 :: compile the code
-%visualstudio%\Common7\IDE\devenv.exe cl_dll\cl_dll-2019.sln /Build %codeconfiguration%
-%visualstudio%\Common7\IDE\devenv.exe dlls\hl-2019.sln /Build %codeconfiguration%
+%visualstudio%\%vsbindir%\devenv.exe cl_dll\cl_dll-2019.sln /Build %codeconfiguration%
+%visualstudio%\%vsbindir%\devenv.exe dlls\hl-2019.sln /Build %codeconfiguration%
 
 xcopy /Y cl_dll\%codeconfiguration%\client.dll %moddir%\cl_dlls\
 if "%1" == "release" (

@@ -1,3 +1,4 @@
+:: clean the project by deleting all generated files
 
 call settings.bat
 

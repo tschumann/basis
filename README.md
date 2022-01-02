@@ -7,43 +7,62 @@ Something like Spirit of Half-Life. The intent is to add more features to the Ha
 How to fork this without using GitHub's forking
 -----------------------------------------------
 
-$ # clone the repo
+```
+# clone the repo
+git clone --mirror https://github.com/tschumann/basis
+cd basis
+# push the checkout of Basis into a repo that you have created
+git push --mirror https://github.com/you/basis-mirror
 
-$ git clone --mirror https://github.com/tschumann/basis
-
-$ cd basis
-
-$ # push the checkout of Basis into a repo that you have created
-
-$ git push --mirror https://github.com/you/basis-mirror
-
-
-$ # clone your repo
-
-$ git clone https://github.com/you/repo
-
-$ # note that similar steps are in update.bat too
-
-$ # create a new remote that points to Basis
-
-$ git remote add basis https://github.com/you/basis-mirror
-
-$ # pull and merge the latest changes from Basis
-
-$ git pull basis master
+# clone your repo
+git clone https://github.com/you/repo
+# create a new remote that points to Basis
+git remote add basis https://github.com/tschumann/basis
+# pull and merge the latest changes from Basis
+git pull basis master
+```
 
 
 Compiling on Windows
 --------------------
 
-If you're using Command Prompt:
+Build all required projects.
+
+Windows Command Prompt:
+```
+init.bat
+```
+
+Windows Git Bash:
+```
+MSYS_NO_PATHCONV=1 cmd /c init.bat
+```
+
+Build the code and assets.
+
+Windows Command Prompt:
 ```
 build.bat
 ```
 
-If you're using Git Bash
+Windows Git Bash:
 ```
 MSYS_NO_PATHCONV=1 cmd /c build.bat
+```
+
+Cleaning the project:
+
+Windows Command Prompt:
+```
+clean.bat
+```
+
+Windows Git Bash:
+```
+powershell ./clean.ps1
+```
+```
+MSYS_NO_PATHCONV=1 cmd /c clean.bat
 ```
 
 
@@ -56,17 +75,20 @@ cd linux
 make
 ```
 
-Setting up local development
-----------------------------
+Pulling in upstream changes
+---------------------------
 
-$ # clone the repo
+Pull in the latest changes from https://github.com/ValveSoftware/halflife
 
-$ git clone https://github.com/tschumann/basis
+Windows Command Prompt:
+```
+update.bat
+```
 
-$ # create a new remote to link back to Valve's halflife repo
-
-$ git remote add valve https://github.com/ValveSoftware/halflife
-
-$ # pull the latest changes from Valve's halflife repo
-
-$ git pull valve master
+Windows Git Bash:
+```
+powershell ./update.ps1
+```
+```
+MSYS_NO_PATHCONV=1 cmd /c update.bat
+```
