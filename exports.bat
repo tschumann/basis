@@ -1,3 +1,4 @@
+:: list exports in the passed in binary
 
 call settings.bat
 

@@ -1,18 +1,19 @@
 #!/bin/bash
 
-set -e
+set -eu
 
 cd $(dirname "${BASH_SOURCE[0]}")
 
-sudo apt-get install libgl-dev
+# initialise the repo by building all necessary projects
+
+# install required dependencies
+sudo apt-get install gcc-multilib g++-multilib mesa-common-dev libgl-dev
 
 sh ./settings.sh
 
+# need to create these, otherwise the compile scripts don't copy correctly
 mkdir $MODDIR/cl_dlls/
 mkdir $MODDIR/dlls/
-# need to create these, otherwise the compile scripts don't copy correctly
 mkdir $MODDIR/maps/
 mkdir $MODDIR/models/
 mkdir $MODDIR/sprites/
-
-# TODO: check that files with the same names as the filesystem testing assets don't exist in $MODDIR

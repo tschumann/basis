@@ -22,11 +22,12 @@ git remote add basis https://github.com/tschumann/basis
 git pull basis master
 ```
 
+Getting started
+---------------
 
-Compiling on Windows
---------------------
+Change the values in `settings.bat`/`settings.ps1`/`settings.sh` as required.
 
-Build all required projects.
+Build all the required projects.
 
 Windows Command Prompt:
 ```
@@ -37,6 +38,10 @@ Windows Git Bash:
 ```
 MSYS_NO_PATHCONV=1 cmd /c init.bat
 ```
+
+
+Compiling
+---------
 
 Build the code and assets.
 
@@ -50,7 +55,14 @@ Windows Git Bash:
 MSYS_NO_PATHCONV=1 cmd /c build.bat
 ```
 
-Cleaning the project:
+Linux bash:
+```
+cd linux
+make
+```
+
+Cleaning
+--------
 
 Windows Command Prompt:
 ```
@@ -65,15 +77,11 @@ powershell ./clean.ps1
 MSYS_NO_PATHCONV=1 cmd /c clean.bat
 ```
 
-
-Compiling on Linux
-------------------
-
+Linux bash:
 ```
-sudo apt-get install gcc-multilib g++-multilib mesa-common-dev
-cd linux
-make
+./clean.sh
 ```
+
 
 Pulling in upstream changes
 ---------------------------
@@ -91,4 +99,9 @@ powershell ./update.ps1
 ```
 ```
 MSYS_NO_PATHCONV=1 cmd /c update.bat
+```
+
+Linux bash:
+```
+./update.sh
 ```
