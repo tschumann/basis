@@ -234,7 +234,7 @@ int CHudStatusBar :: MsgFunc_StatusText( const char *pszName, int iSize, void *p
 
 	int line = READ_BYTE();
 
-	if ( line < 0 || line > MAX_STATUSBAR_LINES )
+	if ( line < 0 || line >= MAX_STATUSBAR_LINES )
 		return 1;
 
 	strncpy( m_szStatusText[line], READ_STRING(), MAX_STATUSTEXT_LENGTH );
@@ -255,7 +255,7 @@ int CHudStatusBar :: MsgFunc_StatusValue( const char *pszName, int iSize, void *
 	BEGIN_READ( pbuf, iSize );
 
 	int index = READ_BYTE();
-	if ( index < 1 || index > MAX_STATUSBAR_VALUES )
+	if ( index < 1 || index >= MAX_STATUSBAR_VALUES )
 		return 1; // index out of range
 
 	m_iStatusValues[index] = READ_SHORT();
