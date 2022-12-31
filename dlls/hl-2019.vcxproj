@@ -499,7 +499,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
   <ItemGroup>
     <ClInclude Include="..\engine\eiface.h" />
     <ClInclude Include="..\foolsgoldsource\foolsgoldsource.h" />
-    <ClInclude Include="..\foolsgoldsource\hltest.h" />
+    <ClInclude Include="..\foolsgoldsource\test_plumbing.h" />
     <ClInclude Include="..\game_shared\modbot\bot.h" />
     <ClInclude Include="..\game_shared\modbot\bot_constants.h" />
     <ClInclude Include="..\game_shared\modbot\bot_manager.h" />

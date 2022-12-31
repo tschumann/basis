@@ -638,7 +638,7 @@
     <ClInclude Include="..\foolsgoldsource\foolsgoldsource.h">
       <Filter>Header Files\foolsgoldsource</Filter>
     </ClInclude>
-    <ClInclude Include="..\foolsgoldsource\hltest.h">
+    <ClInclude Include="..\foolsgoldsource\test_plumbing.h">
       <Filter>Header Files\foolsgoldsource</Filter>
     </ClInclude>
   </ItemGroup>
