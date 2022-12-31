@@ -25,6 +25,13 @@ git pull basis master
 Getting started
 ---------------
 
+Clone and get the submodules.
+```
+git clone https://github.com/tschumann/basis
+git submodule init
+git submodule update
+```
+
 Change the values in `settings.bat`/`settings.ps1`/`settings.sh` as required.
 
 Build all the required projects.

@@ -25,6 +25,12 @@
     <Filter Include="Header Files\mod\bot">
       <UniqueIdentifier>{92113dae-d10f-4fd3-9d5a-9cc2ff0cca89}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\foolsgoldsource">
+      <UniqueIdentifier>{cf231da4-6237-4abb-a724-23ee7e4bf14f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\foolsgoldsource">
+      <UniqueIdentifier>{93b360b8-cc21-4a95-a2a4-f72ecb46d7b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aflock.cpp">
@@ -414,6 +420,12 @@
     <ClCompile Include="..\game_shared\shared_util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="construction_test.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foolsgoldsource\foolsgoldsource.cpp">
+      <Filter>Source Files\foolsgoldsource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activity.h">
@@ -622,6 +634,12 @@
     </ClInclude>
     <ClInclude Include="..\game_shared\modbot\simple_state_machine.h">
       <Filter>Header Files\mod\bot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foolsgoldsource\foolsgoldsource.h">
+      <Filter>Header Files\foolsgoldsource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foolsgoldsource\hltest.h">
+      <Filter>Header Files\foolsgoldsource</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
