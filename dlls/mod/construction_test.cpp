@@ -1,4 +1,4 @@
-//========= Copyright © 2008-2022, Team Sandpit, All rights reserved. ============
+//========= Copyright © 2008-2023, Team Sandpit, All rights reserved. ============
 //
 // Purpose: construction entity tests
 //

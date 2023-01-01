@@ -26,6 +26,12 @@
       <UniqueIdentifier>{0448e37d-3e16-4852-8087-12546b705eb2}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
+    <Filter Include="Source Files\foolsgoldsource">
+      <UniqueIdentifier>{b8373026-ac29-4085-8f8f-310adaffeb48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\foolsgoldsource">
+      <UniqueIdentifier>{66cbe580-c488-4a30-a826-c44cfad7a1e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ammo.cpp">
@@ -304,6 +310,12 @@
     <ClCompile Include="mod\modtri.cpp">
       <Filter>Source Files\mod</Filter>
     </ClCompile>
+    <ClCompile Include="..\foolsgoldsource\foolsgoldsource.cpp">
+      <Filter>Source Files\foolsgoldsource</Filter>
+    </ClCompile>
+    <ClCompile Include="modhud_test.cpp">
+      <Filter>Source Files\mod</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ammo.h">
@@ -503,6 +515,12 @@
     </ClInclude>
     <ClInclude Include="mod\modtri.h">
       <Filter>Header Files\mod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foolsgoldsource\foolsgoldsource.h">
+      <Filter>Header Files\foolsgoldsource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foolsgoldsource\vscu_test.h">
+      <Filter>Header Files\foolsgoldsource</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

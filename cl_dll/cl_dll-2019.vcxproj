@@ -179,6 +179,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)client.pdb $(ProjectDir)..\basis\cl_d
     <ClCompile Include="..\dlls\squeakgrenade.cpp" />
     <ClCompile Include="..\dlls\tripmine.cpp" />
     <ClCompile Include="..\dlls\wpn_shared\hl_wpn_glock.cpp" />
+    <ClCompile Include="..\foolsgoldsource\foolsgoldsource.cpp" />
     <ClCompile Include="..\game_shared\vgui_checkbutton2.cpp" />
     <ClCompile Include="..\game_shared\vgui_grid.cpp" />
     <ClCompile Include="..\game_shared\vgui_helpers.cpp" />
@@ -227,6 +228,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)client.pdb $(ProjectDir)..\basis\cl_d
     <ClCompile Include="in_camera.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="message.cpp" />
+    <ClCompile Include="modhud_test.cpp" />
     <ClCompile Include="mod\gl.cpp" />
     <ClCompile Include="mod\modhud.cpp" />
     <ClCompile Include="mod\modhud_msg.cpp" />
@@ -261,6 +263,8 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)client.pdb $(ProjectDir)..\basis\cl_d
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common\parsemsg.h" />
+    <ClInclude Include="..\foolsgoldsource\foolsgoldsource.h" />
+    <ClInclude Include="..\foolsgoldsource\vscu_test.h" />
     <ClInclude Include="..\game_shared\vgui_scrollbar2.h" />
     <ClInclude Include="..\game_shared\vgui_slider2.h" />
     <ClInclude Include="..\game_shared\voice_banmgr.h" />

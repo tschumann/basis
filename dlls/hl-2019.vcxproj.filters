@@ -420,11 +420,11 @@
     <ClCompile Include="..\game_shared\shared_util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="construction_test.cpp">
-      <Filter>Source Files\mod</Filter>
-    </ClCompile>
     <ClCompile Include="..\foolsgoldsource\foolsgoldsource.cpp">
       <Filter>Source Files\foolsgoldsource</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\construction_test.cpp">
+      <Filter>Source Files\mod</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -638,7 +638,7 @@
     <ClInclude Include="..\foolsgoldsource\foolsgoldsource.h">
       <Filter>Header Files\foolsgoldsource</Filter>
     </ClInclude>
-    <ClInclude Include="..\foolsgoldsource\test_plumbing.h">
+    <ClInclude Include="..\foolsgoldsource\vscu_test.h">
       <Filter>Header Files\foolsgoldsource</Filter>
     </ClInclude>
   </ItemGroup>

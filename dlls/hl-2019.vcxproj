@@ -231,7 +231,6 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
     <ClCompile Include="combat.cpp">
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
-    <ClCompile Include="construction_test.cpp" />
     <ClCompile Include="controller.cpp">
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
@@ -347,6 +346,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
       <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</RuntimeTypeInfo>
     </ClCompile>
     <ClCompile Include="mod\construction.cpp" />
+    <ClCompile Include="mod\construction_test.cpp" />
     <ClCompile Include="mod\coop_gamerules.cpp" />
     <ClCompile Include="mod\hassault.cpp" />
     <ClCompile Include="mod\modanimation.cpp" />
@@ -499,7 +499,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)$(ProjectName).pdb $(ProjectDir)..\ba
   <ItemGroup>
     <ClInclude Include="..\engine\eiface.h" />
     <ClInclude Include="..\foolsgoldsource\foolsgoldsource.h" />
-    <ClInclude Include="..\foolsgoldsource\test_plumbing.h" />
+    <ClInclude Include="..\foolsgoldsource\vscu_test.h" />
     <ClInclude Include="..\game_shared\modbot\bot.h" />
     <ClInclude Include="..\game_shared\modbot\bot_constants.h" />
     <ClInclude Include="..\game_shared\modbot\bot_manager.h" />
