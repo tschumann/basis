@@ -1,11 +1,12 @@
 //========= Copyright © 2008-2022, Team Sandpit, All rights reserved. ============
 //
-// Purpose: Mock engine for testing
+// Purpose: construction entity tests
 //
 // $NoKeywords: $
 //================================================================================
 
-#include "foolsgoldsource/test_plumbing.h"
+#include "foolsgoldsource/vscu_test.h"
+#include "foolsgoldsource/foolsgoldsource.h"
 
 #include "extdll.h"
 #include "util.h"
