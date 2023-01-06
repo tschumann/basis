@@ -90,6 +90,16 @@ Linux bash:
 ```
 
 
+Tests
+-----
+
+There are some unit tests.
+
+```
+powershell ./test.ps1
+```
+
+
 Pulling in upstream changes
 ---------------------------
 

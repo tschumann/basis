@@ -29,7 +29,7 @@ namespace modtests
 		{
 		}
 
-		TEST_METHOD(TestSpawn)
+		TEST_METHOD(TestMonsterConstructionDeadSpawn)
 		{
 			edict_t* pEdict = foolsgoldsource::gEngine.CreateEdict();
 			monster_construction_dead( &pEdict->v );
