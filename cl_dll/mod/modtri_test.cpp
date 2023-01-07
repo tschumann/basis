@@ -5,6 +5,7 @@
 // $NoKeywords: $
 //================================================================================
 
+// fix definitions in enginecallback.h colliding with definitions in cl_util.h
 #define ENGINECALLBACK_H
 
 #include "../foolsgoldsource/vscu_test.h"
