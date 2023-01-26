@@ -17,7 +17,7 @@ extern "C" void monster_construction_dead(entvars_t* pev);
 
 namespace modtests
 {
-	TEST_CLASS(construction_test)
+	TEST_CLASS(construction_dead_test)
 	{
 	public:
 
@@ -31,16 +31,19 @@ namespace modtests
 
 		TEST_METHOD(TestMonsterConstructionDeadSpawn)
 		{
-			edict_t* pEdict = foolsgoldsource::gEngine.CreateEdict();
+			edict_t* pEdict = foolsgoldsource::pfnCreateEntity();
 			monster_construction_dead( &pEdict->v );
 			Assert::IsNotNull( pEdict->pvPrivateData );
 
 			KeyValueData pose = { "monster_construction_dead", "pose", "0", 0 };
-			DispatchKeyValue(pEdict, &pose);
+			DispatchKeyValue( pEdict, &pose );
 
 			Assert::AreEqual( 0, ModDispatchSpawn( pEdict ) );
-			Assert::AreEqual( 0, pEdict->v.sequence );
 			Assert::AreEqual( "models/construction.mdl", STRING(pEdict->v.model) );
+			Assert::AreEqual( 0, pEdict->v.effects );
+			Assert::AreEqual( 8.0f, pEdict->v.yaw_speed );
+			Assert::AreEqual( 0, pEdict->v.sequence );
+			Assert::AreEqual( 4.0f, pEdict->v.health ); // CBaseMonster::BecomeDead halves the health
 		}
 	};
 }
