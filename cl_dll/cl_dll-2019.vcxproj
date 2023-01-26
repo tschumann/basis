@@ -233,6 +233,7 @@ call ..\filecopy.bat $(ProjectDir)$(OutDir)client.pdb $(ProjectDir)..\basis\cl_d
     <ClCompile Include="mod\modhud_msg.cpp" />
     <ClCompile Include="mod\modhud_test.cpp" />
     <ClCompile Include="mod\ModStudioModelRenderer.cpp" />
+    <ClCompile Include="mod\ModStudioModelRenderer_test.cpp" />
     <ClCompile Include="mod\modtri_test.cpp" />
     <ClCompile Include="mod\mod_util.cpp" />
     <ClCompile Include="mod\modtri.cpp" />

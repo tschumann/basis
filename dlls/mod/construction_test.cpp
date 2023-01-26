@@ -17,7 +17,7 @@ extern "C" void monster_construction_dead(entvars_t* pev);
 
 namespace modtests
 {
-	TEST_CLASS(construction_dead_test)
+	TEST_CLASS(construction_test)
 	{
 	public:
 
