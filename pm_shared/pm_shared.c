@@ -241,7 +241,7 @@ void PM_InitTextureTypes()
 		while (buffer[j] && !isspace(buffer[j]))
 			j++;
 
-		if (!buffer[j])
+		if (i == j)
 			continue;
 
 		// null-terminate name and save in sentences array
