@@ -938,7 +938,7 @@ void CStudioModelRenderer::StudioSetupBones ( void )
 			{
 				copy = 0;
 			}
-			else if ( !strcmp( pbones[ pbones[i].parent ].name, "Bip01 Pelvis" ) )
+			else if ( pbones[i].parent != -1 && !strcmp( pbones[ pbones[i].parent ].name, "Bip01 Pelvis" ) )
 			{
 				copy = 1;
 			}
