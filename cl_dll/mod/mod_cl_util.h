@@ -18,16 +18,6 @@
 
 #include "com_model.h"
 
-#ifdef _WIN32
-#define FILESYSTEM_DLLNAME "FileSystem_Steam.dll"
-#elif defined(OSX)
-#define FILESYSTEM_DLLNAME "FileSystem_Steam.dylib"
-#elif defined(__linux__)
-#define FILESYSTEM_DLLNAME "FileSystem_Steam.so"
-#else
-#error
-#endif
-
 extern void ConsolePrintf( const char *format, ... );
 extern void ConsoleDPrintf( const char *format, ... );
 
