@@ -34,6 +34,11 @@ git submodule update
 
 Change the values in `settings.bat`/`settings.ps1`/`settings.sh` as required.
 
+Install required dependencies:
+```
+sudo apt-get install libgl-dev
+```
+
 Build all the required projects.
 
 Windows Command Prompt:
