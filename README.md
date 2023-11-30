@@ -22,6 +22,7 @@ git remote add basis https://github.com/tschumann/basis
 git pull basis master
 ```
 
+
 Getting started
 ---------------
 
@@ -34,17 +35,7 @@ git submodule update
 
 Change the values in `settings.bat`/`settings.ps1`/`settings.sh` as required.
 
-Install required dependencies:
-```
-sudo apt-get install libgl-dev
-```
-
 Build all the required projects.
-
-Windows Command Prompt:
-```
-init.bat
-```
 
 Windows Git Bash:
 ```
@@ -57,11 +48,6 @@ Compiling
 
 Build the code and assets.
 
-Windows Command Prompt:
-```
-build.bat
-```
-
 Windows Git Bash:
 ```
 MSYS_NO_PATHCONV=1 cmd /c build.bat
@@ -69,17 +55,14 @@ MSYS_NO_PATHCONV=1 cmd /c build.bat
 
 Linux bash:
 ```
+sudo apt-get install libgl-dev
 cd linux
 make
 ```
 
+
 Cleaning
 --------
-
-Windows Command Prompt:
-```
-clean.bat
-```
 
 Windows Git Bash:
 ```
@@ -98,22 +81,27 @@ Linux bash:
 Tests
 -----
 
-There are some unit tests.
-
+Run the unit tests:
 ```
 powershell ./test.ps1
 ```
+
+
+Updating Steamworks SDK
+-----------------------
+
+The current required version of the Steamworks SDK is 1.53a
+
+The version of the Steamworks SDK to build with needs to match `steamapps/common/Half-Life/steam_api.dll`: go to https://partner.steamgames.com/downloads/list and find the version whose `sdk\redistributable_bin\steam_api.dll` has the same version as `steamapps/common/Half-Life/steam_api.dll`
+
+Copy `sdk/redistributable_bin/steam_api.lib` to `lib/public/`, copy `sdk/redistributable_bin/linux32/libsteam_api.so` to `linux/` and copy `sdk/public/steam/*.h` to `public/steam/`
+
 
 
 Pulling in upstream changes
 ---------------------------
 
 Pull in the latest changes from https://github.com/ValveSoftware/halflife
-
-Windows Command Prompt:
-```
-update.bat
-```
 
 Windows Git Bash:
 ```
