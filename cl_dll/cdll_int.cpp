@@ -208,6 +208,7 @@ void CL_DLLEXPORT HUD_Init( void )
 	CL_LoadGameUI();
 	CL_LoadVGUI2();
 
+	Steam_Init();
 	ConsolePrintf( "Steam_UserHasLicenseForApp %d\n", Steam_UserHasLicenseForApp() );
 	ConsolePrintf( "Steam_UserOwnsApp %d\n", Steam_UserOwnsApp(gEngfuncs.pfnGetAppID()) );
 }

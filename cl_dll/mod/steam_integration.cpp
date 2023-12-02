@@ -26,7 +26,7 @@ bool g_iSteamAPIInited;
 
 void Steam_Init()
 {
-	bool g_iSteamAPIInited = SteamAPI_Init();
+	g_iSteamAPIInited = SteamAPI_Init();
 	ConsoleDPrintf( "SteamAPI_Init result %d\n", g_iSteamAPIInited );
 }
 
