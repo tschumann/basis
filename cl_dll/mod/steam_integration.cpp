@@ -19,7 +19,7 @@
 int Q_snprintf( char *buffer, size_t buffersize, const char *format, ... ) { return 0; }
 // NETADR_H is defined in common/netadr.h but the Steam API expects it to be defined in tier1 code
 #undef NETADR_H
-#include "steamapi.h"
+#include "steam_api.h"
 #define NETADR_H
 
 bool g_iSteamAPIInited;
