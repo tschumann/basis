@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qbsp2", "qbsp2-2019.vcxproj", "{031FF29F-CBDE-49B9-9E3C-74B650E70448}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vis", "vis.vcxproj", "{7AF08EEF-C9A3-4C11-A5B9-4A64B1199195}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{031FF29F-CBDE-49B9-9E3C-74B650E70448}.Debug|Win32.ActiveCfg = Debug|Win32
-		{031FF29F-CBDE-49B9-9E3C-74B650E70448}.Debug|Win32.Build.0 = Debug|Win32
-		{031FF29F-CBDE-49B9-9E3C-74B650E70448}.Release|Win32.ActiveCfg = Release|Win32
-		{031FF29F-CBDE-49B9-9E3C-74B650E70448}.Release|Win32.Build.0 = Release|Win32
+		{7AF08EEF-C9A3-4C11-A5B9-4A64B1199195}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7AF08EEF-C9A3-4C11-A5B9-4A64B1199195}.Debug|Win32.Build.0 = Debug|Win32
+		{7AF08EEF-C9A3-4C11-A5B9-4A64B1199195}.Release|Win32.ActiveCfg = Release|Win32
+		{7AF08EEF-C9A3-4C11-A5B9-4A64B1199195}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

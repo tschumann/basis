@@ -11,19 +11,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>sprgen</ProjectName>
-    <ProjectGuid>{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}</ProjectGuid>
+    <ProjectName>qbsp2</ProjectName>
+    <ProjectGuid>{031FF29F-CBDE-49B9-9E3C-74B650E70448}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -42,45 +42,44 @@
     <_ProjectFileVersion>15.0.26323.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\Release\</OutDir>
-    <IntDir>.\Release\</IntDir>
+    <OutDir>.\release\</OutDir>
+    <IntDir>.\release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\Debug\</OutDir>
-    <IntDir>.\Debug\</IntDir>
+    <OutDir>.\debug\</OutDir>
+    <IntDir>.\debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <TypeLibraryName>.\Release/sprgen.tlb</TypeLibraryName>
+      <TypeLibraryName>.\release/qbsp2.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
-      <Optimization>MinSpace</Optimization>
+      <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CONSOLE;DOUBLEVEC_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\Release/sprgen.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
-      <ObjectFileName>.\Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeaderOutputFile>.\release/qbsp2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\release/</AssemblerListingLocation>
+      <ObjectFileName>.\release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\release/</ProgramDataBaseFileName>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>.\Release/sprgen.exe</OutputFile>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glaux.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\release/qbsp2.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\Release/sprgen.pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>..\common\GL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\release/qbsp2.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
@@ -88,24 +87,24 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Release/sprgen.bsc</OutputFile>
+      <OutputFile>.\release/qbsp2.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <TypeLibraryName>.\Debug/sprgen.tlb</TypeLibraryName>
+      <TypeLibraryName>.\debug/qbsp2.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\common;..\..\engine;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CONSOLE;DOUBLEVEC_T;_NOENUMQBOOL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\Debug/sprgen.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\debug/qbsp2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\debug/</AssemblerListingLocation>
+      <ObjectFileName>.\debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\debug/</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
@@ -115,31 +114,46 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>.\Debug/sprgen.exe</OutputFile>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\debug/qbsp2.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\common\GL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\Debug/sprgen.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\debug/qbsp2.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Debug/sprgen.bsc</OutputFile>
+      <OutputFile>.\debug/qbsp2.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\cmdlib.c" />
-    <ClCompile Include="..\common\lbmlib.c" />
-    <ClCompile Include="..\common\scriplib.c" />
-    <ClCompile Include="sprgen.c" />
+    <ClInclude Include="..\common\bsplib.h" />
+    <ClInclude Include="..\common\cmdlib.h" />
+    <ClInclude Include="..\common\mathlib.h" />
+    <ClInclude Include="..\common\scriplib.h" />
+    <ClInclude Include="..\common\threads.h" />
+    <ClInclude Include="bsp5.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\common\cmdlib.h" />
-    <ClInclude Include="..\common\lbmlib.h" />
-    <ClInclude Include="..\common\scriplib.h" />
-    <ClInclude Include="spritegn.h" />
+    <ClCompile Include="..\common\bsplib.c" />
+    <ClCompile Include="..\common\cmdlib.c" />
+    <ClCompile Include="..\common\mathlib.c" />
+    <ClCompile Include="..\common\scriplib.c" />
+    <ClCompile Include="..\common\threads.c" />
+    <ClCompile Include="gldraw.c" />
+    <ClCompile Include="merge.c" />
+    <ClCompile Include="outside.c" />
+    <ClCompile Include="portals.c" />
+    <ClCompile Include="qbsp.c" />
+    <ClCompile Include="solidbsp.c" />
+    <ClCompile Include="surfaces.c" />
+    <ClCompile Include="tjunc.c" />
+    <ClCompile Include="writebsp.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

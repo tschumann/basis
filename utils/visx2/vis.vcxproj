@@ -11,19 +11,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>makels</ProjectName>
-    <ProjectGuid>{6EAB95F8-EBEF-4784-8D79-1E6EA2E42435}</ProjectGuid>
+    <ProjectName>vis</ProjectName>
+    <ProjectGuid>{7AF08EEF-C9A3-4C11-A5B9-4A64B1199195}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -53,21 +53,19 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <TypeLibraryName>.\Release/makels.tlb</TypeLibraryName>
+      <TypeLibraryName>.\Release/vis.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\Release/makels.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>.\Release/vis.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
       <ObjectFileName>.\Release/</ObjectFileName>
       <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
+      <BrowseInformation />
+      <BrowseInformationFile>.\Release/</BrowseInformationFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
     <ResourceCompile>
@@ -75,9 +73,9 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>.\Release/makels.exe</OutputFile>
+      <OutputFile>.\Release/vis.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ProgramDatabaseFile>.\Release/makels.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\Release/vis.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
@@ -85,25 +83,26 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Release/makels.bsc</OutputFile>
+      <OutputFile>.\Release/vis.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <TypeLibraryName>.\Debug/makels.tlb</TypeLibraryName>
+      <TypeLibraryName>.\Debug/vis.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;..\..\engine;..\..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\Debug/makels.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/vis.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
       <ObjectFileName>.\Debug/</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level3</WarningLevel>
+      <BrowseInformation />
+      <BrowseInformationFile>.\Debug/</BrowseInformationFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
@@ -112,10 +111,10 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>.\Debug/makels.exe</OutputFile>
+      <OutputFile>.\Debug/vis.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\Debug/makels.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\Debug/vis.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
@@ -123,11 +122,28 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Debug/makels.bsc</OutputFile>
+      <OutputFile>.\Debug/vis.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="makels.cpp" />
+    <ClCompile Include="..\common\bsplib.c" />
+    <ClCompile Include="..\common\cmdlib.c" />
+    <ClCompile Include="..\common\mathlib.c" />
+    <ClCompile Include="..\common\scriplib.c" />
+    <ClCompile Include="..\common\threads.c" />
+    <ClCompile Include="flow.c" />
+    <ClCompile Include="soundpvs.c" />
+    <ClCompile Include="vis.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\bspfile.h" />
+    <ClInclude Include="..\common\bsplib.h" />
+    <ClInclude Include="..\common\cmdlib.h" />
+    <ClInclude Include="..\common\mathlib.h" />
+    <ClInclude Include="..\common\scriplib.h" />
+    <ClInclude Include="..\common\threads.h" />
+    <ClInclude Include="..\qbsp2\bsp5.h" />
+    <ClInclude Include="vis.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

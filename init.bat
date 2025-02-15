@@ -10,14 +10,14 @@ mkdir %moddir%\models\
 mkdir %moddir%\sprites\
 
 :: compile the utilities - build as release as they shouldn't need to be debugged
-%visualstudio%\%vsbindir%\devenv.exe  utils\qcsg\qcsg-2019.sln /Build Release
-%visualstudio%\%vsbindir%\devenv.exe  utils\qbsp2\qbsp2-2019.sln /Build Release
-%visualstudio%\%vsbindir%\devenv.exe  utils\qrad\qrad-2019.sln /Build Release
-%visualstudio%\%vsbindir%\devenv.exe  utils\vis2x\vis-2019.sln /Build Release
-%visualstudio%\%vsbindir%\devenv.exe  utils\makels\makels-2019.sln /Build Release
-%visualstudio%\%vsbindir%\devenv.exe  utils\qlumpy\qlumpy-2019.sln /Build Release
-%visualstudio%\%vsbindir%\devenv.exe  utils\sprgren\sprgen-2019.sln /Build Release
-%visualstudio%\%vsbindir%\devenv.exe  utils\studiomdl\studiomdl-2019.sln /Build Release
+%visualstudio%\%vsbindir%\devenv.exe utils\qcsg\qcsg.sln /Build Release
+%visualstudio%\%vsbindir%\devenv.exe utils\qbsp2\qbsp2.sln /Build Release
+%visualstudio%\%vsbindir%\devenv.exe utils\qrad\qrad.sln /Build Release
+%visualstudio%\%vsbindir%\devenv.exe utils\vis2x\vis.sln /Build Release
+%visualstudio%\%vsbindir%\devenv.exe utils\makels\makels.sln /Build Release
+%visualstudio%\%vsbindir%\devenv.exe utils\qlumpy\qlumpy.sln /Build Release
+%visualstudio%\%vsbindir%\devenv.exe utils\sprgren\sprgen.sln /Build Release
+%visualstudio%\%vsbindir%\devenv.exe utils\studiomdl\studiomdl.sln /Build Release
 
 :: make sure qrad has a lights file
 mkdir utils\qrad\Release

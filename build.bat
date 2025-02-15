@@ -8,8 +8,8 @@ if "%1" == "release" (
 )
 
 :: compile the code
-%visualstudio%\%vsbindir%\devenv.exe cl_dll\cl_dll-2019.sln /Build %codeconfiguration%
-%visualstudio%\%vsbindir%\devenv.exe dlls\hl-2019.sln /Build %codeconfiguration%
+%visualstudio%\%vsbindir%\devenv.exe cl_dll\cl_dll.sln /Build %codeconfiguration%
+%visualstudio%\%vsbindir%\devenv.exe dlls\hl.sln /Build %codeconfiguration%
 
 xcopy /Y cl_dll\%codeconfiguration%\client.dll %moddir%\cl_dlls\
 if "%1" == "release" (

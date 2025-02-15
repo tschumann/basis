@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qrad", "qrad-2019.vcxproj", "{79ADEFBB-059C-4397-AE83-8E4FDA5835EA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sprgen", "sprgen.vcxproj", "{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{79ADEFBB-059C-4397-AE83-8E4FDA5835EA}.Debug|Win32.ActiveCfg = Debug|Win32
-		{79ADEFBB-059C-4397-AE83-8E4FDA5835EA}.Debug|Win32.Build.0 = Debug|Win32
-		{79ADEFBB-059C-4397-AE83-8E4FDA5835EA}.Release|Win32.ActiveCfg = Release|Win32
-		{79ADEFBB-059C-4397-AE83-8E4FDA5835EA}.Release|Win32.Build.0 = Release|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Debug|Win32.Build.0 = Debug|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Release|Win32.ActiveCfg = Release|Win32
+		{6AD95629-17EF-4BB2-B511-AAC8E7F4EDEF}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
