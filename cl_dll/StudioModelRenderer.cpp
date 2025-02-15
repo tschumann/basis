@@ -442,6 +442,19 @@ void CStudioModelRenderer::StudioSetUpTransform (int trivial_accept)
 	angles[PITCH] = m_pCurrentEntity->curstate.angles[PITCH];
 	angles[YAW] = m_pCurrentEntity->curstate.angles[YAW];
 
+	if ( m_pCurrentEntity->model->flags & EF_ROTATE )
+	{
+		float timemod;
+
+		timemod = fmod( gEngfuncs.GetClientTime(), 2.0f );
+
+		m_pCurrentEntity->angles[0] = 0;
+		m_pCurrentEntity->angles[YAW] = timemod * 180.0 - 90.0;
+		m_pCurrentEntity->angles[2] = 0;
+
+		VectorCopy( m_pCurrentEntity->angles, m_pCurrentEntity->curstate.angles );
+	}
+
 	//Con_DPrintf("Angles %4.2f prev %4.2f for %i\n", angles[PITCH], m_pCurrentEntity->index);
 	//Con_DPrintf("movetype %d %d\n", m_pCurrentEntity->movetype, m_pCurrentEntity->aiment );
 	if (m_pCurrentEntity->curstate.movetype == MOVETYPE_STEP) 
