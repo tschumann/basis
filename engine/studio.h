@@ -325,15 +325,19 @@ typedef struct
 } mstudiotrivert_t;
 #endif
 
-// model flags
-#define	EF_ROCKET	1
-#define	EF_GRENADE	2
-#define	EF_GIB		4
-#define	EF_ROTATE	8
-#define	EF_TRACER	16
-#define	EF_ZOMGIB	32
-#define	EF_TRACER2	64
-#define	EF_TRACER3	128
+// model flags from engine/model.h as detailed in hlcoders thread QC $flags
+#define EF_ROCKET       (1<<0)                  // leave a trail
+#define EF_GRENADE      (1<<1)                  // leave a trail
+#define EF_GIB          (1<<2)                  // leave a trail
+#define EF_ROTATE       (1<<3)                  // rotate (bonus items)
+#define EF_TRACER       (1<<4)                  // green split trail
+#define EF_ZOMGIB       (1<<5)                  // small blood trail
+#define EF_TRACER2      (1<<6)                  // orange split trail + rotate
+#define EF_TRACER3      (1<<7)                  // purple trail
+
+#define EF_FLYMODEL     (1<<8)                  // illuminate as flying model
+#define EF_COMPLEX      (1<<9)                  // does complex entity to entity intersection
+#define EF_ENVLIGHT     (1<<10)                 // only uses environment light
 
 // lighting options
 #define STUDIO_NF_FLATSHADE		0x0001
