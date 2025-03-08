@@ -462,6 +462,10 @@ void SaveReadFields( SAVERESTOREDATA *pSaveData, const char *pname, void *pBaseD
 
 void OnFreeEntPrivateData(edict_s *pEdict)
 {
+	if (pEdict && pEdict->pvPrivateData)
+	{
+		((CBaseEntity*)pEdict->pvPrivateData)->~CBaseEntity();
+	}
 }
 
 
