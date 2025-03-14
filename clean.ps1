@@ -1,3 +1,10 @@
+# get the location of this file
+$scriptpath = $MyInvocation.MyCommand.Path
+# get the directory path to this file
+$wd = Split-Path $scriptpath
+# set the working directory as this file's directory
+Push-Location $wd
+
 # clean the project by deleting all generated files
 
 # code-related stuff (could use MSBuild /t:Clean but it still seems to leave junk lying around)
@@ -37,3 +44,5 @@ Remove-Item wadsrc\tools.ls -ErrorAction Ignore
 
 # filesystem testing stuff
 Remove-Item -Recurse mod\ -ErrorAction Ignore
+
+Pop-Location

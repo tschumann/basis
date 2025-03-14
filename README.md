@@ -42,6 +42,11 @@ Windows Git Bash:
 MSYS_NO_PATHCONV=1 cmd /c init.bat
 ```
 
+Linux bash:
+```
+./init.sh
+```
+
 
 Compiling
 ---------
@@ -55,7 +60,6 @@ MSYS_NO_PATHCONV=1 cmd /c build.bat
 
 Linux bash:
 ```
-sudo apt-get install libgl-dev
 cd linux
 make
 ```
@@ -100,12 +104,9 @@ Pulling in upstream changes
 
 Pull in the latest changes from https://github.com/ValveSoftware/halflife
 
-Windows Git Bash:
+PowerShell:
 ```
-powershell ./update.ps1
-```
-```
-MSYS_NO_PATHCONV=1 cmd /c update.bat
+./update.ps1
 ```
 
 Linux bash:

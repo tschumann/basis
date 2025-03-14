@@ -4,7 +4,7 @@ set -eu
 
 cd $(dirname "${BASH_SOURCE[0]}")
 
-# initialise the repo by building all necessary projects
+# initialise the repo by building all necessary projects etc
 
 # install required dependencies
 sudo apt-get install gcc-multilib g++-multilib mesa-common-dev libgl-dev

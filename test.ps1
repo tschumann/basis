@@ -5,6 +5,8 @@ $wd = Split-Path $scriptpath
 # set the working directory as this file's directory
 Push-Location $wd
 
+# build and run the tests
+
 New-Item -Path "cl_dll" -Name "run_tests.hxx" -ItemType "file" -Force
 # build the solution
 & "MSBuild.exe" /t:Build /p:Configuration=Debug "cl_dll\cl_dll.sln"

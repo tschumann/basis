@@ -1,4 +1,4 @@
-:: initialise the repo by building all necessary projects
+:: initialise the repo by building all necessary projects etc
 
 call settings.bat
 
