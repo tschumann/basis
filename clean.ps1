@@ -1,11 +1,6 @@
 # clean the project by deleting all generated files
 
-. ./settings.ps1
-
-# tidy up the mod directory
-Remove-Item $moddir\voice_ban.dt -ErrorAction Ignore
-
-# code-related stuff
+# code-related stuff (could use MSBuild /t:Clean but it still seems to leave junk lying around)
 Remove-Item -Recurse cl_dll\Debug\ -ErrorAction Ignore
 Remove-Item -Recurse cl_dll\Release\ -ErrorAction Ignore
 Remove-Item -Recurse dlls\Debug\ -ErrorAction Ignore

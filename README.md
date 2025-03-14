@@ -64,12 +64,9 @@ make
 Cleaning
 --------
 
-Windows Git Bash:
+PowerShell:
 ```
-powershell ./clean.ps1
-```
-```
-MSYS_NO_PATHCONV=1 cmd /c clean.bat
+./clean.ps1
 ```
 
 Linux bash:
@@ -81,9 +78,9 @@ Linux bash:
 Tests
 -----
 
-Run the unit tests:
+Developer PowerShell for VS:
 ```
-powershell ./test.ps1
+./test.ps1
 ```
 
 
