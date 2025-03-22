@@ -17,10 +17,8 @@ New-Item -Path "dlls" -Name "run_tests.hxx" -ItemType "file" -Force
 & "MSBuild.exe" /t:Build /p:Configuration=Debug "dlls\hl.sln"
 Remove-Item dlls\run_tests.hxx
 
-# copy across the .dll files that client.dll depends on
-Copy-Item "C:\Program Files (x86)\Steam\steamapps\common\Half-Life\SDL2.dll" -Destination "cl_dll\Debug"
-Copy-Item "C:\Program Files (x86)\Steam\steamapps\common\Half-Life\steam_api.dll" -Destination "cl_dll\Debug"
-Copy-Item "C:\Program Files (x86)\Steam\steamapps\common\Half-Life\vgui.dll" -Destination "cl_dll\Debug"
+# adjust the path so that SDL2.dll, steam_api.dll and vgui.dll are visible
+$env:Path = "C:\Program Files (x86)\Steam\steamapps\common\Half-Life\;" + $env:Path
 
 # run the tests - add --diag:out.txt to get extra information if required
 & "vstest.console.exe" cl_dll\Debug\client.dll --logger:"console;verbosity=Normal"
