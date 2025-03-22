@@ -37,9 +37,9 @@ Change the values in `settings.bat`/`settings.ps1`/`settings.sh` as required.
 
 Build all the required projects.
 
-Windows Git Bash:
+Powershell:
 ```
-MSYS_NO_PATHCONV=1 cmd /c init.bat
+./init.ps1
 ```
 
 Linux bash:
@@ -53,9 +53,9 @@ Compiling
 
 Build the code and assets.
 
-Windows Git Bash:
+Powershell:
 ```
-MSYS_NO_PATHCONV=1 cmd /c build.bat
+./build.ps1
 ```
 
 Linux bash:
