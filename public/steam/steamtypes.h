@@ -1,27 +1,20 @@
-//========= Copyright © 1996-2008, Valve LLC, All rights reserved. ============
-//
-// Purpose:
-//
-//=============================================================================
+//========= Copyright 1996-2022, Valve LLC, All rights reserved. ============
 
 #ifndef STEAMTYPES_H
 #define STEAMTYPES_H
-#ifdef _WIN32
-#pragma once
-#endif
 
 #define S_CALLTYPE __cdecl
+// WARNING: __cdecl is potentially #defined away in steam_api_common.h
 
 // Steam-specific types. Defined here so this header file can be included in other code bases.
 #ifndef WCHARTYPES_H
 typedef unsigned char uint8;
 #endif
 
-#if defined( __GNUC__ ) && !defined(_WIN32) && !defined(POSIX)
-	#if __GNUC__ < 4
-		#error "Steamworks requires GCC 4.X (4.2 or 4.4 have been tested)"
-	#endif
-	#define POSIX 1
+#ifdef __GNUC__
+#if __GNUC__ < 4
+#error "Steamworks requires GCC 4.X (4.2 or 4.4 have been tested)"
+#endif
 #endif
 
 #if defined(__LP64__) || defined(__x86_64__) || defined(_WIN64) || defined(__aarch64__) || defined(__s390x__)
@@ -89,14 +82,12 @@ typedef unsigned int uintp;
 
 #endif // else _WIN32
 
-#ifdef __cplusplus // to allow pm_*.c to compile
-
 typedef uint32 AppId_t;
-const AppId_t k_uAppIdInvalid = 0x0;
+static const AppId_t k_uAppIdInvalid = 0x0;
 
 // AppIds and DepotIDs also presently share the same namespace
 typedef uint32 DepotId_t;
-const DepotId_t k_uDepotIdInvalid = 0x0;
+static const DepotId_t k_uDepotIdInvalid = 0x0;
 
 // RTime32.  Seconds elapsed since Jan 1 1970, i.e. unix timestamp.
 // It's the same as time_t, but it is always 32-bit and unsigned.  
@@ -104,19 +95,21 @@ typedef uint32 RTime32;
 
 // handle to a Steam API call
 typedef uint64 SteamAPICall_t;
-const SteamAPICall_t k_uAPICallInvalid = 0x0;
+static const SteamAPICall_t k_uAPICallInvalid = 0x0;
 
 typedef uint32 AccountID_t;
 
 // Party Beacon ID
 typedef uint64 PartyBeaconID_t;
-const PartyBeaconID_t k_ulPartyBeaconIdInvalid = 0;
+static const PartyBeaconID_t k_ulPartyBeaconIdInvalid = 0;
 
-enum ESteamIPType
+typedef enum
 {
 	k_ESteamIPTypeIPv4 = 0,
 	k_ESteamIPTypeIPv6 = 1,
-};
+} ESteamIPType;
+
+#ifdef __cplusplus
 
 #pragma pack( push, 1 )
 
@@ -133,15 +126,15 @@ struct SteamIPAddress_t
 
 	ESteamIPType m_eType;
 
-	bool IsSet() const 
-	{ 
-		if ( k_ESteamIPTypeIPv4 == m_eType )
+	bool IsSet() const
+	{
+		if (k_ESteamIPTypeIPv4 == m_eType)
 		{
 			return m_unIPv4 != 0;
 		}
-		else 
+		else
 		{
-			return m_ipv6Qword[0] !=0 || m_ipv6Qword[1] != 0; 
+			return m_ipv6Qword[0] != 0 || m_ipv6Qword[1] != 0;
 		}
 	}
 
@@ -187,6 +180,6 @@ struct SteamIPAddress_t
 
 #pragma pack( pop )
 
-#endif // __cplusplus // to allow pm_*.c to compile
+#endif
 
 #endif // STEAMTYPES_H

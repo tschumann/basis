@@ -25,6 +25,14 @@
 #include "hornet.h"
 #include "gamerules.h"
 
+static float GetRechargeTime()
+{
+	if (gpGlobals->maxClients > 1)
+	{
+		return 0.3f;
+	}
+	return 0.5f;
+}
 
 enum hgun_e {
 	HGUN_IDLE1 = 0,
@@ -145,7 +153,7 @@ void CHgun::PrimaryAttack()
 	CBaseEntity *pHornet = CBaseEntity::Create( "hornet", m_pPlayer->GetGunPosition( ) + gpGlobals->v_forward * 16 + gpGlobals->v_right * 8 + gpGlobals->v_up * -12, m_pPlayer->pev->v_angle, m_pPlayer->edict() );
 	pHornet->pev->velocity = gpGlobals->v_forward * 300;
 
-	m_flRechargeTime = gpGlobals->time + 0.5;
+	m_flRechargeTime = gpGlobals->time + GetRechargeTime();
 #endif
 	
 	m_pPlayer->m_rgAmmo[m_iPrimaryAmmoType]--;
@@ -173,6 +181,10 @@ void CHgun::PrimaryAttack()
 	if (m_flNextPrimaryAttack < UTIL_WeaponTimeBase() )
 	{
 		m_flNextPrimaryAttack = UTIL_WeaponTimeBase() + 0.25;
+	}
+	if (m_pPlayer->m_rgAmmo[m_iPrimaryAmmoType] == 0)
+	{
+		m_flNextPrimaryAttack += GetRechargeTime();
 	}
 
 	m_flTimeWeaponIdle = UTIL_WeaponTimeBase() + UTIL_SharedRandomFloat( m_pPlayer->random_seed, 10, 15 );
@@ -238,7 +250,7 @@ void CHgun::SecondaryAttack( void )
 
 	pHornet->SetThink( &CHornet::StartDart );
 
-	m_flRechargeTime = gpGlobals->time + 0.5;
+	m_flRechargeTime = gpGlobals->time + GetRechargeTime();
 #endif
 
 	int flags;
@@ -258,7 +270,14 @@ void CHgun::SecondaryAttack( void )
 		// player "shoot" animation
 	m_pPlayer->SetAnimation( PLAYER_ATTACK1 );
 
+
 	m_flNextPrimaryAttack = m_flNextSecondaryAttack = UTIL_WeaponTimeBase() + 0.1;
+	if (m_pPlayer->m_rgAmmo[m_iPrimaryAmmoType] == 0)
+	{
+		m_flRechargeTime = gpGlobals->time + 0.5;
+		m_flNextSecondaryAttack += 0.5;
+		m_flNextPrimaryAttack += 0.5;
+	}
 	m_flTimeWeaponIdle = UTIL_WeaponTimeBase() + UTIL_SharedRandomFloat( m_pPlayer->random_seed, 10, 15 );
 }
 
@@ -271,7 +290,7 @@ void CHgun::Reload( void )
 	while (m_pPlayer->m_rgAmmo[m_iPrimaryAmmoType] < HORNET_MAX_CARRY && m_flRechargeTime < gpGlobals->time)
 	{
 		m_pPlayer->m_rgAmmo[m_iPrimaryAmmoType]++;
-		m_flRechargeTime += 0.5;
+		m_flRechargeTime += GetRechargeTime();
 	}
 }
 

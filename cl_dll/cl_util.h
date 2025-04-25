@@ -77,12 +77,15 @@ inline struct cvar_s *CVAR_CREATE( const char *cv, const char *val, const int fl
 #define XPROJECT(x)	( (1.0f+(x))*ScreenWidth*0.5f )
 #define YPROJECT(y) ( (1.0f-(y))*ScreenHeight*0.5f )
 
-#define XRES(x)					((x  * ((float)ScreenWidth / 640)))
-#define YRES(y)					((y  * ((float)ScreenHeight / 480)))
+#define XRES(x)					((x)  * ((float)ScreenWidth / 640))
+#define YRES(y)					((y)  * ((float)ScreenHeight / 480))
+#define XRES_HD(x)				((x)  * max(1.f, (float)ScreenWidth / 1280.f))
+#define YRES_HD(y)				((y)  * max(1.f, (float)ScreenHeight / 720.f))
 
 #define GetScreenInfo (*gEngfuncs.pfnGetScreenInfo)
 #define ServerCmd (*gEngfuncs.pfnServerCmd)
 #define EngineClientCmd (*gEngfuncs.pfnClientCmd)
+#define EngineFilteredClientCmd (*gEngfuncs.pfnFilteredClientCmd)
 #define SetCrosshair (*gEngfuncs.pfnSetCrosshair)
 #define AngleVectors (*gEngfuncs.pfnAngleVectors)
 
@@ -162,9 +165,7 @@ inline int safe_sprintf( char *dst, int len_dst, const char *format, ...)
 inline void PlaySound( char *szSound, float vol ) { gEngfuncs.pfnPlaySoundByName( szSound, vol ); }
 inline void PlaySound( int iSound, float vol ) { gEngfuncs.pfnPlaySoundByIndex( iSound, vol ); }
 
-#include <algorithm>
-using std::min;
-using std::max;
+#define fabs(x)	   ((x) > 0 ? (x) : 0 - (x))
 
 void ScaleColors( int &r, int &g, int &b, int a );
 

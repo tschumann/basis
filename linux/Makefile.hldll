@@ -16,6 +16,7 @@ PM_OBJ_DIR=$(HLDLL_OBJ_DIR)/pm_shared
 GAME_SHARED_OBJ_DIR=$(HLDLL_OBJ_DIR)/game_shared
 GAME_SHARED_BOT_OBJ_DIR=$(GAME_SHARED_OBJ_DIR)/modbot
 COMMON_OBJ_DIR=$(HLDLL_OBJ_DIR)/common
+HL_OUTPUT_DIR=$(SOURCE_DIR)/../game/valve
 
 #CFLAGS=$(BASE_CFLAGS) $(ARCH_CFLAGS) $(SHLIBCFLAGS) -DCLIENT_WEAPONS
 CFLAGS=$(BASE_CFLAGS)  $(ARCH_CFLAGS)  -DCLIENT_WEAPONS
@@ -135,6 +136,7 @@ HLDLL_OBJS = \
 	$(HLDLL_OBJ_DIR)/tripmine.o \
 	$(HLDLL_OBJ_DIR)/turret.o \
 	$(HLDLL_OBJ_DIR)/util.o \
+	$(HLDLL_OBJ_DIR)/vehicle.o \
 	$(HLDLL_OBJ_DIR)/weapons.o \
 	$(HLDLL_OBJ_DIR)/world.o \
 	$(HLDLL_OBJ_DIR)/xen.o \
@@ -198,10 +200,12 @@ dirs:
 
 hl.$(SHLIBEXT): $(HLDLL_OBJS) $(MODDLL_OBJS) $(HLWPN_OBJS) $(PM_OBJS) $(GAME_SHARED_OBJS) $(GAME_SHARED_BOT_OBJS) $(COMMON_OBJS)
 	$(CC) $(SHLIBLDFLAGS) -o $(BUILD_DIR)/$@ $(HLDLL_OBJS) $(MODDLL_OBJS) $(HLWPN_OBJS) $(PM_OBJS) $(GAME_SHARED_OBJS) $(GAME_SHARED_BOT_OBJS) $(COMMON_OBJS) $(LDFLAGS)
-	# p4 edit ../basis/dlls/hl.$(SHLIBEXT)
-	mkdir -p ../basis/dlls
-	cp $(BUILD_DIR)/$@  ../basis/dlls/hl.$(SHLIBEXT)
-	./gendbg.sh ../basis/dlls/hl.$(SHLIBEXT)
+ifeq ($(CREATE_OUTPUT_DIRS),1)
+	mkdir -p $(HL_OUTPUT_DIR)/dlls
+endif
+	$(P4_EDIT_START) $(HL_OUTPUT_DIR)/dlls/hl.$(SHLIBEXT) $(P4_EDIT_END)
+	cp $(BUILD_DIR)/$@  $(HL_OUTPUT_DIR)/dlls/hl.$(SHLIBEXT)
+	./gendbg.sh $(HL_OUTPUT_DIR)/dlls/hl.$(SHLIBEXT)
 	
 $(HLWPN_OBJ_DIR)/%.o : $(HLWPN_SRC_DIR)/%.cpp
 	$(DO_HLWPN_CC)

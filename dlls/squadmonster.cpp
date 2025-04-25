@@ -386,7 +386,7 @@ int CSquadMonster :: SquadRecruit( int searchRadius, int maxMembers )
 //=========================================================
 // CheckEnemy
 //=========================================================
-int CSquadMonster :: CheckEnemy ( CBaseEntity *pEnemy )
+int CSquadMonster :: CheckEnemy ( CBaseEntity *pEnemy ) 
 {
 	int iUpdatedLKP;
 

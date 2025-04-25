@@ -39,7 +39,7 @@
 
 #define CONTROLLER_FLINCH_DELAY			2		// at most one flinch every n secs
 
-class CController : public CSquadMonster
+class CController : public CSquadMonster 
 {
 public:
 	virtual int		Save( CSave &save );

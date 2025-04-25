@@ -54,16 +54,19 @@ typedef int BOOL;
 #include <limits.h>
 #include <stdarg.h>
 #include <string.h> // memset 
-#include <algorithm>
-using std::min;
-using std::max;
+#ifndef max
+#define max(a,b)  (((a) > (b)) ? (a) : (b))
 #define _vsnprintf(a,b,c,d) vsnprintf(a,b,c,d)
-#define _snprintf(a,b,c,d) snprintf(a,b,c,d)
+#endif
 #endif //_WIN32
 
 // Misc C-runtime library headers
 #include "stdio.h"
 #include "stdlib.h"
+#include "minmax.h"
+#ifndef _WIN32
+# define _vsnprintf(a,b,c,d) vsnprintf(a,b,c,d)
+#endif
 #include "math.h"
 
 // Header file containing definition of globalvars_t and entvars_t

@@ -26,7 +26,7 @@
 #include	"weapons.h"
 #include	"soundent.h"
 #include	"hornet.h"
-
+ 
 //=========================================================
 // monster-specific schedule types
 //=========================================================

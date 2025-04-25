@@ -498,8 +498,6 @@ ClientCommand
 called each time a player uses a "cmd" command
 ============
 */
-extern float g_flWeaponCheat;
-
 // Use CMD_ARGV,  CMD_ARGV, and CMD_ARGC to get pointers the character string command.
 void ClientCommand( edict_t *pEntity )
 {
@@ -526,7 +524,7 @@ void ClientCommand( edict_t *pEntity )
 	}
 	else if ( FStrEq(pcmd, "give" ) )
 	{
-		if ( g_flWeaponCheat != 0.0)
+		if ( CVAR_GET_FLOAT( "sv_cheats" ) != 0.0)
 		{
 			int iszItem = ALLOC_STRING( CMD_ARGV(1) );	// Make a copy of the classname
 			GetClassPtr((CBasePlayer *)pev)->GiveNamedItem( STRING(iszItem) );
@@ -540,7 +538,7 @@ void ClientCommand( edict_t *pEntity )
 	}
 	else if ( FStrEq(pcmd, "fov" ) )
 	{
-		if ( g_flWeaponCheat && CMD_ARGC() > 1)
+		if ( CVAR_GET_FLOAT( "sv_cheats" ) && CMD_ARGC() > 1)
 		{
 			GetClassPtr((CBasePlayer *)pev)->m_iFOV = atoi( CMD_ARGV(1) );
 		}
@@ -608,7 +606,7 @@ void ClientCommand( edict_t *pEntity )
 			ClientPrint( &pEntity->v, HUD_PRINTCONSOLE, UTIL_VarArgs( "Cannot add bots in singleplayer" ) );
 		}
 	}
-	else if ( FStrEq( pcmd, "ent_fire" ) && g_flWeaponCheat )
+	else if ( FStrEq( pcmd, "ent_fire" ) && CVAR_GET_FLOAT( "sv_cheats" ) != 0.0 )
 	{
 		if ( CMD_ARGC() < 2 )
 		{
@@ -642,6 +640,13 @@ void ClientCommand( edict_t *pEntity )
 		// max total length is 192 ...and we're adding a string below ("Unknown command: %s\n")
 		strncpy( command, pcmd, 127 );
 		command[127] = '\0';
+		// First parse the name and remove any %'s
+		for ( char *pApersand = command; pApersand != NULL && *pApersand != 0; pApersand++ )
+		{
+			// Replace it with a space
+			if ( *pApersand == '%' )
+				*pApersand = ' ';
+		}
 
 		// tell the user they entered an unknown command
 		ClientPrint( &pEntity->v, HUD_PRINTCONSOLE, UTIL_VarArgs( "Unknown command: %s\n", command ) );
@@ -905,6 +910,7 @@ void ClientPrecache( void )
 	PRECACHE_SOUND("debris/wood3.wav");
 
 	PRECACHE_SOUND("plats/train_use1.wav");		// use a train
+	PRECACHE_SOUND("plats/vehicle_ignition.wav");
 
 	PRECACHE_SOUND("buttons/spark5.wav");		// hit computer texture
 	PRECACHE_SOUND("buttons/spark6.wav");
@@ -1302,6 +1308,12 @@ int AddToFullPack( struct entity_state_s *state, int e, edict_t *ent, edict_t *h
 		state->usehull      = ( ent->v.flags & FL_DUCKING ) ? 1 : 0;
 		state->health		= ent->v.health;
 	}
+
+	CBaseEntity	*pEntity = static_cast<CBaseEntity*>( GET_PRIVATE( ent ) );
+	if ( pEntity && pEntity->Classify() != CLASS_NONE && pEntity->Classify() != CLASS_MACHINE )
+		state->eflags |= EFLAG_FLESH_SOUND;
+	else
+		state->eflags &= ~EFLAG_FLESH_SOUND;
 
 	return 1;
 }

@@ -29,7 +29,7 @@
 class CNihilanth : public CModMonster
 {
 public:
-	int		Save( CSave &save );
+	int		Save( CSave &save ); 
 	int		Restore( CRestore &restore );
 	static	TYPEDESCRIPTION m_SaveData[];
 
@@ -463,7 +463,7 @@ void CNihilanth :: DyingThink( void )
 	{
 		if (m_pBall->pev->renderamt > 0)
 		{
-			m_pBall->pev->renderamt = max( 0.0f, m_pBall->pev->renderamt - 2);
+			m_pBall->pev->renderamt = max<float>( 0, m_pBall->pev->renderamt - 2);
 		}
 		else
 		{
@@ -885,7 +885,7 @@ void CNihilanth :: HuntThink( void )
 		}
 		else
 		{
-			m_flAdj = min( m_flAdj + 10, 1000.0f );
+			m_flAdj = min( m_flAdj + 10.0f, 1000.0f );
 		}
 	}
 

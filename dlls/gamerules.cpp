@@ -37,6 +37,7 @@ extern int gmsgDeathMsg;	// client dll messages
 extern int gmsgMOTD;
 
 int g_teamplay = 0;
+extern cvar_t sv_busters;
 
 //=========================================================
 //=========================================================
@@ -331,7 +332,13 @@ CGameRules *InstallGameRules( void )
 			g_teamplay = 1;
 			return new CHalfLifeTeamplay;
 		}
-		if ((int)gpGlobals->deathmatch == 1)
+
+		if ( sv_busters.value == 1 )
+		{
+			g_teamplay = 0;
+			return new CMultiplayBusters;
+		}
+		else if ((int)gpGlobals->deathmatch == 1)
 		{
 			// vanilla deathmatch
 			g_teamplay = 0;

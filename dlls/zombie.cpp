@@ -38,7 +38,7 @@
 class CZombie : public CModMonster
 {
 public:
-	void Spawn( void );
+	void Spawn( void ); 
 	void Precache( void );
 	void SetYawSpeed( void );
 	int  Classify ( void );
@@ -170,18 +170,16 @@ void CZombie :: AlertSound( void )
 
 void CZombie :: IdleSound( void )
 {
-	int pitch = 100 + RANDOM_LONG(-5,5);
+	int pitch = 95 + RANDOM_LONG(0,9);
 
 	// Play a random idle sound
-	EMIT_SOUND_DYN ( ENT(pev), CHAN_VOICE, pIdleSounds[ RANDOM_LONG(0,ARRAYSIZE(pIdleSounds)-1) ], 1.0, ATTN_NORM, 0, pitch );
+	EMIT_SOUND_DYN ( ENT(pev), CHAN_VOICE, pIdleSounds[ RANDOM_LONG(0,ARRAYSIZE(pIdleSounds)-1) ], 1.0, ATTN_NORM, 0, 100 + RANDOM_LONG(-5,5) );
 }
 
 void CZombie :: AttackSound( void )
 {
-	int pitch = 100 + RANDOM_LONG(-5,5);
-
 	// Play a random attack sound
-	EMIT_SOUND_DYN ( ENT(pev), CHAN_VOICE, pAttackSounds[ RANDOM_LONG(0,ARRAYSIZE(pAttackSounds)-1) ], 1.0, ATTN_NORM, 0, pitch );
+	EMIT_SOUND_DYN ( ENT(pev), CHAN_VOICE, pAttackSounds[ RANDOM_LONG(0,ARRAYSIZE(pAttackSounds)-1) ], 1.0, ATTN_NORM, 0, 100 + RANDOM_LONG(-5,5) );
 }
 
 

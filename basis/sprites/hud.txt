@@ -1,77 +1,158 @@
-123
-selection		320 320hud1	160	160	80	20
+257
 
-bucket1			320 320hud2	108	16	12	12
-bucket2			320 320hud2	108	28	12	12
-bucket3			320 320hud2	108	40	12	12	
-bucket4			320 320hud2	108	52	12	12
-bucket5			320 320hud2	108	64	12	12					
-bucket0			320 320hud2	108	76	12	12
+//===========================================
+selection		2560 2560/hud_selection	0	0	510	135
 
-dmg_bio			320 320hud4	0	0	32	32
-dmg_poison		320 320hud4	0	0	32	32
-dmg_chem		320 320hud4	32	0	32	32
-dmg_cold		320 320hud4	64	0	32	32
-dmg_drown		320 320hud4	96	0	32	32
-dmg_heat		320 320hud4	128	0	32	32
-dmg_gas			320 320hud4	160	0	32	32
-dmg_rad			320 320hud4	192	0	32	32
-dmg_shock		320 320hud4	224	0	32	32
+bucket1			2560 2560/hud_bucket1	0	0	60	60
+bucket2			2560 2560/hud_bucket2	0	0	60	60		
+bucket3			2560 2560/hud_bucket3	0	0	60	60		
+bucket4			2560 2560/hud_bucket4	0	0	60	60		
+bucket5			2560 2560/hud_bucket5	0	0	60	60		
+bucket0			2560 2560/hud_bucket0	0	0	60	60		
 
-number_0		320 320hud2	0	0	12  16
-number_1		320 320hud2	12	0	12  16
-number_2		320 320hud2	24	0	12  16
-number_3		320 320hud2	36	0	12  16
-number_4		320 320hud2	48	0	12  16
-number_5		320 320hud2	60	0	12  16
-number_6		320 320hud2	72	0	12  16
-number_7		320 320hud2	84	0	12  16
-number_8		320 320hud2	96	0	12  16
-number_9		320 320hud2	108	0	12  16
+dmg_bio			2560 2560/hud_dmg_bio	0	0	192	192
+dmg_poison		2560 2560/hud_dmg_poison	0	0	192	192
+dmg_chem		2560 2560/hud_dmg_chem	0	0	192	192
+dmg_cold		2560 2560/hud_dmg_cold	0	0	192	192
+dmg_drown		2560 2560/hud_dmg_drown	0	0	192	192
+dmg_heat		2560 2560/hud_dmg_heat	0	0	192	192
+dmg_gas			2560 2560/hud_dmg_gas	0	0	192	192
+dmg_rad			2560 2560/hud_dmg_rad	0 0	192	192
+dmg_shock		2560 2560/hud_dmg_shock	0	0	192	192
 
-divider			320 320hud2	120	0	1	20
+number_0		2560 2560/hud_number_0	0	0	60	72
+number_1		2560 2560/hud_number_1	0	0	60	72
+number_2		2560 2560/hud_number_2	0	0	60	72
+number_3		2560 2560/hud_number_3	0	0	60	72
+number_4		2560 2560/hud_number_4	0	0	60	72
+number_5		2560 2560/hud_number_5	0	0	60	72
+number_6		2560 2560/hud_number_6	0	0	60	72
+number_7		2560 2560/hud_number_7	0	0	60	72
+number_8		2560 2560/hud_number_8	0	0	60	72
+number_9		2560 2560/hud_number_9	0	0	60	72
 
-cross			320 320hud2	0	72	16	16
+divider			2560 2560/hud_divider	0	0	6	120
 
-suit_full		320 320hud2	0	52	20	20
-suit_empty		320 320hud2	20	52	20	20
+cross			2560 2560/hud_cross	0	0	96	96
 
-flash_full		320 320hud2	16	72	18	16
-flash_empty		320 320hud2	34	72	18	16
-flash_beam		320 320hud2	52	72	6	16
+suit_full		2560 2560/hud_suit_full	0	0	120	120
+suit_empty		2560 2560/hud_suit_empty	0	0	120	120
 
-train_back		320	320hud3 0	0	48	48
-train_stop		320	320hud3 48	0	48	48
-train_forward1	320	320hud3 96	0	48	48
-train_forward2	320	320hud3 144	0	48	48
-train_forward3	320	320hud3 192	0	48	48
+flash_full		2560 2560/hud_flash_full	0	0	96	96
+flash_empty		2560 2560/hud_flash_empty	0	0	96	96
+flash_beam		2560 2560/hud_flash_beam 0	0	48	96
 
-title_half		320 320hud3 0	48	128	16
-title_life		320 320hud3 128 48	116	16
+train_back		2560	2560/hud_train_back 0	0	216	216
+train_stop		2560	2560/hud_train_stop 0	0	216	216
+train_forward1	2560	2560/hud_train_forward1 0	0	216	216
+train_forward2	2560	2560/hud_train_forward2 0	0	216	216
+train_forward3	2560	2560/hud_train_forward3 0	0	216	216
 
-d_crowbar		320	320hud1	0	208	48	16
-d_9mmhandgun	320	320hud1	0	224	32	16
-d_357			320	320hud1	0	240	32	16
-d_9mmAR			320	320hud1	48	208	48	16
-d_shotgun		320	320hud1	48	224	48	16
-d_bolt			320	320hud1	48	240	48	16
-d_crossbow		320	320hud1	48	240	48	16
-d_rpg_rocket	320	320hud1	96	208	48	16
-d_gauss		320	320hud1	96	224	32	16
-d_egon		320	320hud1	96	240	32	16
-d_hornet		320	320hud1	144	208	48	16
-d_grenade		320	320hud1	144	224	32	16
-d_satchel		320	320hud1	144	240	32	16
-d_tripmine		320	320hud1	192	208	32	16
-d_snark			320	320hud1	192	224	32	16
-d_skull			320	320hud1	192	240	32	16
-d_tracktrain		320	320hud1	224	208	32	16
+autoaim_c		2560	2560/hud_autoaim_c	0	0	72	72
 
-item_battery	320 320hud2	48	52	20	20
-item_healthkit	320	320hud2	68	52	20	20
-item_longjump	320	320hud2	88	52	20	20
+title_half		2560 2560/hud_title_half	0	0	768	90
+title_life		2560 2560/hud_title_life	0	0	660	90
 
-grenade			320 320hud2     36      34      18      18
+d_crowbar		2560	2560/hud_d_crowbar	0	0	144	48
+d_9mmhandgun	2560	2560/hud_d_9mmhandgun	0	0	96	48
+d_357			2560	2560/hud_d_357	0	0	96	48
+d_9mmAR			2560	2560/hud_d_9mmar	0	0	144	48
+d_shotgun		2560	2560/hud_d_shotgun	0	0	144	48
+d_bolt			2560	2560/hud_d_bolt	0	0	144	48
+d_crossbow		2560	2560/hud_d_crossbow	0	0	144	48
+d_rpg_rocket	2560	2560/hud_d_rpg_rocket	0	0	144	48
+d_gauss		2560	2560/hud_d_gauss	0	0	96	48
+d_egon		2560	2560/hud_d_egon	0	0	96	48
+d_hornet		2560	2560/hud_d_hornet	0	0	144	48
+d_grenade		2560	2560/hud_d_grenade	0	0	96	48
+d_satchel		2560	2560/hud_d_satchel	0	0	96	48
+d_tripmine		2560	2560/hud_d_tripmine	0	0	96	48
+d_snark			2560	2560/hud_d_snark	0	0	96	48
+d_skull			2560	2560/hud_d_skull	0	0	96	48
+d_tracktrain		2560	2560/hud_d_tracktrain	0	0	96	48
+
+item_battery	2560 2560/hud_item_battery	0	0	132	132
+item_healthkit	2560 2560/hud_item_healthkit	0	0	132	132
+item_longjump	2560 2560/hud_item_longjump	0	0	132	132
+
+grenade			2560 2560/hud_grenade     0      0      72      72
+
+//===========================================
+selection		1280 1280/hud_selection	0	0	340	90
+
+bucket1			1280 1280/hud_bucket1	0	0	40	40
+bucket2			1280 1280/hud_bucket2	0	0	40	40		
+bucket3			1280 1280/hud_bucket3	0	0	40	40		
+bucket4			1280 1280/hud_bucket4	0	0	40	40		
+bucket5			1280 1280/hud_bucket5	0	0	40	40		
+bucket0			1280 1280/hud_bucket0	0	0	40	40		
+
+dmg_bio			1280 1280/hud_dmg_bio	0	0	128	128
+dmg_poison		1280 1280/hud_dmg_poison	0	0	128	128
+dmg_chem		1280 1280/hud_dmg_chem	0	0	128	128
+dmg_cold		1280 1280/hud_dmg_cold	0	0	128	128
+dmg_drown		1280 1280/hud_dmg_drown	0	0	128	128
+dmg_heat		1280 1280/hud_dmg_heat	0	0	128	128
+dmg_gas			1280 1280/hud_dmg_gas	0	0	128	128
+dmg_rad			1280 1280/hud_dmg_rad	0 0	128	128
+dmg_shock		1280 1280/hud_dmg_shock	0	0	128	128
+
+number_0		1280 1280/hud_number_0	0	0	40	48
+number_1		1280 1280/hud_number_1	0	0	40	48
+number_2		1280 1280/hud_number_2	0	0	40	48
+number_3		1280 1280/hud_number_3	0	0	40	48
+number_4		1280 1280/hud_number_4	0	0	40	48
+number_5		1280 1280/hud_number_5	0	0	40	48
+number_6		1280 1280/hud_number_6	0	0	40	48
+number_7		1280 1280/hud_number_7	0	0	40	48
+number_8		1280 1280/hud_number_8	0	0	40	48
+number_9		1280 1280/hud_number_9	0	0	40	48
+
+divider			1280 1280/hud_divider	0	0	4	80
+
+cross			1280 1280/hud_cross	0	0	64	64
+
+suit_full		1280 1280/hud_suit_full	0	0	80	80
+suit_empty		1280 1280/hud_suit_empty	0	0	80	80
+
+flash_full		1280 1280/hud_flash_full	0	0	64	64
+flash_empty		1280 1280/hud_flash_empty	0	0	64	64
+flash_beam		1280 1280/hud_flash_beam 0	0	32	64
+
+train_back		1280	1280/hud_train_back 0	0	144	144
+train_stop		1280	1280/hud_train_stop 0	0	144	144
+train_forward1	1280	1280/hud_train_forward1 0	0	144	144
+train_forward2	1280	1280/hud_train_forward2 0	0	144	144
+train_forward3	1280	1280/hud_train_forward3 0	0	144	144
+
+autoaim_c		1280	1280/hud_autoaim_c	0	0	48	48
+
+title_half		1280 1280/hud_title_half	0	0	512	60
+title_life		1280 1280/hud_title_life	0	0	440	60
+
+d_crowbar		1280	1280/hud_d_crowbar	0	0	96	32
+d_9mmhandgun	1280	1280/hud_d_9mmhandgun	0	0	64	32
+d_357			1280	1280/hud_d_357	0	0	64	32
+d_9mmAR			1280	1280/hud_d_9mmar	0	0	96	32
+d_shotgun		1280	1280/hud_d_shotgun	0	0	96	32
+d_bolt			1280	1280/hud_d_bolt	0	0	96	32
+d_crossbow		1280	1280/hud_d_crossbow	0	0	96	32
+d_rpg_rocket	1280	1280/hud_d_rpg_rocket	0	0	96	32
+d_gauss		1280	1280/hud_d_gauss	0	0	64	32
+d_egon		1280	1280/hud_d_egon	0	0	64	32
+d_hornet		1280	1280/hud_d_hornet	0	0	96	32
+d_grenade		1280	1280/hud_d_grenade	0	0	64	32
+d_satchel		1280	1280/hud_d_satchel	0	0	64	32
+d_tripmine		1280	1280/hud_d_tripmine	0	0	64	32
+d_snark			1280	1280/hud_d_snark	0	0	64	32
+d_skull			1280	1280/hud_d_skull	0	0	64	32
+d_tracktrain		1280	1280/hud_d_tracktrain	0	0	64	32
+
+item_battery	1280 1280/hud_item_battery	0	0	88	88
+item_healthkit	1280 1280/hud_item_healthkit	0	0	88	88
+item_longjump	1280 1280/hud_item_longjump	0	0	88	88
+
+grenade			1280 1280/hud_grenade     0      0      48      48
 
 //===========================================
 
@@ -151,3 +232,79 @@ item_healthkit	640 640hud2	176	48	44	44
 item_longjump	640 640hud2	176	96	44	44
 
 grenade			640 640hud7     48      96      24      24
+
+//===========================================
+
+selection		320 320hud1	160	160	80	20
+
+bucket1			320 320hud2	108	16	12	12
+bucket2			320 320hud2	108	28	12	12
+bucket3			320 320hud2	108	40	12	12	
+bucket4			320 320hud2	108	52	12	12
+bucket5			320 320hud2	108	64	12	12					
+bucket0			320 320hud2	108	76	12	12
+
+dmg_bio			320 320hud4	0	0	32	32
+dmg_poison		320 320hud4	0	0	32	32
+dmg_chem		320 320hud4	32	0	32	32
+dmg_cold		320 320hud4	64	0	32	32
+dmg_drown		320 320hud4	96	0	32	32
+dmg_heat		320 320hud4	128	0	32	32
+dmg_gas			320 320hud4	160	0	32	32
+dmg_rad			320 320hud4	192	0	32	32
+dmg_shock		320 320hud4	224	0	32	32
+
+number_0		320 320hud2	0	0	12  16
+number_1		320 320hud2	12	0	12  16
+number_2		320 320hud2	24	0	12  16
+number_3		320 320hud2	36	0	12  16
+number_4		320 320hud2	48	0	12  16
+number_5		320 320hud2	60	0	12  16
+number_6		320 320hud2	72	0	12  16
+number_7		320 320hud2	84	0	12  16
+number_8		320 320hud2	96	0	12  16
+number_9		320 320hud2	108	0	12  16
+
+divider			320 320hud2	120	0	1	20
+
+cross			320 320hud2	0	72	16	16
+
+suit_full		320 320hud2	0	52	20	20
+suit_empty		320 320hud2	20	52	20	20
+
+flash_full		320 320hud2	16	72	18	16
+flash_empty		320 320hud2	34	72	18	16
+flash_beam		320 320hud2	52	72	6	16
+
+train_back		320	320hud3 0	0	48	48
+train_stop		320	320hud3 48	0	48	48
+train_forward1	320	320hud3 96	0	48	48
+train_forward2	320	320hud3 144	0	48	48
+train_forward3	320	320hud3 192	0	48	48
+
+title_half		320 320hud3 0	48	128	16
+title_life		320 320hud3 128 48	116	16
+
+d_crowbar		320	320hud1	0	208	48	16
+d_9mmhandgun	320	320hud1	0	224	32	16
+d_357			320	320hud1	0	240	32	16
+d_9mmAR			320	320hud1	48	208	48	16
+d_shotgun		320	320hud1	48	224	48	16
+d_bolt			320	320hud1	48	240	48	16
+d_crossbow		320	320hud1	48	240	48	16
+d_rpg_rocket	320	320hud1	96	208	48	16
+d_gauss		320	320hud1	96	224	32	16
+d_egon		320	320hud1	96	240	32	16
+d_hornet		320	320hud1	144	208	48	16
+d_grenade		320	320hud1	144	224	32	16
+d_satchel		320	320hud1	144	240	32	16
+d_tripmine		320	320hud1	192	208	32	16
+d_snark			320	320hud1	192	224	32	16
+d_skull			320	320hud1	192	240	32	16
+d_tracktrain		320	320hud1	224	208	32	16
+
+item_battery	320 320hud2	48	52	20	20
+item_healthkit	320	320hud2	68	52	20	20
+item_longjump	320	320hud2	88	52	20	20
+
+grenade			320 320hud2     36      34      18      18

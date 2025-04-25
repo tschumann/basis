@@ -11,6 +11,9 @@
 #include "../foolsgoldsource/vscu_test.h"
 #include "../foolsgoldsource/foolsgoldsource.h"
 
+#undef HSPRITE
+#define HSPRITE HANDLE_SPRITE
+
 #include "mod/modhud.h"
 #include "cl_util.h"
 #include "vgui_TeamFortressViewport.h"

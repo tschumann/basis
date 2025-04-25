@@ -131,7 +131,7 @@ void CHandGrenade::WeaponIdle( void )
 
 	if ( m_flTimeWeaponIdle > UTIL_WeaponTimeBase() )
 		return;
-
+	
 	if ( m_flStartThrow )
 	{
 		Vector angThrow = m_pPlayer->pev->v_angle + m_pPlayer->pev->punchangle;
@@ -141,9 +141,10 @@ void CHandGrenade::WeaponIdle( void )
 		else
 			angThrow.x = -10 + angThrow.x * ( ( 90 + 10 ) / 90.0 );
 
-		float flVel = ( 90 - angThrow.x ) * 4;
-		if ( flVel > 500 )
-			flVel = 500;
+		static float flMultiplier = 6.5f;
+		float flVel = ( 90 - angThrow.x ) * flMultiplier;
+		if ( flVel > 1000 )
+			flVel = 1000;
 
 		UTIL_MakeVectors( angThrow );
 
