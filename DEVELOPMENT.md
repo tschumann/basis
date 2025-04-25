@@ -80,10 +80,6 @@ RLE or uncompressed .tga with y-origin set to image height, image description bi
 *.wad
 -----
 
-Luma textures/fullbrights
-=========================
-The last 32 colours in a texture's palette will be displayed as fullbright for certain textures.
-
 
 Adding a new key bind
 ---------------------
