@@ -44,6 +44,7 @@ Powershell:
 
 Linux bash:
 ```
+sudo apt-get install gcc-multilib g++-multilib mesa-common-dev libgl-dev
 ./init.sh
 ```
 

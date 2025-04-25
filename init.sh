@@ -6,14 +6,11 @@ cd $(dirname "${BASH_SOURCE[0]}")
 
 # initialise the repo by building all necessary projects etc
 
-# install required dependencies
-sudo apt-get install gcc-multilib g++-multilib mesa-common-dev libgl-dev
-
-sh ./settings.sh
+source ./settings.sh
 
 # need to create these, otherwise the compile scripts don't copy correctly
-mkdir $MODDIR/cl_dlls/
-mkdir $MODDIR/dlls/
-mkdir $MODDIR/maps/
-mkdir $MODDIR/models/
-mkdir $MODDIR/sprites/
+mkdir -p $MODDIR/cl_dlls/
+mkdir -p $MODDIR/dlls/
+mkdir -p $MODDIR/maps/
+mkdir -p $MODDIR/models/
+mkdir -p $MODDIR/sprites/
